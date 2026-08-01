@@ -107,7 +107,21 @@ for (const file of htmlFiles) {
   $('link[type="application/json+oembed"], link[type="text/xml+oembed"]').remove();
   $('link[rel="alternate"][type="application/json"]').remove();
   $('link[rel="alternate"][type="application/rss+xml"]').attr("href", "/feed.xml");
+  $('link[rel="dns-prefetch"][href*="stats.wp.com"]').remove();
   $('meta[name="generator"]').remove();
+
+  $('script[src*="static.cloudflareinsights.com/beacon.min.js"], script[src*="/cdn-cgi/scripts/"][src*="email-decode"]').remove();
+  $("script:not([src])").each((_index, element) => {
+    const script = $(element).html() ?? "";
+    if (
+      script.includes("window.__CF$cv$params") ||
+      script.includes("/cdn-cgi/challenge-platform/") ||
+      script.includes("_stq = window._stq") ||
+      script.includes("var wc_order_attribution =")
+    ) {
+      $(element).remove();
+    }
+  });
 
   $("link[href], script[src]").each((_index, element) => {
     const attribute = element.tagName === "link" ? "href" : "src";
