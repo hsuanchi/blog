@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-08-01T15:12:50.808Z",
+  "files": {
+    "total": 10383,
+    "html": 850,
+    "assets": 9533
+  },
+  "componentCoverage": {
+    "header": 850,
+    "sidebar": 182,
+    "footer": 850
+  },
+  "analytics": {
+    "pagesWithGa4": 850,
+    "pagesWithGtm": 850
+  },
+  "seo": {
+    "pagesWithCanonical": 849
+  },
+  "missingLocalReferences": [],
+  "dynamicWordPressReferences": []
+}

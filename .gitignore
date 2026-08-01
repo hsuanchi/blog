@@ -1,0 +1,20 @@
+node_modules/
+.DS_Store
+*.log
+
+# WordPress backups may contain credentials and private personal data.
+backup/
+backups/
+migration-backup/
+*.sql
+*.sql.gz
+*.wpress
+*.wxr
+*.xml.private
+updraftplus/
+
+# Local reports and temporary migration state.
+.cache/
+reports/private/
+docs/.migration-state.json
+

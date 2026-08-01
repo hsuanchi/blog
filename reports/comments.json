@@ -1,0 +1,225 @@
+{
+  "generatedAt": "2026-08-01T15:08:37.351Z",
+  "source": "wordpress-export.xml",
+  "pagesUpdated": 54,
+  "approvedCommentsImported": 192,
+  "skipped": [],
+  "countsByPage": [
+    {
+      "link": "https://maxlist.xyz/2018/01/31/google-adwords/",
+      "approvedComments": 13
+    },
+    {
+      "link": "https://maxlist.xyz/2018/02/11/facebook-blueprint/",
+      "approvedComments": 5
+    },
+    {
+      "link": "https://maxlist.xyz/2018/05/20/google-analytics-book-review/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2018/06/17/python_google_trend/",
+      "approvedComments": 3
+    },
+    {
+      "link": "https://maxlist.xyz/2018/06/26/google-analytics-book-review2/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2018/07/15/cohort_analysis/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2018/09/13/crawl_google_search/",
+      "approvedComments": 10
+    },
+    {
+      "link": "https://maxlist.xyz/2018/09/23/python_mysql/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2018/09/25/python_googlesheet_crud/",
+      "approvedComments": 9
+    },
+    {
+      "link": "https://maxlist.xyz/2018/09/29/gcp_server_python/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2018/10/03/seo_python/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2018/10/09/python_nes_modle/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2018/10/14/ga_scroll_depth/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2018/11/11/urad/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2018/11/03/python_apriori/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2018/11/24/gtm_search_lp/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2018/12/31/python_django/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2019/01/15/django_python/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2019/02/09/google_business/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2019/04/14/selenium-chrome/",
+      "approvedComments": 5
+    },
+    {
+      "link": "https://maxlist.xyz/2019/04/27/python-selenium-error/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2019/04/28/python-selenium-driver-threading/",
+      "approvedComments": 3
+    },
+    {
+      "link": "https://maxlist.xyz/2019/07/13/pip-install-python/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/03/15/python-threading/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2019/10/30/flask-sqlalchemy/",
+      "approvedComments": 6
+    },
+    {
+      "link": "https://maxlist.xyz/2019/11/10/flask-sqlalchemy-setting/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2019/12/25/python-property/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2020/01/11/docker-flask/",
+      "approvedComments": 6
+    },
+    {
+      "link": "https://maxlist.xyz/2020/01/01/author/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/02/14/python-ecpay/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2020/03/29/python-coroutine/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2020/04/03/async-io-design-patterns-python/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/04/05/async-python-crawler-snippets/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2020/04/09/concurrency-programming/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2020/04/14/shopee-crawler/",
+      "approvedComments": 19
+    },
+    {
+      "link": "https://maxlist.xyz/2020/04/30/flask-helloworld/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/05/01/flask-list/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/06/14/flask-docker-compose/",
+      "approvedComments": 3
+    },
+    {
+      "link": "https://maxlist.xyz/2020/07/11/ga-shopping-stages/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/07/30/flask-blueprint/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/08/13/analytics-blog-dashboard/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2020/08/17/flask-unittest/",
+      "approvedComments": 3
+    },
+    {
+      "link": "https://maxlist.xyz/2020/11/30/flask-line-bot-deploy-heroku/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2021/01/11/python-object/",
+      "approvedComments": 1
+    },
+    {
+      "link": "https://maxlist.xyz/2021/01/28/ga4-cohort-analytics/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2021/03/04/data-studio-class/",
+      "approvedComments": 4
+    },
+    {
+      "link": "https://maxlist.xyz/2021/03/26/datastudio-regular-expression/",
+      "approvedComments": 5
+    },
+    {
+      "link": "https://maxlist.xyz/2021/04/01/datastudio-case-statement/",
+      "approvedComments": 6
+    },
+    {
+      "link": "https://maxlist.xyz/2021/05/14/datastudio-linkedin/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2021/09/25/en-gather-town-track-user-traffic/",
+      "approvedComments": 5
+    },
+    {
+      "link": "https://maxlist.xyz/2021/12/25/discord-bot/",
+      "approvedComments": 5
+    },
+    {
+      "link": "https://maxlist.xyz/2022/02/01/discord-bot-with-gcp/",
+      "approvedComments": 7
+    },
+    {
+      "link": "https://maxlist.xyz/2023/01/01/git-tutorial-roadmap/",
+      "approvedComments": 2
+    },
+    {
+      "link": "https://maxlist.xyz/2023/07/01/ga4-realtime-dashboard/",
+      "approvedComments": 3
+    }
+  ]
+}
