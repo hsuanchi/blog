@@ -9,7 +9,7 @@
     "components": "node scripts/components.mjs",
     "finalize": "node scripts/finalize.mjs",
     "validate": "node scripts/validate.mjs",
-    "serve": "python3 -m http.server 8080 --directory docs"
+    "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory docs"
   },
   "devDependencies": {
     "cheerio": "1.2.0"

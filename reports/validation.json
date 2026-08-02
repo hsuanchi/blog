@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-08-01T15:28:04.691Z",
+  "generatedAt": "2026-08-02T05:36:31.430Z",
   "files": {
-    "total": 10383,
+    "total": 10384,
     "html": 850,
-    "assets": 9533
+    "assets": 9534
   },
   "componentCoverage": {
     "header": 850,
     "sidebar": 182,
     "footer": 850
+  },
+  "offlineCoverage": {
+    "runtime": 850,
+    "pagesWithoutPreloader": 850
   },
   "analytics": {
     "pagesWithGa4": 850,
@@ -17,6 +21,9 @@
   "seo": {
     "pagesWithCanonical": 849
   },
+  "internalLinksOpeningNewTabs": [],
+  "offlineRootResourceReferences": [],
+  "offlineRootCssReferences": [],
   "missingLocalReferences": [],
   "dynamicWordPressReferences": []
 }

@@ -27,12 +27,13 @@ async function exists(file) {
   }
 }
 
-function localTarget(reference) {
+function localTarget(reference, sourceFile) {
   if (!reference || reference.startsWith("#") || reference.startsWith("data:")) return null;
   if (/^(mailto|tel|javascript):/i.test(reference)) return null;
   let url;
   try {
-    url = new URL(reference, "https://www.maxlist.xyz/");
+    const sourceRelative = path.relative(DOCS_ROOT, sourceFile).split(path.sep).join("/");
+    url = new URL(reference, `https://www.maxlist.xyz/${sourceRelative}`);
   } catch {
     return null;
   }
@@ -54,6 +55,10 @@ const htmlFiles = allFiles.filter((file) => file.endsWith(".html"));
 const missing = new Map();
 const dynamicReferences = [];
 const componentCoverage = { header: 0, sidebar: 0, footer: 0 };
+const offlineCoverage = { runtime: 0, pagesWithoutPreloader: 0 };
+const internalLinksOpeningNewTabs = [];
+const offlineRootResourceReferences = [];
+const offlineRootCssReferences = [];
 let ga4Pages = 0;
 let gtmPages = 0;
 let canonicalPages = 0;
@@ -77,6 +82,13 @@ for (const file of htmlFiles) {
     $(selector).each((_index, element) => {
       const value = $(element).attr(attribute);
       if (value) references.push(value);
+      if (
+        value?.startsWith("/") &&
+        !value.startsWith("//") &&
+        !new Set(["a[href]", "form[action]"]).has(selector)
+      ) {
+        offlineRootResourceReferences.push({ file: path.relative(REPO_ROOT, file), reference: value });
+      }
     });
   }
   for (const attribute of ["srcset", "data-srcset", "data-lazy-srcset"]) {
@@ -85,6 +97,9 @@ for (const file of htmlFiles) {
       for (const candidate of value.split(",")) {
         const reference = candidate.trim().split(/\s+/)[0];
         if (reference) references.push(reference);
+        if (reference.startsWith("/") && !reference.startsWith("//")) {
+          offlineRootResourceReferences.push({ file: path.relative(REPO_ROOT, file), reference });
+        }
       }
     });
   }
@@ -93,30 +108,68 @@ for (const file of htmlFiles) {
     if (/\/wp-(admin|json|comments-post)|\/xmlrpc\.php|[?&]s=/.test(reference)) {
       dynamicReferences.push({ file: path.relative(REPO_ROOT, file), reference });
     }
-    const target = localTarget(reference);
+    const target = localTarget(reference, file);
     if (target && !(await exists(target))) {
       const key = `${path.relative(REPO_ROOT, file)} -> ${reference}`;
       missing.set(key, path.relative(REPO_ROOT, target));
     }
   }
 
-  if ($('script[src="/assets/js/components/header.js"]').length) componentCoverage.header += 1;
-  if ($('script[src="/assets/js/components/sidebar.js"]').length) componentCoverage.sidebar += 1;
-  if ($('script[src="/assets/js/components/footer.js"]').length) componentCoverage.footer += 1;
+  $('a[target="_blank"][href]').each((_index, element) => {
+    const reference = $(element).attr("href") ?? "";
+    try {
+      const sourceRelative = path.relative(DOCS_ROOT, file).split(path.sep).join("/");
+      const url = new URL(reference, `https://www.maxlist.xyz/${sourceRelative}`);
+      if (new Set(["maxlist.xyz", "www.maxlist.xyz"]).has(url.hostname)) {
+        internalLinksOpeningNewTabs.push({ file: path.relative(REPO_ROOT, file), reference });
+      }
+    } catch {
+      // Invalid links are handled by the normal reference checks.
+    }
+  });
+
+  if ($('script[src$="assets/js/components/header.js"]').length) componentCoverage.header += 1;
+  if ($('script[src$="assets/js/components/sidebar.js"]').length) componentCoverage.sidebar += 1;
+  if ($('script[src$="assets/js/components/footer.js"]').length) componentCoverage.footer += 1;
+  if ($('script[data-maxlist-offline="true"][src*="assets/js/offline.js"]').length) {
+    offlineCoverage.runtime += 1;
+  }
+  if (!$(".preloader").length) offlineCoverage.pagesWithoutPreloader += 1;
   if (/G-[A-Z0-9]+|gtag\s*\(/i.test(html)) ga4Pages += 1;
   if (/GTM-[A-Z0-9]+|googletagmanager\.com\/gtm\.js/i.test(html)) gtmPages += 1;
   if ($('link[rel="canonical"]').length) canonicalPages += 1;
+}
+
+for (const file of allFiles.filter((candidate) => candidate.endsWith(".css"))) {
+  const css = await readFile(file, "utf8");
+  const references = css.match(/url\(\s*["']?\/(?!\/)[^"')]+/g) ?? [];
+  for (const reference of references) {
+    offlineRootCssReferences.push({ file: path.relative(REPO_ROOT, file), reference });
+  }
 }
 
 const report = {
   generatedAt: new Date().toISOString(),
   files: { total: allFiles.length, html: htmlFiles.length, assets: allFiles.length - htmlFiles.length },
   componentCoverage,
+  offlineCoverage,
   analytics: { pagesWithGa4: ga4Pages, pagesWithGtm: gtmPages },
   seo: { pagesWithCanonical: canonicalPages },
+  internalLinksOpeningNewTabs,
+  offlineRootResourceReferences,
+  offlineRootCssReferences,
   missingLocalReferences: [...missing].map(([source, expected]) => ({ source, expected })),
   dynamicWordPressReferences: dynamicReferences
 };
 await writeFileEnsured(REPORT_FILE, `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify(report, null, 2));
-if (missing.size > 0) process.exitCode = 1;
+if (
+  missing.size > 0 ||
+  internalLinksOpeningNewTabs.length > 0 ||
+  offlineRootResourceReferences.length > 0 ||
+  offlineRootCssReferences.length > 0 ||
+  offlineCoverage.runtime !== htmlFiles.length ||
+  offlineCoverage.pagesWithoutPreloader !== htmlFiles.length
+) {
+  process.exitCode = 1;
+}

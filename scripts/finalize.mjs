@@ -6,6 +6,8 @@ import { writeFileEnsured } from "./lib.mjs";
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
 const MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "migration.json");
+const OFFLINE_RUNTIME_SOURCE = path.join(REPO_ROOT, "scripts", "offline-runtime.js");
+const OFFLINE_RUNTIME_OUTPUT = path.join(DOCS_ROOT, "assets", "js", "offline.js");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 
 async function filesBelow(directory) {
@@ -26,6 +28,10 @@ function escapeXml(value) {
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
+}
+
+function cleanGeneratedText(value) {
+  return value.replace(/\r\n?/g, "\n").replace(/[ \t]+$/gm, "");
 }
 
 function canonicalForFile(file) {
@@ -62,6 +68,17 @@ function decodedPathname(input) {
   }
 }
 
+function isSameSiteReference(input) {
+  if (!input || input.startsWith("#")) return true;
+  if (/^(mailto|tel|javascript|data|blob):/i.test(input)) return false;
+  try {
+    const url = new URL(input, SITE_ORIGIN);
+    return new Set(["maxlist.xyz", "www.maxlist.xyz"]).has(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
 let migrationReport = null;
 try {
   migrationReport = JSON.parse(await readFile(MIGRATION_REPORT, "utf8"));
@@ -82,6 +99,67 @@ function cleanedSrcset(value) {
     .join(", ");
 }
 
+function relativeRootReference(reference, sourceFile) {
+  if (!reference?.startsWith("/") || reference.startsWith("//")) return reference;
+  try {
+    const url = new URL(reference, SITE_ORIGIN);
+    const prefix = path.relative(path.dirname(sourceFile), DOCS_ROOT).split(path.sep).join("/");
+    const pathname = url.pathname.replace(/^\/+/, "");
+    const relative = prefix ? `${prefix}/${pathname}` : pathname;
+    return `${relative || "."}${url.search}${url.hash}`;
+  } catch {
+    return reference;
+  }
+}
+
+function relativeSrcset(value, sourceFile) {
+  return value
+    .split(",")
+    .map((candidate) => {
+      const [url, ...descriptor] = candidate.trim().split(/\s+/);
+      return [relativeRootReference(url, sourceFile), ...descriptor].join(" ");
+    })
+    .join(", ");
+}
+
+function relativizePageResources($, file) {
+  const attributes = [
+    ["link[href]", "href"],
+    ["script[src]", "src"],
+    ["img[src]", "src"],
+    ["img[data-src]", "data-src"],
+    ["img[data-lazy-src]", "data-lazy-src"],
+    ["source[src]", "src"],
+    ["video[src]", "src"],
+    ["video[poster]", "poster"],
+    ["audio[src]", "src"],
+    ["iframe[src]", "src"],
+    ["object[data]", "data"],
+    ["embed[src]", "src"],
+    ["input[src]", "src"],
+    ["[background]", "background"]
+  ];
+  for (const [selector, attribute] of attributes) {
+    $(selector).each((_index, element) => {
+      const value = $(element).attr(attribute);
+      if (value) $(element).attr(attribute, relativeRootReference(value, file));
+    });
+  }
+  for (const attribute of ["srcset", "data-srcset", "data-lazy-srcset"]) {
+    $(`[${attribute}]`).each((_index, element) => {
+      const value = $(element).attr(attribute);
+      if (value) $(element).attr(attribute, relativeSrcset(value, file));
+    });
+  }
+}
+
+function relativizeCssRootUrls(css, file) {
+  return css.replace(
+    /url\(\s*(["']?)(\/(?!\/)[^"')]+)\1\s*\)/g,
+    (_match, quote, reference) => `url(${quote}${relativeRootReference(reference, file)}${quote})`
+  );
+}
+
 function decodeCloudflareEmail(hex) {
   if (!/^[0-9a-f]+$/i.test(hex) || hex.length < 4 || hex.length % 2 !== 0) return "";
   const key = Number.parseInt(hex.slice(0, 2), 16);
@@ -95,6 +173,7 @@ function decodeCloudflareEmail(hex) {
 const htmlFiles = (await filesBelow(DOCS_ROOT)).filter(
   (file) => file.endsWith(".html") && path.relative(DOCS_ROOT, file) !== "404.html"
 );
+await writeFileEnsured(OFFLINE_RUNTIME_OUTPUT, await readFile(OFFLINE_RUNTIME_SOURCE, "utf8"));
 const sitemapEntries = [];
 const feedArticles = [];
 let finalized = 0;
@@ -109,6 +188,7 @@ for (const file of htmlFiles) {
   $('link[rel="alternate"][type="application/rss+xml"]').attr("href", "/feed.xml");
   $('link[rel="dns-prefetch"][href*="stats.wp.com"]').remove();
   $('meta[name="generator"]').remove();
+  $(".preloader").remove();
 
   $('script[src*="static.cloudflareinsights.com/beacon.min.js"], script[src*="/cdn-cgi/scripts/"][src*="email-decode"]').remove();
   $("script:not([src])").each((_index, element) => {
@@ -180,6 +260,17 @@ for (const file of htmlFiles) {
     }
   });
 
+  $("a[href]").each((_index, element) => {
+    const href = $(element).attr("href") ?? "";
+    if (!isSameSiteReference(href)) return;
+    $(element).removeAttr("target");
+    const rel = ($(element).attr("rel") ?? "")
+      .split(/\s+/)
+      .filter((value) => value && !new Set(["noopener", "noreferrer"]).has(value));
+    if (rel.length) $(element).attr("rel", rel.join(" "));
+    else $(element).removeAttr("rel");
+  });
+
   $("a.__cf_email__[data-cfemail]").each((_index, element) => {
     const email = decodeCloudflareEmail($(element).attr("data-cfemail") ?? "");
     if (!email) return;
@@ -202,6 +293,11 @@ for (const file of htmlFiles) {
   if (!$('meta[name="maxlist-static-snapshot"]').length) {
     $("head").append('<meta name="maxlist-static-snapshot" content="2026-08-01">');
   }
+
+  const offlineScript = relativeRootReference("/assets/js/offline.js?v=20260802-5", file);
+  const offlineElement = $('script[data-maxlist-offline="true"]').first();
+  if (offlineElement.length) offlineElement.attr("src", offlineScript);
+  else $("body").append(`<script data-maxlist-offline="true" src="${offlineScript}"></script>`);
 
   const fallback = canonicalForFile(file);
   const canonicalElement = $('link[rel="canonical"]').first();
@@ -230,7 +326,8 @@ for (const file of htmlFiles) {
         modified
     });
   }
-  await writeFileEnsured(file, $.html());
+  relativizePageResources($, file);
+  await writeFileEnsured(file, cleanGeneratedText($.html()));
   finalized += 1;
 }
 
@@ -250,7 +347,18 @@ $404("#primary main").html(`<section class="error-404 not-found">
     <p><a class="roll-button button" href="/">返回首頁</a></p>
   </div>
 </section>`);
-await writeFileEnsured(path.join(DOCS_ROOT, "404.html"), $404.html());
+await writeFileEnsured(path.join(DOCS_ROOT, "404.html"), cleanGeneratedText($404.html()));
+
+let offlineCssFiles = 0;
+for (const file of (await filesBelow(DOCS_ROOT)).filter((candidate) => candidate.endsWith(".css"))) {
+  const css = await readFile(file, "utf8");
+  const rewritten = relativizeCssRootUrls(css, file);
+  const cleaned = cleanGeneratedText(rewritten);
+  if (cleaned !== css) {
+    await writeFileEnsured(file, cleaned);
+    offlineCssFiles += 1;
+  }
+}
 
 const uniqueEntries = [...new Map(sitemapEntries.map((entry) => [entry.location, entry])).values()]
   .filter((entry) => entry.location.startsWith(`${SITE_ORIGIN}/`))
@@ -308,5 +416,7 @@ if (migrationReport) {
 }
 
 console.log(
-  `Finalized ${finalized} HTML pages; generated 404.html, feed.xml, robots.txt, and a ${uniqueEntries.length}-URL sitemap.`
+  `Finalized ${finalized} HTML pages for web and offline use; removed the blocking preloader, ` +
+    `rewrote ${offlineCssFiles} CSS files, and generated 404.html, feed.xml, robots.txt, ` +
+    `and a ${uniqueEntries.length}-URL sitemap.`
 );

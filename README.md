@@ -7,6 +7,7 @@
 - `docs/`：GitHub Pages 的完整網站根目錄
 - `components/`：Header、Sidebar、Footer 的可讀 HTML 原稿
 - `docs/assets/js/components/`：所有頁面同步引入的共用元件
+- `docs/assets/js/offline.js`：直接雙擊 HTML 時修正站內連結與共用元件路徑
 - `scripts/migrate.mjs`：公開頁面、REST 內容、媒體與版型快照
 - `scripts/components.mjs`：抽出共用 Sydney 元件
 - `scripts/validate.mjs`：檢查連結、檔案、元件、GA4/GTM 與 canonical
@@ -26,7 +27,9 @@ npm run validate
 npm run serve
 ```
 
-本機預覽：`http://localhost:8080/`
+可以直接雙擊 `docs/index.html` 離線瀏覽；站內文章連結會自動指向對應的 `index.html`。
+
+若要用與 GitHub Pages 相同的 HTTP 模式驗收，也可以執行 `npm run serve`，再開啟 `http://127.0.0.1:4173/`。這個服務只綁定本機，不會對外開放。
 
 ## 新增文章
 
