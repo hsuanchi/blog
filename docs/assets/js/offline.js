@@ -21,7 +21,53 @@
     });
   });
 
-  if (location.protocol !== "file:") return;
+  if (location.protocol !== "file:") {
+    if (location.hostname.endsWith(".github.io")) {
+      const firstSegment = location.pathname.split("/").filter(Boolean)[0];
+      const projectBase = firstSegment ? `/${firstSegment}` : "";
+      if (projectBase) {
+        const projectAttributes = [
+          ["a[href]", "href"],
+          ["form[action]", "action"],
+          ["img[src]", "src"],
+          ["img[data-src]", "data-src"],
+          ["img[data-lazy-src]", "data-lazy-src"],
+          ["source[src]", "src"],
+          ["video[src]", "src"],
+          ["video[poster]", "poster"],
+          ["audio[src]", "src"],
+          ["iframe[src]", "src"],
+          ["object[data]", "data"],
+          ["embed[src]", "src"]
+        ];
+        for (const [selector, attribute] of projectAttributes) {
+          document.querySelectorAll(selector).forEach((element) => {
+            const value = element.getAttribute(attribute) ?? "";
+            if (value.startsWith("/") && !value.startsWith("//") && !value.startsWith(`${projectBase}/`)) {
+              element.setAttribute(attribute, `${projectBase}${value}`);
+            }
+          });
+        }
+        for (const attribute of ["srcset", "data-srcset", "data-lazy-srcset"]) {
+          document.querySelectorAll(`[${attribute}]`).forEach((element) => {
+            const value = element.getAttribute(attribute) ?? "";
+            const rewritten = value
+              .split(",")
+              .map((candidate) => {
+                const [url, ...descriptor] = candidate.trim().split(/\s+/);
+                const target = url.startsWith("/") && !url.startsWith("//") && !url.startsWith(`${projectBase}/`)
+                  ? `${projectBase}${url}`
+                  : url;
+                return [target, ...descriptor].join(" ");
+              })
+              .join(", ");
+            element.setAttribute(attribute, rewritten);
+          });
+        }
+      }
+    }
+    return;
+  }
 
   const script = document.currentScript;
   if (!script?.src) return;

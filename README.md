@@ -8,6 +8,8 @@
 - `components/`：Header、Sidebar、Footer 的可讀 HTML 原稿
 - `docs/assets/js/components/`：所有頁面同步引入的共用元件
 - `docs/assets/js/offline.js`：直接雙擊 HTML 時修正站內連結與共用元件路徑
+- `docs/search/`：不依賴 WordPress 或伺服器的文章全文搜尋
+- `docs/CNAME`：GitHub Pages 正式網域 `www.maxlist.xyz`
 - `scripts/migrate.mjs`：公開頁面、REST 內容、媒體與版型快照
 - `scripts/components.mjs`：抽出共用 Sydney 元件
 - `scripts/validate.mjs`：檢查連結、檔案、元件、GA4/GTM 與 canonical
@@ -29,10 +31,12 @@ npm run serve
 
 可以直接雙擊 `docs/index.html` 離線瀏覽；站內文章連結會自動指向對應的 `index.html`。
 
+站內搜尋、桌面與手機選單、文章、圖片及核准留言都可在純靜態模式使用。WooCommerce 未使用，因此購物車、結帳與帳號頁已移除；GA4 `G-YR986G8PX3` 由 GTM `GTM-WSG8N3Q` 載入。
+
 若要用與 GitHub Pages 相同的 HTTP 模式驗收，也可以執行 `npm run serve`，再開啟 `http://127.0.0.1:4173/`。這個服務只綁定本機，不會對外開放。
 
 ## 新增文章
 
-未來可直接複製既有文章目錄中的 `index.html`，保留共用元件的三個 `<script>`，再修改 `<head>` SEO 資訊與 `<article>` 內容。網站不需要建置步驟；提交 `docs/` 後就是可部署內容。
+未來可直接複製既有文章目錄中的 `index.html`，保留共用元件的三個 `<script>`，再修改 `<head>` SEO 資訊與 `<article>` 內容。完成後執行 `npm run finalize && npm run validate`，更新搜尋索引、sitemap 與共用檢查；輸出仍是可直接部署的純靜態檔案，不需要框架或伺服器端建置。
 
-目前 repository 保持 private。確認內容、網址、圖片、核准留言與視覺比對完成後，才會另行切換 public、啟用 GitHub Pages 與設定正式網域。
+目前 repository 保持 private。確認內容、網址、圖片、核准留言與視覺比對完成後，才會另行切換 public，並以 `docs/` 作為 GitHub Pages 來源。網站同時支援 `username.github.io/blog/` 專案預覽與 `www.maxlist.xyz` 正式網域。

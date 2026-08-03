@@ -12,7 +12,7 @@
 	var gtm4wp_datalayer_name = "dataLayer";
 	var dataLayer = dataLayer || [];
 </script>
-<!-- End Google Tag Manager for WordPress by gtm4wp.com --><script>window._wca = window._wca || [];</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
 
 	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲 - Max行銷誌</title>
@@ -20,7 +20,7 @@
 	<meta property="og:locale" content="zh_TW">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲 - Max行銷誌">
-	<meta property="og:description" content="最近在寫將自己的selenium爬蟲程式放在GoogleComputeEngine上運行，環境設置的過程中不小心踩了不少坑，所以決定記錄下這篇，希望提供給之後想在GCP上設定selenium爬蟲的朋友！ 如果對GCP或是selenium不熟悉的朋友，建議可以先閱讀以下兩篇文章： 【爬蟲筆記】如何在GCP上架設運行Python爬蟲程式 【爬蟲筆記】Python Selenium爬蟲教學：實作商品庫存爬取 首先在Google Compute Engine上安裝pip sudo apt-get install python3-pip 安裝selenium pip3 install selenium 安裝Chrome瀏覽器 sudo apt-get install chromium-driver 安 […]">
+	<meta property="og:description" content="最近在寫將自己的selenium爬蟲程式放在GoogleComputeEngine上運行，環境設置的過程中不小心踩了不少坑，所以決定記錄下這篇，希望提供給之後想在GCP上設定selenium爬蟲的朋友！ 如果對GCP或是selenium不熟悉的朋友，建議可以先閱讀以下兩篇文章： 【爬蟲筆記】如何在GCP上架設運行Py…">
 	<meta property="og:url" content="https://www.maxlist.xyz/2019/04/14/selenium-chrome/">
 	<meta property="og:site_name" content="Max行銷誌">
 	<meta property="article:published_time" content="2019-04-14T03:30:46+00:00">
@@ -35,39 +35,20 @@
 	<meta name="twitter:data1" content="Max">
 	<meta name="twitter:label2" content="預估閱讀時間">
 	<meta name="twitter:data2" content="1 分鐘">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#article","isPartOf":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/"},"author":{"name":"Max","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"headline":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲","datePublished":"2019-04-14T03:30:46+00:00","dateModified":"2020-04-10T05:14:20+00:00","mainEntityOfPage":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/"},"wordCount":94,"commentCount":5,"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"image":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","keywords":["chromedriver","Python爬蟲","Selenium","爬蟲筆記"],"articleSection":["All posts","Python 爬蟲教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/","url":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/","name":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲 - Max行銷誌","isPartOf":{"@id":"https://www.maxlist.xyz/#website"},"primaryImageOfPage":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"image":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","datePublished":"2019-04-14T03:30:46+00:00","dateModified":"2020-04-10T05:14:20+00:00","breadcrumb":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#breadcrumb"},"inLanguage":"zh-TW","potentialAction":[{"@type":"ReadAction","target":["https://www.maxlist.xyz/2019/04/14/selenium-chrome/"]}]},{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage","url":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","width":900,"height":632,"caption":"selenium_coverphoto"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"All posts","item":"https://www.maxlist.xyz/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/"},{"@type":"ListItem","position":3,"name":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲"}]},{"@type":"WebSite","@id":"https://www.maxlist.xyz/#website","url":"https://www.maxlist.xyz/","name":"Max行銷誌","description":"行銷、數據分析、與 Python","publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.maxlist.xyz/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"zh-TW"},{"@type":["Person","Organization"],"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","image":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/#/schema/person/image/","url":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","width":512,"height":512,"caption":"Max"},"logo":{"@id":"https://www.maxlist.xyz/#/schema/person/image/"},"description":"我是 Max，熱於分享與交流；左手寫數據分析，右手寫程式開發，相信著行銷與工程的結合能驅動無限的價值。 除了 Blog 外，想認識的朋友歡迎約個 30 分鐘 Online Coffee 聊聊 ☕","sameAs":["https://www.maxlist.xyz/2020/01/01/author/"]}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#article","isPartOf":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/"},"author":{"name":"Max","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"headline":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲","datePublished":"2019-04-14T03:30:46+00:00","dateModified":"2020-04-10T05:14:20+00:00","mainEntityOfPage":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/"},"wordCount":94,"commentCount":5,"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"image":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","keywords":["chromedriver","Python爬蟲","Selenium","爬蟲筆記"],"articleSection":["All posts","Python 爬蟲教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/","url":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/","name":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲 - Max行銷誌","isPartOf":{"@id":"https://www.maxlist.xyz/#website"},"primaryImageOfPage":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"image":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","datePublished":"2019-04-14T03:30:46+00:00","dateModified":"2020-04-10T05:14:20+00:00","breadcrumb":{"@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#breadcrumb"},"inLanguage":"zh-TW","potentialAction":[{"@type":"ReadAction","target":["https://www.maxlist.xyz/2019/04/14/selenium-chrome/"]}]},{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#primaryimage","url":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/04/selenium_coverphoto-e1555212857262.jpeg","width":900,"height":632,"caption":"selenium_coverphoto"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/2019/04/14/selenium-chrome/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"All posts","item":"https://www.maxlist.xyz/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/"},{"@type":"ListItem","position":3,"name":"【爬蟲筆記】如何在 GoogleComputeEngine 上運行 selenium 爬蟲"}]},{"@type":"WebSite","@id":"https://www.maxlist.xyz/#website","url":"https://www.maxlist.xyz/","name":"Max行銷誌","description":"行銷、數據分析、與 Python","publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.maxlist.xyz/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"zh-TW"},{"@type":["Person","Organization"],"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","image":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/#/schema/person/image/","url":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","width":512,"height":512,"caption":"Max"},"logo":{"@id":"https://www.maxlist.xyz/#/schema/person/image/"},"description":"我是 Max，熱於分享與交流；左手寫數據分析，右手寫程式開發，相信著行銷與工程的結合能驅動無限的價值。 除了 Blog 外，想認識的朋友歡迎約個 30 分鐘 Online Coffee 聊聊 ☕","sameAs":["https://www.maxlist.xyz/2020/01/01/author/"]}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
 <link rel="dns-prefetch" href="//www.maxlist.xyz">
 
 <link rel="alternate" type="application/rss+xml" title="訂閱《Max行銷誌》» 資訊提供" href="../../../../feed.xml">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.maxlist.xyz\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.6"}};
-/*! This file is auto-generated */
-!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
+
 <link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="crayon-theme-powershell-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/themes/powershell/powershell.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="crayon-font-monaco-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="sydney-wc-css-css" href="../../../../wp-content/themes/sydney/woocommerce/css/wc.min.css?ver=20220616" type="text/css" media="all">
 <link rel="stylesheet" id="sydney-bootstrap-css" href="../../../../wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1" type="text/css" media="all">
-<style id="wp-emoji-styles-inline-css" type="text/css">
 
-	img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
 <link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=6.8.6" type="text/css" media="all">
 <style id="wp-block-library-inline-css" type="text/css">
 .has-text-align-justify{text-align:justify;}
@@ -115,7 +96,7 @@ div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-to
 <script type="text/javascript" src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <script type="text/javascript" id="wphb-2-js-extra">
 /* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_password_show":"\u986f\u793a\u5bc6\u78bc","i18n_password_hide":"\u96b1\u85cf\u5bc6\u78bc"};;;var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u67e5\u770b\u8cfc\u7269\u8eca","cart_url":"https:\/\/www.maxlist.xyz\/cart\/","is_cart":"","cart_redirect_after_add":"no"};;;var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"https:\/\/www.maxlist.xyz\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
 var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"\u9ede\u64ca\u5c55\u958b\u4ee3\u78bc"};
 /* ]]> */
 </script>
@@ -135,7 +116,7 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 }
 </style>
 <!-- /end HFCM by 99 Robots -->
-	<style>img#wpstats{display:none}</style>
+
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <!-- GTM Container placement set to footer -->
@@ -175,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="../../../../wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png" sizes="192x192">
 <link rel="apple-touch-icon" href="../../../../wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
 <meta name="msapplication-TileImage" content="https://www.maxlist.xyz/wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
-<meta name="maxlist-static-snapshot" content="2026-08-01"></head>
+<meta name="maxlist-static-snapshot" content="2026-08-01"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="description" content="最近在寫將自己的selenium爬蟲程式放在GoogleComputeEngine上運行，環境設置的過程中不小心踩了不少坑，所以決定記錄下這篇，希望提供給之後想在GCP上設定selenium爬蟲的朋友！ 如果對GCP或是selenium不熟悉的朋友，建議可以先閱讀以下兩篇文章： 【爬蟲筆記】如何在GCP上架設運行Py…"></head>
 
 <body class="wp-singular post-template-default single single-post postid-3198 single-format-standard wp-theme-sydney theme-sydney woocommerce-no-js menu-inline e-lazyload elementor-default elementor-kit-5104">
 
@@ -187,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../../../assets/js/components/header.js"></script>
+	<script src="../../../../assets/js/components/header.js?v=20260803-1"></script>
 
 
 
@@ -241,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
 <p class="ez-toc-title" style="cursor:inherit">目錄</p>
 <label for="ez-toc-cssicon-toggle-item-6a6e017dbd88f" class="ez-toc-cssicon-toggle-label"><span class="ez-toc-cssicon"><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></label><input type="checkbox" id="ez-toc-cssicon-toggle-item-6a6e017dbd88f" aria-label="顯示/隱藏"><nav><ul class="ez-toc-list ez-toc-list-level-1 "><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-1" href="#%E9%A6%96%E5%85%88%E5%9C%A8Google_Compute_Engine%E4%B8%8A%E5%AE%89%E8%A3%9Dpip">首先在Google Compute Engine上安裝pip</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-2" href="#%E5%AE%89%E8%A3%9Dselenium">安裝selenium</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-3" href="#%E5%AE%89%E8%A3%9DChrome%E7%80%8F%E8%A6%BD%E5%99%A8">安裝Chrome瀏覽器</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-4" href="#%E5%AE%89%E8%A3%9DChrome_Driver">安裝Chrome Driver</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-5" href="#%E4%BB%A5%E4%B8%8B%E6%98%AF%E6%88%91%E9%80%9A%E5%B8%B8%E9%82%84%E6%9C%83%E5%AE%89%E8%A3%9D%E7%9A%84library">以下是我通常還會安裝的library</a></li></ul></nav></div>
-<h3><span class="ez-toc-section" id="%E9%A6%96%E5%85%88%E5%9C%A8Google_Compute_Engine%E4%B8%8A%E5%AE%89%E8%A3%9Dpip"></span>首先在Google Compute Engine上安裝pip<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="首先在Google_Compute_Engine上安裝pip"></span>首先在Google Compute Engine上安裝pip<span class="ez-toc-section-end"></span></h3>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
 		<div id="urvanov-syntax-highlighter-6a6e017d1f921357487013" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
@@ -264,7 +245,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- [Format Time: 0.0034 seconds] -->
 
 <p></p>
-<h3><span class="ez-toc-section" id="%E5%AE%89%E8%A3%9Dselenium"></span>安裝selenium<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="安裝selenium"></span>安裝selenium<span class="ez-toc-section-end"></span></h3>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
 		<div id="urvanov-syntax-highlighter-6a6e017d1f935485172360" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
@@ -287,7 +268,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- [Format Time: 0.0002 seconds] -->
 
 <p></p>
-<h3><span class="ez-toc-section" id="%E5%AE%89%E8%A3%9DChrome%E7%80%8F%E8%A6%BD%E5%99%A8"></span>安裝Chrome瀏覽器<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="安裝Chrome瀏覽器"></span>安裝Chrome瀏覽器<span class="ez-toc-section-end"></span></h3>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
 		<div id="urvanov-syntax-highlighter-6a6e017d1f939327391675" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
@@ -310,7 +291,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- [Format Time: 0.0002 seconds] -->
 
 <p></p>
-<h3><span class="ez-toc-section" id="%E5%AE%89%E8%A3%9DChrome_Driver"></span>安裝Chrome Driver<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="安裝Chrome_Driver"></span>安裝Chrome Driver<span class="ez-toc-section-end"></span></h3>
 <ol>
 <li>自動安裝Chrome Driver</li>
 </ol>
@@ -376,7 +357,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <ul>
 <li style="list-style-type: none;">
 <ul>
-<li>首先到 <a href="http://chromedriver.chromium.org/">http://chromedriver.chromium.org/</a> 下載最新的Chrome版本Driver，並上傳到VM虛擬主機上，如果這時候運行程式的話會噴出permission denied的權限錯誤，這時候在輸入以下指令就會可以執行囉</li>
+<li>首先到 <a href="https://chromedriver.chromium.org/">http://chromedriver.chromium.org/</a> 下載最新的Chrome版本Driver，並上傳到VM虛擬主機上，如果這時候運行程式的話會噴出permission denied的權限錯誤，這時候在輸入以下指令就會可以執行囉</li>
 </ul>
 </li>
 </ul>
@@ -431,7 +412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <p>以上安裝完就可以運行看看，如果print出google的網頁標題的話，恭喜你代表就成功囉！</p>
 <p></p>
-<h3><span class="ez-toc-section" id="%E4%BB%A5%E4%B8%8B%E6%98%AF%E6%88%91%E9%80%9A%E5%B8%B8%E9%82%84%E6%9C%83%E5%AE%89%E8%A3%9D%E7%9A%84library"></span>以下是我通常還會安裝的library<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="以下是我通常還會安裝的library"></span>以下是我通常還會安裝的library<span class="ez-toc-section-end"></span></h3>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
 		<div id="urvanov-syntax-highlighter-6a6e017d1f94c341880041" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
@@ -573,23 +554,21 @@ driver.close()</div>
 
 
 
-<script src="../../../../assets/js/components/sidebar.js"></script><!-- #secondary -->
+<script src="../../../../assets/js/components/sidebar.js?v=20260803-1"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../../../assets/js/components/footer.js"></script>
+<script src="../../../../assets/js/components/footer.js?v=20260803-1"></script>
 
 	<!-- #colophon -->
 
 
 </div><!-- #page -->
 
-<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a><script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/sydney\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
+<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
 <!-- HFCM by 99 Robots - Snippet # 1: 文章尾部 作者版位 -->
 <script>
 const newHtml = `
@@ -604,10 +583,10 @@ const newHtml = `
                  height="150"
 
                  alt="Max Su"
-                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="https://www.maxlist.xyz/wp-content/uploads/2023/06/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="/wp-content/uploads/2023/06/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
                  width="150"
                  height="150"
-                 src="https://www.maxlist.xyz/wp-content/uploads/2023/06/Max-Su-400x400-1.png"
+                 src="/wp-content/uploads/2023/06/Max-Su-400x400-1.png"
                  alt="Max Su"
                  style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></noscript>
           </figure>
@@ -634,7 +613,7 @@ const newHtml = `
     <div class="elementor-element elementor-element-0316620 elementor-widget elementor-widget-text-editor">
       <div class="elementor-widget-container">
         <div class="elementor-text-editor elementor-clearfix" style="text-align: center; margin: 20px 0;">
-          <a href="https://www.maxlist.xyz/2020/01/01/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+          <a href="/2020/01/01/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
         </div>
       </div>
     </div>
@@ -652,14 +631,14 @@ if (entryContent) {
 <script>
 (function() {
     // 1. 取得當前網址並移除參數
-    const currentUrl = window.location.origin + window.location.pathname;
+    const currentUrl = document.querySelector('link[rel="canonical"]')?.href || (window.location.origin + window.location.pathname);
 
     // 2. AI 配置 (Claude 使用嵌入式 SVG，其他使用圖片)
     const aiTools = [
-        { name: 'ChatGPT', color: '#000000', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
-        { name: 'Perplexity', color: '#14343B', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
-        { name: 'Google AI', color: '#1A73E8', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
-        { name: 'Grok', color: '#313131', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
+        { name: 'ChatGPT', color: '#000000', icon: '/wp-content/uploads/2025/12/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
+        { name: 'Perplexity', color: '#14343B', icon: '/wp-content/uploads/2025/12/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
+        { name: 'Google AI', color: '#1A73E8', icon: '/wp-content/uploads/2025/12/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
+        { name: 'Grok', color: '#313131', icon: '/wp-content/uploads/2025/12/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
         {
             name: 'Claude',
             color: '#DA714F',
@@ -700,7 +679,10 @@ if (entryContent) {
         btnContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 10px;';
 
         aiTools.forEach(tool => {
-            const btn = document.createElement('button');
+            const btn = document.createElement('a');
+            btn.href = `${tool.prompt}${encodeURIComponent(currentUrl)}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
             btn.style.cssText = `
                 padding: 10px 18px;
                 border-radius: 8px;
@@ -714,6 +696,9 @@ if (entryContent) {
                 gap: 10px;
                 font-weight: 600;
                 transition: transform 0.2s, opacity 0.2s;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             `;
 
@@ -725,6 +710,12 @@ if (entryContent) {
             } else {
                 const img = document.createElement('img');
                 img.src = tool.icon;
+                img.alt = '';
+                img.setAttribute('aria-hidden', 'true');
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
                 img.style.width = '18px';
                 img.style.height = '18px';
                 img.style.objectFit = 'contain';
@@ -753,9 +744,6 @@ if (entryContent) {
                         eventLabel: tool.name // 動態帶入 AI 工具名稱
                     });
                 console.log(tool.name)
-
-                // 2. 開啟新分頁
-                window.open(`${tool.prompt}${encodeURIComponent(currentUrl)}`, '_blank');
             };
 
             btnContainer.appendChild(btn);
@@ -830,4 +818,4 @@ lazySizes.cfg.nativeLoading={setLoadingAttribute:true,disableListeners:{scroll:t
 
 
 
-<script data-maxlist-offline="true" src="../../../../assets/js/offline.js?v=20260802-5"></script></body></html>
+<script data-maxlist-offline="true" src="../../../../assets/js/offline.js?v=20260802-7"></script></body></html>

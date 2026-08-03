@@ -6,6 +6,8 @@ import { writeFileEnsured } from "./lib.mjs";
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
 const REPORT_FILE = path.join(REPO_ROOT, "reports", "validation.json");
+const EXPECTED_GTM = "GTM-WSG8N3Q";
+const EXPECTED_GA4 = "G-YR986G8PX3";
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -27,8 +29,12 @@ async function exists(file) {
   }
 }
 
+function plainText(value) {
+  return value.replace(/\s+/g, " ").replace(/\u00a0/g, " ").trim();
+}
+
 function localTarget(reference, sourceFile) {
-  if (!reference || reference.startsWith("#") || reference.startsWith("data:")) return null;
+  if (!reference || reference.startsWith("data:")) return null;
   if (/^(mailto|tel|javascript):/i.test(reference)) return null;
   let url;
   try {
@@ -59,13 +65,24 @@ const offlineCoverage = { runtime: 0, pagesWithoutPreloader: 0 };
 const internalLinksOpeningNewTabs = [];
 const offlineRootResourceReferences = [];
 const offlineRootCssReferences = [];
-let ga4Pages = 0;
+const brokenInternalFragments = [];
+const fragmentReferences = [];
+const unexpectedForms = [];
+const missingDescriptions = [];
+const missingIndexableH1 = [];
+const missingImageAlts = [];
+const externalStatsScripts = [];
+const backendScriptReferences = [];
+const insecureSameSiteScriptReferences = [];
+const indexableTitles = new Map();
 let gtmPages = 0;
 let canonicalPages = 0;
 
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   const $ = load(html, { decodeEntities: false });
+  const relativeFile = path.relative(REPO_ROOT, file);
+  const noindex = /(?:^|,)\s*noindex\b/i.test($('meta[name="robots"]').attr("content") ?? "");
   const references = [];
   const selectors = [
     ["a[href]", "href"],
@@ -104,6 +121,37 @@ for (const file of htmlFiles) {
     });
   }
 
+  $('a[href*="#"]').each((_index, element) => {
+    const reference = $(element).attr("href") ?? "";
+    if (reference && reference !== "#") fragmentReferences.push({ file, reference });
+  });
+  $("form").each((_index, element) => {
+    if ($(element).hasClass("search-form") || $(element).is("[data-static-search-form]")) return;
+    unexpectedForms.push({ file: relativeFile, class: $(element).attr("class") ?? "" });
+  });
+  if (!$('meta[name="description"][content]').length) missingDescriptions.push(relativeFile);
+  if (!noindex && !$("h1").length) missingIndexableH1.push(relativeFile);
+  if (!noindex) {
+    const title = $("title").text().replace(/\s+/g, " ").trim();
+    if (title) indexableTitles.set(title, [...(indexableTitles.get(title) ?? []), relativeFile]);
+  }
+  $("img").each((_index, element) => {
+    if ($(element).parents("noscript").length) return;
+    if (!($(element).attr("alt") ?? "").trim()) missingImageAlts.push(relativeFile);
+  });
+  $('script[src*="stats.wp.com"]').each((_index, element) => {
+    externalStatsScripts.push({ file: relativeFile, source: $(element).attr("src") ?? "" });
+  });
+  $("script").each((_index, element) => {
+    const script = ($(element).html() ?? "").replaceAll("\\/", "/");
+    if (/wp-admin|wc-ajax|comments-post\.php|xmlrpc\.php/i.test(script)) {
+      backendScriptReferences.push(relativeFile);
+    }
+    if (/http:\/\/(?:www\.)?maxlist\.xyz/i.test(script)) {
+      insecureSameSiteScriptReferences.push(relativeFile);
+    }
+  });
+
   for (const reference of references) {
     if (/\/wp-(admin|json|comments-post)|\/xmlrpc\.php|[?&]s=/.test(reference)) {
       dynamicReferences.push({ file: path.relative(REPO_ROOT, file), reference });
@@ -128,16 +176,80 @@ for (const file of htmlFiles) {
     }
   });
 
-  if ($('script[src$="assets/js/components/header.js"]').length) componentCoverage.header += 1;
-  if ($('script[src$="assets/js/components/sidebar.js"]').length) componentCoverage.sidebar += 1;
-  if ($('script[src$="assets/js/components/footer.js"]').length) componentCoverage.footer += 1;
+  if ($('script[src*="assets/js/components/header.js"]').length) componentCoverage.header += 1;
+  if ($('script[src*="assets/js/components/sidebar.js"]').length) componentCoverage.sidebar += 1;
+  if ($('script[src*="assets/js/components/footer.js"]').length) componentCoverage.footer += 1;
   if ($('script[data-maxlist-offline="true"][src*="assets/js/offline.js"]').length) {
     offlineCoverage.runtime += 1;
   }
   if (!$(".preloader").length) offlineCoverage.pagesWithoutPreloader += 1;
-  if (/G-[A-Z0-9]+|gtag\s*\(/i.test(html)) ga4Pages += 1;
-  if (/GTM-[A-Z0-9]+|googletagmanager\.com\/gtm\.js/i.test(html)) gtmPages += 1;
+  if (html.includes(EXPECTED_GTM)) gtmPages += 1;
   if ($('link[rel="canonical"]').length) canonicalPages += 1;
+}
+
+const duplicateIndexableTitles = [...indexableTitles]
+  .filter(([, files]) => files.length > 1)
+  .map(([title, files]) => ({ title, files }));
+
+const archiveNavigation = { linksChecked: 0, yearMismatches: [], missingArchives: [] };
+for (const component of ["sidebar", "footer"]) {
+  const componentFile = path.join(REPO_ROOT, "components", `${component}.html`);
+  const $component = load(await readFile(componentFile, "utf8"), { decodeEntities: false });
+  for (const element of $component('a[href]').toArray()) {
+    const anchor = $component(element);
+    const year = plainText(anchor.text()).match(/^(\d{4})\b/)?.[1];
+    if (!year) continue;
+    archiveNavigation.linksChecked += 1;
+    const reference = anchor.attr("href") ?? "";
+    let linkedYear = "";
+    try {
+      linkedYear = new URL(reference, "https://www.maxlist.xyz/").pathname.match(/^\/(\d{4})\/$/)?.[1] ?? "";
+    } catch {
+      linkedYear = "";
+    }
+    if (linkedYear !== year) {
+      archiveNavigation.yearMismatches.push({ component, label: plainText(anchor.text()), reference });
+      continue;
+    }
+    const target = localTarget(reference, path.join(DOCS_ROOT, "index.html"));
+    if (!target || !(await exists(target))) {
+      archiveNavigation.missingArchives.push({ component, label: plainText(anchor.text()), reference });
+    }
+  }
+}
+
+const idsByFile = new Map();
+async function idsFor(file) {
+  if (idsByFile.has(file)) return idsByFile.get(file);
+  const html = await readFile(file, "utf8");
+  const $ = load(html, { decodeEntities: false });
+  const ids = new Set();
+  $("[id]").each((_index, element) => {
+    const id = $(element).attr("id") ?? "";
+    ids.add(id);
+    try {
+      ids.add(decodeURIComponent(id));
+    } catch {
+      // Preserve malformed legacy identifiers.
+    }
+  });
+  idsByFile.set(file, ids);
+  return ids;
+}
+
+for (const { file, reference } of fragmentReferences) {
+  const target = localTarget(reference, file);
+  if (!target || !(await exists(target))) continue;
+  let fragment;
+  try {
+    const sourceRelative = path.relative(DOCS_ROOT, file).split(path.sep).join("/");
+    fragment = decodeURIComponent(new URL(reference, `https://www.maxlist.xyz/${sourceRelative}`).hash.slice(1));
+  } catch {
+    fragment = reference.split("#").at(-1) ?? "";
+  }
+  if (fragment && !(await idsFor(target)).has(fragment)) {
+    brokenInternalFragments.push({ file: path.relative(REPO_ROOT, file), reference });
+  }
 }
 
 for (const file of allFiles.filter((candidate) => candidate.endsWith(".css"))) {
@@ -148,13 +260,60 @@ for (const file of allFiles.filter((candidate) => candidate.endsWith(".css"))) {
   }
 }
 
+const headerComponentSource = await readFile(
+  path.join(DOCS_ROOT, "assets", "js", "components", "header.js"),
+  "utf8"
+);
+const searchIndexSource = await readFile(path.join(DOCS_ROOT, "assets", "js", "search-index.js"), "utf8");
+const searchIndexPayload = searchIndexSource.match(/^window\.MAXLIST_SEARCH_INDEX=(.*);\s*$/s)?.[1];
+let searchIndexDocuments = 0;
+try {
+  const parsed = JSON.parse(searchIndexPayload ?? "[]");
+  if (Array.isArray(parsed)) searchIndexDocuments = parsed.length;
+} catch {
+  searchIndexDocuments = 0;
+}
+const cname = (await readFile(path.join(DOCS_ROOT, "CNAME"), "utf8")).trim();
+const obsoleteCommercePaths = [];
+for (const relative of ["cart", "checkout", "my-account", "shop"]) {
+  if (await exists(path.join(DOCS_ROOT, relative))) obsoleteCommercePaths.push(relative);
+}
+const generatedFeatures = {
+  staticFixesStylesheet:
+    headerComponentSource.includes('../../css/static-fixes.css') &&
+    (await exists(path.join(DOCS_ROOT, "assets", "css", "static-fixes.css"))),
+  searchIndexDocuments,
+  cname,
+  obsoleteCommercePaths
+};
+
 const report = {
   generatedAt: new Date().toISOString(),
   files: { total: allFiles.length, html: htmlFiles.length, assets: allFiles.length - htmlFiles.length },
   componentCoverage,
   offlineCoverage,
-  analytics: { pagesWithGa4: ga4Pages, pagesWithGtm: gtmPages },
-  seo: { pagesWithCanonical: canonicalPages },
+  analytics: {
+    pagesWithGtm: gtmPages,
+    gtmContainer: EXPECTED_GTM,
+    ga4Delivery: "via-gtm",
+    ga4MeasurementId: EXPECTED_GA4
+  },
+  seo: {
+    pagesWithCanonical: canonicalPages,
+    missingDescriptions,
+    missingIndexableH1,
+    missingImageAlts: [...new Set(missingImageAlts)],
+    duplicateIndexableTitles,
+    brokenInternalFragments
+  },
+  generatedFeatures,
+  archiveNavigation,
+  security: {
+    unexpectedForms,
+    externalStatsScripts,
+    backendScriptReferences,
+    insecureSameSiteScriptReferences
+  },
   internalLinksOpeningNewTabs,
   offlineRootResourceReferences,
   offlineRootCssReferences,
@@ -165,11 +324,30 @@ await writeFileEnsured(REPORT_FILE, `${JSON.stringify(report, null, 2)}\n`);
 console.log(JSON.stringify(report, null, 2));
 if (
   missing.size > 0 ||
+  brokenInternalFragments.length > 0 ||
+  unexpectedForms.length > 0 ||
+  missingDescriptions.length > 0 ||
+  missingIndexableH1.length > 0 ||
+  missingImageAlts.length > 0 ||
+  duplicateIndexableTitles.length > 0 ||
+  externalStatsScripts.length > 0 ||
+  backendScriptReferences.length > 0 ||
+  insecureSameSiteScriptReferences.length > 0 ||
   internalLinksOpeningNewTabs.length > 0 ||
   offlineRootResourceReferences.length > 0 ||
   offlineRootCssReferences.length > 0 ||
+  componentCoverage.header !== htmlFiles.length ||
+  componentCoverage.footer !== htmlFiles.length ||
+  gtmPages !== htmlFiles.length ||
+  canonicalPages !== htmlFiles.length - 1 ||
+  !generatedFeatures.staticFixesStylesheet ||
+  generatedFeatures.searchIndexDocuments < 1 ||
+  generatedFeatures.cname !== "www.maxlist.xyz" ||
+  generatedFeatures.obsoleteCommercePaths.length > 0 ||
   offlineCoverage.runtime !== htmlFiles.length ||
   offlineCoverage.pagesWithoutPreloader !== htmlFiles.length
+  || archiveNavigation.yearMismatches.length > 0
+  || archiveNavigation.missingArchives.length > 0
 ) {
   process.exitCode = 1;
 }

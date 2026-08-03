@@ -1,25 +1,49 @@
 {
-  "generatedAt": "2026-08-02T05:36:31.430Z",
+  "generatedAt": "2026-08-03T05:53:25.194Z",
   "files": {
-    "total": 10384,
-    "html": 850,
-    "assets": 9534
+    "total": 10385,
+    "html": 847,
+    "assets": 9538
   },
   "componentCoverage": {
-    "header": 850,
-    "sidebar": 182,
-    "footer": 850
+    "header": 847,
+    "sidebar": 180,
+    "footer": 847
   },
   "offlineCoverage": {
-    "runtime": 850,
-    "pagesWithoutPreloader": 850
+    "runtime": 847,
+    "pagesWithoutPreloader": 847
   },
   "analytics": {
-    "pagesWithGa4": 850,
-    "pagesWithGtm": 850
+    "pagesWithGtm": 847,
+    "gtmContainer": "GTM-WSG8N3Q",
+    "ga4Delivery": "via-gtm",
+    "ga4MeasurementId": "G-YR986G8PX3"
   },
   "seo": {
-    "pagesWithCanonical": 849
+    "pagesWithCanonical": 846,
+    "missingDescriptions": [],
+    "missingIndexableH1": [],
+    "missingImageAlts": [],
+    "duplicateIndexableTitles": [],
+    "brokenInternalFragments": []
+  },
+  "generatedFeatures": {
+    "staticFixesStylesheet": true,
+    "searchIndexDocuments": 226,
+    "cname": "www.maxlist.xyz",
+    "obsoleteCommercePaths": []
+  },
+  "archiveNavigation": {
+    "linksChecked": 18,
+    "yearMismatches": [],
+    "missingArchives": []
+  },
+  "security": {
+    "unexpectedForms": [],
+    "externalStatsScripts": [],
+    "backendScriptReferences": [],
+    "insecureSameSiteScriptReferences": []
   },
   "internalLinksOpeningNewTabs": [],
   "offlineRootResourceReferences": [],

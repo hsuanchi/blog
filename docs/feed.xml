@@ -5,217 +5,217 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 02 Aug 2026 05:36:28 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2026 17:01:14 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Looker Studio 教學 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description></description>
+      <description>分類: Looker Studio 教學 &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-l…</description>
     </item>
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>looker studio 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/looker-studio/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/looker-studio/</guid>
-      <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Looker studio 教學 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/looker-studio-%E6%95%99%E5%AD%B8/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/looker-studio-%E6%95%99%E5%AD%B8/</guid>
-      <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>數據分析 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90/</guid>
-      <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description></description>
+      <description>分類: All posts &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-large-th…</description>
     </item>
     <item>
       <title>[Looker Studio 教學] Search Console 網站曝光/網址曝光 如何選擇？ - Max行銷誌</title>
       <link>https://www.maxlist.xyz/2026/03/08/looker-studio-gsc-data-source/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/2026/03/08/looker-studio-gsc-data-source/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:01 GMT</pubDate>
-      <description>當你在 Looker Studio 串接 Google Search Console 時，會發現系統提供兩種不同的資料來源： 1. 什麼是「網站曝光 (Site Impression)」 定義 網站曝光（Site Impression）是以 整個網站為單位統計搜尋結果中的曝光與點擊數據。當使用者在搜尋引擎輸入關鍵字時，只要你的網站有任何頁面出現在搜尋結果中，就會被計算為曝光。這類資料會將網站的整體搜尋表現進行彙總，而不會細分到實際排名的頁面網址。 可使用的維度 在 Looker Studio 中，網站曝光可以使用以下維度進行分析： 需要注意的是，網站曝光資料 沒有 Page（頁面）維度，因此無法直接分析某個關鍵字是由哪一個網址取得排名。 2. 什麼是「網址曝光 (URL Impression […]</description>
-    </item>
-    <item>
-      <title>author 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/author/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/author/</guid>
-      <pubDate>Fri, 19 Dec 2025 16:14:34 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>max行銷誌 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/max%E8%A1%8C%E9%8A%B7%E8%AA%8C/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/max%E8%A1%8C%E9%8A%B7%E8%AA%8C/</guid>
-      <pubDate>Fri, 19 Dec 2025 16:14:34 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>關於作者 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/%E9%97%9C%E6%96%BC%E4%BD%9C%E8%80%85/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/%E9%97%9C%E6%96%BC%E4%BD%9C%E8%80%85/</guid>
-      <pubDate>Fri, 19 Dec 2025 16:14:34 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>AI流量追蹤 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/ai%E6%B5%81%E9%87%8F%E8%BF%BD%E8%B9%A4/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/ai%E6%B5%81%E9%87%8F%E8%BF%BD%E8%B9%A4/</guid>
-      <pubDate>Sat, 13 Dec 2025 06:08:34 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>looke 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/looke/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/looke/</guid>
-      <pubDate>Sat, 13 Dec 2025 06:08:34 GMT</pubDate>
-      <description></description>
+      <description>當你在 Looker Studio 串接 Google Search Console 時，會發現系統提供兩種不同的資料來源： 1. 什麼是「網站曝光 (Site Impression)」 定義 網站曝光（Site Impression）是以 整個網站為單位統計搜尋結果中的曝光與點擊數據。當使用者在搜尋引擎輸入關鍵字時…</description>
     </item>
     <item>
       <title>Google Tag Manager 教學 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/</guid>
       <pubDate>Sat, 13 Dec 2025 05:45:23 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>Google Tag Manager 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/google-tag-manager/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/google-tag-manager/</guid>
-      <pubDate>Sat, 13 Dec 2025 05:45:23 GMT</pubDate>
-      <description></description>
+      <description>分類: Google Tag Manager 教學 &lt;img width=&quot;1910&quot; height=&quot;1072&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/GTM-數據追蹤學-入門指南.jpg&quot; class=&quot;attachment-large-t…</description>
     </item>
     <item>
       <title>AI 流量怎麼追蹤？用 GA4 + Looker 建立 AI 流量分析儀表板 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/2025/12/13/looker-ai-traffic/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/2025/12/13/looker-ai-traffic/</guid>
       <pubDate>Sat, 13 Dec 2025 03:59:27 GMT</pubDate>
-      <description>AI 已經開始帶來網站流量，但在 GA4 裡往往無法直接看出來。若想知道 AI 帶來多少流量、進到哪些頁面，以及使用者是否真的閱讀內容，就必須把 AI 流量獨立分析。這篇文章會用 GA4 與 Looker，帶你建立一套可實際追蹤 AI 流量的分析儀表板。 這篇文章會帶你做到什麼？ 第一張 Dashboard 會幫助你監測 AI 流量在每週或每月的成長趨勢，了解不同 AI 工具帶來的流量變化 第二張 Dashboard 則聚焦在 AI 流量實際進站的頁面與使用者行為，讓你看清楚 AI 把人帶到哪些內容，以及這些使用者是否真的停下來閱讀 什麼是 AI 流量？先定義，後分析 我們判斷 AI 流量的方式是使用 GA4 的 Session source / medium。 根據 source / me […]</description>
-    </item>
-    <item>
-      <title>lookerstudio 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/lookerstudio/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/lookerstudio/</guid>
-      <pubDate>Wed, 05 Nov 2025 03:14:23 GMT</pubDate>
-      <description></description>
+      <description>AI 已經開始帶來網站流量，但在 GA4 裡往往無法直接看出來。若想知道 AI 帶來多少流量、進到哪些頁面，以及使用者是否真的閱讀內容，就必須把 AI 流量獨立分析。這篇文章會用 GA4 與 Looker，帶你建立一套可實際追蹤 AI 流量的分析儀表板。 這篇文章會帶你做到什麼？ 第一張 Dashboard 會幫助你…</description>
     </item>
     <item>
       <title>[超完整表格] Looker Studio、Tableau 與 Power BI 比較：導入前的四個考慮要素 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/2025/11/05/lookerstudio-vs-tableau-vs-powerbi/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/2025/11/05/lookerstudio-vs-tableau-vs-powerbi/</guid>
       <pubDate>Wed, 05 Nov 2025 03:11:40 GMT</pubDate>
-      <description>本篇整理了台灣最常被使用的三個 BI 工具：Looker Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Looker Studio vs Tableau vs Power BI 比較表格： 比較面向 Looker Studio Tableau Power BI 串接資料來源 支援超過 1000+ 資料來源，尤其是 Google 生態系的資料非常完整：如 Google Analytics、BigQuery 等(查看文件) 支援多種資料來源含資料庫、檔案、雲端，強調彈性與跨來源關聯(查看文件) 支援超過 100 種，包括 Microsoft Azure、生態系深度整合(查看文件) 導 […]</description>
+      <description>本篇整理了台灣最常被使用的三個 BI 工具：Looker Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Looker Studio vs Tableau vs Power BI 比較表格： 比較面向 Lo…</description>
     </item>
     <item>
       <title>Looker Studio 教學 彙整 - 第 2 頁，總計 2 頁 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</guid>
       <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>community visualization 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/community-visualization/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/community-visualization/</guid>
-      <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>data studio 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/data-studio/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/data-studio/</guid>
-      <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>社群視覺呈現 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/%E7%A4%BE%E7%BE%A4%E8%A6%96%E8%A6%BA%E5%91%88%E7%8F%BE/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/%E7%A4%BE%E7%BE%A4%E8%A6%96%E8%A6%BA%E5%91%88%E7%8F%BE/</guid>
-      <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>kobo 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/kobo/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/kobo/</guid>
-      <pubDate>Sun, 02 Nov 2025 13:45:22 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>kobo格式 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/kobo%E6%A0%BC%E5%BC%8F/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/kobo%E6%A0%BC%E5%BC%8F/</guid>
-      <pubDate>Sun, 02 Nov 2025 13:45:22 GMT</pubDate>
-      <description></description>
-    </item>
-    <item>
-      <title>電子書 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/%E9%9B%BB%E5%AD%90%E6%9B%B8/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/%E9%9B%BB%E5%AD%90%E6%9B%B8/</guid>
-      <pubDate>Sun, 02 Nov 2025 13:45:22 GMT</pubDate>
-      <description></description>
+      <description>分類: Looker Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
     </item>
     <item>
       <title>一文搞懂 Kobo 電子書格式：EPUB、Kepub、版本差異與閱讀體驗 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/2025/11/02/kobo-epub-vs-kepub/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/2025/11/02/kobo-epub-vs-kepub/</guid>
       <pubDate>Sun, 02 Nov 2025 13:43:21 GMT</pubDate>
-      <description>對許多剛開始閱讀電子書的人來說，「格式」是一個常被忽略但非常關鍵的主題。不同平台（如 Kindle、Kobo、Google Play Books）使用的格式不盡相同，也影響到書籍是否能跨裝置閱讀。 當你在 Kobo 官方商店購買電子書後，系統會依出版社與授權方式提供不同的檔案格式。 可以進入書籍商品頁下拉，底部會出現電子書詳細資料： ☝🏻可以從圖中看到這本書顯示：EPUB 3 (Adobe DRM)，接下來我們會分別介紹什麼是 EPUB？ 3？ 和 Adobe DRM 又是什麼。 1. Kobo 電子書格式主要分為兩類 (EPUB / Kepub)： 類型 副檔名 特性 Kepub（Kobo EPUB） .kepub.epub Kobo 專屬版本，功能完整（顯示進度、註解同步、閱讀時間統計等 […]</description>
+      <description>對許多剛開始閱讀電子書的人來說，「格式」是一個常被忽略但非常關鍵的主題。不同平台（如 Kindle、Kobo、Google Play Books）使用的格式不盡相同，也影響到書籍是否能跨裝置閱讀。 當你在 Kobo 官方商店購買電子書後，系統會依出版社與授權方式提供不同的檔案格式。 可以進入書籍商品頁下拉，底部會出現…</description>
     </item>
     <item>
       <title>n8n 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/n8n/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/n8n/</guid>
       <pubDate>Wed, 29 Oct 2025 09:26:36 GMT</pubDate>
-      <description></description>
+      <description>分類: n8n &lt;img width=&quot;1902&quot; height=&quot;1064&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2025/10/n8n重設帳號密碼zeabur篇.jpg&quot; class=&quot;attachment-large-thumb size-large-…</description>
     </item>
     <item>
-      <title>n8n教學 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/n8n%E6%95%99%E5%AD%B8/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/n8n%E6%95%99%E5%AD%B8/</guid>
-      <pubDate>Wed, 29 Oct 2025 09:26:36 GMT</pubDate>
-      <description></description>
+      <title>n8n 圖文教學：3 分鐘重新設定帳號密碼 (Zeabur 介面) - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2025/10/29/n8n-password-reset/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2025/10/29/n8n-password-reset/</guid>
+      <pubDate>Wed, 29 Oct 2025 07:45:05 GMT</pubDate>
+      <description>本篇教學將帶你快速重新設定 n8n 帳號密碼！將帶大家在 Zeabur 介面上輸入指令，讓使用者重設密碼，這個流程絕對不會導致 workflow 和資料遺失，單純是重設密碼而已，請放心使用。終於不用再怕忘記密碼了🥹 Step 1: 開啟 Zeabur 指令終端機 首先，登入 Zeabur 的管理後台，在左側專案列表…</description>
     </item>
     <item>
-      <title>n8n重設帳號密碼 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/n8n%E9%87%8D%E8%A8%AD%E5%B8%B3%E8%99%9F%E5%AF%86%E7%A2%BC/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/n8n%E9%87%8D%E8%A8%AD%E5%B8%B3%E8%99%9F%E5%AF%86%E7%A2%BC/</guid>
-      <pubDate>Wed, 29 Oct 2025 09:26:36 GMT</pubDate>
-      <description></description>
+      <title>【圖文教學】如何授權 Merchant Center 超級用戶權限 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2025/07/29/google-merchant-center-superuser/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2025/07/29/google-merchant-center-superuser/</guid>
+      <pubDate>Tue, 29 Jul 2025 08:44:43 GMT</pubDate>
+      <description>最近遇到需要分享 Google Merchant Center 超級用戶權限的問題，花了很多時間研究，也和 GPT 聊很久，但 GMC 介面上把權限分享藏得很深，實在太難找了 🤣 所以寫了這篇，分享給目前也在卡關的你，希望有幫助！ Step 1 設定 &gt; 用戶訪問權限 首先，進入 Google Merchant C…</description>
     </item>
     <item>
-      <title>zeabur 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/zeabur/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/zeabur/</guid>
-      <pubDate>Wed, 29 Oct 2025 09:26:36 GMT</pubDate>
-      <description></description>
+      <title>數據自動化 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
+      <pubDate>Thu, 03 Jul 2025 05:15:31 GMT</pubDate>
+      <description>分類: 數據自動化 &lt;img width=&quot;1910&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2025/07/數據自動化-Meta廣告.jpg&quot; class=&quot;attachment-large-thumb size-large-th…</description>
     </item>
     <item>
-      <title>n8n升級 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/n8n%E5%8D%87%E7%B4%9A/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/n8n%E5%8D%87%E7%B4%9A/</guid>
-      <pubDate>Wed, 29 Oct 2025 09:24:46 GMT</pubDate>
-      <description></description>
+      <title>零成本，每天定時撈取 Meta 廣告數據 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2025/07/03/auto-fetch-meta-ads/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2025/07/03/auto-fetch-meta-ads/</guid>
+      <pubDate>Thu, 03 Jul 2025 05:05:29 GMT</pubDate>
+      <description>本篇會帶大家撈取 Meta 廣告數據，設定完成後每天會自動抓取數據，並存在 Google Sheet 中！我們使用的是 Google Sheet 內建的 App Script，完全不需要付任何的費用，而且只需要一次設定，之後每天都可以輕鬆看廣告數據報表囉！ 一、取得 Meta 廣告數據權限 步驟 1：前往 Meta…</description>
     </item>
     <item>
-      <title>n8n更新 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/tag/n8n%E6%9B%B4%E6%96%B0/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/tag/n8n%E6%9B%B4%E6%96%B0/</guid>
-      <pubDate>Wed, 29 Oct 2025 09:24:46 GMT</pubDate>
-      <description></description>
+      <title>Python 基礎教學 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/python-base/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/python-base/</guid>
+      <pubDate>Tue, 27 May 2025 02:16:33 GMT</pubDate>
+      <description>分類: Python 基礎教學 &lt;img width=&quot;1912&quot; height=&quot;1066&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/04/FastAPI-Contributor.jpg&quot; class=&quot;attachment-large-thumb…</description>
+    </item>
+    <item>
+      <title>n8n 圖文教學： 一鍵更新升級 n8n 版本，超容易！ - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2025/05/23/n8n-update-version/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2025/05/23/n8n-update-version/</guid>
+      <pubDate>Fri, 23 May 2025 03:34:37 GMT</pubDate>
+      <description>在建立自己的 n8n 自動化流程時，總是會看到小提醒你需要更新 n8n 版本囉！別擔心，本篇教學會帶著你一鍵快速的升級 n8n 的版本，如果你還沒有部署 n8n 在主機上的話，可以參考之前這篇 「n8n 圖文教學： 3 分鐘安裝部署n8n」！ 如何升級 n8n 版本 更新 n8n 的版本方式主要有兩種，取決於你當初是…</description>
+    </item>
+    <item>
+      <title>n8n 圖文教學： 3 分鐘安裝部署 n8n，完成第一個新手任務！ - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2025/05/12/n8n-deployment/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2025/05/12/n8n-deployment/</guid>
+      <pubDate>Mon, 12 May 2025 06:23:39 GMT</pubDate>
+      <description>本篇教學將帶你快速安裝 n8n：將帶大家使用 Zeabur 部署自己的 n8n，過程中不需要自己架設伺服器，也不用處理繁瑣的網路設定與憑證 SSL 安裝。只要幾個按鍵簡單步驟，你就能在 3 分鐘內啟動 n8n，自由串接各種服務、開始你的工作流程自動化。 選擇架設 n8n 的方式 要使用 n8n，首先你得決定把它「架在…</description>
+    </item>
+    <item>
+      <title>Python 數據分析 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/analytics/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/analytics/</guid>
+      <pubDate>Thu, 05 Sep 2024 12:09:26 GMT</pubDate>
+      <description>分類: Python 數據分析 &lt;img width=&quot;1896&quot; height=&quot;1066&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/08/電商小細節-1.jpg&quot; class=&quot;attachment-large-thumb size-large-t…</description>
+    </item>
+    <item>
+      <title>All posts 彙整 - 第 2 頁，總計 20 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/2/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/2/</guid>
+      <pubDate>Thu, 05 Sep 2024 12:09:26 GMT</pubDate>
+      <description>分類: All posts &lt;img width=&quot;1896&quot; height=&quot;1066&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/08/電商小細節-1.jpg&quot; class=&quot;attachment-large-thumb size-large-thu…</description>
+    </item>
+    <item>
+      <title>【電商小細節】頁面優化經驗談：細節決定成敗 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2024/08/05/page-optimize/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2024/08/05/page-optimize/</guid>
+      <pubDate>Mon, 05 Aug 2024 09:54:23 GMT</pubDate>
+      <description>▍不斷奔跑：更多實驗，更快成長 Airbnb、Amazon、Booking.com、Netflix 和 Uber 等都有著實驗文化精神。這種快速且持續的實驗和迭代，使產品能夠精確地滿足用戶需求並迅速應對市場變化。 Amazon 每年進行約 12,000 次實驗，甚至允許賣家進行商品頁面的 A/B 測試；Booking…</description>
+    </item>
+    <item>
+      <title>FastAPI Contributor 繁體中文翻譯計畫 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2024/04/14/fastapi-contributor/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2024/04/14/fastapi-contributor/</guid>
+      <pubDate>Sun, 14 Apr 2024 13:46:06 GMT</pubDate>
+      <description>嗨你好，我是 Max，很歡迎你一起參與 FastAPI 繁體中文翻譯計畫，希望這份紀錄對你在開始第一篇翻譯時有幫助 🙂 ㄧ. 起手式 Fork FastAPI 首先到 FastAPI (https://github.com/tiangolo/fastapi)，點擊右上角的 Fork 專案 接下來到本地終端機 git…</description>
+    </item>
+    <item>
+      <title>Python 資料庫教學 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/python-sql/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/python-sql/</guid>
+      <pubDate>Mon, 01 Apr 2024 09:22:35 GMT</pubDate>
+      <description>分類: Python 資料庫教學 &lt;img width=&quot;1888&quot; height=&quot;1060&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/04/關於-SQL-的一天.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
+    </item>
+    <item>
+      <title>SQL Query 的一天過得好嗎 (上)？ - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2024/04/01/a-day-of-sql/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2024/04/01/a-day-of-sql/</guid>
+      <pubDate>Mon, 01 Apr 2024 06:41:10 GMT</pubDate>
+      <description>這篇我們會從使用者下了 SQL 指令開始、路途中經過連線池 (connection pool)、解析器 (parser)、優化器 (optimizer)… 等的過程紀錄下，希望這篇文章有幫助到你 🙂 Phase 1 – Connection Pool (連線池) 1-1. 什麼是 Connection Pool？…</description>
+    </item>
+    <item>
+      <title>資料庫最常見的欄位：UUID - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2024/02/08/uuid/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2024/02/08/uuid/</guid>
+      <pubDate>Thu, 08 Feb 2024 05:23:11 GMT</pubDate>
+      <description>UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…</description>
+    </item>
+    <item>
+      <title>Git 教學 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/git-%E6%95%99%E5%AD%B8/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/git-%E6%95%99%E5%AD%B8/</guid>
+      <pubDate>Tue, 02 Jan 2024 15:26:55 GMT</pubDate>
+      <description>分類: Git 教學 &lt;img width=&quot;1916&quot; height=&quot;1070&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2022/12/Git-入門指南.jpg&quot; class=&quot;attachment-large-thumb size-large-thumb…</description>
+    </item>
+    <item>
+      <title>Python 數據分析 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/analytics/page/2/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/analytics/page/2/</guid>
+      <pubDate>Tue, 02 Jan 2024 15:20:26 GMT</pubDate>
+      <description>分類: Python 數據分析 &lt;img width=&quot;1272&quot; height=&quot;706&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/數據分析-blog-dashboard-部落格儀表板.jpg&quot; class=&quot;attachment-large-…</description>
+    </item>
+    <item>
+      <title>【數據分析】30 分鐘打造 GA4 即時報表 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/2023/07/01/ga4-realtime-dashboard/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/2023/07/01/ga4-realtime-dashboard/</guid>
+      <pubDate>Sat, 01 Jul 2023 05:17:50 GMT</pubDate>
+      <description>本篇教學會帶大家用 30 分鐘，打造一個 GA4 即時報表，過程只需要三個步驟，1. GA4 串接 BigQuery 2. 建立 GA4 檢視表 3. 串接 GA4 Dashboard。步驟非常簡單，不需要任何工程師的協助，就可以輕鬆完成的 GA4 即時報表。 首先我們來看最終「GA4 即時報表」成果如下，我們打造一…</description>
+    </item>
+    <item>
+      <title>All posts 彙整 - 第 3 頁，總計 20 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/3/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/3/</guid>
+      <pubDate>Fri, 23 Jun 2023 09:03:16 GMT</pubDate>
+      <description>分類: All posts &lt;img width=&quot;1914&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/05/GTM-教學-網頁觸發時機.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
+    </item>
+    <item>
+      <title>Google Tag Manager 教學 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/page/2/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/page/2/</guid>
+      <pubDate>Fri, 23 Jun 2023 08:59:42 GMT</pubDate>
+      <description>分類: Google Tag Manager 教學 &lt;img width=&quot;1892&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/05/GTM-入門第一堂課-GTM-埋設.jpg&quot; class=&quot;attachment-larg…</description>
+    </item>
+    <item>
+      <title>All posts 彙整 - 第 12 頁，總計 20 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/12/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/12/</guid>
+      <pubDate>Thu, 22 Jun 2023 05:11:39 GMT</pubDate>
+      <description>分類: All posts &lt;img width=&quot;1358&quot; height=&quot;756&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/python-async爬蟲.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
+    </item>
+    <item>
+      <title>Python 基礎教學 彙整 - 第 3 頁，總計 4 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/python-base/page/3/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/python-base/page/3/</guid>
+      <pubDate>Thu, 22 Jun 2023 05:10:10 GMT</pubDate>
+      <description>分類: Python 基礎教學 &lt;img width=&quot;1408&quot; height=&quot;788&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/Multi-processing-pool.jpg&quot; class=&quot;attachment-large-thumb…</description>
     </item>
   </channel>
 </rss>

@@ -12,7 +12,7 @@
 	var gtm4wp_datalayer_name = "dataLayer";
 	var dataLayer = dataLayer || [];
 </script>
-<!-- End Google Tag Manager for WordPress by gtm4wp.com --><script>window._wca = window._wca || [];</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
 
 	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>【Django教學】 如何在網頁上運行 python 腳本 - Max行銷誌</title>
@@ -20,7 +20,7 @@
 	<meta property="og:locale" content="zh_TW">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="【Django教學】 如何在網頁上運行 python 腳本 - Max行銷誌">
-	<meta property="og:description" content="為了解決如何在網頁上運行 python 腳本這問題，當時花費不少時間研究和踩過了不少坑，因此將步驟詳細記錄下來，希望能幫助到想利用網頁寫一個簡單的 python 程式的人。 如果有第一次接觸 Django 的朋友可以參考之前寫的這篇：[Django教學] 5分鐘快速入門，打造一個簡單Python網頁 &nbsp; 一. 安裝 Django Mac 版安裝 Django： pip install django &nbsp;#在終端機內輸入 Window 版安裝 Django: 官方網站連結：https://www.djangoproject.com/download/ 安裝好後創建第一個 Project： django-admin startproject first &nbsp;#在終端機內輸入 創建第一個 APP： c […]">
+	<meta property="og:description" content="為了解決如何在網頁上運行 python 腳本這問題，當時花費不少時間研究和踩過了不少坑，因此將步驟詳細記錄下來，希望能幫助到想利用網頁寫一個簡單的 python 程式的人。 如果有第一次接觸 Django 的朋友可以參考之前寫的這篇：[Django教學] 5分鐘快速入門，打造一個簡單Python網頁 一. 安裝 Dj…">
 	<meta property="og:url" content="https://www.maxlist.xyz/2019/01/15/django_python/">
 	<meta property="og:site_name" content="Max行銷誌">
 	<meta property="article:published_time" content="2019-01-15T13:58:34+00:00">
@@ -35,39 +35,20 @@
 	<meta name="twitter:data1" content="Max">
 	<meta name="twitter:label2" content="預估閱讀時間">
 	<meta name="twitter:data2" content="2 分鐘">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#article","isPartOf":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/"},"author":{"name":"Max","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"headline":"【Django教學】 如何在網頁上運行 python 腳本","datePublished":"2019-01-15T13:58:34+00:00","dateModified":"2020-04-10T04:29:56+00:00","mainEntityOfPage":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/"},"wordCount":204,"commentCount":2,"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"image":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","keywords":["django","django入門","django安裝","django教學","網頁python運行"],"articleSection":["All posts","Python Django 教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/2019/01/15/django_python/","url":"https://www.maxlist.xyz/2019/01/15/django_python/","name":"【Django教學】 如何在網頁上運行 python 腳本 - Max行銷誌","isPartOf":{"@id":"https://www.maxlist.xyz/#website"},"primaryImageOfPage":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"image":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","datePublished":"2019-01-15T13:58:34+00:00","dateModified":"2020-04-10T04:29:56+00:00","breadcrumb":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#breadcrumb"},"inLanguage":"zh-TW","potentialAction":[{"@type":"ReadAction","target":["https://www.maxlist.xyz/2019/01/15/django_python/"]}]},{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage","url":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","width":1650,"height":1100,"caption":"python_django"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"All posts","item":"https://www.maxlist.xyz/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/"},{"@type":"ListItem","position":3,"name":"【Django教學】 如何在網頁上運行 python 腳本"}]},{"@type":"WebSite","@id":"https://www.maxlist.xyz/#website","url":"https://www.maxlist.xyz/","name":"Max行銷誌","description":"行銷、數據分析、與 Python","publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.maxlist.xyz/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"zh-TW"},{"@type":["Person","Organization"],"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","image":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/#/schema/person/image/","url":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","width":512,"height":512,"caption":"Max"},"logo":{"@id":"https://www.maxlist.xyz/#/schema/person/image/"},"description":"我是 Max，熱於分享與交流；左手寫數據分析，右手寫程式開發，相信著行銷與工程的結合能驅動無限的價值。 除了 Blog 外，想認識的朋友歡迎約個 30 分鐘 Online Coffee 聊聊 ☕","sameAs":["https://www.maxlist.xyz/2020/01/01/author/"]}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#article","isPartOf":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/"},"author":{"name":"Max","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"headline":"【Django教學】 如何在網頁上運行 python 腳本","datePublished":"2019-01-15T13:58:34+00:00","dateModified":"2020-04-10T04:29:56+00:00","mainEntityOfPage":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/"},"wordCount":204,"commentCount":2,"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"image":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","keywords":["django","django入門","django安裝","django教學","網頁python運行"],"articleSection":["All posts","Python Django 教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/2019/01/15/django_python/","url":"https://www.maxlist.xyz/2019/01/15/django_python/","name":"【Django教學】 如何在網頁上運行 python 腳本 - Max行銷誌","isPartOf":{"@id":"https://www.maxlist.xyz/#website"},"primaryImageOfPage":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"image":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","datePublished":"2019-01-15T13:58:34+00:00","dateModified":"2020-04-10T04:29:56+00:00","breadcrumb":{"@id":"https://www.maxlist.xyz/2019/01/15/django_python/#breadcrumb"},"inLanguage":"zh-TW","potentialAction":[{"@type":"ReadAction","target":["https://www.maxlist.xyz/2019/01/15/django_python/"]}]},{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#primaryimage","url":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2019/01/python_django.jpeg","width":1650,"height":1100,"caption":"python_django"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/2019/01/15/django_python/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"All posts","item":"https://www.maxlist.xyz/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/"},{"@type":"ListItem","position":3,"name":"【Django教學】 如何在網頁上運行 python 腳本"}]},{"@type":"WebSite","@id":"https://www.maxlist.xyz/#website","url":"https://www.maxlist.xyz/","name":"Max行銷誌","description":"行銷、數據分析、與 Python","publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.maxlist.xyz/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"zh-TW"},{"@type":["Person","Organization"],"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","image":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/#/schema/person/image/","url":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","contentUrl":"https://www.maxlist.xyz/wp-content/uploads/2018/09/cropped-螢幕快照-2018-09-23-下午8.03.21.png","width":512,"height":512,"caption":"Max"},"logo":{"@id":"https://www.maxlist.xyz/#/schema/person/image/"},"description":"我是 Max，熱於分享與交流；左手寫數據分析，右手寫程式開發，相信著行銷與工程的結合能驅動無限的價值。 除了 Blog 外，想認識的朋友歡迎約個 30 分鐘 Online Coffee 聊聊 ☕","sameAs":["https://www.maxlist.xyz/2020/01/01/author/"]}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
 <link rel="dns-prefetch" href="//www.maxlist.xyz">
 
 <link rel="alternate" type="application/rss+xml" title="訂閱《Max行銷誌》» 資訊提供" href="../../../../feed.xml">
-<script type="text/javascript">
-/* <![CDATA[ */
-window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.maxlist.xyz\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.6"}};
-/*! This file is auto-generated */
-!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
-/* ]]> */
-</script>
+
 <link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="crayon-theme-powershell-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/themes/powershell/powershell.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="crayon-font-monaco-css" href="../../../../wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.28" type="text/css" media="all">
 <link rel="stylesheet" id="sydney-wc-css-css" href="../../../../wp-content/themes/sydney/woocommerce/css/wc.min.css?ver=20220616" type="text/css" media="all">
 <link rel="stylesheet" id="sydney-bootstrap-css" href="../../../../wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1" type="text/css" media="all">
-<style id="wp-emoji-styles-inline-css" type="text/css">
 
-	img.wp-smiley, img.emoji {
-		display: inline !important;
-		border: none !important;
-		box-shadow: none !important;
-		height: 1em !important;
-		width: 1em !important;
-		margin: 0 0.07em !important;
-		vertical-align: -0.1em !important;
-		background: none !important;
-		padding: 0 !important;
-	}
-</style>
 <link rel="stylesheet" id="wp-block-library-css" href="../../../../wp-includes/css/dist/block-library/style.min.css?ver=6.8.6" type="text/css" media="all">
 <style id="wp-block-library-inline-css" type="text/css">
 .has-text-align-justify{text-align:justify;}
@@ -115,7 +96,7 @@ div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-to
 <script type="text/javascript" src="../../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <script type="text/javascript" id="wphb-2-js-extra">
 /* <![CDATA[ */
-var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_password_show":"\u986f\u793a\u5bc6\u78bc","i18n_password_hide":"\u96b1\u85cf\u5bc6\u78bc"};;;var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u67e5\u770b\u8cfc\u7269\u8eca","cart_url":"https:\/\/www.maxlist.xyz\/cart\/","is_cart":"","cart_redirect_after_add":"no"};;;var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"https:\/\/www.maxlist.xyz\/wp-admin\/admin-ajax.php","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
 var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"\u9ede\u64ca\u5c55\u958b\u4ee3\u78bc"};
 /* ]]> */
 </script>
@@ -135,7 +116,7 @@ var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","m
 }
 </style>
 <!-- /end HFCM by 99 Robots -->
-	<style>img#wpstats{display:none}</style>
+
 
 <!-- Google Tag Manager for WordPress by gtm4wp.com -->
 <!-- GTM Container placement set to footer -->
@@ -175,7 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="../../../../wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png" sizes="192x192">
 <link rel="apple-touch-icon" href="../../../../wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
 <meta name="msapplication-TileImage" content="https://www.maxlist.xyz/wp-content/uploads/2020/08/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
-<meta name="maxlist-static-snapshot" content="2026-08-01"></head>
+<meta name="maxlist-static-snapshot" content="2026-08-01"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="description" content="為了解決如何在網頁上運行 python 腳本這問題，當時花費不少時間研究和踩過了不少坑，因此將步驟詳細記錄下來，希望能幫助到想利用網頁寫一個簡單的 python 程式的人。 如果有第一次接觸 Django 的朋友可以參考之前寫的這篇：[Django教學] 5分鐘快速入門，打造一個簡單Python網頁 一. 安裝 Dj…"></head>
 
 <body class="wp-singular post-template-default single single-post postid-2929 single-format-standard wp-theme-sydney theme-sydney woocommerce-no-js menu-inline e-lazyload elementor-default elementor-kit-5104">
 
@@ -187,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../../../assets/js/components/header.js"></script>
+	<script src="../../../../assets/js/components/header.js?v=20260803-1"></script>
 
 
 
@@ -238,7 +219,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="ez-toc-title" style="cursor:inherit">目錄</p>
 <label for="ez-toc-cssicon-toggle-item-6a6e017945bd3" class="ez-toc-cssicon-toggle-label"><span class="ez-toc-cssicon"><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></label><input type="checkbox" id="ez-toc-cssicon-toggle-item-6a6e017945bd3" aria-label="顯示/隱藏"><nav><ul class="ez-toc-list ez-toc-list-level-1 "><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="#i">&nbsp;</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-2" href="#%E4%B8%80_%E5%AE%89%E8%A3%9D_Django">一. 安裝 Django</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-3" href="#%E4%BA%8C_%E5%B0%87_Python_%E8%85%B3%E6%9C%AC%E6%94%BE%E5%88%B0_home_%3E_Viewspy%E5%85%A7">二. 將 Python 腳本放到 home &gt; Views.py內</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-4" href="#%E4%B8%89_%E5%BB%BA%E7%AB%8B_simple_crawlhtml_%E9%A0%81%E9%9D%A2">三. 建立 simple_crawl.html 頁面</a></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-5" href="#%E5%9B%9B_urls%E8%A8%AD%E5%AE%9A">四. urls設定</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-6" href="#Django_%E6%95%99%E5%AD%B8%E7%9B%B8%E9%97%9C%E7%9A%84%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80%EF%BC%9A">Django 教學相關的延伸閱讀：</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-7" href="#Python_%E6%95%99%E5%AD%B8%E7%9B%B8%E9%97%9C%E7%9A%84%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80%EF%BC%9A">Python 教學相關的延伸閱讀：</a></li></ul></li></ul></nav></div>
 <h2><span class="ez-toc-section" id="i"></span>&nbsp;<span class="ez-toc-section-end"></span></h2>
-<h2><span class="ez-toc-section" id="%E4%B8%80_%E5%AE%89%E8%A3%9D_Django"></span>一. 安裝 Django<span class="ez-toc-section-end"></span></h2>
+<h2><span class="ez-toc-section" id="一_安裝_Django"></span>一. 安裝 Django<span class="ez-toc-section-end"></span></h2>
 <div>Mac 版安裝 Django：</div>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
@@ -347,7 +328,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div>| — templates</div>
 <div>|&nbsp; &nbsp;<code>--simple_crawl.html</code></div><code>
 </code><div><code></code>— manage.py</div>
-<h2><span class="ez-toc-section" id="%E4%BA%8C_%E5%B0%87_Python_%E8%85%B3%E6%9C%AC%E6%94%BE%E5%88%B0_home_%3E_Viewspy%E5%85%A7"></span>二. 將 Python 腳本放到 home &gt; Views.py內<span class="ez-toc-section-end"></span></h2>
+<h2><span class="ez-toc-section" id="二_將_Python_腳本放到_home_>_Viewspy內"></span>二. 將 Python 腳本放到 home &gt; Views.py內<span class="ez-toc-section-end"></span></h2>
 <div>&nbsp;</div>
 <div>&nbsp;</div>
 <div>這邊寫了一個簡單的爬蟲，僅抓取網頁的標題並存在 title 內，最後 return render(request, ‘home/simple_crawl.html’,locals()) 這邊是告訴 Django render 這個 simple_crawl.html 頁面</div>
@@ -372,7 +353,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 <!-- [Format Time: 0.0010 seconds] -->
 
-<h2><span class="ez-toc-section" id="%E4%B8%89_%E5%BB%BA%E7%AB%8B_simple_crawlhtml_%E9%A0%81%E9%9D%A2"></span>三. 建立 simple_crawl.html 頁面<span class="ez-toc-section-end"></span></h2>
+<h2><span class="ez-toc-section" id="三_建立_simple_crawlhtml_頁面"></span>三. 建立 simple_crawl.html 頁面<span class="ez-toc-section-end"></span></h2>
 <div>路徑：home &gt; templates &gt; simple_crawl.html</div>
 <div>1.在 home 資料夾內新建 templates 資料夾</div>
 <div>2.在 templates 資料夾內新建 simple_crawl.html</div>
@@ -422,7 +403,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 <!-- [Format Time: 0.0016 seconds] -->
 
-<h2><span class="ez-toc-section" id="%E5%9B%9B_urls%E8%A8%AD%E5%AE%9A"></span>四. urls設定<span class="ez-toc-section-end"></span></h2>
+<h2><span class="ez-toc-section" id="四_urls設定"></span>四. urls設定<span class="ez-toc-section-end"></span></h2>
 <div>在 first &gt; urls.py 將設定修改如下，這邊新增了path(‘home/’, include(‘home.urls’))，告訴 Django 當有人踩 ‘home/’ 這個網址時，要去 include(‘home.urls’) 這裡找檔案，所以接下來就是建置 ‘home.urls’</div>
 <!-- Urvanov Syntax Highlighter v2.8.28 -->
 
@@ -490,7 +471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- [Format Time: 0.0002 seconds] -->
 
 <div>基本上這就是一個簡單的在網頁上運行 Python 腳本的網頁，希望對大家有幫助！</div>
-<h3><span class="ez-toc-section" id="Django_%E6%95%99%E5%AD%B8%E7%9B%B8%E9%97%9C%E7%9A%84%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80%EF%BC%9A"></span>Django 教學相關的延伸閱讀：<span class="ez-toc-section-end"></span></h3>
+<h3><span class="ez-toc-section" id="Django_教學相關的延伸閱讀："></span>Django 教學相關的延伸閱讀：<span class="ez-toc-section-end"></span></h3>
 <ul>
 <li><a href="/2018/12/31/python_django/">[Django教學] 5分鐘快速入門，打造一個簡單Python網頁</a></li>
 <li><a href="/2019/01/15/django_python/">[Django教學] 如何在Django網頁上運行python腳本</a></li>
@@ -498,7 +479,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 
 
-<h3 class="wp-block-heading"><span class="ez-toc-section" id="Python_%E6%95%99%E5%AD%B8%E7%9B%B8%E9%97%9C%E7%9A%84%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80%EF%BC%9A"></span>Python 教學相關的延伸閱讀：<span class="ez-toc-section-end"></span></h3>
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="Python_教學相關的延伸閱讀："></span>Python 教學相關的延伸閱讀：<span class="ez-toc-section-end"></span></h3>
 
 
 
@@ -591,23 +572,21 @@ home/simple_crawl.html
 
 
 
-<script src="../../../../assets/js/components/sidebar.js"></script><!-- #secondary -->
+<script src="../../../../assets/js/components/sidebar.js?v=20260803-1"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../../../assets/js/components/footer.js"></script>
+<script src="../../../../assets/js/components/footer.js?v=20260803-1"></script>
 
 	<!-- #colophon -->
 
 
 </div><!-- #page -->
 
-<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a><script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/sydney\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
+<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
 <!-- HFCM by 99 Robots - Snippet # 1: 文章尾部 作者版位 -->
 <script>
 const newHtml = `
@@ -622,10 +601,10 @@ const newHtml = `
                  height="150"
 
                  alt="Max Su"
-                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="https://www.maxlist.xyz/wp-content/uploads/2023/06/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="/wp-content/uploads/2023/06/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
                  width="150"
                  height="150"
-                 src="https://www.maxlist.xyz/wp-content/uploads/2023/06/Max-Su-400x400-1.png"
+                 src="/wp-content/uploads/2023/06/Max-Su-400x400-1.png"
                  alt="Max Su"
                  style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></noscript>
           </figure>
@@ -652,7 +631,7 @@ const newHtml = `
     <div class="elementor-element elementor-element-0316620 elementor-widget elementor-widget-text-editor">
       <div class="elementor-widget-container">
         <div class="elementor-text-editor elementor-clearfix" style="text-align: center; margin: 20px 0;">
-          <a href="https://www.maxlist.xyz/2020/01/01/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+          <a href="/2020/01/01/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
         </div>
       </div>
     </div>
@@ -670,14 +649,14 @@ if (entryContent) {
 <script>
 (function() {
     // 1. 取得當前網址並移除參數
-    const currentUrl = window.location.origin + window.location.pathname;
+    const currentUrl = document.querySelector('link[rel="canonical"]')?.href || (window.location.origin + window.location.pathname);
 
     // 2. AI 配置 (Claude 使用嵌入式 SVG，其他使用圖片)
     const aiTools = [
-        { name: 'ChatGPT', color: '#000000', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
-        { name: 'Perplexity', color: '#14343B', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
-        { name: 'Google AI', color: '#1A73E8', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
-        { name: 'Grok', color: '#313131', icon: 'http://www.maxlist.xyz/wp-content/uploads/2025/12/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
+        { name: 'ChatGPT', color: '#000000', icon: '/wp-content/uploads/2025/12/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
+        { name: 'Perplexity', color: '#14343B', icon: '/wp-content/uploads/2025/12/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
+        { name: 'Google AI', color: '#1A73E8', icon: '/wp-content/uploads/2025/12/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
+        { name: 'Grok', color: '#313131', icon: '/wp-content/uploads/2025/12/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
         {
             name: 'Claude',
             color: '#DA714F',
@@ -718,7 +697,10 @@ if (entryContent) {
         btnContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 10px;';
 
         aiTools.forEach(tool => {
-            const btn = document.createElement('button');
+            const btn = document.createElement('a');
+            btn.href = `${tool.prompt}${encodeURIComponent(currentUrl)}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
             btn.style.cssText = `
                 padding: 10px 18px;
                 border-radius: 8px;
@@ -732,6 +714,9 @@ if (entryContent) {
                 gap: 10px;
                 font-weight: 600;
                 transition: transform 0.2s, opacity 0.2s;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
                 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             `;
 
@@ -743,6 +728,12 @@ if (entryContent) {
             } else {
                 const img = document.createElement('img');
                 img.src = tool.icon;
+                img.alt = '';
+                img.setAttribute('aria-hidden', 'true');
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
                 img.style.width = '18px';
                 img.style.height = '18px';
                 img.style.objectFit = 'contain';
@@ -771,9 +762,6 @@ if (entryContent) {
                         eventLabel: tool.name // 動態帶入 AI 工具名稱
                     });
                 console.log(tool.name)
-
-                // 2. 開啟新分頁
-                window.open(`${tool.prompt}${encodeURIComponent(currentUrl)}`, '_blank');
             };
 
             btnContainer.appendChild(btn);
@@ -848,4 +836,4 @@ lazySizes.cfg.nativeLoading={setLoadingAttribute:true,disableListeners:{scroll:t
 
 
 
-<script data-maxlist-offline="true" src="../../../../assets/js/offline.js?v=20260802-5"></script></body></html>
+<script data-maxlist-offline="true" src="../../../../assets/js/offline.js?v=20260802-7"></script></body></html>

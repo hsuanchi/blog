@@ -147,8 +147,8 @@ const components = {
     (await readableNonEmpty(path.join(PARTIAL_ROOT, "header.html"))),
   sidebar:
     extracted.sidebar.trim() ||
-    (await findRawSelector("#secondary")) ||
-    (await readableNonEmpty(path.join(PARTIAL_ROOT, "sidebar.html"))),
+    (await readableNonEmpty(path.join(PARTIAL_ROOT, "sidebar.html"))) ||
+    (await findRawSelector("#secondary")),
   footer:
     extracted.footer.trim() ||
     (await readableNonEmpty(path.join(PARTIAL_ROOT, "footer.html")))
@@ -165,7 +165,35 @@ await Promise.all(
   )
 );
 
-const activeMenuCode = `  const current = location.pathname.replace(/\\/$/, "") || "/";\n  document.querySelectorAll("#masthead a[href], #masthead-mobile a[href]").forEach((link) => {\n    const target = new URL(link.href, location.href).pathname.replace(/\\/$/, "") || "/";\n    if (target === current) {\n      link.setAttribute("aria-current", "page");\n      link.closest("li")?.classList.add("current-menu-item");\n    }\n  });\n`;
+const activeMenuCode = `  const fixes = document.createElement("link");
+  fixes.rel = "stylesheet";
+  fixes.href = new URL("../../css/static-fixes.css?v=20260802-3", script.src).href;
+  document.head.append(fixes);
+  const current = location.pathname.replace(/\\/$/, "") || "/";
+  document.querySelectorAll("#masthead a[href], #masthead-mobile a[href]").forEach((link) => {
+    const target = new URL(link.href, location.href).pathname.replace(/\\/$/, "") || "/";
+    if (target === current) {
+      link.setAttribute("aria-current", "page");
+      link.closest("li")?.classList.add("current-menu-item");
+    }
+  });
+  const menuToggle = document.querySelector("#masthead-mobile .menu-toggle");
+  const menuClose = document.querySelector(".mobile-menu-close");
+  const syncMenuState = () => {
+    const open = document.body.classList.contains("mobile-menu-visible");
+    menuToggle?.setAttribute("aria-expanded", String(open));
+    menuToggle?.setAttribute("aria-label", open ? "關閉選單" : "開啟選單");
+  };
+  menuToggle?.addEventListener("click", () => requestAnimationFrame(syncMenuState));
+  menuClose?.addEventListener("click", () => requestAnimationFrame(syncMenuState));
+  document.querySelectorAll(".header-search").forEach((toggle) => {
+    toggle.addEventListener("click", () => requestAnimationFrame(() => {
+      const open = toggle.querySelector(".icon-cancel")?.classList.contains("active") ?? false;
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "關閉搜尋" : "開啟搜尋");
+    }));
+  });
+`;
 
 await Promise.all([
   writeFileEnsured(
