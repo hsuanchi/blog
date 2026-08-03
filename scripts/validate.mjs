@@ -354,9 +354,13 @@ const legacyUploadImages = allFiles.filter((file) => {
   return relative.startsWith("wp-content/uploads/") && IMAGE_EXTENSIONS.has(path.extname(file).toLowerCase());
 });
 const urlMigration = {
-  expectedPosts: urlMigrationPlan?.postCount ?? 0,
+  migratedPosts: urlMigrationPlan?.postCount ?? 0,
+  addedStaticPosts: 2,
+  expectedPosts: (urlMigrationPlan?.postCount ?? 0) + 2,
   actualPosts: postFiles.length,
-  expectedImages: urlMigrationPlan?.imageDestinationCount ?? 0,
+  migratedImages: urlMigrationPlan?.imageDestinationCount ?? 0,
+  addedStaticImages: 6,
+  expectedImages: (urlMigrationPlan?.imageDestinationCount ?? 0) + 6,
   actualImages: imageFiles.length,
   legacyDatedPostFiles: legacyDatedPostFiles.map((file) => path.relative(REPO_ROOT, file)),
   legacyUploadImages: legacyUploadImages.map((file) => path.relative(REPO_ROOT, file)),
@@ -424,9 +428,13 @@ if (
   generatedFeatures.obsoleteCommercePaths.length > 0 ||
   offlineCoverage.runtime !== htmlFiles.length ||
   offlineCoverage.pagesWithoutPreloader !== htmlFiles.length
-  || urlMigration.expectedPosts !== 178
+  || urlMigration.migratedPosts !== 178
+  || urlMigration.addedStaticPosts !== 2
+  || urlMigration.expectedPosts !== 180
   || urlMigration.actualPosts !== urlMigration.expectedPosts
-  || urlMigration.expectedImages !== 9418
+  || urlMigration.migratedImages !== 9418
+  || urlMigration.addedStaticImages !== 6
+  || urlMigration.expectedImages !== 9424
   || urlMigration.actualImages !== urlMigration.expectedImages
   || urlMigration.legacyDatedPostFiles.length > 0
   || urlMigration.legacyUploadImages.length > 0

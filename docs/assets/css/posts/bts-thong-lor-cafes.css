@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&display=swap");
+
+.cafe-guide-thonglor{
+  --ink: #1e1410;
+  --muted: #9e8f85;
+  --paper: #fdfcfb;
+  --cream: #faf3ea;
+  --line: #ede5de;
+  --brown: #6b3517;
+  --brown-soft: #9d6b43;
+  --gold: #b98a25;
+  --blue: #5f95a5;
+  --green: #2e5e4a;
+  --red: #a54136;
+}
+
+.cafe-guide-thonglor *{ box-sizing: border-box; }
+.cafe-guide-thonglor{ scroll-behavior: smooth; }
+.cafe-guide-thonglor{ margin: 0; color: var(--ink); background: var(--paper); font-family: "Noto Sans TC", sans-serif; }
+.cafe-guide-thonglor button,
+.cafe-guide-thonglor a{ font: inherit; }
+.cafe-guide-thonglor a{ color: inherit; }
+
+.cafe-guide-thonglor .hero{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  text-align: center;
+}
+.cafe-guide-thonglor .hero-bg{ position: absolute; inset: 0; background: url("../../../image/bts-thong-lor-cafes-hero.jpg") center / cover no-repeat; }
+.cafe-guide-thonglor .hero-bg::after{ content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(62,34,21,.3) 0%, rgba(62,34,21,.5) 40%, rgba(62,34,21,.7) 100%); }
+.cafe-guide-thonglor .hero-content{ position: relative; z-index: 1; width: 496px; max-width: 100%; padding: 40px 24px; }
+.cafe-guide-thonglor .eyebrow{ margin-bottom: 32px; color: rgba(255,255,255,.7); font-size: 11px; font-weight: 600; letter-spacing: .27em; }
+.cafe-guide-thonglor .hero h1{ margin: 0 0 28px; font-family: "Playfair Display", Georgia, serif; font-size: 80px; font-weight: 800; line-height: 1.05; letter-spacing: -.03em; }
+.cafe-guide-thonglor .hero h1 span{ display: block; }
+.cafe-guide-thonglor .hero h1 span:first-child{ font-size: 1em; }
+.cafe-guide-thonglor .hero p{ margin: 0 0 48px; font: italic 500 20px/1.7 "Playfair Display", Georgia, serif; }
+.cafe-guide-thonglor .hero-count{ display: grid; justify-items: center; }
+.cafe-guide-thonglor .hero-count strong{ font: 700 40px/1 "Playfair Display", Georgia, serif; }
+.cafe-guide-thonglor .hero-count span{ margin-top: 5px; color: rgba(255,255,255,.65); font-size: 11px; }
+.cafe-guide-thonglor .scroll-cue{ position: absolute; z-index: 2; bottom: 28px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.55); font-size: 10px; letter-spacing: .2em; text-decoration: none; }
+
+.cafe-guide-thonglor .map-section{ width: 100%; margin: 0; padding: 80px 24px; background: var(--cream); text-align: center; }
+.cafe-guide-thonglor .map-section-title{ margin-bottom: 8px; font: 600 28px/1.4 "Playfair Display", Georgia, serif; }
+.cafe-guide-thonglor .map-section-sub{ margin-bottom: 16px; color: var(--muted); font-size: 14px; }
+.cafe-guide-thonglor .map-section-desc{ width: 700px; max-width: 100%; margin: 0 auto 36px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.cafe-guide-thonglor .map-shell{ width: 1100px; max-width: 100%; height: 682px; margin: 0 auto; display: flex; gap: 40px; text-align: left; }
+.cafe-guide-thonglor .map-canvas{ position: relative; flex: 0 0 682px; height: 682px; overflow: hidden; border-radius: 16px; background: #c8c5ba; box-shadow: 0 4px 24px rgba(0,0,0,.08); }
+.cafe-guide-thonglor .map-canvas > img{ width: 100%; height: 100%; display: block; object-fit: cover; filter: grayscale(.75) sepia(.16) saturate(.65) contrast(.82) brightness(.92); opacity: .8; }
+.cafe-guide-thonglor .map-canvas::after{ content: ""; position: absolute; inset: 0; pointer-events: none; background: rgba(142,136,121,.16); }
+.cafe-guide-thonglor .map-credit{ position: absolute; z-index: 8; right: 7px; bottom: 5px; color: rgba(45,45,45,.55); font-size: 9px; }
+.cafe-guide-thonglor .origin-marker{ position: absolute; z-index: 7; transform: translate(-50%,-50%); display: flex; align-items: center; gap: 5px; padding: 5px 8px; border-radius: 6px; color: white; background: #29211d; font-size: 9px; text-decoration: none; white-space: nowrap; }
+.cafe-guide-thonglor .origin-marker i{ width: 6px; height: 6px; border-radius: 50%; background: white; }
+.cafe-guide-thonglor .map-marker{ position: absolute; z-index: 5; transform: translate(-50%,-50%); display: grid; place-items: center; min-width: 22px; min-height: 22px; max-width: 34px; max-height: 34px; border: 2px solid white; border-radius: 50%; color: white; box-shadow: 0 2px 7px rgba(0,0,0,.18); text-decoration: none; }
+.cafe-guide-thonglor .map-marker > span{ font-size: 9px; font-weight: 700; }
+.cafe-guide-thonglor .map-marker b{ display: none; }
+.cafe-guide-thonglor .signal-high{ background: var(--brown); }.cafe-guide-thonglor .signal-mid{ background: var(--brown-soft); }.cafe-guide-thonglor .signal-low{ background: var(--blue); }
+.cafe-guide-thonglor .map-callout{ position: absolute; z-index: 6; width: 165px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.94); color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.08); text-decoration: none; }
+.cafe-guide-thonglor .map-callout strong{ display: block; overflow: hidden; font: 700 11px/1.3 "Playfair Display", Georgia, serif; text-overflow: ellipsis; white-space: nowrap; }
+.cafe-guide-thonglor .map-callout span{ display: block; margin-top: 3px; color: var(--muted); font-size: 8px; white-space: nowrap; }
+.cafe-guide-thonglor .callout-1{ left: 12px; top: 28%; }.cafe-guide-thonglor .callout-3{ right: 84px; top: 5%; }.cafe-guide-thonglor .callout-4{ right: 7px; top: 38%; }.cafe-guide-thonglor .callout-9{ left: 8px; top: 53%; }.cafe-guide-thonglor .callout-15{ right: 20px; bottom: 13%; }.cafe-guide-thonglor .callout-20{ left: 20px; bottom: 6%; }
+.cafe-guide-thonglor .map-aside{ flex: 0 0 378px; height: 682px; overflow: hidden; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: white; box-shadow: 0 2px 16px rgba(0,0,0,.06); }
+.cafe-guide-thonglor .aside-block + .aside-block{ margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--line); }
+.cafe-guide-thonglor .aside-block h3{ margin: 0 0 13px; font: 600 18px/1.35 "Playfair Display", Georgia, serif; }
+.cafe-guide-thonglor .aside-block p{ margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.cafe-guide-thonglor .legend{ margin: 18px 0 0; padding: 0; display: grid; gap: 12px; list-style: none; }
+.cafe-guide-thonglor .legend li{ display: grid; grid-template-columns: 15px 1fr; gap: 10px; align-items: start; color: var(--muted); font-size: 10px; line-height: 1.45; }
+.cafe-guide-thonglor .legend i{ width: 12px; height: 12px; margin-top: 2px; border: 2px solid white; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); }
+.cafe-guide-thonglor .legend i.high{ background: var(--brown); }.cafe-guide-thonglor .legend i.mid{ background: var(--brown-soft); }.cafe-guide-thonglor .legend i.low{ background: var(--blue); }
+.cafe-guide-thonglor .legend b{ display: block; color: var(--ink); font-size: 12px; font-weight: 500; }
+.cafe-guide-thonglor .aside-block ol{ margin: 0; padding: 0; list-style: none; }
+.cafe-guide-thonglor .aside-block ol li{ display: flex; justify-content: space-between; gap: 10px; padding: 7px 0; border-bottom: 1px dashed var(--line); font-size: 11px; }
+.cafe-guide-thonglor .aside-block ol a{ overflow: hidden; text-decoration: none; text-overflow: ellipsis; white-space: nowrap; }
+.cafe-guide-thonglor .aside-block ol strong{ color: var(--brown); white-space: nowrap; }
+.cafe-guide-thonglor .aside-language{ display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; }
+.cafe-guide-thonglor .aside-language div{ padding: 8px; border-radius: 6px; background: var(--cream); }
+.cafe-guide-thonglor .aside-language span{ display: block; color: var(--muted); font-size: 9px; }.cafe-guide-thonglor .aside-language strong{ font: 600 16px/1.2 "Playfair Display",Georgia,serif; }
+
+.cafe-guide-thonglor .ranking-section{ width: 100%; margin: 0; padding: 100px 24px; background: var(--paper); }
+.cafe-guide-thonglor .section-heading{ width: 812px; max-width: 100%; margin: 0 auto 48px; text-align: center; }
+.cafe-guide-thonglor .section-heading > span{ display: none; }
+.cafe-guide-thonglor .section-heading h2{ margin: 0 0 12px; font: 600 32px/1.3 "Playfair Display", Georgia, serif; letter-spacing: 0; }
+.cafe-guide-thonglor .section-heading p{ margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.cafe-guide-thonglor .top-five,
+.cafe-guide-thonglor .more-cafes{ width: 812px; max-width: 100%; margin: 0 auto; }
+.cafe-guide-thonglor .top-five{ display: block; }
+.cafe-guide-thonglor .shop{ scroll-margin-top: 22px; width: 100%; margin: 0 0 80px; padding: 0 0 80px; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; background: transparent; box-shadow: none; }
+.cafe-guide-thonglor .shop-top{ display: flex; gap: 20px; align-items: flex-start; margin-bottom: 40px; padding: 0; border: 0; }
+.cafe-guide-thonglor .rank-number{ flex: 0 0 40px; width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--gold); font: 700 14px/1 "Playfair Display",Georgia,serif; }
+.cafe-guide-thonglor .cafe-heading{ min-width: 0; }
+.cafe-guide-thonglor .cafe-heading h3{ margin: -4px 0 4px; font: 700 30px/1.25 "Playfair Display", Georgia, serif; letter-spacing: -.02em; }
+.cafe-guide-thonglor .cafe-heading > div{ color: var(--muted); font-size: 13px; }
+.cafe-guide-thonglor .cafe-heading p{ margin: 15px 0 0; color: #7f7067; font: italic 500 15px/1.7 "Playfair Display", Georgia, serif; }
+.cafe-guide-thonglor .bento{ display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 40px; }
+.cafe-guide-thonglor .bento-cell{ min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 12px; background: white; }
+.cafe-guide-thonglor .bento-num{ height: 142px; display: flex; flex-direction: column; }
+.cafe-guide-thonglor .bento-num > strong{ color: var(--brown); font: 700 40px/1 "Playfair Display",Georgia,serif; }
+.cafe-guide-thonglor .bento-num:nth-child(2) > strong{ color: var(--green); }.cafe-guide-thonglor .bento-num:nth-child(3) > strong{ color: var(--gold); }.cafe-guide-thonglor .bento-num:nth-child(4) > strong{ color: var(--blue); }
+.cafe-guide-thonglor .bento-num b{ margin-top: 10px; color: var(--muted); font-size: 11px; font-weight: 400; }
+.cafe-guide-thonglor .bento-num span{ margin-top: auto; padding: 5px 7px; border-radius: 4px; background: #fbf4ec; color: var(--brown); font-size: 10px; line-height: 1.25; }
+.cafe-guide-thonglor .bento-num:nth-child(2) span{ background:#f0f6f2;color:var(--green); }.cafe-guide-thonglor .bento-num:nth-child(3) span{ background:#fff8df;color:#8a6515; }.cafe-guide-thonglor .bento-num:nth-child(4) span{ background:#edf6f9;color:#477d8b; }
+.cafe-guide-thonglor .bento-stars,
+.cafe-guide-thonglor .bento-topics,
+.cafe-guide-thonglor .bento-nation,
+.cafe-guide-thonglor .bento-neg-xray{ grid-column: span 2; min-height: 142px; }
+.cafe-guide-thonglor .bento-stars,
+.cafe-guide-thonglor .bento-topics{ height: 209px; }
+.cafe-guide-thonglor .bento-cell h4{ margin: 0 0 16px; color: var(--muted); font-size: 11px; font-weight: 400; }
+.cafe-guide-thonglor .percent-row + .percent-row{ margin-top: 8px; }
+.cafe-guide-thonglor .percent-label{ display: flex; justify-content: space-between; gap: 10px; margin-bottom: 5px; color: #63554d; font-size: 10px; }
+.cafe-guide-thonglor .percent-label span{ display: flex; gap: 6px; }.cafe-guide-thonglor .percent-label small{ color: var(--muted); }.cafe-guide-thonglor .percent-label strong{ font-weight: 500; }
+.cafe-guide-thonglor .percent-track{ height: 6px; overflow: hidden; border-radius: 999px; background: #f4eee9; }
+.cafe-guide-thonglor .percent-track i{ display: block; height: 100%; border-radius: inherit; background: var(--gold); }
+.cafe-guide-thonglor .bento-topics .percent-track i{ background: var(--brown); }.cafe-guide-thonglor .percent-track.red i{ background: var(--red); }
+.cafe-guide-thonglor .panel-note{ margin: 14px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.cafe-guide-thonglor .language-line{ display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 5px 0; }
+.cafe-guide-thonglor .language-line span{ font-size: 11px; }.cafe-guide-thonglor .language-line strong{ color: var(--brown); font: 600 15px "Playfair Display",Georgia,serif; }.cafe-guide-thonglor .language-line small{ grid-column:1/-1; color:var(--muted); font-size:9px; }
+.cafe-guide-thonglor .negative-xray{ background: white; }
+.cafe-guide-thonglor .negative-stats{ display: flex; align-items: start; gap: 26px; }
+.cafe-guide-thonglor .negative-stats div{ display: grid; text-align: center; }
+.cafe-guide-thonglor .negative-stats strong{ color: var(--red); font: 500 22px/1 "Playfair Display",Georgia,serif; }.cafe-guide-thonglor .negative-stats span{ margin-top:4px;color:var(--muted);font-size:9px; }
+.cafe-guide-thonglor .negative-xray > p{ margin: 12px 0 0; color: var(--muted); font-size: 10px; }
+.cafe-guide-thonglor .bento-insight{ grid-column: span 4; padding: 17px 20px; background: #fffaf2; color: #66564e; font-size: 12px; }
+
+.cafe-guide-thonglor .reviews-block{ margin-top: 0; }
+.cafe-guide-thonglor .reviews-title{ margin-bottom: 18px; font-size: 13px; font-weight: 600; }
+.cafe-guide-thonglor .reviews-list,
+.cafe-guide-thonglor .reviews-list.expanded{ display: block; }
+.cafe-guide-thonglor .review-item{ min-height: 0; margin: 0 0 20px; padding: 0 0 0 16px; border: 0; border-left: 2px solid #d7b56a; border-radius: 0; background: transparent; }
+.cafe-guide-thonglor .review-item.review-low{ border-left-color: var(--red); background: #fbf1ee; padding: 14px 16px; }
+.cafe-guide-thonglor .review-meta{ display: flex; justify-content: space-between; gap: 12px; color: var(--gold); font-size: 10px; }
+.cafe-guide-thonglor .review-meta time{ color: var(--muted); }
+.cafe-guide-thonglor .review-item p{ margin: 9px 0; color: #54463f; font: 400 14px/1.75 "Noto Sans TC",sans-serif; white-space: pre-wrap; overflow-wrap: anywhere; }
+.cafe-guide-thonglor .review-item footer{ color: var(--muted); font-size: 10px; }
+.cafe-guide-thonglor .more-reviews{ width: auto; margin: 0 0 18px; padding: 9px 20px; border: 0; border-radius: 999px; color: white; background: var(--brown); cursor: pointer; font-size: 12px; font-weight: 500; }
+.cafe-guide-thonglor .reviews-loading,
+.cafe-guide-thonglor .reviews-error{ margin: 12px 0; color: var(--muted); font-size: 11px; }
+.cafe-guide-thonglor .review-pager{ display:flex;justify-content:space-between;align-items:center;margin:16px 0;color:var(--muted);font-size:10px; }
+.cafe-guide-thonglor .review-pager div{ display:flex;gap:7px; }.cafe-guide-thonglor .review-pager button{ padding:7px 12px;border:1px solid var(--line);border-radius:6px;background:white;color:var(--brown);cursor:pointer; }.cafe-guide-thonglor .review-pager button:disabled{ opacity:.35; }
+.cafe-guide-thonglor .review-summary{ margin: 4px 0 0; padding: 0; border: 0; background: transparent; color: var(--muted); font-size: 10px; }
+.cafe-guide-thonglor .neg-section{ margin-top: 18px; }
+.cafe-guide-thonglor .neg-section .reviews-title{ margin-bottom: 10px; }
+.cafe-guide-thonglor .neg-section .review-item{ margin-bottom: 0; }
+.cafe-guide-thonglor .verdict-grid{ margin-top: 26px; padding: 18px 16px; border-radius: 8px; background: #fffcf7; }
+.cafe-guide-thonglor .verdict-grid > div{ padding: 0; background: transparent; }.cafe-guide-thonglor .verdict-grid > div + div{ margin-top: 7px; }
+.cafe-guide-thonglor .verdict-grid strong{ font-size: 11px; }.cafe-guide-thonglor .verdict-grid p{ display:inline;margin:0 0 0 6px;color:#75665d;font-size:11px;line-height:1.6; }
+.cafe-guide-thonglor .coverage-note{ margin-top: 14px; color: var(--muted); font-size: 9px; }
+.cafe-guide-thonglor .cafe-footer{ display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;padding-top:18px;border-top:1px solid var(--line); }
+.cafe-guide-thonglor .cafe-footer > div{ display:flex;align-items:center;gap:8px;color:var(--muted);font-size:10px; }.cafe-guide-thonglor .cafe-footer > div small{ padding-left:8px;border-left:1px solid var(--line); }
+.cafe-guide-thonglor .cafe-footer nav{ display:flex;gap:8px; }.cafe-guide-thonglor .cafe-footer a{ padding:8px 11px;border:1px solid var(--brown);border-radius:6px;color:var(--brown);text-decoration:none;font-size:10px; }.cafe-guide-thonglor .cafe-footer a.solid{ color:white;background:var(--brown); }
+
+.cafe-guide-thonglor .more-cafes{ margin-top: 20px; border-top: 0; }
+.cafe-guide-thonglor .more-cafes > header{ display:block;padding:0 0 18px; }.cafe-guide-thonglor .more-cafes > header h2{ margin:0 0 5px;font:600 24px "Playfair Display",Georgia,serif; }.cafe-guide-thonglor .more-cafes > header p{ margin:0;color:var(--muted);font-size:11px; }
+.cafe-guide-thonglor .more-item{ border-top:1px solid var(--line); }.cafe-guide-thonglor .more-item:last-child{ border-bottom:1px solid var(--line); }
+.cafe-guide-thonglor .more-row{ width:100%;display:grid;grid-template-columns:46px minmax(180px,1.1fr) 80px 100px minmax(180px,1.5fr) 40px;gap:10px;align-items:center;padding:16px 0;border:0;background:transparent;color:var(--ink);text-align:left;cursor:pointer; }
+.cafe-guide-thonglor .more-row:hover{ background:#fffaf4; }.cafe-guide-thonglor .more-rank{ color:var(--gold);font:700 14px "Playfair Display",Georgia,serif; }.cafe-guide-thonglor .more-name{ font-size:12px;font-weight:600; }.cafe-guide-thonglor .more-name small,
+.cafe-guide-thonglor .more-row>strong small{ display:block;margin-top:3px;color:var(--muted);font-size:9px;font-weight:400; }.cafe-guide-thonglor .more-row>strong{ color:var(--brown);font:600 15px "Playfair Display",Georgia,serif; }.cafe-guide-thonglor .more-language,
+.cafe-guide-thonglor .more-row p,
+.cafe-guide-thonglor .more-row i{ color:var(--muted);font-size:9px; }.cafe-guide-thonglor .more-row p{ margin:0; }.cafe-guide-thonglor .more-row i{ color:var(--brown);font-style:normal;text-align:right; }
+.cafe-guide-thonglor .more-item > .shop{ margin: 32px 0 0; padding-bottom: 60px; }
+
+.cafe-guide-thonglor .site-footer{ padding:36px 20px 55px;border-top:1px solid var(--line);background:var(--cream);color:var(--muted);text-align:center;font-size:9px;line-height:1.7; }.cafe-guide-thonglor .site-footer p{margin:2px 0;}
+
+@media (max-width: 1150px){
+  .cafe-guide-thonglor .map-shell{ width: 900px; height: 560px; gap: 28px; }.cafe-guide-thonglor .map-canvas{ flex-basis:560px;height:560px; }.cafe-guide-thonglor .map-aside{ flex-basis:312px;height:560px;padding:22px;overflow:auto; }
+}
+
+@media (max-width: 760px){
+  .cafe-guide-thonglor .hero-content{ width: 100%; }.cafe-guide-thonglor .hero h1{ font-size: 58px; }.cafe-guide-thonglor .hero p{ font-size: 16px; }.cafe-guide-thonglor .eyebrow{ font-size: 9px; }
+  .cafe-guide-thonglor .map-section{ padding:60px 16px; }.cafe-guide-thonglor .map-shell{ width:100%;height:auto;display:block; }.cafe-guide-thonglor .map-canvas{ width:100%;height:auto;aspect-ratio:1; }.cafe-guide-thonglor .map-aside{ width:100%;height:auto;margin-top:18px; }.cafe-guide-thonglor .map-callout{ display:none; }
+  .cafe-guide-thonglor .ranking-section{ padding:72px 18px; }.cafe-guide-thonglor .section-heading h2{ font-size:28px; }.cafe-guide-thonglor .shop{ margin-bottom:60px;padding-bottom:60px; }.cafe-guide-thonglor .cafe-heading h3{ font-size:24px; }.cafe-guide-thonglor .cafe-heading p{ font-size:13px; }
+  .cafe-guide-thonglor .bento{ grid-template-columns:repeat(2,1fr); }.cafe-guide-thonglor .bento-num{ height:128px;padding:15px; }.cafe-guide-thonglor .bento-num>strong{ font-size:32px; }.cafe-guide-thonglor .bento-stars,
+.cafe-guide-thonglor .bento-topics,
+.cafe-guide-thonglor .bento-nation,
+.cafe-guide-thonglor .bento-neg-xray,
+.cafe-guide-thonglor .bento-insight{ grid-column:span 2; }.cafe-guide-thonglor .bento-stars,
+.cafe-guide-thonglor .bento-topics{ height:auto; }
+  .cafe-guide-thonglor .cafe-footer{ align-items:flex-start;flex-direction:column; }.cafe-guide-thonglor .cafe-footer>div{ flex-wrap:wrap; }.cafe-guide-thonglor .cafe-footer>div small{ width:100%;padding-left:0;border-left:0; }.cafe-guide-thonglor .cafe-footer nav{ width:100%; }.cafe-guide-thonglor .cafe-footer a{ flex:1;text-align:center; }
+  .cafe-guide-thonglor .more-row{ grid-template-columns:38px 1fr 66px 34px; }.cafe-guide-thonglor .more-language,
+.cafe-guide-thonglor .more-row p{ display:none; }.cafe-guide-thonglor .more-row i{ grid-column:4;grid-row:1; }
+}
+
+
+.cafe-guide-thonglor .hero-content{ width: 720px; }
+.cafe-guide-thonglor .hero .eyebrow{ margin-bottom: 24px; }
+.cafe-guide-thonglor .station-lockup{ display: inline-flex; align-items: center; justify-content: center; gap: 13px; margin-bottom: 22px; }
+.cafe-guide-thonglor .station-code{ padding: 7px 10px 6px; border-radius: 4px; background: rgba(255,255,255,.92); color: #3e2215; font-size: 11px; font-weight: 700; letter-spacing: .12em; line-height: 1; }
+.cafe-guide-thonglor .station-name{ color: rgba(255,255,255,.88); font-size: 17px; font-weight: 600; letter-spacing: .2em; line-height: 1; }
+.cafe-guide-thonglor .hero h1.station-map-title{ margin-bottom: 28px; font-size: 92px; line-height: 1; letter-spacing: .02em; }
+.cafe-guide-thonglor .data-status{ width: 812px; max-width: calc(100% - 36px); margin: 48px auto; padding: 20px; border: 1px solid var(--line); border-radius: 12px; color: var(--muted); text-align: center; }
+.cafe-guide-thonglor .data-status.error{ color: var(--red); background: #fbf1ee; }
+.cafe-guide-thonglor .map-canvas > img{ position: absolute; inset: 0; }
+@media (max-width: 760px){
+  .cafe-guide-thonglor .hero-content{ width: 100%; padding-inline: 18px; }
+  .cafe-guide-thonglor .station-lockup{ gap: 9px; margin-bottom: 18px; }
+  .cafe-guide-thonglor .station-code{ padding: 6px 8px 5px; font-size: 9px; }
+  .cafe-guide-thonglor .station-name{ font-size: 12px; letter-spacing: .14em; }
+  .cafe-guide-thonglor .hero h1.station-map-title{ font-size: 68px; }
+}
+.cafe-guide-thonglor{display:block;max-width:100%;margin:0 0 40px;overflow:hidden;border-radius:14px;background:#fdfbf9;color:#1e1410;font-size:16px;line-height:1.65;box-shadow:0 12px 36px rgba(44,24,16,.08)}
+.cafe-guide-thonglor .guide-display-title{font-family:var(--serif,Georgia,serif);font-size:clamp(42px,7vw,76px);font-weight:800;color:#fff;line-height:1.06;letter-spacing:-.03em;margin:0 0 28px}
+.cafe-guide-thonglor .hero{min-height:clamp(540px,72vh,760px)}
+.cafe-guide-thonglor .guide-main{display:block}
+.cafe-guide-thonglor button{font-family:inherit;text-transform:none;letter-spacing:normal}
+.cafe-guide-thonglor img{max-width:100%;height:auto}
+.cafe-guide-thonglor [role="button"]:focus-visible,.cafe-guide-thonglor button:focus-visible,.cafe-guide-thonglor a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
+@media(max-width:767px){.cafe-guide-thonglor{margin-left:-15px;margin-right:-15px;border-radius:0}.cafe-guide-thonglor .hero{min-height:520px}.cafe-guide-thonglor .guide-display-title{font-size:42px}}

@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-08-03T15:17:03.504Z",
+  "generatedAt": "2026-08-03T16:30:58.329Z",
   "files": {
-    "total": 10382,
-    "html": 845,
-    "assets": 9537
+    "total": 10396,
+    "html": 848,
+    "assets": 9548
   },
   "componentCoverage": {
-    "header": 845,
-    "sidebar": 178,
-    "footer": 845
+    "header": 848,
+    "sidebar": 180,
+    "footer": 848
   },
   "offlineCoverage": {
-    "runtime": 845,
-    "pagesWithoutPreloader": 845
+    "runtime": 848,
+    "pagesWithoutPreloader": 848
   },
   "analytics": {
-    "pagesWithGtm": 845,
+    "pagesWithGtm": 848,
     "gtmContainer": "GTM-WSG8N3Q",
     "ga4Delivery": "via-gtm",
     "ga4MeasurementId": "G-YR986G8PX3"
   },
   "seo": {
-    "pagesWithCanonical": 844,
+    "pagesWithCanonical": 847,
     "missingDescriptions": [],
     "missingIndexableH1": [],
     "missingImageAlts": [],
@@ -30,15 +30,19 @@
   },
   "generatedFeatures": {
     "staticFixesStylesheet": true,
-    "searchIndexDocuments": 226,
+    "searchIndexDocuments": 229,
     "cname": "www.maxlist.xyz",
     "obsoleteCommercePaths": []
   },
   "urlMigration": {
-    "expectedPosts": 178,
-    "actualPosts": 178,
-    "expectedImages": 9418,
-    "actualImages": 9418,
+    "migratedPosts": 178,
+    "addedStaticPosts": 2,
+    "expectedPosts": 180,
+    "actualPosts": 180,
+    "migratedImages": 9418,
+    "addedStaticImages": 6,
+    "expectedImages": 9424,
+    "actualImages": 9424,
     "legacyDatedPostFiles": [],
     "legacyUploadImages": [],
     "staleLegacyReferences": [],

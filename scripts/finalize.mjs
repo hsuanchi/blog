@@ -515,7 +515,6 @@ for (const file of htmlFiles) {
       script = script
         .replace(/https?:\/\/(?:www\.)?maxlist\.xyz\//gi, "/")
         .replace(/\n\s*img\.alt = tool\.name;/g, "")
-        .replace(/\n\s*img\.setAttribute\('aria-hidden', 'true'\);/g, "")
         .replace(/\n\s*btn\.type = 'button';/g, "")
         .replace(
           "const currentUrl = window.location.origin + window.location.pathname;",
@@ -526,11 +525,11 @@ for (const file of htmlFiles) {
           "const btn = document.createElement('a');\n            btn.href = `${tool.prompt}${encodeURIComponent(currentUrl)}`;\n            btn.target = '_blank';\n            btn.rel = 'noopener noreferrer';"
         )
         .replace(
-          "transition: transform 0.2s, opacity 0.2s;",
+          /transition: transform 0\.2s, opacity 0\.2s;(?!\n\s*text-decoration: none;)/,
           "transition: transform 0.2s, opacity 0.2s;\n                text-decoration: none;"
         )
         .replace(
-          "img.src = tool.icon;",
+          /img\.src = tool\.icon;(?!\n\s*img\.alt = '';\n\s*img\.setAttribute\('aria-hidden', 'true'\);)/,
           "img.src = tool.icon;\n                img.alt = '';\n                img.setAttribute('aria-hidden', 'true');"
         )
         .replace(/\n\s*\/\/ 2\. 開啟新分頁\n\s*window\.open\(`\$\{tool\.prompt\}\$\{encodeURIComponent\(currentUrl\)\}`, '_blank'\);/g, "");

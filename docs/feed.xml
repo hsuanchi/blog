@@ -5,21 +5,42 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 03 Aug 2026 15:16:58 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 16:30:15 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>咖啡地圖 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E5%92%96%E5%95%A1%E5%9C%B0%E5%9C%96/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E5%92%96%E5%95%A1%E5%9C%B0%E5%9C%96/</guid>
+      <pubDate>Mon, 20 Jul 2026 03:13:20 GMT</pubDate>
+      <description>Max行銷誌的咖啡地圖與 Google Maps 評論分析文章。</description>
+    </item>
+    <item>
+      <title>All posts 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
+      <pubDate>Mon, 20 Jul 2026 03:13:20 GMT</pubDate>
+      <description>Max行銷誌全部 180 篇文章，涵蓋行銷、數據分析、Python、資料工程與咖啡地圖。</description>
+    </item>
+    <item>
+      <title>BTS Thong Lor 咖啡地圖：分析 4,731 則評論，精選 20 家咖啡店</title>
+      <link>https://www.maxlist.xyz/post/bts-thong-lor-station-cafes/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/bts-thong-lor-station-cafes/</guid>
+      <pubDate>Mon, 20 Jul 2026 03:13:20 GMT</pubDate>
+      <description>分析 4,731 則 Google Maps 公開評論，從咖啡信號、星等、語系與負評精選 BTS Thong Lor Station 周邊 20 間咖啡店。</description>
+    </item>
+    <item>
+      <title>宮古島咖啡地圖：分析 3,091 則評論，精選 15 家咖啡店</title>
+      <link>https://www.maxlist.xyz/post/miyako-cafes/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/miyako-cafes/</guid>
+      <pubDate>Sat, 04 Apr 2026 14:10:10 GMT</pubDate>
+      <description>分析 3,091 則 Google Maps 公開評論，從咖啡信號、星等、口碑與負評精選宮古島 15 間咖啡店，附完整評論、地圖與店家資訊。</description>
+    </item>
     <item>
       <title>Looker Studio 教學 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
       <description>分類: Looker Studio 教學 &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-l…</description>
-    </item>
-    <item>
-      <title>All posts 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description>分類: All posts &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-large-th…</description>
     </item>
     <item>
       <title>[Looker Studio 教學] Search Console 網站曝光/網址曝光 如何選擇？ - Max行銷誌</title>
@@ -195,27 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/3/</guid>
       <pubDate>Fri, 23 Jun 2023 09:03:16 GMT</pubDate>
       <description>分類: All posts &lt;img width=&quot;1914&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/05/GTM-教學-網頁觸發時機.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
-    </item>
-    <item>
-      <title>Google Tag Manager 教學 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/page/2/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/gtm%E5%9F%8B%E8%A8%AD/page/2/</guid>
-      <pubDate>Fri, 23 Jun 2023 08:59:42 GMT</pubDate>
-      <description>分類: Google Tag Manager 教學 &lt;img width=&quot;1892&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/05/GTM-入門第一堂課-GTM-埋設.jpg&quot; class=&quot;attachment-larg…</description>
-    </item>
-    <item>
-      <title>All posts 彙整 - 第 12 頁，總計 20 頁 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/12/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/12/</guid>
-      <pubDate>Thu, 22 Jun 2023 05:11:39 GMT</pubDate>
-      <description>分類: All posts &lt;img width=&quot;1358&quot; height=&quot;756&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/python-async爬蟲.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
-    </item>
-    <item>
-      <title>Python 基礎教學 彙整 - 第 3 頁，總計 4 頁 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/python-base/page/3/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/python-base/page/3/</guid>
-      <pubDate>Thu, 22 Jun 2023 05:10:10 GMT</pubDate>
-      <description>分類: Python 基礎教學 &lt;img width=&quot;1408&quot; height=&quot;788&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/Multi-processing-pool.jpg&quot; class=&quot;attachment-large-thumb…</description>
     </item>
   </channel>
 </rss>
