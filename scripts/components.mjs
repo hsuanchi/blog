@@ -161,7 +161,7 @@ stripMenuState(headerFragment);
 components.header = headerFragment("body").html() ?? components.header;
 await Promise.all(
   Object.entries(components).map(([name, html]) =>
-    writeFileEnsured(path.join(PARTIAL_ROOT, `${name}.html`), `${html}\n`)
+    writeFileEnsured(path.join(PARTIAL_ROOT, `${name}.html`), `${html.trim()}\n`)
   )
 );
 

@@ -7,7 +7,9 @@
     "migrate": "node scripts/migrate.mjs",
     "comments": "node scripts/import-comments.mjs",
     "components": "node scripts/components.mjs",
+    "migrate-urls": "node scripts/migrate-urls.mjs",
     "finalize": "node scripts/finalize.mjs",
+    "test:redirects": "node scripts/test-redirect-worker.mjs",
     "validate": "node scripts/validate.mjs",
     "serve": "python3 -m http.server 4173 --bind 127.0.0.1 --directory docs"
   },

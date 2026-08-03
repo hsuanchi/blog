@@ -5,7 +5,7 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 02 Aug 2026 17:01:14 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2026 15:16:58 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Looker Studio 教學 彙整 - Max行銷誌</title>
@@ -23,8 +23,8 @@
     </item>
     <item>
       <title>[Looker Studio 教學] Search Console 網站曝光/網址曝光 如何選擇？ - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2026/03/08/looker-studio-gsc-data-source/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2026/03/08/looker-studio-gsc-data-source/</guid>
+      <link>https://www.maxlist.xyz/post/looker-studio-gsc-data-source/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/looker-studio-gsc-data-source/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:01 GMT</pubDate>
       <description>當你在 Looker Studio 串接 Google Search Console 時，會發現系統提供兩種不同的資料來源： 1. 什麼是「網站曝光 (Site Impression)」 定義 網站曝光（Site Impression）是以 整個網站為單位統計搜尋結果中的曝光與點擊數據。當使用者在搜尋引擎輸入關鍵字時…</description>
     </item>
@@ -37,15 +37,15 @@
     </item>
     <item>
       <title>AI 流量怎麼追蹤？用 GA4 + Looker 建立 AI 流量分析儀表板 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/12/13/looker-ai-traffic/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/12/13/looker-ai-traffic/</guid>
+      <link>https://www.maxlist.xyz/post/looker-ai-traffic/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/looker-ai-traffic/</guid>
       <pubDate>Sat, 13 Dec 2025 03:59:27 GMT</pubDate>
       <description>AI 已經開始帶來網站流量，但在 GA4 裡往往無法直接看出來。若想知道 AI 帶來多少流量、進到哪些頁面，以及使用者是否真的閱讀內容，就必須把 AI 流量獨立分析。這篇文章會用 GA4 與 Looker，帶你建立一套可實際追蹤 AI 流量的分析儀表板。 這篇文章會帶你做到什麼？ 第一張 Dashboard 會幫助你…</description>
     </item>
     <item>
       <title>[超完整表格] Looker Studio、Tableau 與 Power BI 比較：導入前的四個考慮要素 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/11/05/lookerstudio-vs-tableau-vs-powerbi/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/11/05/lookerstudio-vs-tableau-vs-powerbi/</guid>
+      <link>https://www.maxlist.xyz/post/lookerstudio-vs-tableau-vs-powerbi/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/lookerstudio-vs-tableau-vs-powerbi/</guid>
       <pubDate>Wed, 05 Nov 2025 03:11:40 GMT</pubDate>
       <description>本篇整理了台灣最常被使用的三個 BI 工具：Looker Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Looker Studio vs Tableau vs Power BI 比較表格： 比較面向 Lo…</description>
     </item>
@@ -58,8 +58,8 @@
     </item>
     <item>
       <title>一文搞懂 Kobo 電子書格式：EPUB、Kepub、版本差異與閱讀體驗 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/11/02/kobo-epub-vs-kepub/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/11/02/kobo-epub-vs-kepub/</guid>
+      <link>https://www.maxlist.xyz/post/kobo-epub-vs-kepub/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/kobo-epub-vs-kepub/</guid>
       <pubDate>Sun, 02 Nov 2025 13:43:21 GMT</pubDate>
       <description>對許多剛開始閱讀電子書的人來說，「格式」是一個常被忽略但非常關鍵的主題。不同平台（如 Kindle、Kobo、Google Play Books）使用的格式不盡相同，也影響到書籍是否能跨裝置閱讀。 當你在 Kobo 官方商店購買電子書後，系統會依出版社與授權方式提供不同的檔案格式。 可以進入書籍商品頁下拉，底部會出現…</description>
     </item>
@@ -72,15 +72,15 @@
     </item>
     <item>
       <title>n8n 圖文教學：3 分鐘重新設定帳號密碼 (Zeabur 介面) - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/10/29/n8n-password-reset/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/10/29/n8n-password-reset/</guid>
+      <link>https://www.maxlist.xyz/post/n8n-password-reset/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/n8n-password-reset/</guid>
       <pubDate>Wed, 29 Oct 2025 07:45:05 GMT</pubDate>
       <description>本篇教學將帶你快速重新設定 n8n 帳號密碼！將帶大家在 Zeabur 介面上輸入指令，讓使用者重設密碼，這個流程絕對不會導致 workflow 和資料遺失，單純是重設密碼而已，請放心使用。終於不用再怕忘記密碼了🥹 Step 1: 開啟 Zeabur 指令終端機 首先，登入 Zeabur 的管理後台，在左側專案列表…</description>
     </item>
     <item>
       <title>【圖文教學】如何授權 Merchant Center 超級用戶權限 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/07/29/google-merchant-center-superuser/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/07/29/google-merchant-center-superuser/</guid>
+      <link>https://www.maxlist.xyz/post/google-merchant-center-superuser/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/google-merchant-center-superuser/</guid>
       <pubDate>Tue, 29 Jul 2025 08:44:43 GMT</pubDate>
       <description>最近遇到需要分享 Google Merchant Center 超級用戶權限的問題，花了很多時間研究，也和 GPT 聊很久，但 GMC 介面上把權限分享藏得很深，實在太難找了 🤣 所以寫了這篇，分享給目前也在卡關的你，希望有幫助！ Step 1 設定 &gt; 用戶訪問權限 首先，進入 Google Merchant C…</description>
     </item>
@@ -93,8 +93,8 @@
     </item>
     <item>
       <title>零成本，每天定時撈取 Meta 廣告數據 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/07/03/auto-fetch-meta-ads/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/07/03/auto-fetch-meta-ads/</guid>
+      <link>https://www.maxlist.xyz/post/auto-fetch-meta-ads/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/auto-fetch-meta-ads/</guid>
       <pubDate>Thu, 03 Jul 2025 05:05:29 GMT</pubDate>
       <description>本篇會帶大家撈取 Meta 廣告數據，設定完成後每天會自動抓取數據，並存在 Google Sheet 中！我們使用的是 Google Sheet 內建的 App Script，完全不需要付任何的費用，而且只需要一次設定，之後每天都可以輕鬆看廣告數據報表囉！ 一、取得 Meta 廣告數據權限 步驟 1：前往 Meta…</description>
     </item>
@@ -107,15 +107,15 @@
     </item>
     <item>
       <title>n8n 圖文教學： 一鍵更新升級 n8n 版本，超容易！ - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/05/23/n8n-update-version/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/05/23/n8n-update-version/</guid>
+      <link>https://www.maxlist.xyz/post/n8n-update-version/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/n8n-update-version/</guid>
       <pubDate>Fri, 23 May 2025 03:34:37 GMT</pubDate>
       <description>在建立自己的 n8n 自動化流程時，總是會看到小提醒你需要更新 n8n 版本囉！別擔心，本篇教學會帶著你一鍵快速的升級 n8n 的版本，如果你還沒有部署 n8n 在主機上的話，可以參考之前這篇 「n8n 圖文教學： 3 分鐘安裝部署n8n」！ 如何升級 n8n 版本 更新 n8n 的版本方式主要有兩種，取決於你當初是…</description>
     </item>
     <item>
       <title>n8n 圖文教學： 3 分鐘安裝部署 n8n，完成第一個新手任務！ - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2025/05/12/n8n-deployment/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2025/05/12/n8n-deployment/</guid>
+      <link>https://www.maxlist.xyz/post/n8n-deployment/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/n8n-deployment/</guid>
       <pubDate>Mon, 12 May 2025 06:23:39 GMT</pubDate>
       <description>本篇教學將帶你快速安裝 n8n：將帶大家使用 Zeabur 部署自己的 n8n，過程中不需要自己架設伺服器，也不用處理繁瑣的網路設定與憑證 SSL 安裝。只要幾個按鍵簡單步驟，你就能在 3 分鐘內啟動 n8n，自由串接各種服務、開始你的工作流程自動化。 選擇架設 n8n 的方式 要使用 n8n，首先你得決定把它「架在…</description>
     </item>
@@ -135,15 +135,15 @@
     </item>
     <item>
       <title>【電商小細節】頁面優化經驗談：細節決定成敗 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2024/08/05/page-optimize/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2024/08/05/page-optimize/</guid>
+      <link>https://www.maxlist.xyz/post/page-optimize/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/page-optimize/</guid>
       <pubDate>Mon, 05 Aug 2024 09:54:23 GMT</pubDate>
       <description>▍不斷奔跑：更多實驗，更快成長 Airbnb、Amazon、Booking.com、Netflix 和 Uber 等都有著實驗文化精神。這種快速且持續的實驗和迭代，使產品能夠精確地滿足用戶需求並迅速應對市場變化。 Amazon 每年進行約 12,000 次實驗，甚至允許賣家進行商品頁面的 A/B 測試；Booking…</description>
     </item>
     <item>
       <title>FastAPI Contributor 繁體中文翻譯計畫 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2024/04/14/fastapi-contributor/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2024/04/14/fastapi-contributor/</guid>
+      <link>https://www.maxlist.xyz/post/fastapi-contributor/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/fastapi-contributor/</guid>
       <pubDate>Sun, 14 Apr 2024 13:46:06 GMT</pubDate>
       <description>嗨你好，我是 Max，很歡迎你一起參與 FastAPI 繁體中文翻譯計畫，希望這份紀錄對你在開始第一篇翻譯時有幫助 🙂 ㄧ. 起手式 Fork FastAPI 首先到 FastAPI (https://github.com/tiangolo/fastapi)，點擊右上角的 Fork 專案 接下來到本地終端機 git…</description>
     </item>
@@ -156,15 +156,15 @@
     </item>
     <item>
       <title>SQL Query 的一天過得好嗎 (上)？ - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2024/04/01/a-day-of-sql/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2024/04/01/a-day-of-sql/</guid>
+      <link>https://www.maxlist.xyz/post/a-day-of-sql/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/a-day-of-sql/</guid>
       <pubDate>Mon, 01 Apr 2024 06:41:10 GMT</pubDate>
       <description>這篇我們會從使用者下了 SQL 指令開始、路途中經過連線池 (connection pool)、解析器 (parser)、優化器 (optimizer)… 等的過程紀錄下，希望這篇文章有幫助到你 🙂 Phase 1 – Connection Pool (連線池) 1-1. 什麼是 Connection Pool？…</description>
     </item>
     <item>
       <title>資料庫最常見的欄位：UUID - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2024/02/08/uuid/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2024/02/08/uuid/</guid>
+      <link>https://www.maxlist.xyz/post/uuid/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/uuid/</guid>
       <pubDate>Thu, 08 Feb 2024 05:23:11 GMT</pubDate>
       <description>UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…</description>
     </item>
@@ -184,8 +184,8 @@
     </item>
     <item>
       <title>【數據分析】30 分鐘打造 GA4 即時報表 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/2023/07/01/ga4-realtime-dashboard/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/2023/07/01/ga4-realtime-dashboard/</guid>
+      <link>https://www.maxlist.xyz/post/ga4-realtime-dashboard/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/ga4-realtime-dashboard/</guid>
       <pubDate>Sat, 01 Jul 2023 05:17:50 GMT</pubDate>
       <description>本篇教學會帶大家用 30 分鐘，打造一個 GA4 即時報表，過程只需要三個步驟，1. GA4 串接 BigQuery 2. 建立 GA4 檢視表 3. 串接 GA4 Dashboard。步驟非常簡單，不需要任何工程師的協助，就可以輕鬆完成的 GA4 即時報表。 首先我們來看最終「GA4 即時報表」成果如下，我們打造一…</description>
     </item>

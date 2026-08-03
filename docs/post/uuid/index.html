@@ -1,0 +1,996 @@
+<!DOCTYPE html><html lang="zh-TW"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>資料庫最常見的欄位：UUID - Max行銷誌</title>
+	<link rel="canonical" href="https://www.maxlist.xyz/post/uuid/">
+	<meta property="og:locale" content="zh_TW">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="資料庫最常見的欄位：UUID - Max行銷誌">
+	<meta property="og:description" content="UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…">
+	<meta property="og:url" content="https://www.maxlist.xyz/post/uuid/">
+	<meta property="og:site_name" content="Max行銷誌">
+	<meta property="article:published_time" content="2024-02-08T05:23:11+00:00">
+	<meta property="article:modified_time" content="2024-02-14T04:20:28+00:00">
+	<meta property="og:image" content="https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg">
+	<meta property="og:image:width" content="1888">
+	<meta property="og:image:height" content="1060">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Max">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Max">
+	<meta name="twitter:label2" content="預估閱讀時間">
+	<meta name="twitter:data2" content="6 分鐘">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/post/uuid/#article","isPartOf":{"@id":"https://www.maxlist.xyz/post/uuid/"},"author":{"name":"Max","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"headline":"資料庫最常見的欄位：UUID","datePublished":"2024-02-08T05:23:11+00:00","dateModified":"2024-02-14T04:20:28+00:00","mainEntityOfPage":{"@id":"https://www.maxlist.xyz/post/uuid/"},"wordCount":247,"commentCount":0,"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"image":{"@id":"https://www.maxlist.xyz/post/uuid/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg","keywords":["python教學","UUID"],"articleSection":["All posts","Python 基礎教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/post/uuid/","url":"https://www.maxlist.xyz/post/uuid/","name":"資料庫最常見的欄位：UUID - Max行銷誌","isPartOf":{"@id":"https://www.maxlist.xyz/#website"},"primaryImageOfPage":{"@id":"https://www.maxlist.xyz/post/uuid/#primaryimage"},"image":{"@id":"https://www.maxlist.xyz/post/uuid/#primaryimage"},"thumbnailUrl":"https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg","datePublished":"2024-02-08T05:23:11+00:00","dateModified":"2024-02-14T04:20:28+00:00","breadcrumb":{"@id":"https://www.maxlist.xyz/post/uuid/#breadcrumb"},"inLanguage":"zh-TW","potentialAction":[{"@type":"ReadAction","target":["https://www.maxlist.xyz/post/uuid/"]}]},{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/post/uuid/#primaryimage","url":"https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg","contentUrl":"https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg","width":1888,"height":1060,"caption":"UUID Max行銷誌"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/post/uuid/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"All posts","item":"https://www.maxlist.xyz/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/"},{"@type":"ListItem","position":3,"name":"資料庫最常見的欄位：UUID"}]},{"@type":"WebSite","@id":"https://www.maxlist.xyz/#website","url":"https://www.maxlist.xyz/","name":"Max行銷誌","description":"行銷、數據分析、與 Python","publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.maxlist.xyz/search/?q={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"zh-TW"},{"@type":["Person","Organization"],"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","image":{"@type":"ImageObject","inLanguage":"zh-TW","@id":"https://www.maxlist.xyz/#/schema/person/image/","url":"https://www.maxlist.xyz/image/cropped-%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-09-23-%E4%B8%8B%E5%8D%888.03.21.png","contentUrl":"https://www.maxlist.xyz/image/cropped-%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-09-23-%E4%B8%8B%E5%8D%888.03.21.png","width":512,"height":512,"caption":"Max"},"logo":{"@id":"https://www.maxlist.xyz/#/schema/person/image/"},"description":"我是 Max，熱於分享與交流；左手寫數據分析，右手寫程式開發，相信著行銷與工程的結合能驅動無限的價值。 除了 Blog 外，想認識的朋友歡迎約個 30 分鐘 Online Coffee 聊聊 ☕","sameAs":["https://www.maxlist.xyz/post/author/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="../../">
+
+<link rel="alternate" type="application/rss+xml" title="訂閱《Max行銷誌》» 資訊提供" href="../../feed.xml">
+
+<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="../../wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.28" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-theme-powershell-css" href="../../wp-content/plugins/urvanov-syntax-highlighter/themes/powershell/powershell.css?ver=2.8.28" type="text/css" media="all">
+<link rel="stylesheet" id="crayon-font-monaco-css" href="../../wp-content/plugins/urvanov-syntax-highlighter/fonts/monaco.css?ver=2.8.28" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-wc-css-css" href="../../wp-content/themes/sydney/woocommerce/css/wc.min.css?ver=20220616" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-bootstrap-css" href="../../wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1" type="text/css" media="all">
+
+<link rel="stylesheet" id="wp-block-library-css" href="../../wp-includes/css/dist/block-library/style.min.css?ver=6.8.6" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="../../wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false&amp;ver=34ae973733627b74a14e" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="../../wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="../../wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.6" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+
+<style id="woocommerce-layout-inline-css" type="text/css">
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="wphb-1-css" href="../../wp-content/uploads/hummingbird-assets/535401a884ff6f3553f16146eef8e652.css" type="text/css" media="all">
+<style id="wphb-1-inline-css" type="text/css">
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}.ez-toc-box-title {font-weight: bold; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: #666; padding-bottom: 5px;position:absolute;top:-4%;left:5%;background-color: inherit;transition: top 0.3s ease;}.ez-toc-box-title.toc-closed {top:-25%;}
+</style>
+<link rel="stylesheet" id="sydney-style-css" href="../../wp-content/themes/sydney/style.css?ver=20221019" type="text/css" media="all">
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='sydney-ie9-css' href='https://www.maxlist.xyz/wp-content/themes/sydney/css/ie9.css?ver=6.8.6' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="sydney-elementor-css" href="../../wp-content/themes/sydney/css/components/elementor.min.css?ver=20220824" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-style-min-css" href="../../wp-content/themes/sydney/css/styles.min.css?ver=20221019" type="text/css" media="all">
+<style id="sydney-style-min-inline-css" type="text/css">
+.site-header{background-color:rgba(0,0,0,0.9);}.woocommerce ul.products li.product{text-align:center;}html{scroll-behavior:smooth;}.header-image{background-size:cover;}.header-image{height:400px;}.sydney_contact_info_widget span{fill:#d65050;}.go-top:hover svg{stroke:#d65050;}.site-header.float-header{background-color:rgba(0,0,0,0.9);}@media only screen and (max-width:1024px){.site-header{background-color:#000000;}}#mainnav ul li a,#mainnav ul li::before{color:#ffffff}#mainnav .sub-menu li a{color:#ffffff}#mainnav .sub-menu li a{background:#ffffff}.text-slider .maintitle,.text-slider .subtitle{color:#ffffff}body{color:}#secondary{background-color:#ffffff}#secondary,#secondary a{color:#737C8C}.btn-menu .sydney-svg-icon{fill:#ffffff}#mainnav ul li a:hover,.main-header #mainnav .menu > li > a:hover{color:#d65050}.overlay{background-color:#bababa}.page-wrap{padding-top:43px;}.page-wrap{padding-bottom:100px;}@media only screen and (max-width:1025px){.mobile-slide{display:block;}.slide-item{background-image:none !important;}.header-slider{}.slide-item{height:auto !important;}.slide-inner{min-height:initial;}}.go-top.show{border-radius:2px;bottom:10px;}.go-top.position-right{right:20px;}.go-top.position-left{left:20px;}.go-top{background-color:;}.go-top:hover{background-color:;}.go-top{color:;}.go-top svg{stroke:;}.go-top:hover{color:;}.go-top:hover svg{stroke:;}.go-top .sydney-svg-icon,.go-top .sydney-svg-icon svg{width:16px;height:16px;}.go-top{padding:15px;}.site-info{border-top:0 solid rgba(255,255,255,0.1);}.footer-widgets-grid{gap:30px;}@media (min-width:992px){.footer-widgets-grid{padding-top:95px;padding-bottom:95px;}}@media (min-width:576px) and (max-width:991px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (max-width:575px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (min-width:992px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (min-width:576px) and (max-width:991px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (max-width:575px){.sidebar-column .widget .widget-title{font-size:22px;}}.footer-widgets{background-color:#00102E;}.sidebar-column .widget .widget-title{color:;}.sidebar-column .widget h1,.sidebar-column .widget h2,.sidebar-column .widget h3,.sidebar-column .widget h4,.sidebar-column .widget h5,.sidebar-column .widget h6{color:;}.sidebar-column .widget{color:#ffffff;}.sidebar-column .widget a{color:#ffffff;}.sidebar-column .widget a:hover{color:;}.site-footer{background-color:#00102E;}.site-info,.site-info a{color:#ffffff;}.site-info .sydney-svg-icon svg{fill:#ffffff;}.site-info{padding-top:20px;padding-bottom:20px;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-radius:3px;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{text-transform:uppercase;}button,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{background-color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{background-color:;}button,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.checkout-button.button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{color:;}.is-style-outline .wp-block-button__link,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.roll-button,.wp-block-button__link.is-style-outline,button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:;}.posts-layout .list-image{width:30%;}.posts-layout .list-content{width:70%;}.content-area:not(.layout4):not(.layout6) .posts-layout .entry-thumb{margin:0 0 10px 0;}.layout4 .entry-thumb,.layout6 .entry-thumb{margin:0 10px 0 0;}.layout6 article:nth-of-type(even) .list-image .entry-thumb{margin:0 0 0 10px;}.posts-layout .entry-header{margin-bottom:0;}.posts-layout .entry-meta.below-excerpt{margin:5px 0 0;}.posts-layout .entry-meta.above-title{margin:0 0 5px;}.single .entry-header .entry-title{color:;}.single .entry-header .entry-meta,.single .entry-header .entry-meta a{color:;}@media (min-width:992px){.single .entry-meta{font-size:12px;}}@media (min-width:576px) and (max-width:991px){.single .entry-meta{font-size:12px;}}@media (max-width:575px){.single .entry-meta{font-size:12px;}}@media (min-width:992px){.single .entry-header .entry-title{font-size:36px;}}@media (min-width:576px) and (max-width:991px){.single .entry-header .entry-title{font-size:32px;}}@media (max-width:575px){.single .entry-header .entry-title{font-size:32px;}}.posts-layout .entry-post{color:#233452;}.posts-layout .entry-title a{color:#00102E;}.posts-layout .author,.posts-layout .entry-meta a{color:#737C8C;}@media (min-width:992px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-post{font-size:16px;}}@media (max-width:575px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:992px){.posts-layout .entry-meta{font-size:10px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-meta{font-size:12px;}}@media (max-width:575px){.posts-layout .entry-meta{font-size:10px;}}@media (min-width:992px){.posts-layout .entry-title{font-size:15px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-title{font-size:32px;}}@media (max-width:575px){.posts-layout .entry-title{font-size:15px;}}.single .entry-header{margin-bottom:40px;}.single .entry-thumb{margin-bottom:40px;}.single .entry-meta-above{margin-bottom:8px;}.single .entry-meta-below{margin-top:8px;}@media (min-width:992px){.custom-logo-link img{max-width:180px;}}@media (min-width:576px) and (max-width:991px){.custom-logo-link img{max-width:100px;}}@media (max-width:575px){.custom-logo-link img{max-width:100px;}}.main-header,.bottom-header-row{border-bottom:0 solid rgba(255,255,255,0.1);}.header_layout_3,.header_layout_4,.header_layout_5{border-bottom:1px solid rgba(255,255,255,0.1);}.main-header,.header-search-form{background-color:;}.main-header.sticky-active{background-color:;}.main-header .site-title a,.main-header .site-description,.main-header #mainnav .menu > li > a,.main-header .header-contact a{color:#ffffff;}.main-header .sydney-svg-icon svg,.main-header .dropdown-symbol .sydney-svg-icon svg{fill:#ffffff;}.sticky-active .main-header .site-title a,.sticky-active .main-header .site-description,.sticky-active .main-header #mainnav .menu > li > a,.sticky-active .main-header .header-contact a,.sticky-active .main-header .logout-link,.sticky-active .main-header .html-item,.sticky-active .main-header .sydney-login-toggle{color:;}.sticky-active .main-header .sydney-svg-icon svg,.sticky-active .main-header .dropdown-symbol .sydney-svg-icon svg{fill:;}.bottom-header-row{background-color:;}.bottom-header-row,.bottom-header-row .header-contact a,.bottom-header-row #mainnav .menu > li > a{color:;}.bottom-header-row #mainnav .menu > li > a:hover{color:;}.bottom-header-row .header-item svg,.dropdown-symbol .sydney-svg-icon svg{fill:;}.main-header .main-header-inner,.main-header .top-header-row{padding-top:15px;padding-bottom:15px;}.bottom-header-inner{padding-top:15px;padding-bottom:15px;}.bottom-header-row #mainnav ul ul li,.main-header #mainnav ul ul li{background-color:;}.bottom-header-row #mainnav ul ul li a,.bottom-header-row #mainnav ul ul li:hover a,.main-header #mainnav ul ul li:hover a,.main-header #mainnav ul ul li a{color:;}.bottom-header-row #mainnav ul ul li svg,.main-header #mainnav ul ul li svg{fill:;}.main-header-cart .count-number{color:;}.main-header-cart .widget_shopping_cart .widgettitle:after,.main-header-cart .widget_shopping_cart .woocommerce-mini-cart__buttons:before{background-color:rgba(33,33,33,0.9);}.sydney-offcanvas-menu .mainnav ul li{text-align:left;}.sydney-offcanvas-menu .mainnav a{padding:10px 0;}#masthead-mobile{background-color:;}#masthead-mobile .site-description,#masthead-mobile a:not(.button){color:;}#masthead-mobile svg{fill:;}.mobile-header{padding-top:15px;padding-bottom:15px;}.sydney-offcanvas-menu{background-color:;}.sydney-offcanvas-menu,.sydney-offcanvas-menu #mainnav a:not(.button),.sydney-offcanvas-menu a:not(.button){color:;}.sydney-offcanvas-menu svg,.sydney-offcanvas-menu .dropdown-symbol .sydney-svg-icon svg{fill:;}@media (min-width:992px){.site-logo{max-height:100px;}}@media (min-width:576px) and (max-width:991px){.site-logo{max-height:100px;}}@media (max-width:575px){.site-logo{max-height:100px;}}.site-title a,.site-title a:visited,.main-header .site-title a,.main-header .site-title a:visited{color:#ffffff}.site-description,.main-header .site-description{color:#ffffff}@media (min-width:992px){.site-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.site-title{font-size:24px;}}@media (max-width:575px){.site-title{font-size:20px;}}@media (min-width:992px){.site-description{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.site-description{font-size:16px;}}@media (max-width:575px){.site-description{font-size:16px;}}h1,h2,h3,h4,h5,h6,.site-title{text-decoration:;text-transform:;font-style:;line-height:1.2;letter-spacing:px;}@media (min-width:992px){h1:not(.site-title){font-size:42px;}}@media (min-width:576px) and (max-width:991px){h1:not(.site-title){font-size:42px;}}@media (max-width:575px){h1:not(.site-title){font-size:32px;}}@media (min-width:992px){h2{font-size:36px;}}@media (min-width:576px) and (max-width:991px){h2{font-size:32px;}}@media (max-width:575px){h2{font-size:24px;}}@media (min-width:992px){h3{font-size:32px;}}@media (min-width:576px) and (max-width:991px){h3{font-size:24px;}}@media (max-width:575px){h3{font-size:20px;}}@media (min-width:992px){h4{font-size:24px;}}@media (min-width:576px) and (max-width:991px){h4{font-size:18px;}}@media (max-width:575px){h4{font-size:16px;}}@media (min-width:992px){h5{font-size:20px;}}@media (min-width:576px) and (max-width:991px){h5{font-size:16px;}}@media (max-width:575px){h5{font-size:16px;}}@media (min-width:992px){h6{font-size:18px;}}@media (min-width:576px) and (max-width:991px){h6{font-size:16px;}}@media (max-width:575px){h6{font-size:16px;}}p,.posts-layout .entry-post{text-decoration:}body,.posts-layout .entry-post{text-transform:;font-style:;line-height:1.68;letter-spacing:px;}@media (min-width:992px){body{font-size:20px;}}@media (min-width:576px) and (max-width:991px){body{font-size:16px;}}@media (max-width:575px){body{font-size:16px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}.woocommerce ul.products li.product .col-md-7 > *,.woocommerce ul.products li.product .col-md-8 > *,.woocommerce ul.products li.product > *{margin-bottom:12px;}.wc-block-grid__product-onsale,span.onsale{border-radius:0;top:20px!important;left:20px!important;}.wc-block-grid__product-onsale,.products span.onsale{left:auto!important;right:20px;}.wc-block-grid__product-onsale,span.onsale{color:;}.wc-block-grid__product-onsale,span.onsale{background-color:;}ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,ul.wc-block-grid__products li.wc-block-grid__product .woocommerce-loop-product__title,ul.wc-block-grid__products li.product .wc-block-grid__product-title,ul.wc-block-grid__products li.product .woocommerce-loop-product__title,ul.products li.wc-block-grid__product .wc-block-grid__product-title,ul.products li.wc-block-grid__product .woocommerce-loop-product__title,ul.products li.product .wc-block-grid__product-title,ul.products li.product .woocommerce-loop-product__title,ul.products li.product .woocommerce-loop-category__title,.woocommerce-loop-product__title .botiga-wc-loop-product__title{color:;}a.wc-forward:not(.checkout-button){color:;}a.wc-forward:not(.checkout-button):hover{color:;}.woocommerce-pagination li .page-numbers:hover{color:;}.woocommerce-sorting-wrapper{border-color:rgba(33,33,33,0.9);}ul.products li.product-category .woocommerce-loop-category__title{text-align:center;}ul.products li.product-category > a,ul.products li.product-category > a > img{border-radius:0;}.entry-content a:not(.button){color:;}.entry-content a:not(.button):hover{color:;}h1{color:;}h2{color:;}h3{color:;}h4{color:;}h5{color:;}h6{color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,select:focus,.woocommerce .select2-container .select2-selection--single:focus,.woocommerce-page .select2-container .select2-selection--single:focus,.select2-container--default .select2-selection--single .select2-selection__rendered,.wp-block-search .wp-block-search__input,.wp-block-search .wp-block-search__input:focus{color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"]{background-color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-account fieldset,.woocommerce-account .woocommerce-form-login,.woocommerce-account .woocommerce-form-register,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"],.wp-block-search .wp-block-search__input{border-color:;}input::placeholder{color:;opacity:1;}input:-ms-input-placeholder{color:;}input::-ms-input-placeholder{color:;}
+</style>
+<link rel="stylesheet" id="elementor-lazyload-css" href="../../wp-content/plugins/elementor/assets/css/modules/lazyload/frontend.min.css?ver=3.13.4" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="../../wp-content/plugins/jetpack/css/jetpack.css?ver=12.2.2" type="text/css" media="all">
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="wphb-2-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"\u9ede\u64ca\u5c55\u958b\u4ee3\u78bc"};
+/* ]]> */
+</script>
+
+
+
+
+
+
+
+<!-- HFCM by 99 Robots - Snippet # 2: 全站 CSS 調整 -->
+<style>
+#masthead > div.container > div > div > div:nth-child(1) > div > p.site-title > a,
+#menu-item-3117 > a,
+#nav_menu-16 > h3 {
+  color: #d65050 !important;
+}
+</style>
+<!-- /end HFCM by 99 Robots -->
+
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pageTitle":"資料庫最常見的欄位：UUID - Max行銷誌","pagePostType":"post","pagePostType2":"single-post","pageCategory":["%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0","python-base"],"pageAttributes":["python%e6%95%99%e5%ad%b8","uuid"],"pagePostAuthor":"Max","pagePostDate":"8 2 月, 2024","pagePostDateYear":"2024","pagePostDateMonth":"02","pagePostDateDay":"08","pagePostDateDayName":"星期四","pagePostDateHour":"05","pagePostDateMinute":"23","pagePostDateIso":"2024-02-08T05:23:11+00:00","pagePostDateUnix":1707369791,"pagePostTerms":{"category":["All posts","Python 基礎教學"],"post_tag":["python教學","UUID"]},"postCountOnPage":1,"postCountTotal":1,"postFormat":"standard"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSG8N3Q');
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload { opacity: 0; }
+				.lazyloading {
+					border: 0 !important;
+					opacity: 1;
+					background: rgba(255, 255, 255, 0) url('/wp-content/plugins/wp-smush-pro/app/assets/images/smush-lazyloader-2.gif') no-repeat center !important;
+					background-size: 16px auto !important;
+				}
+					</style>
+			<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+
+<style class="wp-fonts-local" type="text/css">
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+<link rel="icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-150x150.png" sizes="32x32">
+<link rel="icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
+<meta name="msapplication-TileImage" content="https://www.maxlist.xyz/image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
+<meta name="maxlist-static-snapshot" content="2026-08-01"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="description" content="UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…"></head>
+
+<body class="wp-singular post-template-default single single-post postid-9582 single-format-standard wp-theme-sydney theme-sydney woocommerce-no-js menu-inline e-lazyload elementor-default elementor-kit-5104">
+
+<span id="toptarget"></span>
+
+
+
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
+
+	<script src="../../assets/js/components/header.js?v=20260803-1"></script>
+
+
+
+
+
+
+
+
+
+	<div class="sydney-hero-area">
+				<div class="header-image">
+								</div>
+
+			</div>
+
+
+	<div id="content" class="page-wrap">
+		<div class="content-wrapper container">
+			<div class="row">
+
+
+
+	<div id="primary" class="content-area sidebar-right col-md-9 container-normal">
+
+
+		<main id="main" class="post-wrap" role="main">
+
+
+
+
+<article id="post-9582" class="post-9582 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-base tag-python tag-uuid">
+	<div class="content-inner">
+
+
+		<header class="entry-header">
+
+		<h1 class="title-post entry-title">資料庫最常見的欄位：UUID</h1>
+					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By  <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/" rel="category tag">All posts</a>、<a href="/category/python-base/" rel="category tag">Python 基礎教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/uuid/" rel="bookmark"><time class="entry-date updated-time" datetime="2024-02-14T04:20:28+00:00">14 2 月, 2024</time></a></span></div>			</header><!-- .entry-header -->
+
+					<div class="entry-thumb ">
+			<img width="1888" height="1060" alt="UUID Max行銷誌" decoding="async" fetchpriority="high" data-srcset="../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg 1888w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-300x168.jpg 300w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1024x575.jpg 1024w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-768x431.jpg 768w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1536x862.jpg 1536w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1000x561.jpg 1000w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-230x129.jpg 230w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-350x197.jpg 350w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-480x269.jpg 480w" data-src="../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg" data-sizes="(max-width: 1888px) 100vw, 1888px" class="attachment-large-thumb size-large-thumb wp-post-image lazyload" src="../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg" srcset="../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg 1888w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-300x168.jpg 300w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1024x575.jpg 1024w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-768x431.jpg 768w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1536x862.jpg 1536w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1000x561.jpg 1000w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-230x129.jpg 230w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-350x197.jpg 350w, ../../image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-480x269.jpg 480w"><noscript><img width="1888" height="1060" src="https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="UUID Max行銷誌" decoding="async" fetchpriority="high" srcset="https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.jpg 1888w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-300x168.jpg 300w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1024x575.jpg 1024w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-768x431.jpg 768w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1536x862.jpg 1536w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-1000x561.jpg 1000w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-230x129.jpg 230w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-350x197.jpg 350w, https://www.maxlist.xyz/image/UUID-Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-480x269.jpg 480w" sizes="(max-width: 1888px) 100vw, 1888px" /></noscript>		</div>
+
+
+	<div class="entry-content">
+
+<div id="ez-toc-container" class="ez-toc-v2_0_85 counter-hierarchy ez-toc-counter ez-toc-grey ez-toc-container-direction">
+<p class="ez-toc-title" style="cursor:inherit">目錄</p>
+<label for="ez-toc-cssicon-toggle-item-6a6e01e6e6726" class="ez-toc-cssicon-toggle-label"><span class="ez-toc-cssicon"><span class="eztoc-hide" style="display:none;">Toggle</span><span class="ez-toc-icon-toggle-span"><svg style="fill: #999;color:#999" xmlns="http://www.w3.org/2000/svg" class="list-377408" width="20px" height="20px" viewBox="0 0 24 24" fill="none"><path d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z" fill="currentColor"></path></svg><svg style="fill: #999;color:#999" class="arrow-unsorted-368013" xmlns="http://www.w3.org/2000/svg" width="10px" height="10px" viewBox="0 0 24 24" version="1.2" baseProfile="tiny"><path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path></svg></span></span></label><input type="checkbox" id="ez-toc-cssicon-toggle-item-6a6e01e6e6726" aria-label="顯示/隱藏"><nav><ul class="ez-toc-list ez-toc-list-level-1 "><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-1" href="#UUID_%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F">UUID 是什麼？</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-2" href="#UUID_v1">UUID v1</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-3" href="#UUID_v2">UUID v2</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-4" href="#UUID_v3">UUID v3</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-5" href="#UUID_v4">UUID v4</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-6" href="#UUID_v5">UUID v5</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-7" href="#UUID_v7">UUID v7</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-8" href="#UUIDhex">UUID.hex</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-9" href="#%E7%89%B9%E6%AE%8A%E7%9A%84_UUID">特殊的 UUID</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-10" href="#%E5%85%B6%E4%BB%96%E7%9B%B8%E9%97%9C_ID">其他相關 ID</a><ul class="ez-toc-list-level-3"><li class="ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-11" href="#Snowflake_ID_%E9%9B%AA%E8%8A%B1_ID">Snowflake ID (雪花 ID)</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-12" href="#Sharding_IDs_at_Instagram">Sharding &amp; IDs at Instagram</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-13" href="#MongoDB_Object_ID">MongoDB Object ID</a></li><li class="ez-toc-page-1 ez-toc-heading-level-3"><a class="ez-toc-link ez-toc-heading-14" href="#ULID_spec">ULID spec</a></li></ul></li><li class="ez-toc-page-1 ez-toc-heading-level-2"><a class="ez-toc-link ez-toc-heading-15" href="#%E5%BB%B6%E4%BC%B8%E9%96%B1%E8%AE%80">延伸閱讀</a></li></ul></nav></div>
+<h2 class="wp-block-heading"><span class="ez-toc-section" id="UUID_是什麼？"></span>UUID 是什麼？<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。</p>
+
+
+
+<p>而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，<a href="https://datatracker.ietf.org/doc/draft-ietf-uuidrev-rfc4122bis/" target="_blank" rel="noreferrer noopener">RFC 4122</a> 中標準化了 UUID 的實作規範。</p>
+
+
+
+<p>以下是幾個 UUID 的實際樣子，由 128 位元 (36 字元) 組成：</p>
+
+
+
+<ul class="wp-block-list">
+<li>c2e456b2-6093-4c68-9746-2460c3ce19bb</li>
+
+
+
+<li>efeddb6a-1471-49f1-ab67-189b5e2758e1</li>
+</ul>
+
+
+
+<p>其中 UUID 有不同的版本，每種的使用情境不同，接下來將會為大家一一介紹：</p>
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v1"></span>UUID v1:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>組成結構：時間戳記 + MAC address 所生成</li>
+
+
+
+<li>缺點：
+<ul class="wp-block-list">
+<li>MAC address 是每一台電腦都會有的網卡，每一張上都會有不同的編號，如果使用 v1 要小心會有隱私性問題</li>
+
+
+
+<li>而現在虛擬主機的 MAC address 是會被修改，如果遇到相同的 MAC address 則會有碰撞的情況發生</li>
+
+
+
+<li>uuid.js 統計大概有 20% 的人會使用這個版本的 UUID</li>
+</ul>
+</li>
+
+
+
+<li>以下是 Python 呼叫內建 library 所產生 uuid v1 的方式：</li>
+</ul>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa576600185596" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa576600185596-7">7</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-1"><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-2"><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">timestamp</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-e">MAC </span><span class="crayon-v">address</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">|</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-3"><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-4">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-5"><span class="crayon-e">import </span><span class="crayon-e">uuid</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-6"><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid1</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa576600185596-7"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">2b233aa4</span><span class="crayon-o">-</span><span class="crayon-v">d02d</span><span class="crayon-o">-</span><span class="crayon-cn">3b16</span><span class="crayon-o">-</span><span class="crayon-v">a4ff</span><span class="crayon-o">-</span><span class="crayon-v">fc44606ec6ae</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0019 seconds] -->
+
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v2"></span>UUID v2:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>是一個較少被使用和提及的版本，UUIDv2 更多的是針對特定的系統和需求設計的，它主要用於包含 POSIX 安全性資訊（如用戶 ID 和群組 ID）的 UUID，在 Python 內建 library 中並沒有實作 UUID v2。</li>
+
+
+
+<li>缺點：特定系統使用，且不在 Python 內建 library 裡面</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v3"></span>UUID v3:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>組成結構：namespace identifier (UUID) + 字串，使用 MD5 hash 產生</li>
+
+
+
+<li>非隨機性的 UUID，如果你放入相同的 namespace 和字串，所產生的 UUID 會是相同</li>
+
+
+
+<li>以下是 Python 呼叫內建 library 所產生 uuid v3 的方式：</li>
+</ul>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa584955800059" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa584955800059-12">12</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-1"><span class="crayon-p"># 以下是 python library 的程式碼，可以看到由 md5 hash 你所放入的資料</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-2"><span class="crayon-e">def </span><span class="crayon-e">uuid3</span><span class="crayon-sy">(</span><span class="crayon-t">namespace</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">name</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">""</span><span class="crayon-s">"Generate a UUID from the MD5 hash of a namespace UUID and a name."</span><span class="crayon-s">""</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">from </span><span class="crayon-e">hashlib </span><span class="crayon-e">import </span><span class="crayon-e">md5</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-5"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">hash</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">md5</span><span class="crayon-sy">(</span><span class="crayon-t">namespace</span><span class="crayon-sy">.</span><span class="crayon-v">bytes</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-e">bytes</span><span class="crayon-sy">(</span><span class="crayon-v">name</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"utf-8"</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">digest</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">UUID</span><span class="crayon-sy">(</span><span class="crayon-v">bytes</span><span class="crayon-o">=</span><span class="crayon-v">hash</span><span class="crayon-sy">[</span><span class="crayon-o">:</span><span class="crayon-cn">16</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">3</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-7">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-8"><span class="crayon-p"># 以下是 uuid3 的使用方式</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-9"><span class="crayon-e">import </span><span class="crayon-e">uuid</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-10">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-11"><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid3</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-v">NAMESPACE_DNS</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"max_su"</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa584955800059-12"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">6fa459ea</span><span class="crayon-o">-</span><span class="crayon-v">ee8a</span><span class="crayon-o">-</span><span class="crayon-cn">3ca4</span><span class="crayon-o">-</span><span class="crayon-cn">894e</span><span class="crayon-o">-</span><span class="crayon-v">db77e160355e</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0090 seconds] -->
+
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v4"></span>UUID v4:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>組成結構：隨機變數產生的 UUID</li>
+
+
+
+<li>uuid.js 統計大概有 70% 的人會使用這個版本的 UUID</li>
+
+
+
+<li>缺點：
+<ul class="wp-block-list">
+<li>有非常非常小機率發生碰撞 (找到重複項的機率是十億分之一)</li>
+
+
+
+<li>如果是當資料庫的 primary key index 時，因為是 UUID v4 是隨機的產生的，速度會比有順序的 id 還來得慢，所以才會有後面的 UUID v7 產生</li>
+</ul>
+</li>
+
+
+
+<li>以下是 Python 呼叫內建 library 所產生 uuid v4 的方式：</li>
+</ul>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa588451831296" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa588451831296-7">7</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-1"><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-2"><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">random</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-v">version</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">random</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">|</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-3"><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span><span class="crayon-o">-</span><span class="crayon-o">+</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-4">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-5"><span class="crayon-e">import </span><span class="crayon-e">uuid</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-6"><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid4</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa588451831296-7"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-v">c2e456b2</span><span class="crayon-o">-</span><span class="crayon-cn">6093</span><span class="crayon-o">-</span><span class="crayon-cn">4c68</span><span class="crayon-o">-</span><span class="crayon-cn">9746</span><span class="crayon-o">-</span><span class="crayon-cn">2460c3ce19bb</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0023 seconds] -->
+
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v5"></span>UUID v5:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>組成結構：namespace identifier (UUID) + 字串，使用 SHA1 hash 產生</li>
+
+
+
+<li>非隨機性的 UUID，如果你放入相同的 namespace 和字串，所產生的 UUID 會是相同</li>
+
+
+
+<li>以下是 Python 呼叫內建 library 所產生 uuid v5 的方式：</li>
+</ul>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-12">12</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-1"><span class="crayon-p"># 以下是 python library 的程式碼，可以看到由 sha1 hash 你所放入的資料</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-2"><span class="crayon-e">def </span><span class="crayon-e">uuid5</span><span class="crayon-sy">(</span><span class="crayon-t">namespace</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">name</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-3"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-s">""</span><span class="crayon-s">"Generate a UUID from the SHA-1 hash of a namespace UUID and a name."</span><span class="crayon-s">""</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-4"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">from </span><span class="crayon-e">hashlib </span><span class="crayon-e">import </span><span class="crayon-e">sha1</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-5"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">hash</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">sha1</span><span class="crayon-sy">(</span><span class="crayon-t">namespace</span><span class="crayon-sy">.</span><span class="crayon-v">bytes</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-e">bytes</span><span class="crayon-sy">(</span><span class="crayon-v">name</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"utf-8"</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">digest</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-6"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">UUID</span><span class="crayon-sy">(</span><span class="crayon-v">bytes</span><span class="crayon-o">=</span><span class="crayon-v">hash</span><span class="crayon-sy">[</span><span class="crayon-o">:</span><span class="crayon-cn">16</span><span class="crayon-sy">]</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">version</span><span class="crayon-o">=</span><span class="crayon-cn">5</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-7">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-8"><span class="crayon-p"># 以下是 uuid5 的使用方式</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-9"><span class="crayon-e">import </span><span class="crayon-e">uuid</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-10">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-11"><span class="crayon-e">print</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid5</span><span class="crayon-sy">(</span><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-v">NAMESPACE_DNS</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"max_su"</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58c369551163-12"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">886313e1</span><span class="crayon-o">-</span><span class="crayon-cn">3b8a</span><span class="crayon-o">-</span><span class="crayon-cn">5372</span><span class="crayon-o">-</span><span class="crayon-cn">9b90</span><span class="crayon-o">-</span><span class="crayon-cn">0c9aee199e5d</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUID_v7"></span>UUID v7:<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>RFC 4122 最後更新於 16 February 2023</li>
+
+
+
+<li>目前 Python 內建 library 還沒有實作 v7，不過 PR 已經在審核了
+<ul class="wp-block-list">
+<li><a href="https://github.com/python/cpython/pull/29824/files" target="_blank" rel="noreferrer noopener">Python UUID v7 PR</a></li>
+
+
+
+<li><a href="https://github.com/python/cpython/issues/102461" target="_blank" rel="noreferrer noopener">Python UUID v7 discussion</a></li>
+</ul>
+</li>
+
+
+
+<li>組成結構：前面 48 bits 由 timestamp 組成，後面是隨機組成</li>
+
+
+
+<li>優點：
+<ul class="wp-block-list">
+<li>前面是由 timestamp 所組成是有順序性的，所以在當 primary key index 時速度上會遠大於 uuid v4 的版本，可以參考這篇文章有人做了速度實驗上比較：<a href="https://medium.com/@rtawadrous/why-uuid7-is-better-than-uuid4-as-clustered-index-edb02bf70056" target="_blank" rel="noreferrer noopener nofollow">Why UUID7 is better than UUID4 as clustered index in RDBMS</a></li>
+
+
+
+<li>後面時有隨機組成，所以解決了 uuid v1 的 MAC address 的隱私性和碰撞的可能</li>
+</ul>
+</li>
+</ul>
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="UUIDhex"></span>UUID.hex<span class="ez-toc-section-end"></span></h3>
+
+
+
+<p>“Hex” 是 “Hexadecimal” 的縮寫，意思是「十六進位」，十六進位是由 0 到 9 和 A 到 F 所表示，所以會去除 -，這種格式使得 UUID 更適合用於 URLs 和檔案命名上的傳輸，資料庫儲存的空間也從 36 字元下降為 32 字元。</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-5">5</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-1"><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid4</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-2"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-cn">2a93bb6e</span><span class="crayon-o">-</span><span class="crayon-v">e881</span><span class="crayon-o">-</span><span class="crayon-cn">435c</span><span class="crayon-o">-</span><span class="crayon-cn">9a8f</span><span class="crayon-o">-</span><span class="crayon-cn">2390bb522804</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-4"><span class="crayon-v">uuid</span><span class="crayon-sy">.</span><span class="crayon-e">uuid4</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-v">hex</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa58f719490083-5"><span class="crayon-o">&gt;&gt;&gt;</span><span class="crayon-cn">2a93bb6ee881435c9a8f2390bb522804</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0004 seconds] -->
+
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="特殊的_UUID"></span>特殊的 UUID<span class="ez-toc-section-end"></span></h3>
+
+
+
+<ul class="wp-block-list">
+<li>nil UUID: 表示為「空」或「未指定」的 UUID，會將所有位元設為 0，00000000-0000-0000-0000-000000000000</li>
+
+
+
+<li>max UUID: UUID 範圍內的最大值，會將所有位元設為 1，ffffffff-ffff-ffff-ffff-ffffffffffff</li>
+</ul>
+
+
+
+<h2 class="wp-block-heading"><span class="ez-toc-section" id="其他相關_ID"></span>其他相關 ID<span class="ez-toc-section-end"></span></h2>
+
+
+
+<h3 class="wp-block-heading"><span class="ez-toc-section" id="Snowflake_ID_雪花_ID"></span>Snowflake ID (雪花 ID)<span class="ez-toc-section-end"></span></h3>
+
+
+
+<p>UUID 是由 128 位元所組成，在儲存上的長度是個硬傷，如果想要縮短長度又會怕有碰撞，要怎麼解決這個問題？我們來看看由 Twitter (X) 所提出的開發的解決方案 Snowflake ID。</p>
+
+
+
+<p>在現實中每片雪花都是獨一無二，且有自己獨特的結構。所以在命名上將其命名為「Snowflake (雪花) ID」。</p>
+
+
+
+<p>Snowflake ID 是由 Twitter 開發的解決方案，他們需要解決平均每秒 9000 條推文，峰值高達每秒 143199 條推文的 ID，不僅可以在其龐大的分散式伺服器中擴展，還可以產生高效的儲存 ID (大致按時間排序)。Snowflake ID 也被 Discord 和 Instagram 等公司使用。</p>
+
+
+
+<p>組成結構：由 64 位元組成，相較 UUID 少了一半的長度</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa592694966098" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa592694966098-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa592694966098-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa592694966098-3">3</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa592694966098-1"><span class="crayon-o">+</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">+</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa592694966098-2"><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-cn">1</span><span class="crayon-h"> </span><span class="crayon-e">Bit </span><span class="crayon-v">Unused</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-cn">41</span><span class="crayon-h"> </span><span class="crayon-e">Bit </span><span class="crayon-v">Timestamp</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-cn">10</span><span class="crayon-h"> </span><span class="crayon-e">Bit </span><span class="crayon-v">NodeID</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-o">|</span><span class="crayon-h">&nbsp;&nbsp; </span><span class="crayon-cn">12</span><span class="crayon-h"> </span><span class="crayon-e">Bit </span><span class="crayon-e">Sequence </span><span class="crayon-v">ID</span><span class="crayon-h"> </span><span class="crayon-o">|</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa592694966098-3"><span class="crayon-o">+</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">--</span><span class="crayon-o">+</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0012 seconds] -->
+
+
+
+
+<ul class="wp-block-list">
+<li>42 bit 時間戳記</li>
+
+
+
+<li>10 bit 機器號碼 (or any random number you provide)</li>
+
+
+
+<li>12 bit 順序號碼</li>
+</ul>
+
+
+
+<p>以下是我參考 <a href="https://github.com/vd2org/snowflake" target="_blank" rel="noreferrer noopener">Source code</a> 所改寫的 python snowflake，主要是不想安裝任何的套件，使用方式簡單，僅需呼叫 snowflake_id()，即可獲得一組新的雪花 ID。</p>
+
+
+
+<!-- Urvanov Syntax Highlighter v2.8.28 -->
+
+		<div id="urvanov-syntax-highlighter-6a6e01e5aa595752768533" class="urvanov-syntax-highlighter-syntax crayon-theme-powershell urvanov-syntax-highlighter-font-monaco urvanov-syntax-highlighter-os-pc print-yes notranslate" data-settings=" no-popup minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 14px !important; line-height: 20px !important;">
+
+			<div class="crayon-toolbar" data-settings=" mouseover" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 14px !important;height: 21px !important; line-height: 21px !important;"><div class="crayon-button urvanov-syntax-highlighter-nums-button" title="切換是否顯示行編號"><div class="urvanov-syntax-highlighter-button-icon"></div></div><div class="crayon-button urvanov-syntax-highlighter-wrap-button" title="切換自動換行"><div class="urvanov-syntax-highlighter-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 19.6px !important; line-height: 19.6px !important;"></div>
+			<div class="urvanov-syntax-highlighter-plain-wrap"></div>
+			<div class="urvanov-syntax-highlighter-main" style="">
+				<table class="crayon-table">
+					<tbody><tr class="urvanov-syntax-highlighter-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="urvanov-syntax-highlighter-nums-content" style="font-size: 14px !important; line-height: 20px !important;"><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-1">1</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-2">2</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-3">3</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-4">4</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-5">5</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-6">6</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-7">7</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-8">8</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-9">9</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-10">10</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-11">11</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-12">12</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-13">13</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-14">14</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-15">15</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-16">16</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-17">17</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-18">18</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-19">19</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-20">20</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-21">21</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-22">22</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-23">23</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-24">24</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-25">25</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-26">26</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-27">27</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-28">28</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-29">29</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-30">30</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-31">31</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-32">32</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-33">33</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-34">34</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-35">35</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-36">36</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-37">37</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-38">38</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-39">39</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-40">40</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-41">41</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-42">42</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-43">43</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-44">44</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-45">45</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-46">46</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-47">47</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-48">48</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-49">49</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-50">50</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-51">51</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-52">52</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-53">53</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-54">54</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-55">55</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-56">56</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-57">57</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-58">58</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-59">59</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-60">60</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-61">61</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-62">62</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-63">63</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-64">64</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-65">65</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-66">66</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-67">67</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-68">68</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-69">69</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-70">70</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-71">71</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-72">72</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-73">73</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-74">74</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-75">75</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-76">76</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-77">77</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-78">78</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-79">79</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-80">80</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-81">81</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-82">82</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-83">83</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-84">84</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-85">85</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-86">86</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-87">87</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-88">88</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-89">89</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-90">90</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-91">91</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-92">92</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-93">93</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-94">94</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-95">95</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-96">96</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-97">97</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-98">98</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-99">99</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-100">100</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-101">101</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-102">102</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-103">103</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-104">104</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-105">105</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-106">106</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-107">107</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-108">108</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-109">109</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-110">110</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-111">111</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-112">112</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-113">113</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-114">114</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-115">115</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-116">116</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-117">117</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-118">118</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-119">119</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-120">120</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-121">121</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-122">122</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-123">123</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-124">124</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-125">125</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-126">126</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-127">127</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-128">128</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-129">129</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-130">130</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-131">131</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-132">132</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-133">133</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-134">134</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-135">135</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-136">136</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-137">137</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-138">138</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-139">139</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-140">140</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-141">141</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-142">142</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-143">143</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-144">144</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-145">145</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-146">146</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-147">147</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-148">148</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-149">149</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-150">150</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-151">151</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-152">152</div><div class="crayon-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-153">153</div><div class="crayon-num crayon-striped-num" data-line="urvanov-syntax-highlighter-6a6e01e5aa595752768533-154">154</div></div>
+				</td>
+						<td class="urvanov-syntax-highlighter-code"><div class="crayon-pre" style="font-size: 14px !important; line-height: 20px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-1"><span class="crayon-e">import </span><span class="crayon-e">random</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-2"><span class="crayon-e">from </span><span class="crayon-e">dataclasses </span><span class="crayon-e">import </span><span class="crayon-e">dataclass</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-3"><span class="crayon-e">from </span><span class="crayon-e">datetime </span><span class="crayon-e">import </span><span class="crayon-v">datetime</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">timedelta</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-4"><span class="crayon-e">from </span><span class="crayon-e">time </span><span class="crayon-e">import </span><span class="crayon-e">time</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-5"><span class="crayon-e">from </span><span class="crayon-e">typing </span><span class="crayon-e">import </span><span class="crayon-e">Optional</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-6">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-7"><span class="crayon-v">__all__</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-s">"Snowflake"</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-s">"SnowflakeGenerator"</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-8">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-9"><span class="crayon-v">MAX_INSTANCE</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0b1111111111</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-p"># 分散式系統最多 1023 個節點</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-10"><span class="crayon-v">MAX_SEQ</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0b111111111111</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-p"># 每毫秒能生成的 4095 ID 數量</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-11"><span class="crayon-v">MAX_TS</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0b11111111111111111111111111111111111111111</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-p"># 大約等於 69.73 年</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-12">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-13">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-14"><span class="crayon-sy">@</span><span class="crayon-e">dataclass</span><span class="crayon-sy">(</span><span class="crayon-v">frozen</span><span class="crayon-o">=</span><span class="crayon-t">True</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-15"><span class="crayon-t">class</span><span class="crayon-h"> </span><span class="crayon-v">Snowflake</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-16"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">timestamp</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-17"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">instance</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-18"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">epoch</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h">&nbsp;&nbsp;</span><span class="crayon-p"># 起始時間點（epoch）</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-19"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">seq</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-20">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-21"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__post_init__</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-22"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">epoch</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-23"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span><span class="crayon-i">f</span><span class="crayon-s">"epoch must be greater than 0!"</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-24">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-25"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_TS</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-26"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-27"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"timestamp must not be negative and must be less than {MAX_TS}!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-28"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-29">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-30"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_INSTANCE</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-31"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-32"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"instance must not be negative and must be less than {MAX_INSTANCE}!"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-33"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-34">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-35"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">seq</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">seq</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_SEQ</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-36"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-37"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"seq must not be negative and must be less than {MAX_SEQ}!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-38"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-39">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-40"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-e">classmethod</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-41"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">parse</span><span class="crayon-sy">(</span><span class="crayon-v">cls</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">snowflake</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">epoch</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-s">"Snowflake"</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-42"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">cls</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-43"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">epoch</span><span class="crayon-o">=</span><span class="crayon-v">epoch</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-44"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">timestamp</span><span class="crayon-o">=</span><span class="crayon-v">snowflake</span><span class="crayon-h"> </span><span class="crayon-o">&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">22</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-45"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">instance</span><span class="crayon-o">=</span><span class="crayon-v">snowflake</span><span class="crayon-h"> </span><span class="crayon-o">&gt;&gt;</span><span class="crayon-h"> </span><span class="crayon-cn">12</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_INSTANCE</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-46"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">seq</span><span class="crayon-o">=</span><span class="crayon-v">snowflake</span><span class="crayon-h"> </span><span class="crayon-o">&amp;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_SEQ</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-47"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-48">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-49"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-50"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">milliseconds</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-51"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">+</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-i">epoch</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-52">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-53"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-54"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">seconds</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-t">float</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-55"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">milliseconds</span><span class="crayon-h"> </span><span class="crayon-o">/</span><span class="crayon-h"> </span><span class="crayon-cn">1000</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-56">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-57"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-58"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">datetime</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-v">datetime</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-59"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-v">datetime</span><span class="crayon-sy">.</span><span class="crayon-e">utcfromtimestamp</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">seconds</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-60">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-61"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-62"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">timedelta</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-v">timedelta</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-63"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">timedelta</span><span class="crayon-sy">(</span><span class="crayon-v">milliseconds</span><span class="crayon-o">=</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">epoch</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-64">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-65"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-66"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">value</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-67"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">22</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">12</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">seq</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-68">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-69"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__int__</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-70"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">value</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-71">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-72">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-73"><span class="crayon-t">class</span><span class="crayon-h"> </span><span class="crayon-v">SnowflakeGenerator</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-74"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__init__</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-75"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-76"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">instance</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-77"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-o">*</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-78"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">seq</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-79"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">epoch</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-sy">,</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-80"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">timestamp</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">Optional</span><span class="crayon-sy">[</span><span class="crayon-t">int</span><span class="crayon-sy">]</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">None</span><span class="crayon-sy">,</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-81"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-82"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">current</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">time</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-cn">1000.0</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">__int__</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-83">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-84"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">current</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-v">epoch</span><span class="crayon-h"> </span><span class="crayon-o">&gt;=</span><span class="crayon-h"> </span><span class="crayon-v">MAX_TS</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-85"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">OverflowError</span><span class="crayon-sy">(</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-86"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"The maximum current timestamp has been reached in selected epoch,"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-87"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"so Snowflake cannot generate more IDs!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-88"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-89">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-90"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">timestamp </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-e">current</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-91">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-92"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">current</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-93"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-94"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"timestamp must not be negative and must be less than {current}!"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-95"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-96">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-97"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">epoch</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-v">epoch</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">current</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-98"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-99"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"epoch must not be negative and must be lower than current time {current}!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-100"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-101">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-102"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_epo</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">epoch</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-103"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_ts</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">timestamp</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">_epo</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-104">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-105"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_INSTANCE</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-106"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-107"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"instance must not be negative and must be less than {MAX_INSTANCE}!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-108"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-109">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-110"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">seq</span><span class="crayon-h"> </span><span class="crayon-o">&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-st">or</span><span class="crayon-h"> </span><span class="crayon-v">seq</span><span class="crayon-h"> </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">MAX_SEQ</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-111"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">ValueError</span><span class="crayon-sy">(</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-112"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"seq must not be negative and must be less than {MAX_SEQ}!"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-113"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-114">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-115"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_inf</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-v">instance</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">12</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-116"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_seq</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-i">seq</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-117">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-118"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-e">classmethod</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-119"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">from_snowflake</span><span class="crayon-sy">(</span><span class="crayon-v">cls</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">sf</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-v">Snowflake</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-s">"SnowflakeGenerator"</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-120"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">cls</span><span class="crayon-sy">(</span><span class="crayon-v">sf</span><span class="crayon-sy">.</span><span class="crayon-v">instance</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">seq</span><span class="crayon-o">=</span><span class="crayon-v">sf</span><span class="crayon-sy">.</span><span class="crayon-v">seq</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">epoch</span><span class="crayon-o">=</span><span class="crayon-v">sf</span><span class="crayon-sy">.</span><span class="crayon-v">epoch</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">timestamp</span><span class="crayon-o">=</span><span class="crayon-v">sf</span><span class="crayon-sy">.</span><span class="crayon-v">timestamp</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-121">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-122"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">@</span><span class="crayon-m">property</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-123"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">epoch</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-t">int</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-124"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">_epo</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-125">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-126"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__iter__</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-127"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-128">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-129"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__next__</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-v">str</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-130"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-v">current</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">time</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-cn">1000.0</span><span class="crayon-sy">)</span><span class="crayon-sy">.</span><span class="crayon-e">__int__</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">_epo</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-131">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-132"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-v">current</span><span class="crayon-h"> </span><span class="crayon-o">&gt;=</span><span class="crayon-h"> </span><span class="crayon-v">MAX_TS</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-133"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">OverflowError</span><span class="crayon-sy">(</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-134"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"The maximum current timestamp has been reached in selected epoch,"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-135"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"so Snowflake cannot generate more IDs!"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-136"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-137">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-138"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_ts</span><span class="crayon-h"> </span><span class="crayon-o">==</span><span class="crayon-h"> </span><span class="crayon-v">current</span><span class="crayon-o">:</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-139"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">if</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_seq</span><span class="crayon-h"> </span><span class="crayon-o">==</span><span class="crayon-h"> </span><span class="crayon-v">MAX_SEQ</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-140"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">raise </span><span class="crayon-e">OverflowError</span><span class="crayon-sy">(</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-141"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"The maximum current sequence has been reached in selected epoch,"</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-142"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-i">f</span><span class="crayon-s">"so Snowflake cannot generate more IDs!"</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-143"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-144"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_seq</span><span class="crayon-h"> </span><span class="crayon-o">+=</span><span class="crayon-h"> </span><span class="crayon-cn">1</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-145"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">else</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-146"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_seq</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-cn">0</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-147">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-148"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_ts</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">current</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-149"><span class="crayon-e">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-e">str</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_ts</span><span class="crayon-h"> </span><span class="crayon-o">&lt;&lt;</span><span class="crayon-h"> </span><span class="crayon-cn">22</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_inf</span><span class="crayon-h"> </span><span class="crayon-o">|</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-v">_seq</span><span class="crayon-sy">)</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-150">&nbsp;</div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-151"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-e">def </span><span class="crayon-e">__call__</span><span class="crayon-sy">(</span><span class="crayon-r">self</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-o">-&gt;</span><span class="crayon-h"> </span><span class="crayon-v">str</span><span class="crayon-o">:</span></div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-152"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="crayon-st">return</span><span class="crayon-h"> </span><span class="crayon-r">self</span><span class="crayon-sy">.</span><span class="crayon-e">__next__</span><span class="crayon-sy">(</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-153">&nbsp;</div><div class="crayon-line crayon-striped-line" id="urvanov-syntax-highlighter-6a6e01e5aa595752768533-154"><span class="crayon-v">snowflake_id</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-e">SnowflakeGenerator</span><span class="crayon-sy">(</span><span class="crayon-v">random</span><span class="crayon-sy">.</span><span class="crayon-e">randint</span><span class="crayon-sy">(</span><span class="crayon-cn">1</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">1023</span><span class="crayon-sy">)</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</tbody></table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0127 seconds] -->
+
+
+
+
+<p>除了雪花 ID 外，以下幾種 id 都使用了類似的手法將 timestamp 加入在開頭：</p>
+
+
+
+<h3 class="wp-block-heading has-medium-font-size"><span class="ez-toc-section" id="Sharding_IDs_at_Instagram"></span><a href="https://instagram-engineering.com/sharding-ids-at-instagram-1cf5a71e5a5c" target="_blank" rel="noreferrer noopener">Sharding &amp; IDs at Instagram</a><span class="ez-toc-section-end"></span></h3>
+
+
+
+<h3 class="wp-block-heading has-medium-font-size"><span class="ez-toc-section" id="MongoDB_Object_ID"></span><a href="https://www.mongodb.com/docs/manual/reference/method/ObjectId/" target="_blank" rel="noreferrer noopener">MongoDB Object ID</a><span class="ez-toc-section-end"></span></h3>
+
+
+
+<h3 class="wp-block-heading has-medium-font-size"><span class="ez-toc-section" id="ULID_spec"></span><a href="https://github.com/ulid/spec" target="_blank" rel="noreferrer noopener">ULID spec</a><a href="https://medium.com/@InstagramEng?source=post_page-----1cf5a71e5a5c--------------------------------"></a><span class="ez-toc-section-end"></span></h3>
+
+
+
+<p>以上是我花了點時間所整理的資訊，希望有幫助到你，那本篇就在這邊告一個段落，感謝收看 🙂 </p>
+
+
+
+<h2 class="wp-block-heading"><span class="ez-toc-section" id="延伸閱讀"></span>延伸閱讀<span class="ez-toc-section-end"></span></h2>
+
+
+
+<p>▍關於&nbsp;<strong>Python </strong>教學系列目錄：</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="/post/python-tutorial/">Python 教學：入門完全指南</a></li>
+
+
+
+<li><a href="/post/python-object/">Python 萬物皆物件，什麼是 Object</a></li>
+
+
+
+<li><a href="/post/python-immutable-mutable-objects/">Python 萬物皆物件，什麼是 Mutable</a></li>
+
+
+
+<li><a href="/post/python-oop/">Python 物件導向的 – 封裝/繼承/多型</a></li>
+</ul>
+
+
+
+<p>▍關於&nbsp;<strong>Flask&nbsp;</strong>教學系列目錄：</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="/post/flask-list/">【Flask教學】Flask 學習路線圖</a></li>
+</ul>
+
+
+
+<p>▍關於&nbsp;<strong>Git </strong>教學系列目錄：</p>
+
+
+
+<ul class="wp-block-list">
+<li><a href="/post/git-tutorial-roadmap/">Git 學習路線指南</a></li>
+
+
+
+<li><a href="/post/git_tutorial/">Git 入門 4 步驟 (init, add, commit, push)</a></li>
+
+
+
+<li><a href="/post/git-merge-rebase/">進入 Git 平行時空 (merge &amp; rebase)</a></li>
+
+
+
+<li><a href="/post/git-reset-checkout/">Git 時光機 (reset &amp; checkout)</a></li>
+</ul>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="tags-links"> <a href="/tag/python%e6%95%99%e5%ad%b8/" rel="tag">python教學</a><a href="/tag/uuid/" rel="tag">UUID</a></span>	</footer><!-- .entry-footer -->
+
+		</div>
+
+</article><!-- #post-## -->
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">文章導覽</h2>
+		<div class="nav-links clearfix">
+		<div class="nav-previous"><span><svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.19643 0.741072C5.19643 0.660715 5.16071 0.589286 5.10714 0.535715L4.66071 0.0892859C4.60714 0.0357151 4.52679 0 4.45536 0C4.38393 0 4.30357 0.0357151 4.25 0.0892859L0.0892857 4.25C0.0357143 4.30357 0 4.38393 0 4.45536C0 4.52679 0.0357143 4.60714 0.0892857 4.66072L4.25 8.82143C4.30357 8.875 4.38393 8.91072 4.45536 8.91072C4.52679 8.91072 4.60714 8.875 4.66071 8.82143L5.10714 8.375C5.16071 8.32143 5.19643 8.24107 5.19643 8.16964C5.19643 8.09822 5.16071 8.01786 5.10714 7.96429L1.59821 4.45536L5.10714 0.946429C5.16071 0.892858 5.19643 0.8125 5.19643 0.741072Z" fill="#737C8C"></path></svg></span><a href="/post/ga4-realtime-dashboard/" rel="prev">【數據分析】30 分鐘打造 GA4 即時報表</a></div><div class="nav-next"><a href="/post/a-day-of-sql/" rel="next">SQL Query 的一天過得好嗎 (上)？</a><span><svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.19643 4.45536C5.19643 4.38393 5.16071 4.30357 5.10714 4.25L0.946429 0.0892859C0.892857 0.0357151 0.8125 0 0.741071 0C0.669643 0 0.589286 0.0357151 0.535714 0.0892859L0.0892857 0.535715C0.0357143 0.589286 0 0.669643 0 0.741072C0 0.8125 0.0357143 0.892858 0.0892857 0.946429L3.59821 4.45536L0.0892857 7.96429C0.0357143 8.01786 0 8.09822 0 8.16964C0 8.25 0.0357143 8.32143 0.0892857 8.375L0.535714 8.82143C0.589286 8.875 0.669643 8.91072 0.741071 8.91072C0.8125 8.91072 0.892857 8.875 0.946429 8.82143L5.10714 4.66072C5.16071 4.60714 5.19643 4.52679 5.19643 4.45536Z" fill="#737C8C"></path></svg></span></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+
+<script src="../../assets/js/components/sidebar.js?v=20260803-1"></script><!-- #secondary -->
+			</div>
+		</div>
+	</div><!-- #content -->
+
+
+
+<script src="../../assets/js/components/footer.js?v=20260803-1"></script>
+
+	<!-- #colophon -->
+
+
+</div><!-- #page -->
+
+<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
+<!-- HFCM by 99 Robots - Snippet # 1: 文章尾部 作者版位 -->
+<script>
+const newHtml = `
+  <div class="elementor-widget-wrap" style="padding: 40px 0;">
+    <!-- Image Box -->
+    <div class="elementor-element elementor-element-7a328636 elementor-vertical-align-middle elementor-position-top elementor-widget elementor-widget-image-box">
+      <div class="elementor-widget-container">
+        <div class="elementor-image-box-wrapper" style="text-align: center;">
+          <figure class="elementor-image-box-img">
+            <img decoding="async"
+                 width="150"
+                 height="150"
+
+                 alt="Max Su"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="/image/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
+                 width="150"
+                 height="150"
+                 src="/image/Max-Su-400x400-1.png"
+                 alt="Max Su"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></noscript>
+          </figure>
+          <div class="elementor-image-box-content">
+            <h3 class="elementor-image-box-title" style="color: #00102E; margin: 10px 0; font-size: 22px; font-weight: bold;">Max 行銷誌</h3>
+            <p class="elementor-image-box-description" style="color: #737C8C; letter-spacing: 2px; margin: 0 0 15px; font-size: 14px;">MARKETING, DATA AND PYTHON</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Text -->
+    <div class="elementor-element elementor-element-7f10b74 elementor-widget elementor-widget-text-editor">
+      <div class="elementor-widget-container">
+        <div class="elementor-text-editor elementor-clearfix" style="text-align: center;">
+          <p style="color: #7a7a7a; font-size: 16px; line-height: 1.6; margin: 0 0 15px; max-width: 400px; display: inline-block;">
+            我不常思考生命中的時間，做喜歡得事情，讓喜歡的事有價值。如果你還沒找到這件事，繼續找，別停頓。盡你全心全力，你知道你一定會找到。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Read More -->
+    <div class="elementor-element elementor-element-0316620 elementor-widget elementor-widget-text-editor">
+      <div class="elementor-widget-container">
+        <div class="elementor-text-editor elementor-clearfix" style="text-align: center; margin: 20px 0;">
+          <a href="/post/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+        </div>
+      </div>
+    </div>
+
+`;
+
+// 插入到 .entry-content 最後
+const entryContent = document.querySelector('.navigation');
+if (entryContent) {
+  entryContent.insertAdjacentHTML('beforeend', newHtml);
+}
+</script>
+<!-- /end HFCM by 99 Robots -->
+<!-- HFCM by 99 Robots - Snippet # 3: 快速總結版位 -->
+<script>
+(function() {
+    // 1. 取得當前網址並移除參數
+    const currentUrl = document.querySelector('link[rel="canonical"]')?.href || (window.location.origin + window.location.pathname);
+
+    // 2. AI 配置 (Claude 使用嵌入式 SVG，其他使用圖片)
+    const aiTools = [
+        { name: 'ChatGPT', color: '#000000', icon: '/image/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
+        { name: 'Perplexity', color: '#14343B', icon: '/image/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
+        { name: 'Google AI', color: '#1A73E8', icon: '/image/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
+        { name: 'Grok', color: '#313131', icon: '/image/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
+        {
+            name: 'Claude',
+            color: '#DA714F',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128" fill="none"><g clip-path="url(#clip0_62_247)"><rect width="128" height="128" rx="64" fill="url(#paint0_linear_62_247)"/><rect opacity="0.35" width="128" height="128" fill="#D97757"/><path d="M35.0162 79.6935L53.4327 69.3665L53.7362 68.462L53.4327 67.9583H52.522L49.4357 67.7705L38.912 67.4889L29.805 67.1133L20.9509 66.6439L18.7248 66.1745L16.6504 63.405L16.8528 62.0437L18.7248 60.7763L21.4063 61.011L27.3258 61.4335L36.2305 62.0437L42.656 62.4193L52.2184 63.405H53.7362L53.9386 62.7948L53.4327 62.4193L53.0279 62.0437L43.8197 55.8006L33.8526 49.2289L28.6413 45.4267L25.8586 43.5021L24.442 41.7184L23.8348 37.7753L26.3646 34.9589L29.805 35.1936L30.6651 35.4283L34.1561 38.1039L41.5935 43.8776L51.3077 51.0126L52.7243 52.1862L53.2948 51.8012L53.3821 51.529L52.7243 50.4493L47.4625 40.9204L41.8465 31.2036L39.3168 27.1667L38.659 24.7727C38.4043 23.7681 38.2543 22.9369 38.2543 21.9093L41.1382 17.9663L42.7572 17.45L46.653 17.9663L48.272 19.3745L50.7006 24.9135L54.5963 33.5976L60.6677 45.4267L62.4385 48.9472L63.3998 52.1862L63.754 53.1719H64.3611V52.6086L64.867 45.943L65.7777 37.7753L66.6884 27.2606L66.992 24.3033L68.4593 20.7358L71.3937 18.8112L73.6705 19.8909L75.5425 22.5665L75.2895 24.3033L74.1764 31.5322L72.0009 42.8449L70.5842 50.4493H71.3937L72.355 49.4636L76.2002 44.394L82.6257 36.3202L85.459 33.1282L88.7983 29.6076L90.9233 27.9178H94.9708L97.9053 32.3302L96.5899 36.8835L92.4411 42.1408L89.0007 46.6002L84.0677 53.2093L81.0067 58.5232L81.2812 58.9616L82.0186 58.8987L93.1494 56.5047L99.1702 55.4251L106.355 54.2046L109.593 55.7067L109.947 57.2558L108.682 60.4008L100.992 62.2784L91.9857 64.1091L78.5749 67.2661L78.4264 67.3856L78.6017 67.6456L84.6495 68.193L87.2298 68.3338H93.5542L105.343 69.2257L108.429 71.2441L110.25 73.732L109.947 75.6566L105.191 78.0506L98.816 76.5484L83.8906 72.9809L78.7806 71.7135H78.0722V72.136L82.3222 76.3137L90.1643 83.3549L99.9291 92.4614L100.435 94.7145L99.1702 96.4983L97.8547 96.3105L89.2536 89.8327L85.9144 86.9224L78.4264 80.5854H77.9204V81.2425L79.6407 83.7773L88.7983 97.531L89.2536 101.756L88.5959 103.117L86.218 103.962L83.6376 103.492L78.224 95.935L72.7092 87.4857L68.2569 79.8812L67.7191 80.2207L65.0694 108.515L63.8551 109.97L61.0219 111.05L58.6439 109.266L57.379 106.356L58.6439 100.582L60.1617 93.0716L61.376 87.1101L62.4891 79.6935L63.1689 77.2158L63.1088 77.0501L62.5657 77.1413L56.9743 84.81L48.4744 96.3105L41.7453 103.492L40.1263 104.15L37.3436 102.694L37.5966 100.113L39.165 97.8126L48.4744 85.9836L54.0904 78.6138L57.7099 74.3834L57.6747 73.7716L57.4748 73.7545L32.7395 89.8796L28.3377 90.4429L26.4151 88.6592L26.6681 85.7488L27.5788 84.81L35.0162 79.6935Z" fill="#FAF9F5"/></g><defs><linearGradient id="paint0_linear_62_247" x1="52.5" y1="128" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#DC6038"/><stop offset="1" stop-color="#D97757"/></linearGradient><clipPath id="clip0_62_247"><rect width="128" height="128" rx="64" fill="white"/></clipPath></defs></svg>`,
+            prompt: 'https://claude.ai/new?q=總結這篇文章: '
+        }
+    ];
+
+    const tocContainer = document.querySelector('#ez-toc-container');
+
+    if (tocContainer) {
+        tocContainer.style.cssText += `
+            border: 1px solid #d1d5db !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            background-color: #f3f4f6 !important;
+            max-width: 100%;
+        `;
+
+        const tocTitle = tocContainer.querySelector('.ez-toc-title');
+        if (tocTitle) {
+            tocTitle.style.cssText = 'font-weight: 800; font-size: 1.25rem; color: #1f2937; margin-bottom: 10px;';
+        }
+
+        const aiWrapper = document.createElement('div');
+        aiWrapper.style.cssText = `
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #d1d5db;
+        `;
+
+        const aiHeader = document.createElement('h2');
+        aiHeader.innerText = '快速文章總結';
+        aiHeader.style.cssText = 'font-size: 1.1rem; font-weight: 700; color: #1f2937; margin-bottom: 15px; border: none; background: transparent; padding: 0;';
+        aiWrapper.appendChild(aiHeader);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 10px;';
+
+        aiTools.forEach(tool => {
+            const btn = document.createElement('a');
+            btn.href = `${tool.prompt}${encodeURIComponent(currentUrl)}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.style.cssText = `
+                padding: 10px 18px;
+                border-radius: 8px;
+                background: ${tool.color};
+                color: white;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 600;
+                transition: transform 0.2s, opacity 0.2s;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            `;
+
+            if (tool.svg) {
+                const svgSpan = document.createElement('span');
+                svgSpan.style.display = 'flex';
+                svgSpan.innerHTML = tool.svg;
+                btn.appendChild(svgSpan);
+            } else {
+                const img = document.createElement('img');
+                img.src = tool.icon;
+                img.alt = '';
+                img.setAttribute('aria-hidden', 'true');
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.style.width = '18px';
+                img.style.height = '18px';
+                img.style.objectFit = 'contain';
+                img.style.borderRadius = '2px';
+                btn.appendChild(img);
+            }
+
+            btn.appendChild(document.createTextNode(tool.name));
+
+            btn.onmouseover = () => {
+                btn.style.opacity = '0.85';
+                btn.style.transform = 'translateY(-2px)';
+            };
+            btn.onmouseout = () => {
+                btn.style.opacity = '1';
+                btn.style.transform = 'translateY(0)';
+            };
+
+            // --- 核心修改：結合追蹤與開啟網址 ---
+            btn.onclick = () => {
+                // 1. 發送數據到 dataLayer
+								dataLayer.push({
+                        event: "cusevent",
+                        eventCategory: 'AIButton',
+                        eventAction: 'click', // 注意：需為字串
+                        eventLabel: tool.name // 動態帶入 AI 工具名稱
+                    });
+                console.log(tool.name)
+            };
+
+            btnContainer.appendChild(btn);
+        });
+
+        aiWrapper.appendChild(btnContainer);
+        tocContainer.appendChild(aiWrapper);
+    }
+})();
+</script>
+
+<!-- /end HFCM by 99 Robots -->
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe  height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true" data-src="https://www.googletagmanager.com/ns.html?id=GTM-WSG8N3Q" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->			<script type="text/javascript">
+				const lazyloadRunObserver = () => {
+					const dataAttribute = 'data-e-bg-lazyload';
+					const lazyloadBackgrounds = document.querySelectorAll( `[${ dataAttribute }]:not(.lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+					entries.forEach( ( entry ) => {
+						if ( entry.isIntersecting ) {
+							let lazyloadBackground = entry.target;
+							const lazyloadSelector = lazyloadBackground.getAttribute( dataAttribute );
+							if ( lazyloadSelector ) {
+								lazyloadBackground = entry.target.querySelector( lazyloadSelector );
+							}
+							if( lazyloadBackground ) {
+								lazyloadBackground.classList.add( 'lazyloaded' );
+							}
+							lazyloadBackgroundObserver.unobserve( entry.target );
+						}
+					});
+					}, { rootMargin: '100px 0px 100px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/elementor.js?ver=20200504" id="sydney-elementor-editor-js"></script>
+<script type="text/javascript" src="../../wp-content/uploads/hummingbird-assets/acfab1b57e2f7878b4249d20f68b6646.js" id="wphb-3-js"></script>
+<script type="text/javascript" id="wphb-3-js-after">
+/* <![CDATA[ */
+lazySizes.cfg.nativeLoading={setLoadingAttribute:true,disableListeners:{scroll:true}};lazySizes.init();
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/functions.min.js?ver=20220628" id="sydney-functions-js"></script>
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/scripts.js?ver=6.8.6" id="sydney-scripts-js"></script>
+
+
+
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+
+
+
+
+<script data-maxlist-offline="true" src="../../assets/js/offline.js?v=20260802-7"></script></body></html>

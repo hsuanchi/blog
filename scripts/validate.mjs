@@ -6,8 +6,10 @@ import { writeFileEnsured } from "./lib.mjs";
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
 const REPORT_FILE = path.join(REPO_ROOT, "reports", "validation.json");
+const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json");
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
+const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -58,6 +60,23 @@ function localTarget(reference, sourceFile) {
 
 const allFiles = await filesBelow(DOCS_ROOT);
 const htmlFiles = allFiles.filter((file) => file.endsWith(".html"));
+let urlMigrationPlan = null;
+try {
+  urlMigrationPlan = JSON.parse(await readFile(URL_MIGRATION_REPORT, "utf8"));
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
+const knownLegacyPaths = new Set(
+  urlMigrationPlan
+    ? [...urlMigrationPlan.posts, ...urlMigrationPlan.articleAliases, ...urlMigrationPlan.images].map(
+        ({ oldPath }) => decodeURIComponent(oldPath)
+      )
+    : []
+);
+const legacyReferencePattern =
+  /\/(?:20\d{2}\/\d{2}\/\d{2}\/[^"'`<>\s\\),;}]+|wp-content\/uploads\/(?:20\d{2}\/\d{2}\/)?[^"'`<>\s\\),;}]+)/g;
+const staleLegacyReferences = [];
+const malformedStructuredData = [];
 const missing = new Map();
 const dynamicReferences = [];
 const componentCoverage = { header: 0, sidebar: 0, footer: 0 };
@@ -82,6 +101,38 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   const $ = load(html, { decodeEntities: false });
   const relativeFile = path.relative(REPO_ROOT, file);
+  for (const match of html.matchAll(legacyReferencePattern)) {
+    let pathname;
+    try {
+      pathname = decodeURIComponent(new URL(match[0], "https://www.maxlist.xyz").pathname);
+    } catch {
+      continue;
+    }
+    if (knownLegacyPaths.has(pathname) || knownLegacyPaths.has(pathname.endsWith("/") ? pathname : `${pathname}/`)) {
+      staleLegacyReferences.push({ file: relativeFile, reference: match[0] });
+    }
+  }
+  $('script[type="application/ld+json"]').each((_index, element) => {
+    try {
+      const schema = JSON.parse($(element).html() ?? "");
+      const visit = (value, key = "") => {
+        if (
+          typeof value === "string" &&
+          (/^\/20\d{2}\/\d{2}\/\d{2}\//.test(value) ||
+            (new Set(["@type", "inLanguage"]).has(key) && value.startsWith("/")))
+        ) {
+          malformedStructuredData.push({ file: relativeFile, key, value: value.slice(0, 200) });
+        } else if (Array.isArray(value)) {
+          for (const child of value) visit(child, key);
+        } else if (value && typeof value === "object") {
+          for (const [childKey, child] of Object.entries(value)) visit(child, childKey);
+        }
+      };
+      visit(schema);
+    } catch (error) {
+      malformedStructuredData.push({ file: relativeFile, key: "parse", value: error.message });
+    }
+  });
   const noindex = /(?:^|,)\s*noindex\b/i.test($('meta[name="robots"]').attr("content") ?? "");
   const references = [];
   const selectors = [
@@ -287,6 +338,32 @@ const generatedFeatures = {
   obsoleteCommercePaths
 };
 
+const postFiles = allFiles.filter((file) => /^post\/[^/]+\/index\.html$/.test(path.relative(DOCS_ROOT, file).split(path.sep).join("/")));
+const imageFiles = allFiles.filter(
+  (file) =>
+    path.relative(DOCS_ROOT, file).split(path.sep)[0] === "image" &&
+    IMAGE_EXTENSIONS.has(path.extname(file).toLowerCase())
+);
+const legacyDatedPostFiles = allFiles.filter((file) =>
+  /^20\d{2}\/\d{2}\/\d{2}\/[^/]+\/index\.html$/.test(
+    path.relative(DOCS_ROOT, file).split(path.sep).join("/")
+  )
+);
+const legacyUploadImages = allFiles.filter((file) => {
+  const relative = path.relative(DOCS_ROOT, file).split(path.sep).join("/");
+  return relative.startsWith("wp-content/uploads/") && IMAGE_EXTENSIONS.has(path.extname(file).toLowerCase());
+});
+const urlMigration = {
+  expectedPosts: urlMigrationPlan?.postCount ?? 0,
+  actualPosts: postFiles.length,
+  expectedImages: urlMigrationPlan?.imageDestinationCount ?? 0,
+  actualImages: imageFiles.length,
+  legacyDatedPostFiles: legacyDatedPostFiles.map((file) => path.relative(REPO_ROOT, file)),
+  legacyUploadImages: legacyUploadImages.map((file) => path.relative(REPO_ROOT, file)),
+  staleLegacyReferences,
+  malformedStructuredData
+};
+
 const report = {
   generatedAt: new Date().toISOString(),
   files: { total: allFiles.length, html: htmlFiles.length, assets: allFiles.length - htmlFiles.length },
@@ -307,6 +384,7 @@ const report = {
     brokenInternalFragments
   },
   generatedFeatures,
+  urlMigration,
   archiveNavigation,
   security: {
     unexpectedForms,
@@ -346,6 +424,14 @@ if (
   generatedFeatures.obsoleteCommercePaths.length > 0 ||
   offlineCoverage.runtime !== htmlFiles.length ||
   offlineCoverage.pagesWithoutPreloader !== htmlFiles.length
+  || urlMigration.expectedPosts !== 178
+  || urlMigration.actualPosts !== urlMigration.expectedPosts
+  || urlMigration.expectedImages !== 9418
+  || urlMigration.actualImages !== urlMigration.expectedImages
+  || urlMigration.legacyDatedPostFiles.length > 0
+  || urlMigration.legacyUploadImages.length > 0
+  || urlMigration.staleLegacyReferences.length > 0
+  || urlMigration.malformedStructuredData.length > 0
   || archiveNavigation.yearMismatches.length > 0
   || archiveNavigation.missingArchives.length > 0
 ) {
