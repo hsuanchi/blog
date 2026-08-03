@@ -201,6 +201,11 @@
   .cafe-guide-thonglor .station-name{ font-size: 12px; letter-spacing: .14em; }
   .cafe-guide-thonglor .hero h1.station-map-title{ font-size: 68px; }
 }
+body.cafe-guide-post .content-wrapper.container{max-width:1400px}
+body.cafe-guide-post #primary.content-area{float:none;flex:0 0 100%;width:100%;max-width:100%;min-width:0}
+body.cafe-guide-post #secondary{display:none!important}
+body.cafe-guide-post #main,body.cafe-guide-post article,body.cafe-guide-post .content-inner,body.cafe-guide-post .entry-content{min-width:0}
+body.cafe-guide-post .entry-header,body.cafe-guide-post .entry-footer,body.cafe-guide-post .cafe-guide-navigation{max-width:1100px;margin-left:auto;margin-right:auto}
 .cafe-guide-thonglor{display:block;max-width:100%;margin:0 0 40px;overflow:hidden;border-radius:14px;background:#fdfbf9;color:#1e1410;font-size:16px;line-height:1.65;box-shadow:0 12px 36px rgba(44,24,16,.08)}
 .cafe-guide-thonglor .guide-display-title{font-family:var(--serif,Georgia,serif);font-size:clamp(42px,7vw,76px);font-weight:800;color:#fff;line-height:1.06;letter-spacing:-.03em;margin:0 0 28px}
 .cafe-guide-thonglor .hero{min-height:clamp(540px,72vh,760px)}
@@ -208,4 +213,9 @@
 .cafe-guide-thonglor button{font-family:inherit;text-transform:none;letter-spacing:normal}
 .cafe-guide-thonglor img{max-width:100%;height:auto}
 .cafe-guide-thonglor [role="button"]:focus-visible,.cafe-guide-thonglor button:focus-visible,.cafe-guide-thonglor a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
+.cafe-guide-thonglor .map-wrapper,.cafe-guide-thonglor .map-shell{max-width:100%}
+.cafe-guide-thonglor .map-legend{min-width:0}
+.cafe-guide-thonglor .map-shell{height:auto}
+.cafe-guide-thonglor .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
+.cafe-guide-thonglor .map-aside{flex:1 1 34%;min-width:0;height:auto}
 @media(max-width:767px){.cafe-guide-thonglor{margin-left:-15px;margin-right:-15px;border-radius:0}.cafe-guide-thonglor .hero{min-height:520px}.cafe-guide-thonglor .guide-display-title{font-size:42px}}

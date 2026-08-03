@@ -336,7 +336,7 @@ async function buildGuide(guide) {
       /https:\/\/images\.unsplash\.com\/photo-1495474472287-4d71bcdd2085\?w=1920&q=80/g,
       "../../../image/miyako-cafes-hero.jpg"
     );
-    js += `\n\ndocument.querySelectorAll('.cafe-guide-miyako .collapsed-row, .cafe-guide-miyako .map-callout-label').forEach(function (control) {\n  control.addEventListener('keydown', function (event) {\n    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); control.click(); }\n  });\n});\n`;
+    js += `\n\ndocument.querySelectorAll('.cafe-guide-miyako .collapsed-row, .cafe-guide-miyako .map-callout-label').forEach(function (control) {\n  control.addEventListener('keydown', function (event) {\n    if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); control.click(); }\n  });\n  if (control.classList.contains('collapsed-row')) {\n    control.addEventListener('click', function () {\n      var detail = document.getElementById(control.id.replace('row-', 'detail-'));\n      control.setAttribute('aria-expanded', detail && detail.style.display === 'block' ? 'true' : 'false');\n    });\n  }\n});\n`;
   } else {
     css = await readFile(path.join(SOURCE_ROOT, "bts-thong-lor.css"), "utf8");
     js = await readFile(path.join(SOURCE_ROOT, "bts-thong-lor.js"), "utf8");
@@ -344,6 +344,11 @@ async function buildGuide(guide) {
   }
   const scoped = scopeCss(css, guide.scope);
   const overrides = `
+body.cafe-guide-post .content-wrapper.container{max-width:1400px}
+body.cafe-guide-post #primary.content-area{float:none;flex:0 0 100%;width:100%;max-width:100%;min-width:0}
+body.cafe-guide-post #secondary{display:none!important}
+body.cafe-guide-post #main,body.cafe-guide-post article,body.cafe-guide-post .content-inner,body.cafe-guide-post .entry-content{min-width:0}
+body.cafe-guide-post .entry-header,body.cafe-guide-post .entry-footer,body.cafe-guide-post .cafe-guide-navigation{max-width:1100px;margin-left:auto;margin-right:auto}
 ${guide.scope}{display:block;max-width:100%;margin:0 0 40px;overflow:hidden;border-radius:14px;background:#fdfbf9;color:#1e1410;font-size:16px;line-height:1.65;box-shadow:0 12px 36px rgba(44,24,16,.08)}
 ${guide.scope} .guide-display-title{font-family:var(--serif,Georgia,serif);font-size:clamp(42px,7vw,76px);font-weight:800;color:#fff;line-height:1.06;letter-spacing:-.03em;margin:0 0 28px}
 ${guide.scope} .hero{min-height:clamp(540px,72vh,760px)}
@@ -351,6 +356,11 @@ ${guide.scope} .guide-main{display:block}
 ${guide.scope} button{font-family:inherit;text-transform:none;letter-spacing:normal}
 ${guide.scope} img{max-width:100%;height:auto}
 ${guide.scope} [role="button"]:focus-visible,${guide.scope} button:focus-visible,${guide.scope} a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
+${guide.scope} .map-wrapper,${guide.scope} .map-shell{max-width:100%}
+${guide.scope} .map-legend{min-width:0}
+${guide.scope} .map-shell{height:auto}
+${guide.scope} .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
+${guide.scope} .map-aside{flex:1 1 34%;min-width:0;height:auto}
 @media(max-width:767px){${guide.scope}{margin-left:-15px;margin-right:-15px;border-radius:0}${guide.scope} .hero{min-height:520px}${guide.scope} .guide-display-title{font-size:42px}}
 `;
   await writeFileEnsured(
@@ -367,6 +377,14 @@ ${guide.scope} [role="button"]:focus-visible,${guide.scope} button:focus-visible
   const canonical = `https://www.maxlist.xyz/post/${guide.slug}/`;
   const coverUrl = `https://www.maxlist.xyz/image/${guide.cover}`;
   $("html").attr("lang", "zh-TW");
+  $("body")
+    .removeClass((_index, className) =>
+      (className ?? "")
+        .split(/\s+/)
+        .filter((name) => /^postid-\d+$/.test(name))
+        .join(" ")
+    )
+    .addClass(`postid-${guide.postId} cafe-guide-post`);
   $("title").text(`${guide.title} - Max行銷誌`);
   $('link[rel="canonical"]').attr("href", canonical);
   ensureMeta($, 'meta[name="description"]', { name: "description", content: guide.description });

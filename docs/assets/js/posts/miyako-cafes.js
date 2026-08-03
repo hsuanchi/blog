@@ -123,4 +123,10 @@ document.querySelectorAll('.cafe-guide-miyako .collapsed-row, .cafe-guide-miyako
   control.addEventListener('keydown', function (event) {
     if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); control.click(); }
   });
+  if (control.classList.contains('collapsed-row')) {
+    control.addEventListener('click', function () {
+      var detail = document.getElementById(control.id.replace('row-', 'detail-'));
+      control.setAttribute('aria-expanded', detail && detail.style.display === 'block' ? 'true' : 'false');
+    });
+  }
 });
