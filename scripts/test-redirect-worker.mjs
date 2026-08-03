@@ -20,6 +20,10 @@ await expectRedirect(
   "https://www.maxlist.xyz/post/shopee-crawler/?utm_source=legacy"
 );
 await expectRedirect(
+  "http://maxlist.xyz/2020/04/14/shopee-crawler/?utm_source=legacy",
+  "https://www.maxlist.xyz/post/shopee-crawler/?utm_source=legacy"
+);
+await expectRedirect(
   "https://www.maxlist.xyz/wp-content/uploads/2023/06/%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90-google-trends-%E5%88%86%E6%9E%90-768x428.jpg",
   "https://www.maxlist.xyz/image/%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90-google-trends-%E5%88%86%E6%9E%90-768x428.jpg"
 );

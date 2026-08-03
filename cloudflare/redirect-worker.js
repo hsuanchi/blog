@@ -65,6 +65,9 @@ export default {
     const url = new URL(request.url);
     const target = redirectTarget(url);
     if (!target) return fetch(request);
+    url.protocol = "https:";
+    url.hostname = "www.maxlist.xyz";
+    url.port = "";
     url.pathname = encodePathname(target);
     return Response.redirect(url.toString(), 301);
   }

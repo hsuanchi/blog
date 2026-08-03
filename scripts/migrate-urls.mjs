@@ -531,6 +531,9 @@ function workerSource(report) {
     `    const url = new URL(request.url);\n` +
     `    const target = redirectTarget(url);\n` +
     `    if (!target) return fetch(request);\n` +
+    `    url.protocol = \"https:\";\n` +
+    `    url.hostname = \"www.maxlist.xyz\";\n` +
+    `    url.port = \"\";\n` +
     `    url.pathname = encodePathname(target);\n` +
     `    return Response.redirect(url.toString(), 301);\n` +
     `  }\n` +
