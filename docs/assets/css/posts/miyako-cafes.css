@@ -399,6 +399,7 @@ body.cafe-guide-post .entry-header,body.cafe-guide-post .entry-footer,body.cafe-
 .cafe-guide-miyako img{max-width:100%;height:auto}
 .cafe-guide-miyako [role="button"]:focus-visible,.cafe-guide-miyako button:focus-visible,.cafe-guide-miyako a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
 .cafe-guide-miyako .map-wrapper,.cafe-guide-miyako .map-shell{max-width:100%}
+.cafe-guide-miyako .map-wrapper{align-items:flex-start}
 .cafe-guide-miyako .map-legend{min-width:0}
 .cafe-guide-miyako .map-shell{height:auto}
 .cafe-guide-miyako .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}

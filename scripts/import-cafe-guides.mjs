@@ -14,14 +14,14 @@ const SOURCE_ROOT = path.resolve(process.env.CAFE_SOURCE_DIR);
 const TEMPLATE_FILE = path.join(DOCS_ROOT, "post", "shopee-crawler", "index.html");
 const MODIFIED = "2026-08-04T00:00:00+08:00";
 const AUTHOR_ID = "https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa";
-const CAFE_ASSET_VERSION = "20260804-2";
+const CAFE_ASSET_VERSION = "20260804-3";
 
 const guides = [
   {
     key: "miyako",
     slug: "miyako-cafes",
     postId: "11001",
-    title: "宮古島咖啡地圖：分析 3,091 則評論，精選 15 家咖啡店",
+    title: "宮古島 15 家咖啡廳地圖：親測與 3,091 則評價分析",
     shortTitle: "宮古島咖啡地圖",
     description:
       "分析 3,091 則 Google Maps 公開評論，從咖啡信號、星等、口碑與負評精選宮古島 15 間咖啡店，附完整評論、地圖與店家資訊。",
@@ -42,7 +42,7 @@ const guides = [
     key: "thonglor",
     slug: "bts-thong-lor-station-cafes",
     postId: "11002",
-    title: "BTS Thong Lor 咖啡地圖：分析 4,731 則評論，精選 20 家咖啡店",
+    title: "曼谷 Thong Lor 20 家咖啡廳地圖：親測與 4,731 則評價分析",
     shortTitle: "BTS Thong Lor Station 咖啡地圖",
     description:
       "分析 4,731 則 Google Maps 公開評論，從咖啡信號、星等、語系與負評精選 BTS Thong Lor Station 周邊 20 間咖啡店。",
@@ -357,7 +357,7 @@ ${guide.scope} .guide-main{display:block}
 ${guide.scope} button{font-family:inherit;text-transform:none;letter-spacing:normal}
 ${guide.scope} img{max-width:100%;height:auto}
 ${guide.scope} [role="button"]:focus-visible,${guide.scope} button:focus-visible,${guide.scope} a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
-${guide.scope} .map-wrapper,${guide.scope} .map-shell{max-width:100%}
+${guide.scope} .map-wrapper,${guide.scope} .map-shell{max-width:100%}${guide.key === "miyako" ? `\n${guide.scope} .map-wrapper{align-items:flex-start}` : ""}
 ${guide.scope} .map-legend{min-width:0}
 ${guide.scope} .map-shell{height:auto}
 ${guide.scope} .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
