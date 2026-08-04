@@ -361,7 +361,12 @@ ${guide.scope} .map-legend{min-width:0}
 ${guide.scope} .map-shell{height:auto}
 ${guide.scope} .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
 ${guide.scope} .map-aside{flex:1 1 34%;min-width:0;height:auto}
-@media(max-width:767px){${guide.scope}{margin-left:-15px;margin-right:-15px;border-radius:0}${guide.scope} .hero{min-height:520px}${guide.scope} .guide-display-title{font-size:42px}}
+@media(max-width:767px){
+body.cafe-guide-post.single .entry-header h1.entry-title{font-size:28px;line-height:1.25;letter-spacing:-.02em;overflow-wrap:anywhere}
+${guide.scope}{width:calc(100% + 30px);max-width:none;margin-left:-15px;margin-right:-15px;border-radius:0}
+${guide.scope} .hero{min-height:520px}
+${guide.scope} .guide-display-title{font-size:42px}
+}
 `;
   await writeFileEnsured(
     path.join(DOCS_ROOT, "assets", "css", "posts", guide.cssOutput),

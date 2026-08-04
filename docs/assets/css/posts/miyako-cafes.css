@@ -403,4 +403,9 @@ body.cafe-guide-post .entry-header,body.cafe-guide-post .entry-footer,body.cafe-
 .cafe-guide-miyako .map-shell{height:auto}
 .cafe-guide-miyako .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
 .cafe-guide-miyako .map-aside{flex:1 1 34%;min-width:0;height:auto}
-@media(max-width:767px){.cafe-guide-miyako{margin-left:-15px;margin-right:-15px;border-radius:0}.cafe-guide-miyako .hero{min-height:520px}.cafe-guide-miyako .guide-display-title{font-size:42px}}
+@media(max-width:767px){
+body.cafe-guide-post.single .entry-header h1.entry-title{font-size:28px;line-height:1.25;letter-spacing:-.02em;overflow-wrap:anywhere}
+.cafe-guide-miyako{width:calc(100% + 30px);max-width:none;margin-left:-15px;margin-right:-15px;border-radius:0}
+.cafe-guide-miyako .hero{min-height:520px}
+.cafe-guide-miyako .guide-display-title{font-size:42px}
+}
