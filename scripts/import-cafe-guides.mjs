@@ -14,7 +14,7 @@ const SOURCE_ROOT = path.resolve(process.env.CAFE_SOURCE_DIR);
 const TEMPLATE_FILE = path.join(DOCS_ROOT, "post", "shopee-crawler", "index.html");
 const MODIFIED = "2026-08-04T00:00:00+08:00";
 const AUTHOR_ID = "https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa";
-const CAFE_ASSET_VERSION = "20260804-3";
+const CAFE_ASSET_VERSION = "20260804-4";
 
 const guides = [
   {
@@ -357,7 +357,7 @@ ${guide.scope} .guide-main{display:block}
 ${guide.scope} button{font-family:inherit;text-transform:none;letter-spacing:normal}
 ${guide.scope} img{max-width:100%;height:auto}
 ${guide.scope} [role="button"]:focus-visible,${guide.scope} button:focus-visible,${guide.scope} a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
-${guide.scope} .map-wrapper,${guide.scope} .map-shell{max-width:100%}${guide.key === "miyako" ? `\n${guide.scope} .map-wrapper{align-items:flex-start}` : ""}
+${guide.scope} .map-wrapper,${guide.scope} .map-shell{max-width:100%}${guide.key === "miyako" ? `\n${guide.scope} .map-wrapper{align-items:flex-start}` : ""}${guide.key === "thonglor" ? `\n${guide.scope} .cafe-heading h3{margin:0 0 4px!important}` : ""}
 ${guide.scope} .map-legend{min-width:0}
 ${guide.scope} .map-shell{height:auto}
 ${guide.scope} .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}

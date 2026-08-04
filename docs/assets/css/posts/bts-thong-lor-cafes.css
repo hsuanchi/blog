@@ -214,6 +214,7 @@ body.cafe-guide-post .entry-header,body.cafe-guide-post .entry-footer,body.cafe-
 .cafe-guide-thonglor img{max-width:100%;height:auto}
 .cafe-guide-thonglor [role="button"]:focus-visible,.cafe-guide-thonglor button:focus-visible,.cafe-guide-thonglor a:focus-visible{outline:3px solid #d65050;outline-offset:3px}
 .cafe-guide-thonglor .map-wrapper,.cafe-guide-thonglor .map-shell{max-width:100%}
+.cafe-guide-thonglor .cafe-heading h3{margin:0 0 4px!important}
 .cafe-guide-thonglor .map-legend{min-width:0}
 .cafe-guide-thonglor .map-shell{height:auto}
 .cafe-guide-thonglor .map-canvas{flex:1 1 62%;min-width:0;height:auto;aspect-ratio:1}
