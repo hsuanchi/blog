@@ -14,6 +14,7 @@ const SOURCE_ROOT = path.resolve(process.env.CAFE_SOURCE_DIR);
 const TEMPLATE_FILE = path.join(DOCS_ROOT, "post", "shopee-crawler", "index.html");
 const MODIFIED = "2026-08-04T00:00:00+08:00";
 const AUTHOR_ID = "https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa";
+const CAFE_ASSET_VERSION = "20260804-2";
 
 const guides = [
   {
@@ -435,7 +436,9 @@ ${guide.scope} .guide-display-title{font-size:42px}
     content: guide.description
   });
   ensureMeta($, 'meta[name="twitter:image"]', { name: "twitter:image", content: coverUrl });
-  $("head").append(`<link rel="stylesheet" href="/assets/css/posts/${guide.cssOutput}">`);
+  $("head").append(
+    `<link rel="stylesheet" href="/assets/css/posts/${guide.cssOutput}?v=${CAFE_ASSET_VERSION}">`
+  );
 
   const article = $("main article").first();
   article.attr(
@@ -455,9 +458,13 @@ ${guide.scope} .guide-display-title{font-size:42px}
   const other = guides.find((candidate) => candidate.slug !== guide.slug);
   article.after(`<nav class="navigation post-navigation cafe-guide-navigation" aria-label="咖啡地圖文章"><div class="nav-links"><div class="nav-next"><a href="/post/${other.slug}/" rel="next"><span class="title">下一篇咖啡地圖</span> ${other.title}</a></div></div></nav>`);
   if (guide.key === "thonglor") {
-    $("body").append('<script src="/assets/data/posts/bts-thong-lor-embedded-data.js"></script>');
+    $("body").append(
+      `<script src="/assets/data/posts/bts-thong-lor-embedded-data.js?v=${CAFE_ASSET_VERSION}"></script>`
+    );
   }
-  $("body").append(`<script src="/assets/js/posts/${guide.jsOutput}"></script>`);
+  $("body").append(
+    `<script src="/assets/js/posts/${guide.jsOutput}?v=${CAFE_ASSET_VERSION}"></script>`
+  );
   const wordCount = $source("body").text().replace(/\s+/g, "").length;
   $("script.yoast-schema-graph").first().text(JSON.stringify(schemaFor(guide, wordCount)));
   const output = path.join(DOCS_ROOT, "post", guide.slug, "index.html");
