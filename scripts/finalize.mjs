@@ -1,5 +1,6 @@
 import { readdir, readFile, rm } from "node:fs/promises";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink } from "./lib.mjs";
 
@@ -13,6 +14,9 @@ const SEARCH_PAGE_OUTPUT = path.join(DOCS_ROOT, "search", "index.html");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 const OFFLINE_RUNTIME_VERSION = "20260802-7";
 const COMPONENT_VERSION = "20260803-1";
+const SIDEBAR_COMPONENT_VERSION = createHash("sha256")
+  .update(await readFile(path.join(DOCS_ROOT, "assets/js/components/sidebar.js")))
+  .digest("hex").slice(0, 12);
 const CANONICAL_ALIASES = new Map([["首頁/index.html", `${SITE_ORIGIN}/`]]);
 const OBSOLETE_COMMERCE_PATHS = ["cart", "checkout", "my-account", "shop"];
 
@@ -745,7 +749,7 @@ for (const file of htmlFiles) {
   for (const component of ["header", "sidebar", "footer"]) {
     $(`script[src*="assets/js/components/${component}.js"]`).attr(
       "src",
-      relativeRootReference(`/assets/js/components/${component}.js?v=${COMPONENT_VERSION}`, file)
+      relativeRootReference(`/assets/js/components/${component}.js?v=${component === "sidebar" ? SIDEBAR_COMPONENT_VERSION : COMPONENT_VERSION}`, file)
     );
   }
 
