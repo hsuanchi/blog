@@ -10,11 +10,12 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--source", type=Path, required=True,
                     help="Browser screenshots and clips.json from the HTML artboards")
 parser.add_argument("--only", nargs="+", help="Export only the named artboards")
+parser.add_argument("--slug", default="netsuite-report-permissions", help="Tutorial artwork and image directory")
 args = parser.parse_args()
 root = Path(__file__).resolve().parent.parent
-target = root / "docs/image/netsuite-report-permissions"
+target = root / "docs/image" / args.slug
 target.mkdir(parents=True, exist_ok=True)
-manifest = root / "artwork/netsuite-report-permissions/exports.json"
+manifest = root / "artwork" / args.slug / "exports.json"
 exports = json.loads(manifest.read_text()) if manifest.exists() else {}
 exported = 0
 for name, clip in json.loads((args.source / "clips.json").read_text()).items():

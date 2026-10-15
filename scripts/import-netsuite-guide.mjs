@@ -62,7 +62,7 @@ $content('.figure-link').each((_i, el) => {
   const key = illustrationMap.get(original);
   const asset = exports[key];
   if (!asset) throw new Error(`Missing exported illustration: ${original}`);
-  const visual = `<a href="/image/${SLUG}/${asset.file}?v=20261015-4" aria-label="放大圖解：${sourceImage.attr('alt')}"><img src="../../image/${SLUG}/${asset.file}?v=20261015-4" width="${asset.width}" height="${asset.height}" alt="${sourceImage.attr('alt')}" loading="lazy" decoding="async"></a>`;
+  const visual = `<a href="/image/${SLUG}/${asset.file}?v=20261015-4" target="_blank" rel="noopener noreferrer" aria-label="放大圖解：${sourceImage.attr('alt')}（另開分頁）"><img src="../../image/${SLUG}/${asset.file}?v=20261015-4" width="${asset.width}" height="${asset.height}" alt="${sourceImage.attr('alt')}" loading="lazy" decoding="async"></a>`;
   const p = link.parent('p');
   const caption = p.next('.caption');
   p.replaceWith(`<figure class="netsuite-figure">${visual}<figcaption>${caption.html()}${original.endsWith('.png') ? '（介面示意）' : ''}<span>點圖放大 ↗</span></figcaption></figure>`);

@@ -1,7 +1,7 @@
 import { readdir, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { load } from "cheerio";
-import { writeFileEnsured } from "./lib.mjs";
+import { writeFileEnsured, isNetsuiteImageZoomLink } from "./lib.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -612,9 +612,26 @@ for (const file of htmlFiles) {
     }
   });
 
+  if ($("body").hasClass("netsuite-post")) {
+    $("main article img[src]").each((_index, element) => {
+      const image = $(element);
+      if (!image.closest("a").length) {
+        image.wrap("<a></a>");
+        image.parent("a").attr({
+          href: image.attr("src"),
+          "aria-label": `放大圖片：${image.attr("alt") ?? "NetSuite 教學圖片"}（另開分頁）`
+        });
+      }
+    });
+  }
+
   $("a[href]").each((_index, element) => {
     const href = $(element).attr("href") ?? "";
     if (!isSameSiteReference(href)) return;
+    if (isNetsuiteImageZoomLink($, element, path.relative(DOCS_ROOT, file).split(path.sep).join("/"))) {
+      $(element).attr("target", "_blank");
+      return;
+    }
     $(element).removeAttr("target");
     const rel = ($(element).attr("rel") ?? "")
       .split(/\s+/)

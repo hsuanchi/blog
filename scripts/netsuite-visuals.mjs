@@ -1,10 +1,14 @@
 // Editable HTML masters for the tutorial's exported editorial illustrations.
-export function cover(compact = false) {
+export function cover(compact = false, content = {}) {
+  const number = content.number ?? '01';
+  const title = content.title ?? '報表權限設定';
+  const subtitle = content.subtitle ?? '搞懂「對象」與「存取」的差別';
+  const points = content.points ?? [['對象', '讓對方在清單找到報表'], ['存取', '對這份報表額外放行']];
   return `<div class="ns-cover${compact ? ' ns-cover--compact' : ''}">
-    <p class="ns-cover__eyebrow">ORACLE NETSUITE <span>教學 01</span></p>
-    <p class="ns-cover__title">報表權限設定</p>
-    <p class="ns-cover__subtitle">搞懂「對象」與「存取」的差別</p>
-    ${compact ? '' : `<div class="ns-cover__grid"><div><strong>對象</strong><span>讓對方在清單找到報表</span></div><div><strong>存取</strong><span>對這份報表額外放行</span></div></div><p class="ns-cover__byline">NETSUITE 教學系列 <span>Max 行銷誌</span></p>`}
+    <p class="ns-cover__eyebrow">ORACLE NETSUITE <span>教學 ${number}</span></p>
+    <p class="ns-cover__title">${title}</p>
+    <p class="ns-cover__subtitle">${subtitle}</p>
+    ${compact ? '' : `<div class="ns-cover__grid">${points.map(([label, text]) => `<div><strong>${label}</strong><span>${text}</span></div>`).join('')}</div><p class="ns-cover__byline">NETSUITE 教學系列 <span>Max 行銷誌</span></p>`}
   </div>`;
 }
 

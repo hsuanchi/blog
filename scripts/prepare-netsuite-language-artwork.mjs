@@ -1,0 +1,40 @@
+import { mkdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { cover } from './netsuite-visuals.mjs';
+
+const root = path.resolve(import.meta.dirname, '..');
+const directory = path.join(root, 'artwork/netsuite-language-settings');
+const hero = cover(false, {
+  number: '02', title: '切換介面語言',
+  subtitle: '繁體中文與英文，從個人偏好設定開始',
+  points: [['個人介面', '設定偏好 → 一般 → 語言'], ['說明中心', '可另外選擇使用的語言']]
+});
+const languagePath = `<div class="ns-visual ns-language-path" role="group" aria-label="NetSuite 中英文介面的語言設定路徑">
+  <div class="ns-visual__heading"><p class="ns-visual__title">中英文介面，從這裡切換</p></div>
+  <div class="ns-language-route"><span>中文路徑</span><p>首頁圖示 → 設定偏好 → 一般 → 本地化 → 語言</p></div>
+  <div class="ns-language-route ns-language-route--english"><span>英文路徑</span><p>Home → Set Preferences → General → Localization → Language</p></div>
+  <div class="ns-language-options"><div><strong>繁體中文</strong><span>Chinese (Traditional)</span></div><div><strong>美式英文</strong><span>English (U.S.)</span></div></div>
+  <p class="ns-visual__note">選擇語言後按「儲存」；這項偏好只影響目前使用者。</p>
+</div>`;
+const homeIcon = '<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 14 16 4l12 10M7 12v16h18V12M13 28v-9h6v9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+const languagePreferences = `<div class="ns-language-screen">
+  <header class="ns-language-screen__heading"><div><p class="ns-language-screen__eyebrow">個人偏好設定 · 語言切換</p><h1>在「設定偏好」切換介面語言</h1></div><span class="ns-language-screen__tag">介面示意</span></header>
+  <div class="ns-language-screen__window">
+    <div class="ns-language-screen__nav"><strong>NetSuite</strong><span class="ns-language-screen__home"><b class="ns-language-screen__number">1</b>${homeIcon}</span><span>活動</span><span>清單</span><span>報表</span><span>設定</span><div class="ns-language-screen__search">⌕　搜尋</div></div>
+    <div class="ns-language-screen__entry"><span class="ns-language-screen__entry-label">從首頁圖示開啟選單</span><span class="ns-language-screen__arrow">→</span><div><strong>設定偏好</strong><span>Set Preferences</span></div></div>
+    <div class="ns-language-screen__titlebar"><div><h2>設定偏好</h2><p>Set Preferences</p></div><div class="ns-language-screen__actions"><strong>儲存 <span>Save</span></strong><span>取消</span></div></div>
+    <div class="ns-language-screen__tabs"><strong><b class="ns-language-screen__number">2</b>一般 <span>General</span></strong><span>外觀</span><span>交易</span><span>分析</span><span>活動</span><span>自訂偏好</span></div>
+    <div class="ns-language-screen__body">
+      <div class="ns-language-screen__localization"><div class="ns-language-screen__section"><h3>本地化</h3><span>Localization</span></div><div class="ns-language-screen__field"><div class="ns-language-screen__label"><b class="ns-language-screen__number">3</b><strong>語言 <span>Language</span></strong></div><div class="ns-language-screen__select"><span>繁體中文</span><span>⌄</span></div><p>此設定適用於您的所有角色。</p></div><div class="ns-language-screen__selection-note">在語言下拉選單中，選擇想使用的介面語言。</div></div>
+      <aside class="ns-language-screen__options"><h3>中英文選項對照</h3><div><strong>繁體中文</strong><span>Chinese (Traditional)</span></div><div><strong>美式英文</strong><span>English (U.S.)</span></div></aside>
+    </div>
+    <div class="ns-language-screen__save"><span class="ns-language-screen__save-check">✓</span><div><strong>選好語言後，記得按「儲存」</strong><p>回到系統頁面，確認導覽列與設定文字已切換。</p></div></div>
+  </div>
+  <p class="ns-language-screen__footnote">依原始操作畫面重製，僅保留教學重點；實際欄位與排列以系統畫面為準。</p>
+</div>`;
+const artboards = [['cover', '教學 02 首圖', hero], ['language-path', '中英文語言設定路徑', languagePath], ['language-preferences', '設定偏好：語言切換介面示意', languagePreferences]];
+await mkdir(directory, { recursive: true });
+for (const [id, title, markup] of artboards) {
+  await writeFile(path.join(directory, `${id}.html`), `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${title}</title><link rel="stylesheet" href="../../docs/assets/css/posts/netsuite.css?v=20261015-4"><link rel="stylesheet" href="../netsuite-report-permissions/artwork.css?v=20261015-5"><link rel="stylesheet" href="artwork.css?v=20261015-2"></head><body class="artwork-solo"><section class="artboard" id="${id}" aria-label="${title}">${markup}</section></body></html>\n`);
+}
+console.log('Prepared NetSuite tutorial 02 artwork with the established cover and illustration palettes.');

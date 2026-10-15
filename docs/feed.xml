@@ -5,14 +5,21 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 15 Oct 2026 07:23:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 15 Oct 2026 08:58:42 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Thu, 15 Oct 2026 06:00:00 GMT</pubDate>
-      <description>Max行銷誌全部 181 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖與 NetSuite 教學。</description>
+      <pubDate>Thu, 15 Oct 2026 08:25:00 GMT</pubDate>
+      <description>Max行銷誌全部 182 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖與 NetSuite 教學。</description>
+    </item>
+    <item>
+      <title>【NetSuite 教學 02】切換介面語言：繁體中文與英文設定</title>
+      <link>https://www.maxlist.xyz/post/netsuite-language-settings/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/netsuite-language-settings/</guid>
+      <pubDate>Thu, 15 Oct 2026 08:25:00 GMT</pubDate>
+      <description>從設定偏好切換 NetSuite 繁體中文與英文介面，附中英文路徑、操作示意圖、多語言功能檢查，以及介面與說明中心語言的差別。</description>
     </item>
     <item>
       <title>【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」</title>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/category/analytics/page/2/</guid>
       <pubDate>Tue, 02 Jan 2024 15:20:26 GMT</pubDate>
       <description>分類: Python 數據分析 &lt;img width=&quot;1272&quot; height=&quot;706&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/數據分析-blog-dashboard-部落格儀表板.jpg&quot; class=&quot;attachment-large-…</description>
-    </item>
-    <item>
-      <title>【數據分析】30 分鐘打造 GA4 即時報表 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/post/ga4-realtime-dashboard/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/post/ga4-realtime-dashboard/</guid>
-      <pubDate>Sat, 01 Jul 2023 05:17:50 GMT</pubDate>
-      <description>本篇教學會帶大家用 30 分鐘，打造一個 GA4 即時報表，過程只需要三個步驟，1. GA4 串接 BigQuery 2. 建立 GA4 檢視表 3. 串接 GA4 Dashboard。步驟非常簡單，不需要任何工程師的協助，就可以輕鬆完成的 GA4 即時報表。 首先我們來看最終「GA4 即時報表」成果如下，我們打造一…</description>
     </item>
   </channel>
 </rss>

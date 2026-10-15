@@ -4,6 +4,24 @@ import path from "node:path";
 export const ORIGIN = "https://www.maxlist.xyz";
 export const SITE_HOSTS = new Set(["maxlist.xyz", "www.maxlist.xyz"]);
 
+// NetSuite article images open the full asset while the reading tab stays in place.
+export function isNetsuiteImageZoomLink($, element, pagePath) {
+  const link = $(element);
+  if (!$("body").hasClass("netsuite-post") || !link.closest("article").length) return false;
+  const source = link.find("img[src]").first().attr("src");
+  const href = link.attr("href");
+  if (!source || !href) return false;
+  try {
+    const base = new URL(pagePath, `${ORIGIN}/`);
+    const image = new URL(source, base);
+    const target = new URL(href, base);
+    return SITE_HOSTS.has(target.hostname) && target.href === image.href &&
+      /^\/image\/netsuite-[^/]+\/[^/]+\.(?:avif|gif|jpe?g|png|svg|webp)$/i.test(target.pathname);
+  } catch {
+    return false;
+  }
+}
+
 export async function ensureDir(directory) {
   await mkdir(directory, { recursive: true });
 }

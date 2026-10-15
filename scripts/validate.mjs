@@ -1,7 +1,7 @@
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { load } from "cheerio";
-import { writeFileEnsured } from "./lib.mjs";
+import { writeFileEnsured, isNetsuiteImageZoomLink } from "./lib.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -10,10 +10,10 @@ const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
-// Two coffee guides and NetSuite tutorial 01, added after the WordPress migration.
-const ADDED_STATIC_POSTS = 3;
-// Six coffee assets plus six NetSuite illustrations exported from HTML masters.
-const ADDED_STATIC_IMAGES = 12;
+// Two coffee guides and NetSuite tutorials 01–02, added after WordPress migration.
+const ADDED_STATIC_POSTS = 4;
+// Six coffee assets, six tutorial 01 assets, and three tutorial 02 assets.
+const ADDED_STATIC_IMAGES = 15;
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -86,6 +86,8 @@ const dynamicReferences = [];
 const componentCoverage = { header: 0, sidebar: 0, footer: 0 };
 const offlineCoverage = { runtime: 0, pagesWithoutPreloader: 0 };
 const internalLinksOpeningNewTabs = [];
+const netsuiteImagesWithoutNewTab = [];
+let netsuiteImagesOpeningNewTabs = 0;
 const offlineRootResourceReferences = [];
 const offlineRootCssReferences = [];
 const brokenInternalFragments = [];
@@ -223,13 +225,27 @@ for (const file of htmlFiles) {
     try {
       const sourceRelative = path.relative(DOCS_ROOT, file).split(path.sep).join("/");
       const url = new URL(reference, `https://www.maxlist.xyz/${sourceRelative}`);
-      if (new Set(["maxlist.xyz", "www.maxlist.xyz"]).has(url.hostname)) {
+      if (new Set(["maxlist.xyz", "www.maxlist.xyz"]).has(url.hostname) && !isNetsuiteImageZoomLink($, element, sourceRelative)) {
         internalLinksOpeningNewTabs.push({ file: path.relative(REPO_ROOT, file), reference });
       }
     } catch {
       // Invalid links are handled by the normal reference checks.
     }
   });
+
+  if ($("body").hasClass("netsuite-post")) {
+    $("main article img[src]").each((_index, element) => {
+      const link = $(element).closest("a");
+      const pagePath = path.relative(DOCS_ROOT, file).split(path.sep).join("/");
+      const rel = new Set((link.attr("rel") ?? "").split(/\s+/));
+      if (link.length && isNetsuiteImageZoomLink($, link.get(0), pagePath) &&
+          link.attr("target") === "_blank" && rel.has("noopener") && rel.has("noreferrer")) {
+        netsuiteImagesOpeningNewTabs += 1;
+      } else {
+        netsuiteImagesWithoutNewTab.push({ file: relativeFile, source: $(element).attr("src") });
+      }
+    });
+  }
 
   if ($('script[src*="assets/js/components/header.js"]').length) componentCoverage.header += 1;
   if ($('script[src*="assets/js/components/sidebar.js"]').length) componentCoverage.sidebar += 1;
@@ -401,6 +417,7 @@ const report = {
     insecureSameSiteScriptReferences
   },
   internalLinksOpeningNewTabs,
+  netsuiteImageNavigation: { imagesOpeningNewTabs: netsuiteImagesOpeningNewTabs, imagesWithoutNewTab: netsuiteImagesWithoutNewTab },
   offlineRootResourceReferences,
   offlineRootCssReferences,
   missingLocalReferences: [...missing].map(([source, expected]) => ({ source, expected })),
@@ -420,6 +437,7 @@ if (
   backendScriptReferences.length > 0 ||
   insecureSameSiteScriptReferences.length > 0 ||
   internalLinksOpeningNewTabs.length > 0 ||
+  netsuiteImagesWithoutNewTab.length > 0 ||
   offlineRootResourceReferences.length > 0 ||
   offlineRootCssReferences.length > 0 ||
   componentCoverage.header !== htmlFiles.length ||

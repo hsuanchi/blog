@@ -37,6 +37,8 @@ npm run serve
 
 ## 新增文章
 
+NetSuite 教學系列先閱讀並遵循 [NetSuite 教學系列製作規範](NETSUITE_GUIDE_RULES.md)，沿用已確認的首圖、內文配色、FAQ 與預覽發布流程。
+
 未來可直接複製既有文章目錄中的 `index.html`，保留共用元件的三個 `<script>`，再修改 `<head>` SEO 資訊與 `<article>` 內容。完成後執行 `npm run finalize && npm run validate`，更新搜尋索引、sitemap 與共用檢查；輸出仍是可直接部署的純靜態檔案，不需要框架或伺服器端建置。
 
 目前 repository 保持 private。確認內容、網址、圖片、核准留言與視覺比對完成後，才會另行切換 public，並以 `docs/` 作為 GitHub Pages 來源。網站同時支援 `username.github.io/blog/` 專案預覽與 `www.maxlist.xyz` 正式網域。
