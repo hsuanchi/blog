@@ -724,6 +724,8 @@ for (const file of htmlFiles) {
     }
   }
   if (relativeFile === "index.html") {
+    $("#coffee-guides, #netsuite-guides, #maxlist-coffee-home-style").remove();
+    $('link[href*="assets/css/posts/netsuite.css"]').remove();
     const homepageTitle = "Max行銷誌｜行銷、數據分析與 Python 教學";
     $("title").text(homepageTitle);
     ensureMeta($, 'meta[property="og:title"]', { property: "og:title", content: homepageTitle });
