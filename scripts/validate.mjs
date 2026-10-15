@@ -10,6 +10,10 @@ const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
+// Two coffee guides and NetSuite tutorial 01, added after the WordPress migration.
+const ADDED_STATIC_POSTS = 3;
+// Six coffee assets plus six NetSuite illustrations exported from HTML masters.
+const ADDED_STATIC_IMAGES = 12;
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -355,12 +359,12 @@ const legacyUploadImages = allFiles.filter((file) => {
 });
 const urlMigration = {
   migratedPosts: urlMigrationPlan?.postCount ?? 0,
-  addedStaticPosts: 2,
-  expectedPosts: (urlMigrationPlan?.postCount ?? 0) + 2,
+  addedStaticPosts: ADDED_STATIC_POSTS,
+  expectedPosts: (urlMigrationPlan?.postCount ?? 0) + ADDED_STATIC_POSTS,
   actualPosts: postFiles.length,
   migratedImages: urlMigrationPlan?.imageDestinationCount ?? 0,
-  addedStaticImages: 6,
-  expectedImages: (urlMigrationPlan?.imageDestinationCount ?? 0) + 6,
+  addedStaticImages: ADDED_STATIC_IMAGES,
+  expectedImages: (urlMigrationPlan?.imageDestinationCount ?? 0) + ADDED_STATIC_IMAGES,
   actualImages: imageFiles.length,
   legacyDatedPostFiles: legacyDatedPostFiles.map((file) => path.relative(REPO_ROOT, file)),
   legacyUploadImages: legacyUploadImages.map((file) => path.relative(REPO_ROOT, file)),
@@ -429,12 +433,8 @@ if (
   offlineCoverage.runtime !== htmlFiles.length ||
   offlineCoverage.pagesWithoutPreloader !== htmlFiles.length
   || urlMigration.migratedPosts !== 178
-  || urlMigration.addedStaticPosts !== 2
-  || urlMigration.expectedPosts !== 180
   || urlMigration.actualPosts !== urlMigration.expectedPosts
   || urlMigration.migratedImages !== 9418
-  || urlMigration.addedStaticImages !== 6
-  || urlMigration.expectedImages !== 9424
   || urlMigration.actualImages !== urlMigration.expectedImages
   || urlMigration.legacyDatedPostFiles.length > 0
   || urlMigration.legacyUploadImages.length > 0

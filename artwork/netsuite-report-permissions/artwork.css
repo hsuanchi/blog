@@ -1,0 +1,118 @@
+/* Fixed composition for 1200px exports. Palette matches the supplied green and cream illustrations. */
+* { box-sizing: border-box; }
+body { margin: 0; background: #e8eee8; color: #183c36; font-family: -apple-system, BlinkMacSystemFont, 'PingFang TC', 'Noto Sans TC', sans-serif; -webkit-font-smoothing: antialiased; }
+.artwork-intro { max-width: 1200px; margin: 48px auto; }
+.artwork-intro h1 { font-size: 28px; }
+.artwork-intro nav { display: flex; gap: 20px; }
+.artwork-intro a { color: #183c36; }
+.artboard { width: 1200px; margin: 64px auto; background: white; }
+.artwork-solo { background: white; }
+.artwork-solo .artboard { margin: 40px auto; }
+.artboard p { margin: 0; }
+.artboard .ns-visual { padding: 38px 40px 36px; background: #f3f6f2; border: 1px solid #dbe5dc; border-radius: 22px; line-height: 1.65; }
+.artboard .ns-visual__heading { margin: 0 6px 30px; }
+.artboard .ns-kicker { display: none; }
+.artboard .ns-visual .ns-visual__title { font-size: 31px; font-weight: 700; color: #183c36; line-height: 1.45; }
+.artboard .ns-grid { gap: 30px; }
+.artboard .ns-panel { padding: 26px 30px 30px; border: 1px solid #cbded5; border-radius: 20px; box-shadow: 0 2px 6px #183c3603; }
+.artboard .ns-panel--accent { border-color: #e5d5b8; }
+.artboard .ns-visual .ns-panel__label { display: block; padding: 0; background: transparent; color: #1a6651; font-size: 32px; line-height: 1.4; font-weight: 700; }
+.artboard .ns-panel--accent .ns-panel__label { color: #9d6325; }
+.artboard .ns-visual .ns-panel__question { margin-top: 8px; font-size: 23px; font-weight: 650; }
+.artboard .ns-list-preview, .artboard .ns-access-preview { min-height: 160px; margin-top: 24px; padding: 20px 22px; border-radius: 12px; background: #eef5f1; }
+.artboard .ns-list-preview > span:first-child { font-size: 18px; color: #607970; }
+.artboard .ns-list-preview strong { display: flex; align-items: center; gap: 12px; margin: 13px 0 20px; padding: 10px 14px; border: 0; border-radius: 8px; background: #d4e9dd; color: #183c36; font-size: 21px; font-weight: 550; }
+.artboard .ns-report-icon { flex: 0 0 22px; width: 22px; height: 22px; color: #607970; }
+.artboard .ns-placeholder-line { height: 4px; width: 82%; margin-left: 12px; background: #bed0c5; }
+.artboard .ns-access-preview { gap: 24px; background: #fcf3e4; }
+.artboard .ns-key-icon { flex: 0 0 100px; color: #ac7635; }
+.artboard .ns-access-preview strong { color: #8b5a24; font-size: 23px; line-height: 1.7; font-weight: 650; }
+.artboard .ns-visual .ns-panel__result { margin-top: 23px; font-size: 21px; font-weight: 550; }
+.artboard .ns-visual .ns-muted { margin-top: 8px; font-size: 19px; color: #607970; }
+.artboard .ns-visual .ns-visual__note { margin-top: 28px; padding: 18px 28px; border: 0; border-radius: 14px; background: #e3eee7; color: #183c36; font-size: 22px; line-height: 1.6; font-weight: 650; }
+
+.artboard .ns-people { gap: 30px; }
+.artboard .ns-person { padding: 26px 28px; gap: 22px; border-radius: 18px; }
+.artboard .ns-person__avatar { flex-basis: 54px; height: 54px; color: #1a6651; background: #d4e9dd; font-size: 28px; }
+.artboard .ns-person--accent .ns-person__avatar { color: #8b5a24; background: #f7e4c5; }
+.artboard .ns-person strong { font-size: 25px; font-weight: 650; }
+.artboard .ns-person p { margin-top: 10px; font-size: 19px; }
+.artboard .ns-sharing-rows { margin-top: 28px; }
+.artboard .ns-sharing-rows > div { grid-template-columns: 116px 1fr; align-items: start; gap: 26px; padding: 24px 30px; border: 0; border-radius: 18px; background: #e3eee7; }
+.artboard .ns-sharing-rows > div + div { margin-top: 20px; }
+.artboard .ns-sharing-rows dt { font-size: 28px; padding-top: 3px; }
+.artboard .ns-sharing-rows .ns-sharing-rows__access { background: #fcf3e4; border: 0; }
+.artboard .ns-sharing-rows__access dt { color: #8b5a24; }
+.artboard .ns-chips { gap: 16px; }
+.artboard .ns-chips > span { padding: 2px 40px; border-radius: 28px; background: white; color: #1a6651; font-size: 26px; }
+.artboard .ns-sharing-rows__access .ns-chips > span { background: white; color: #8b5a24; }
+.artboard .ns-chips small { font-size: 18px; color: #8b7154; }
+.artboard .ns-sharing-rows dd p { margin-top: 12px; font-size: 21px; }
+#audience-access-example .ns-visual__note { background: transparent; padding: 0 6px; font-size: 21px; font-weight: 550; }
+
+.artboard .ns-option { padding: 24px 24px 28px; min-height: 390px; }
+.artboard .ns-option__number { font-size: 16px; color: #607970; }
+.artboard .ns-option .ns-panel__question { font-size: 24px; margin-top: 8px; }
+.artboard .ns-option .ns-muted { font-size: 18px; }
+.artboard .ns-visual .ns-choice-list { margin-top: 24px; }
+.artboard .ns-choice-list li { padding: 15px 14px 15px 42px; border: 1px solid #b8d9c8; border-radius: 9px; background: #eef5f1; color: #1a6651; font-size: 21px; }
+.artboard .ns-choice-list li::before { left: 16px; color: #607970; }
+.artboard .ns-choice-list li + li { margin-top: 14px; }
+.artboard .ns-visual .ns-and { margin-top: 8px; font-size: 17px; }
+.artboard .ns-and + .ns-choice-list { margin-top: 8px; }
+.artboard .ns-visual .ns-option__footer { font-size: 18px; line-height: 1.65; padding-top: 24px; }
+#roles-and-departments .ns-visual__note { background: transparent; padding: 0 6px; font-size: 20px; font-weight: 500; }
+
+/* Interface illustrations use the same soft frame and original green and cream palette. */
+.artboard .ns-builder { border-radius: 20px; border: 1px solid #cbded5; line-height: 1.7; }
+.artboard .ns-builder__titlebar { padding: 25px 32px; background: white; color: #183c36; }
+.artboard .ns-builder__titlebar strong { color: #183c36; font-size: 28px; }
+.artboard .ns-builder__titlebar > span { color: #607970; font-size: 17px; padding: 2px 14px; background: #f3f6f2; border-radius: 20px; }
+.artboard .ns-builder__toolbar { padding: 12px 32px 0; gap: 36px; font-size: 18px; background: #f3f6f2; }
+.artboard .ns-builder__toolbar > * { padding-bottom: 13px; }
+.artboard .ns-builder__toolbar strong { border-bottom-width: 4px; }
+.artboard .ns-builder__body { padding: 28px 32px; }
+.artboard .ns-builder__fields { max-width: 850px; gap: 26px; }
+.artboard .ns-field-label { font-size: 18px; margin-bottom: 8px; }
+.artboard .ns-field-value { padding: 9px 14px; font-size: 20px; border-radius: 6px; }
+.artboard .ns-builder__tabs { margin-top: 28px; gap: 35px; }
+.artboard .ns-builder__tabs > span { font-size: 20px; padding-bottom: 14px; }
+.artboard .ns-builder__tabs .is-current { border-bottom-width: 4px; }
+.artboard .ns-builder .ns-builder__hint { margin: 24px 0; padding: 16px 22px; border-radius: 10px; border: 0; background: #eef5f1; font-size: 20px; }
+.artboard .ns-builder__selections { gap: 30px; }
+.artboard .ns-builder .ns-selection-list { min-height: 122px; padding: 8px; border-radius: 8px; font-size: 19px; }
+.artboard .ns-selection-list li { padding: 10px 12px; }
+.artboard .ns-selection-list .is-selected { border: 0; border-radius: 5px; background: #d4e9dd; color: #1a6651; }
+.artboard .ns-builder .ns-builder__footnote { margin-top: 20px; font-size: 17px; }
+.artboard .ns-builder__footer { padding: 16px 32px; gap: 12px; font-size: 18px; }
+.artboard .ns-builder__footer > * { padding: 6px 20px; border-radius: 7px; }
+
+/* Cover master: exactly 1200 × 630 for article cards and sharing metadata. */
+#cover .ns-cover { display: flex; flex-direction: column; position: relative; width: 1200px; height: 630px; padding: 54px 64px; border: 0; background: #00102e; }
+#cover .ns-cover::before { content: ''; position: absolute; left: 64px; top: 50px; width: 62px; height: 7px; background: #d65050; }
+#cover .ns-cover .ns-cover__eyebrow { margin-top: 25px; font-size: 25px; line-height: 1.5; }
+#cover .ns-cover .ns-cover__title { margin-top: 28px; font-size: 68px; line-height: 1.3; }
+#cover .ns-cover .ns-cover__subtitle { margin-top: 8px; font-size: 30px; line-height: 1.5; }
+#cover .ns-cover__grid { gap: 24px; margin-top: 30px; }
+#cover .ns-cover__grid > div { padding: 18px 22px; border-color: #43536f; border-radius: 14px; background: #ffffff06; }
+#cover .ns-cover__grid strong { font-size: 26px; margin-bottom: 8px; }
+#cover .ns-cover__grid span { font-size: 20px; }
+#cover .ns-cover .ns-cover__byline { margin-top: auto; font-size: 18px; }
+
+/* The teaching artwork retains the source palette independently of the blog. */
+.artboard :is(.ns-visual, .ns-builder) {
+  --ns-navy: #1a6651;
+  --ns-red: #9d6325;
+  --ns-ink: #183c36;
+  --ns-muted: #607970;
+  --ns-surface: #f3f6f2;
+  --ns-border: #cbded5;
+  --ns-tint: #fcf3e4;
+}
+.artboard .ns-visual, .artboard .ns-builder { color: #183c36; }
+.artboard .ns-sharing-rows > div { background: #e4f0e9; }
+.artboard .ns-sharing-rows .ns-sharing-rows__access { background: #fcf0de; }
+.artboard .ns-choice-list li { background: #e4f1eb; }
+.artboard .ns-builder__footer strong { background: #1a6651; border-color: #1a6651; }
+#cover .ns-cover .ns-cover__eyebrow, #cover .ns-cover .ns-cover__byline { color: #c5cdd9; }
+#cover .ns-cover .ns-cover__subtitle, #cover .ns-cover__grid span { color: #d3d9e3; }

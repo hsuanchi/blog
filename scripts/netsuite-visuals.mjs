@@ -1,0 +1,68 @@
+// Editable HTML masters for the tutorial's exported editorial illustrations.
+export function cover(compact = false) {
+  return `<div class="ns-cover${compact ? ' ns-cover--compact' : ''}">
+    <p class="ns-cover__eyebrow">ORACLE NETSUITE <span>教學 01</span></p>
+    <p class="ns-cover__title">報表權限設定</p>
+    <p class="ns-cover__subtitle">搞懂「對象」與「存取」的差別</p>
+    ${compact ? '' : `<div class="ns-cover__grid"><div><strong>對象</strong><span>讓對方在清單找到報表</span></div><div><strong>存取</strong><span>對這份報表額外放行</span></div></div><p class="ns-cover__byline">NETSUITE 教學系列 <span>Max 行銷誌</span></p>`}
+  </div>`;
+}
+
+export const comparison = `<div class="ns-visual" role="group" aria-label="對象與存取的比較">
+  <div class="ns-visual__heading"><span class="ns-kicker">觀念圖解</span><p class="ns-visual__title">對象和存取，分別在管什麼？</p></div>
+  <div class="ns-grid ns-grid--two">
+    <div class="ns-panel"><p class="ns-panel__label">對象</p><p class="ns-panel__question">我要讓誰在清單找到？</p>
+      <div class="ns-list-preview"><span>所有已儲存報表</span><strong><svg class="ns-report-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 8h10M7 12h10M7 16h7" fill="none" stroke="currentColor" stroke-width="2"/></svg>你分享的自訂報表</strong><span class="ns-placeholder-line" aria-hidden="true"></span></div>
+      <p class="ns-panel__result">讓對方比較容易找到報表</p><p class="ns-muted">點進去能不能用，還要看原有權限。</p>
+    </div>
+    <div class="ns-panel ns-panel--accent"><p class="ns-panel__label">存取</p><p class="ns-panel__question">原本不能開，這張要放行嗎？</p>
+      <div class="ns-access-preview"><svg class="ns-key-icon" width="104" height="76" viewBox="0 0 104 76" aria-hidden="true"><circle cx="28" cy="34" r="22" fill="none" stroke="currentColor" stroke-width="6"/><path d="M50 34h47m-10 0v18M72 34v13" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/></svg><strong>只對這一張<br>額外放行</strong></div>
+      <p class="ns-panel__result">替原本權限不足的人開通</p><p class="ns-muted">原本已有權限的人，不必再加。</p>
+    </div>
+  </div>
+  <p class="ns-visual__note">兩邊不用選一樣的人；「存取」留白，也不代表沒有人能用。</p>
+</div>`;
+
+export const example = `<div class="ns-visual" role="group" aria-label="分享給使用者 A 和 B 的設定範例">
+  <div class="ns-visual__heading"><span class="ns-kicker">設定範例</span><p class="ns-visual__title">同一份報表，分享給 A 和 B</p></div>
+  <div class="ns-grid ns-grid--two ns-people">
+    <div class="ns-person"><span class="ns-person__avatar" aria-hidden="true">A</span><div><strong>使用者 A</strong><p>原本就有這類報表所需權限</p></div></div>
+    <div class="ns-person ns-person--accent"><span class="ns-person__avatar" aria-hidden="true">B</span><div><strong>使用者 B</strong><p>原本沒有這類報表所需權限</p></div></div>
+  </div>
+  <dl class="ns-sharing-rows">
+    <div><dt>對象</dt><dd><div class="ns-chips"><span>A</span><span>B</span></div><p>讓兩人都能在「所有已儲存報表」找到這張表。</p></dd></div>
+    <div class="ns-sharing-rows__access"><dt>存取</dt><dd><div class="ns-chips"><span>B</span><small>確認內容可提供後，才額外放行</small></div><p>只替 B 對這份報表開通；A 依原有權限使用。</p></dd></div>
+  </dl>
+  <p class="ns-visual__note">存取不是完整的讀者名單，沒有列在這裡不代表不能用。</p>
+</div>`;
+
+export const sharingOptions = `<div class="ns-visual" role="group" aria-label="報表分享對象的三種設定方式">
+  <div class="ns-visual__heading"><span class="ns-kicker">分享方式</span><p class="ns-visual__title">依需求選擇報表分享對象</p></div>
+  <div class="ns-grid ns-grid--three">
+    <div class="ns-panel ns-option"><span class="ns-option__number">01</span><p class="ns-panel__question">依角色分享</p><p class="ns-muted">同一類職務的人員</p><ul class="ns-choice-list"><li>目標角色 A</li><li>目標角色 B</li></ul><p class="ns-option__footer">可選一個或多個角色；不限定部門時，部門留空。</p></div>
+    <div class="ns-panel ns-option"><span class="ns-option__number">02</span><p class="ns-panel__question">角色搭配部門</p><p class="ns-muted">指定部門中的特定角色</p><ul class="ns-choice-list"><li>目標角色</li></ul><p class="ns-and">而且屬於</p><ul class="ns-choice-list"><li>指定部門</li></ul><p class="ns-option__footer">角色與部門，兩項條件都須符合。</p></div>
+    <div class="ns-panel ns-option"><span class="ns-option__number">03</span><p class="ns-panel__question">指定員工或群組</p><p class="ns-muted">個別人員或團隊名單</p><ul class="ns-choice-list"><li>指定員工</li><li>指定群組</li></ul><p class="ns-option__footer">依需求擇一或搭配；另依員工或群組名單判斷。</p></div>
+  </div>
+  <p class="ns-visual__note">角色與部門須同時符合；指定員工或群組另有分享途徑。</p>
+</div>`;
+
+export function reportBuilder(tab) {
+  const access = tab === 'access';
+  const label = access ? '存取' : '對象';
+  return `<div class="ns-builder" role="group" aria-label="更多選項與${label}分頁的介面示意">
+    <div class="ns-builder__titlebar"><strong>報表產生器</strong><span>介面示意</span></div>
+    <div class="ns-builder__toolbar"><span>編輯版面配置</span><span>編輯資料欄</span><span>篩選條件</span><span>排序</span><strong>更多選項</strong></div>
+    <div class="ns-builder__body">
+      <div class="ns-builder__fields"><div><span class="ns-field-label">名稱</span><span class="ns-field-value">示範自訂報表</span></div><div><span class="ns-field-label">擁有者</span><span class="ns-field-value">報表擁有者</span></div></div>
+      <div class="ns-builder__tabs"><span${access ? '' : ' class="is-current"'}>對象</span><span${access ? ' class="is-current"' : ''}>存取</span><span>稽核軌跡</span></div>
+      <p class="ns-builder__hint">${access ? '只加入需要對這份報表額外放行的角色或人員；設定前，先確認內容可以提供。' : '選取分享對象，讓對方能在「所有已儲存報表」找到這張表。'}</p>
+      <div class="ns-grid ns-grid--three ns-builder__selections">
+        <div><p class="ns-field-label">內部角色</p><ul class="ns-selection-list">${access ? '<li class="ns-selection-list__empty">依需要選取角色</li>' : '<li class="is-selected">目標角色 A</li><li class="is-selected">目標角色 B</li>'}</ul></div>
+        <div><p class="ns-field-label">部門</p><ul class="ns-selection-list"><li class="ns-selection-list__empty">不限定部門</li><li>指定部門（選用）</li></ul></div>
+        <div><p class="ns-field-label">員工</p><ul class="ns-selection-list">${access ? '<li class="is-selected">使用者 B</li><li class="ns-selection-list__empty">其他員工</li>' : '<li class="ns-selection-list__empty">依需要指定員工</li>'}</ul></div>
+      </div>
+      <p class="ns-builder__footnote">${access ? '此處以使用者 B 為例。原本已有足夠權限的 A，不必再加入。' : '不需要每個欄位都填。需要以團隊維護名單時，也可選擇群組。'}</p>
+    </div>
+    <div class="ns-builder__footer"><span>預覽</span><strong>儲存</strong><span>另存新檔</span></div>
+  </div>`;
+}

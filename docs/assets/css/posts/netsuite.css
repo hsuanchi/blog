@@ -1,0 +1,194 @@
+/* Sydney's existing navy, coral, ink and gray are shared by every illustration. */
+:where(.ns-cover, .ns-visual, .ns-builder, .netsuite-faq) {
+  --ns-navy: #00102e;
+  --ns-red: #d65050;
+  --ns-ink: #233452;
+  --ns-muted: #596579;
+  --ns-surface: #f3f4f7;
+  --ns-border: #dfe3ea;
+  --ns-tint: #fcf2f2;
+  color: var(--ns-ink);
+  box-sizing: border-box;
+}
+.netsuite-post .entry-content { line-height: 1.95; overflow-wrap: anywhere; }
+.netsuite-post .entry-header .entry-title { line-height: 1.45; }
+.netsuite-post .entry-content h2 { margin-top: 48px; line-height: 1.5; }
+.netsuite-post .entry-content h3 { margin-top: 32px; font-size: 23px; line-height: 1.6; }
+.netsuite-post .entry-content [id] { scroll-margin-top: 120px; }
+.netsuite-series { color: #596579; font-size: 14px; margin-bottom: 22px; }
+.netsuite-series a { font-weight: 700; }
+.netsuite-scope { padding: 16px 20px; background: #f3f4f7; border-left: 3px solid #d65050; font-size: 14px; }
+.netsuite-toc { margin: 30px 0 38px; padding: 22px 26px; background: #f3f4f7; border: 1px solid #dfe3ea; border-radius: 8px; }
+.netsuite-toc summary { color: #233452; cursor: pointer; font-size: 18px; font-weight: 700; }
+.netsuite-toc ol { margin: 14px 0 0; padding-left: 24px; }
+.netsuite-toc ol ol { margin-top: 4px; font-size: 14px; }
+.netsuite-toc li { padding: 3px 0; }
+.netsuite-toc a { color: #233452; text-decoration: none; }
+.netsuite-toc a:hover { color: #d65050; text-decoration: underline; }
+.netsuite-post .netsuite-figure { margin: 30px 0 34px; }
+.netsuite-post .netsuite-figure > a { display: block; border-radius: 14px; overflow: hidden; }
+.netsuite-post .netsuite-figure img { display: block; width: 100%; height: auto; }
+.netsuite-post .netsuite-figure figcaption { margin: 10px 0 0; color: #596579; font-size: 13px; line-height: 1.8; text-align: left; }
+.netsuite-post .netsuite-figure figcaption > span { display: inline-block; margin-left: 12px; color: #b8464c; font-size: 12px; white-space: nowrap; }
+.netsuite-post .entry-thumb > img { border-radius: 12px; }
+.netsuite-post .netsuite-key-point { padding: 18px 22px; background: #fcf2f2; border-left: 3px solid #d65050; margin: 26px 0; }
+.netsuite-post a:focus-visible, .netsuite-post summary:focus-visible { outline: 3px solid #d65050; outline-offset: 4px; }
+.netsuite-series-end { border-top: 1px solid #dfe3ea; margin-top: 38px; padding-top: 24px; }
+.netsuite-category-intro { max-width: 760px; margin: 20px 0 30px; line-height: 1.9; }
+
+/* Covers are live text in the article, homepage and archive cards. */
+.ns-cover { padding: 34px; background: var(--ns-navy); border-top: 4px solid var(--ns-red); color: white; text-align: left; line-height: 1.6; }
+.ns-cover p { margin: 0; color: inherit; }
+.ns-cover .ns-cover__eyebrow { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; letter-spacing: .1em; color: #c5cdd9; }
+.ns-cover .ns-cover__eyebrow span { letter-spacing: 0; white-space: nowrap; }
+.ns-cover .ns-cover__title { margin-top: 28px; font-size: clamp(29px, 4vw, 42px); font-weight: 700; letter-spacing: .02em; }
+.ns-cover .ns-cover__subtitle { margin-top: 8px; color: #d3d9e3; font-size: 19px; }
+.ns-cover__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 28px; }
+.ns-cover__grid > div { padding: 16px 18px; border: 1px solid #4a586e; border-radius: 5px; }
+.ns-cover__grid strong { display: block; margin-bottom: 4px; color: white; font-size: 18px; }
+.ns-cover__grid span { color: #d3d9e3; font-size: 14px; }
+.ns-cover .ns-cover__byline { display: flex; justify-content: space-between; gap: 12px; margin-top: 26px; font-size: 12px; letter-spacing: .04em; color: #c5cdd9; }
+.ns-cover--compact { padding: 24px; min-height: 180px; }
+.ns-cover--compact .ns-cover__eyebrow { font-size: 11px; letter-spacing: .04em; }
+.ns-cover--compact .ns-cover__title { margin-top: 24px; font-size: 26px; }
+.ns-cover--compact .ns-cover__subtitle { font-size: 14px; }
+.netsuite-card .entry-thumb > a { display: block; text-decoration: none; }
+.netsuite-card .entry-thumb a:hover .ns-cover { border-top-color: white; }
+
+/* Selectable diagrams: the grid stacks at narrow reading widths. */
+.ns-visual { padding: 24px; border: 1px solid var(--ns-border); border-radius: 8px; background: var(--ns-surface); line-height: 1.75; }
+.ns-visual p { margin: 0; }
+.ns-visual__heading { margin-bottom: 22px; }
+.ns-kicker { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 700; color: var(--ns-muted); letter-spacing: .08em; }
+.ns-visual .ns-visual__title { font-size: 22px; font-weight: 700; color: var(--ns-navy); line-height: 1.5; }
+.ns-grid { display: grid; gap: 14px; }
+.ns-grid > * { min-width: 0; }
+.ns-grid--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ns-grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ns-panel { padding: 20px; background: white; border: 1px solid var(--ns-border); border-top: 3px solid var(--ns-navy); border-radius: 5px; }
+.ns-panel--accent { border-top-color: var(--ns-red); }
+.ns-visual .ns-panel__label { display: inline-block; padding: 2px 10px; background: var(--ns-navy); color: white; font-size: 14px; font-weight: 700; }
+.ns-panel--accent .ns-panel__label { background: var(--ns-red); }
+.ns-visual .ns-panel__question { margin-top: 12px; font-size: 18px; font-weight: 700; line-height: 1.6; }
+.ns-visual .ns-panel__result { margin-top: 18px; font-size: 15px; font-weight: 700; }
+.ns-visual .ns-muted { margin-top: 5px; font-size: 14px; color: var(--ns-muted); }
+.ns-list-preview, .ns-access-preview { min-height: 142px; margin-top: 18px; padding: 16px; border-radius: 5px; background: var(--ns-surface); }
+.ns-list-preview > span:first-child { display: block; font-size: 12px; color: var(--ns-muted); }
+.ns-list-preview strong { display: block; margin: 10px 0 16px; padding: 7px 10px; background: white; border-left: 3px solid var(--ns-red); font-size: 14px; font-weight: 600; }
+.ns-placeholder-line { display: block; height: 5px; width: 75%; background: #d4d9e2; border-radius: 3px; }
+.ns-access-preview { display: flex; align-items: center; gap: 14px; background: var(--ns-tint); }
+.ns-access-preview__mark { display: grid; place-items: center; flex: 0 0 40px; height: 40px; border: 1px solid var(--ns-red); border-radius: 50%; color: var(--ns-red); font-size: 30px; }
+.ns-access-preview strong { font-size: 17px; font-weight: 600; }
+.ns-visual .ns-visual__note { margin-top: 18px; padding: 15px 18px; background: white; border-left: 3px solid var(--ns-red); color: var(--ns-ink); font-size: 14px; }
+.ns-person { display: flex; gap: 14px; align-items: center; padding: 18px; background: white; border: 1px solid var(--ns-border); border-radius: 5px; }
+.ns-person__avatar { display: grid; place-items: center; flex: 0 0 40px; height: 40px; background: var(--ns-navy); border-radius: 50%; color: white; font-size: 19px; font-weight: 700; }
+.ns-person--accent .ns-person__avatar { background: var(--ns-red); }
+.ns-person strong { font-size: 16px; }
+.ns-person p { font-size: 13px; color: var(--ns-muted); margin-top: 4px; }
+.ns-sharing-rows { margin: 18px 0 0; }
+.ns-sharing-rows > div { display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 16px; background: white; padding: 20px; border: 1px solid var(--ns-border); border-radius: 5px; }
+.ns-sharing-rows > div + div { margin-top: 12px; }
+.ns-sharing-rows dt { font-weight: 700; font-size: 18px; }
+.ns-sharing-rows dd { margin: 0; }
+.ns-sharing-rows dd p { margin-top: 9px; font-size: 14px; }
+.ns-sharing-rows .ns-sharing-rows__access { border-left: 3px solid var(--ns-red); }
+.ns-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.ns-chips > span { padding: 2px 18px; background: var(--ns-navy); color: white; border-radius: 4px; font-size: 16px; font-weight: 700; }
+.ns-sharing-rows__access .ns-chips > span { background: var(--ns-red); }
+.ns-chips small { color: var(--ns-muted); font-size: 12px; }
+.ns-option { display: flex; flex-direction: column; padding: 18px 16px; }
+.ns-option__number { color: var(--ns-muted); font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+.ns-option .ns-panel__question { margin-top: 6px; font-size: 17px; }
+.ns-visual .ns-choice-list { list-style: none; padding: 0; margin: 18px 0 0; }
+.ns-choice-list li { position: relative; padding: 9px 8px 9px 30px; border: 1px solid var(--ns-border); border-radius: 4px; font-size: 14px; }
+.ns-choice-list li + li { margin-top: 8px; }
+.ns-choice-list li::before { content: '✓'; position: absolute; left: 10px; color: var(--ns-red); font-weight: 700; }
+.ns-visual .ns-and { margin-top: 5px; text-align: center; font-size: 12px; color: var(--ns-muted); }
+.ns-and + .ns-choice-list { margin-top: 5px; }
+.ns-visual .ns-option__footer { margin-top: auto; padding-top: 18px; color: var(--ns-muted); font-size: 13px; }
+
+/* Read-only teaching illustrations. Labels and values are ordinary HTML text. */
+.ns-builder { border: 1px solid var(--ns-border); border-radius: 8px; overflow: hidden; background: white; line-height: 1.75; }
+.ns-builder__titlebar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 15px 20px; color: white; background: var(--ns-navy); }
+.ns-builder__titlebar strong { color: white; font-size: 17px; }
+.ns-builder__titlebar > span { color: #d3d9e3; font-size: 12px; white-space: nowrap; }
+.ns-builder__toolbar { display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 10px 20px 0; border-bottom: 1px solid var(--ns-border); background: var(--ns-surface); font-size: 12px; }
+.ns-builder__toolbar > * { padding-bottom: 10px; }
+.ns-builder__toolbar strong { border-bottom: 3px solid var(--ns-red); color: var(--ns-navy); }
+.ns-builder__body { padding: 20px; }
+.ns-builder__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 600px; }
+.ns-field-label { display: block; margin: 0 0 6px; font-size: 13px; font-weight: 700; color: var(--ns-ink); }
+.ns-field-value { display: block; border: 1px solid var(--ns-border); border-radius: 4px; padding: 7px 10px; background: white; font-size: 14px; }
+.ns-builder__tabs { display: flex; gap: 22px; border-bottom: 1px solid var(--ns-border); margin-top: 24px; }
+.ns-builder__tabs > span { padding: 0 2px 10px; font-size: 14px; }
+.ns-builder__tabs .is-current { border-bottom: 3px solid var(--ns-red); font-weight: 700; color: var(--ns-navy); }
+.ns-builder .ns-builder__hint { padding: 14px 16px; background: var(--ns-surface); border-left: 3px solid var(--ns-red); margin: 18px 0; font-size: 14px; }
+.ns-builder .ns-selection-list { list-style: none; margin: 0; padding: 4px; min-height: 100px; border: 1px solid var(--ns-border); border-radius: 4px; font-size: 13px; }
+.ns-selection-list li { padding: 7px 8px; }
+.ns-selection-list .is-selected { background: var(--ns-surface); border-left: 3px solid var(--ns-red); font-weight: 600; }
+.ns-selection-list .is-selected + .is-selected { margin-top: 4px; }
+.ns-selection-list__empty { color: var(--ns-muted); }
+.ns-builder .ns-builder__footnote { font-size: 12px; color: var(--ns-muted); margin: 16px 0 0; }
+.ns-builder__footer { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 20px; background: var(--ns-surface); border-top: 1px solid var(--ns-border); font-size: 12px; }
+.ns-builder__footer > * { padding: 5px 12px; border: 1px solid var(--ns-border); border-radius: 4px; background: white; }
+.ns-builder__footer strong { background: var(--ns-red); border-color: var(--ns-red); color: white; font-weight: 600; }
+
+/* Native details provide keyboard and screen reader support without JavaScript. */
+.netsuite-faq { margin-top: 22px; }
+.netsuite-faq details { margin-bottom: 10px; border: 1px solid var(--ns-border); border-radius: 6px; background: white; }
+.netsuite-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 20px; min-height: 62px; cursor: pointer; list-style: none; color: var(--ns-navy); font-size: 17px; font-weight: 600; line-height: 1.65; }
+.netsuite-faq summary::-webkit-details-marker { display: none; }
+.netsuite-faq summary::after { content: '+'; flex: 0 0 22px; text-align: center; color: var(--ns-red); font-size: 26px; line-height: 1; font-weight: 400; }
+.netsuite-faq details[open] summary::after { content: '−'; }
+.netsuite-faq details[open] summary { background: var(--ns-surface); }
+.netsuite-faq summary:hover { background: var(--ns-surface); }
+.netsuite-faq__answer { padding: 18px 20px 20px; font-size: 16px; }
+.netsuite-faq__answer > :last-child { margin-bottom: 0; }
+
+.maxlist-netsuite-home { padding: 64px 24px; background: #f3f4f7; }
+.maxlist-netsuite-home__inner { max-width: 1100px; margin: auto; }
+.maxlist-netsuite-home h2 { margin: 0 0 16px; }
+.maxlist-netsuite-home__card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 32px; align-items: center; background: white; padding: 24px; border-radius: 8px; color: #233452; }
+.maxlist-netsuite-home__card > a { display: block; text-decoration: none; }
+.maxlist-netsuite-home__card img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.maxlist-netsuite-home__card h3 { font-size: 25px; margin: 8px 0 12px; line-height: 1.5; }
+.maxlist-netsuite-home__card p { margin: 0 0 14px; line-height: 1.8; }
+.maxlist-netsuite-home__card small { color: #233452; font-weight: 700; }
+.maxlist-netsuite-home__card .ns-cover p { margin: 0; }
+.maxlist-netsuite-home__card .ns-cover__title { margin-top: 24px; }
+.maxlist-netsuite-home__card .ns-cover__subtitle { margin-top: 8px; }
+@media (max-width: 767px) {
+  .netsuite-post.single .entry-header h1.entry-title { font-size: 27px; line-height: 1.5; }
+  .netsuite-post .entry-content h2 { font-size: 25px; }
+  .netsuite-post .entry-content h3 { font-size: 21px; }
+  .netsuite-toc { padding: 18px 20px; }
+  .netsuite-post .entry-content [id] { scroll-margin-top: 100px; }
+  .ns-cover { padding: 24px; }
+  .ns-cover__grid { gap: 10px; }
+  .ns-cover__grid > div { padding: 12px; }
+  .ns-cover__grid span { font-size: 13px; }
+  .ns-visual { padding: 18px; }
+  .ns-grid--two, .ns-grid--three { grid-template-columns: 1fr; }
+  .ns-visual .ns-visual__title { font-size: 21px; }
+  .ns-list-preview, .ns-access-preview { min-height: 124px; }
+  .ns-sharing-rows > div { grid-template-columns: 1fr; gap: 10px; padding: 18px; }
+  .ns-option { padding: 18px; }
+  .ns-builder__titlebar, .ns-builder__body { padding: 16px; }
+  .ns-builder__toolbar { padding-left: 16px; padding-right: 16px; }
+  .ns-builder__fields { grid-template-columns: 1fr; gap: 12px; }
+  .ns-builder .ns-selection-list { min-height: 0; }
+  .netsuite-faq summary { padding: 16px; font-size: 16px; }
+  .netsuite-faq__answer { padding: 16px; }
+  .maxlist-netsuite-home__card { grid-template-columns: 1fr; gap: 18px; padding: 20px; }
+  .maxlist-netsuite-home__card h3 { font-size: 22px; }
+}
+@media (max-width: 380px) {
+  .ns-cover { padding: 20px; }
+  .ns-cover__grid { grid-template-columns: 1fr; }
+  .ns-cover .ns-cover__eyebrow { font-size: 11px; }
+  .ns-cover .ns-cover__subtitle { font-size: 17px; }
+}
+@media print {
+  .ns-cover, .ns-builder__titlebar { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .ns-visual, .ns-builder { break-inside: avoid; }
+}

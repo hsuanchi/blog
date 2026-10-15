@@ -1,0 +1,557 @@
+<!DOCTYPE html><html lang="zh-TW"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" data-pagespeed-no-defer="">
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」 - Max行銷誌</title>
+	<link rel="canonical" href="https://www.maxlist.xyz/post/netsuite-report-permissions/">
+	<meta property="og:locale" content="zh_TW">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」">
+	<meta property="og:description" content="NetSuite 自訂報表怎麼分享？用圖解與五個步驟，分清楚「對象」與「存取」的差別，學會依角色、部門、員工或群組設定報表權限。">
+	<meta property="og:url" content="https://www.maxlist.xyz/post/netsuite-report-permissions/">
+	<meta property="og:site_name" content="Max行銷誌">
+	<meta property="article:published_time" content="2026-10-15T14:00:00+08:00">
+	<meta property="article:modified_time" content="2026-10-15T14:00:00+08:00">
+	<meta property="og:image" content="https://www.maxlist.xyz/image/netsuite-report-permissions/cover.jpg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta name="author" content="Max">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="Max">
+	<meta name="twitter:label2" content="預估閱讀時間">
+	<meta name="twitter:data2" content="4 分鐘">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.maxlist.xyz/post/netsuite-report-permissions/#article","headline":"【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」","description":"NetSuite 自訂報表怎麼分享？用圖解與五個步驟，分清楚「對象」與「存取」的差別，學會依角色、部門、員工或群組設定報表權限。","datePublished":"2026-10-15T14:00:00+08:00","dateModified":"2026-10-15T14:00:00+08:00","author":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max"},"publisher":{"@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa"},"mainEntityOfPage":{"@id":"https://www.maxlist.xyz/post/netsuite-report-permissions/"},"image":"https://www.maxlist.xyz/image/netsuite-report-permissions/cover.jpg","articleSection":["NetSuite 教學"],"inLanguage":"zh-TW"},{"@type":"WebPage","@id":"https://www.maxlist.xyz/post/netsuite-report-permissions/","url":"https://www.maxlist.xyz/post/netsuite-report-permissions/","name":"【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」 - Max行銷誌","description":"NetSuite 自訂報表怎麼分享？用圖解與五個步驟，分清楚「對象」與「存取」的差別，學會依角色、部門、員工或群組設定報表權限。","datePublished":"2026-10-15T14:00:00+08:00","dateModified":"2026-10-15T14:00:00+08:00","breadcrumb":{"@id":"https://www.maxlist.xyz/post/netsuite-report-permissions/#breadcrumb"},"inLanguage":"zh-TW"},{"@type":"BreadcrumbList","@id":"https://www.maxlist.xyz/post/netsuite-report-permissions/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.maxlist.xyz/"},{"@type":"ListItem","position":2,"name":"NetSuite 教學","item":"https://www.maxlist.xyz/category/netsuite/"},{"@type":"ListItem","position":3,"name":"【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」"}]},{"@type":"Person","@id":"https://www.maxlist.xyz/#/schema/person/e66635bb66154fb8e67d40281a5de5aa","name":"Max","url":"https://www.maxlist.xyz/post/author/"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="../../">
+
+<link rel="alternate" type="application/rss+xml" title="訂閱《Max行銷誌》» 資訊提供" href="../../feed.xml">
+
+<link rel="stylesheet" id="urvanov_syntax_highlighter-css" href="../../wp-content/plugins/urvanov-syntax-highlighter/css/min/urvanov_syntax_highlighter.min.css?ver=2.8.28" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-wc-css-css" href="../../wp-content/themes/sydney/woocommerce/css/wc.min.css?ver=20220616" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-bootstrap-css" href="../../wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1" type="text/css" media="all">
+
+<link rel="stylesheet" id="wp-block-library-css" href="../../wp-includes/css/dist/block-library/style.min.css?ver=6.8.6" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel="stylesheet" id="jetpack-videopress-video-block-view-css" href="../../wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-videopress/build/block-editor/blocks/video/view.css?minify=false&amp;ver=34ae973733627b74a14e" type="text/css" media="all">
+<link rel="stylesheet" id="mediaelement-css" href="../../wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17" type="text/css" media="all">
+<link rel="stylesheet" id="wp-mediaelement-css" href="../../wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.8.6" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-family--inter: "Inter", sans-serif;--wp--preset--font-family--cardo: Cardo;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+
+<style id="woocommerce-layout-inline-css" type="text/css">
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="wphb-1-css" href="../../wp-content/uploads/hummingbird-assets/535401a884ff6f3553f16146eef8e652.css" type="text/css" media="all">
+<style id="wphb-1-inline-css" type="text/css">
+div#ez-toc-container .ez-toc-title {font-size: 120%;}div#ez-toc-container .ez-toc-title {font-weight: 500;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-size: 95%;}div#ez-toc-container ul li , div#ez-toc-container ul li a {font-weight: 500;}div#ez-toc-container nav ul ul li {font-size: 90%;}.ez-toc-box-title {font-weight: bold; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 1px; color: #666; padding-bottom: 5px;position:absolute;top:-4%;left:5%;background-color: inherit;transition: top 0.3s ease;}.ez-toc-box-title.toc-closed {top:-25%;}
+</style>
+<link rel="stylesheet" id="sydney-style-css" href="../../wp-content/themes/sydney/style.css?ver=20221019" type="text/css" media="all">
+<!--[if lte IE 9]>
+<link rel='stylesheet' id='sydney-ie9-css' href='https://www.maxlist.xyz/wp-content/themes/sydney/css/ie9.css?ver=6.8.6' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="sydney-elementor-css" href="../../wp-content/themes/sydney/css/components/elementor.min.css?ver=20220824" type="text/css" media="all">
+<link rel="stylesheet" id="sydney-style-min-css" href="../../wp-content/themes/sydney/css/styles.min.css?ver=20221019" type="text/css" media="all">
+<style id="sydney-style-min-inline-css" type="text/css">
+.site-header{background-color:rgba(0,0,0,0.9);}.woocommerce ul.products li.product{text-align:center;}html{scroll-behavior:smooth;}.header-image{background-size:cover;}.header-image{height:400px;}.sydney_contact_info_widget span{fill:#d65050;}.go-top:hover svg{stroke:#d65050;}.site-header.float-header{background-color:rgba(0,0,0,0.9);}@media only screen and (max-width:1024px){.site-header{background-color:#000000;}}#mainnav ul li a,#mainnav ul li::before{color:#ffffff}#mainnav .sub-menu li a{color:#ffffff}#mainnav .sub-menu li a{background:#ffffff}.text-slider .maintitle,.text-slider .subtitle{color:#ffffff}body{color:}#secondary{background-color:#ffffff}#secondary,#secondary a{color:#737C8C}.btn-menu .sydney-svg-icon{fill:#ffffff}#mainnav ul li a:hover,.main-header #mainnav .menu > li > a:hover{color:#d65050}.overlay{background-color:#bababa}.page-wrap{padding-top:43px;}.page-wrap{padding-bottom:100px;}@media only screen and (max-width:1025px){.mobile-slide{display:block;}.slide-item{background-image:none !important;}.header-slider{}.slide-item{height:auto !important;}.slide-inner{min-height:initial;}}.go-top.show{border-radius:2px;bottom:10px;}.go-top.position-right{right:20px;}.go-top.position-left{left:20px;}.go-top{background-color:;}.go-top:hover{background-color:;}.go-top{color:;}.go-top svg{stroke:;}.go-top:hover{color:;}.go-top:hover svg{stroke:;}.go-top .sydney-svg-icon,.go-top .sydney-svg-icon svg{width:16px;height:16px;}.go-top{padding:15px;}.site-info{border-top:0 solid rgba(255,255,255,0.1);}.footer-widgets-grid{gap:30px;}@media (min-width:992px){.footer-widgets-grid{padding-top:95px;padding-bottom:95px;}}@media (min-width:576px) and (max-width:991px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (max-width:575px){.footer-widgets-grid{padding-top:60px;padding-bottom:60px;}}@media (min-width:992px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (min-width:576px) and (max-width:991px){.sidebar-column .widget .widget-title{font-size:22px;}}@media (max-width:575px){.sidebar-column .widget .widget-title{font-size:22px;}}.footer-widgets{background-color:#00102E;}.sidebar-column .widget .widget-title{color:;}.sidebar-column .widget h1,.sidebar-column .widget h2,.sidebar-column .widget h3,.sidebar-column .widget h4,.sidebar-column .widget h5,.sidebar-column .widget h6{color:;}.sidebar-column .widget{color:#ffffff;}.sidebar-column .widget a{color:#ffffff;}.sidebar-column .widget a:hover{color:;}.site-footer{background-color:#00102E;}.site-info,.site-info a{color:#ffffff;}.site-info .sydney-svg-icon svg{fill:#ffffff;}.site-info{padding-top:20px;padding-bottom:20px;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-top:12px;padding-bottom:12px;}}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{padding-left:35px;padding-right:35px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-radius:3px;}@media (min-width:992px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (min-width:576px) and (max-width:991px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}@media (max-width:575px){button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{font-size:14px;}}button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{text-transform:uppercase;}button,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.roll-button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{background-color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{background-color:;}button,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.checkout-button.button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{color:;}.is-style-outline .wp-block-button__link,div.wpforms-container-full .wpforms-form input[type=submit],div.wpforms-container-full .wpforms-form button[type=submit],div.wpforms-container-full .wpforms-form .wpforms-page-button,.roll-button,.wp-block-button__link.is-style-outline,button,a.button,.wp-block-button__link,input[type="button"],input[type="reset"],input[type="submit"]{border-color:;}button:hover,div.wpforms-container-full .wpforms-form input[type=submit]:hover,div.wpforms-container-full .wpforms-form button[type=submit]:hover,div.wpforms-container-full .wpforms-form .wpforms-page-button:hover,.roll-button:hover,a.button:hover,.wp-block-button__link:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover{border-color:;}.posts-layout .list-image{width:30%;}.posts-layout .list-content{width:70%;}.content-area:not(.layout4):not(.layout6) .posts-layout .entry-thumb{margin:0 0 10px 0;}.layout4 .entry-thumb,.layout6 .entry-thumb{margin:0 10px 0 0;}.layout6 article:nth-of-type(even) .list-image .entry-thumb{margin:0 0 0 10px;}.posts-layout .entry-header{margin-bottom:0;}.posts-layout .entry-meta.below-excerpt{margin:5px 0 0;}.posts-layout .entry-meta.above-title{margin:0 0 5px;}.single .entry-header .entry-title{color:;}.single .entry-header .entry-meta,.single .entry-header .entry-meta a{color:;}@media (min-width:992px){.single .entry-meta{font-size:12px;}}@media (min-width:576px) and (max-width:991px){.single .entry-meta{font-size:12px;}}@media (max-width:575px){.single .entry-meta{font-size:12px;}}@media (min-width:992px){.single .entry-header .entry-title{font-size:36px;}}@media (min-width:576px) and (max-width:991px){.single .entry-header .entry-title{font-size:32px;}}@media (max-width:575px){.single .entry-header .entry-title{font-size:32px;}}.posts-layout .entry-post{color:#233452;}.posts-layout .entry-title a{color:#00102E;}.posts-layout .author,.posts-layout .entry-meta a{color:#737C8C;}@media (min-width:992px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-post{font-size:16px;}}@media (max-width:575px){.posts-layout .entry-post{font-size:16px;}}@media (min-width:992px){.posts-layout .entry-meta{font-size:10px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-meta{font-size:12px;}}@media (max-width:575px){.posts-layout .entry-meta{font-size:10px;}}@media (min-width:992px){.posts-layout .entry-title{font-size:15px;}}@media (min-width:576px) and (max-width:991px){.posts-layout .entry-title{font-size:32px;}}@media (max-width:575px){.posts-layout .entry-title{font-size:15px;}}.single .entry-header{margin-bottom:40px;}.single .entry-thumb{margin-bottom:40px;}.single .entry-meta-above{margin-bottom:8px;}.single .entry-meta-below{margin-top:8px;}@media (min-width:992px){.custom-logo-link img{max-width:180px;}}@media (min-width:576px) and (max-width:991px){.custom-logo-link img{max-width:100px;}}@media (max-width:575px){.custom-logo-link img{max-width:100px;}}.main-header,.bottom-header-row{border-bottom:0 solid rgba(255,255,255,0.1);}.header_layout_3,.header_layout_4,.header_layout_5{border-bottom:1px solid rgba(255,255,255,0.1);}.main-header,.header-search-form{background-color:;}.main-header.sticky-active{background-color:;}.main-header .site-title a,.main-header .site-description,.main-header #mainnav .menu > li > a,.main-header .header-contact a{color:#ffffff;}.main-header .sydney-svg-icon svg,.main-header .dropdown-symbol .sydney-svg-icon svg{fill:#ffffff;}.sticky-active .main-header .site-title a,.sticky-active .main-header .site-description,.sticky-active .main-header #mainnav .menu > li > a,.sticky-active .main-header .header-contact a,.sticky-active .main-header .logout-link,.sticky-active .main-header .html-item,.sticky-active .main-header .sydney-login-toggle{color:;}.sticky-active .main-header .sydney-svg-icon svg,.sticky-active .main-header .dropdown-symbol .sydney-svg-icon svg{fill:;}.bottom-header-row{background-color:;}.bottom-header-row,.bottom-header-row .header-contact a,.bottom-header-row #mainnav .menu > li > a{color:;}.bottom-header-row #mainnav .menu > li > a:hover{color:;}.bottom-header-row .header-item svg,.dropdown-symbol .sydney-svg-icon svg{fill:;}.main-header .main-header-inner,.main-header .top-header-row{padding-top:15px;padding-bottom:15px;}.bottom-header-inner{padding-top:15px;padding-bottom:15px;}.bottom-header-row #mainnav ul ul li,.main-header #mainnav ul ul li{background-color:;}.bottom-header-row #mainnav ul ul li a,.bottom-header-row #mainnav ul ul li:hover a,.main-header #mainnav ul ul li:hover a,.main-header #mainnav ul ul li a{color:;}.bottom-header-row #mainnav ul ul li svg,.main-header #mainnav ul ul li svg{fill:;}.main-header-cart .count-number{color:;}.main-header-cart .widget_shopping_cart .widgettitle:after,.main-header-cart .widget_shopping_cart .woocommerce-mini-cart__buttons:before{background-color:rgba(33,33,33,0.9);}.sydney-offcanvas-menu .mainnav ul li{text-align:left;}.sydney-offcanvas-menu .mainnav a{padding:10px 0;}#masthead-mobile{background-color:;}#masthead-mobile .site-description,#masthead-mobile a:not(.button){color:;}#masthead-mobile svg{fill:;}.mobile-header{padding-top:15px;padding-bottom:15px;}.sydney-offcanvas-menu{background-color:;}.sydney-offcanvas-menu,.sydney-offcanvas-menu #mainnav a:not(.button),.sydney-offcanvas-menu a:not(.button){color:;}.sydney-offcanvas-menu svg,.sydney-offcanvas-menu .dropdown-symbol .sydney-svg-icon svg{fill:;}@media (min-width:992px){.site-logo{max-height:100px;}}@media (min-width:576px) and (max-width:991px){.site-logo{max-height:100px;}}@media (max-width:575px){.site-logo{max-height:100px;}}.site-title a,.site-title a:visited,.main-header .site-title a,.main-header .site-title a:visited{color:#ffffff}.site-description,.main-header .site-description{color:#ffffff}@media (min-width:992px){.site-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.site-title{font-size:24px;}}@media (max-width:575px){.site-title{font-size:20px;}}@media (min-width:992px){.site-description{font-size:16px;}}@media (min-width:576px) and (max-width:991px){.site-description{font-size:16px;}}@media (max-width:575px){.site-description{font-size:16px;}}h1,h2,h3,h4,h5,h6,.site-title{text-decoration:;text-transform:;font-style:;line-height:1.2;letter-spacing:px;}@media (min-width:992px){h1:not(.site-title){font-size:42px;}}@media (min-width:576px) and (max-width:991px){h1:not(.site-title){font-size:42px;}}@media (max-width:575px){h1:not(.site-title){font-size:32px;}}@media (min-width:992px){h2{font-size:36px;}}@media (min-width:576px) and (max-width:991px){h2{font-size:32px;}}@media (max-width:575px){h2{font-size:24px;}}@media (min-width:992px){h3{font-size:32px;}}@media (min-width:576px) and (max-width:991px){h3{font-size:24px;}}@media (max-width:575px){h3{font-size:20px;}}@media (min-width:992px){h4{font-size:24px;}}@media (min-width:576px) and (max-width:991px){h4{font-size:18px;}}@media (max-width:575px){h4{font-size:16px;}}@media (min-width:992px){h5{font-size:20px;}}@media (min-width:576px) and (max-width:991px){h5{font-size:16px;}}@media (max-width:575px){h5{font-size:16px;}}@media (min-width:992px){h6{font-size:18px;}}@media (min-width:576px) and (max-width:991px){h6{font-size:16px;}}@media (max-width:575px){h6{font-size:16px;}}p,.posts-layout .entry-post{text-decoration:}body,.posts-layout .entry-post{text-transform:;font-style:;line-height:1.68;letter-spacing:px;}@media (min-width:992px){body{font-size:20px;}}@media (min-width:576px) and (max-width:991px){body{font-size:16px;}}@media (max-width:575px){body{font-size:16px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .entry-title{font-size:32px;}}@media (min-width:992px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (min-width:576px) and (max-width:991px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}@media (max-width:575px){.woocommerce div.product .product-gallery-summary .price .amount{font-size:24px;}}.woocommerce ul.products li.product .col-md-7 > *,.woocommerce ul.products li.product .col-md-8 > *,.woocommerce ul.products li.product > *{margin-bottom:12px;}.wc-block-grid__product-onsale,span.onsale{border-radius:0;top:20px!important;left:20px!important;}.wc-block-grid__product-onsale,.products span.onsale{left:auto!important;right:20px;}.wc-block-grid__product-onsale,span.onsale{color:;}.wc-block-grid__product-onsale,span.onsale{background-color:;}ul.wc-block-grid__products li.wc-block-grid__product .wc-block-grid__product-title,ul.wc-block-grid__products li.wc-block-grid__product .woocommerce-loop-product__title,ul.wc-block-grid__products li.product .wc-block-grid__product-title,ul.wc-block-grid__products li.product .woocommerce-loop-product__title,ul.products li.wc-block-grid__product .wc-block-grid__product-title,ul.products li.wc-block-grid__product .woocommerce-loop-product__title,ul.products li.product .wc-block-grid__product-title,ul.products li.product .woocommerce-loop-product__title,ul.products li.product .woocommerce-loop-category__title,.woocommerce-loop-product__title .botiga-wc-loop-product__title{color:;}a.wc-forward:not(.checkout-button){color:;}a.wc-forward:not(.checkout-button):hover{color:;}.woocommerce-pagination li .page-numbers:hover{color:;}.woocommerce-sorting-wrapper{border-color:rgba(33,33,33,0.9);}ul.products li.product-category .woocommerce-loop-category__title{text-align:center;}ul.products li.product-category > a,ul.products li.product-category > a > img{border-radius:0;}.entry-content a:not(.button){color:;}.entry-content a:not(.button):hover{color:;}h1{color:;}h2{color:;}h3{color:;}h4{color:;}h5{color:;}h6{color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="search"]:focus,input[type="number"]:focus,input[type="tel"]:focus,input[type="range"]:focus,input[type="date"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="time"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="color"]:focus,textarea:focus,select:focus,.woocommerce .select2-container .select2-selection--single:focus,.woocommerce-page .select2-container .select2-selection--single:focus,.select2-container--default .select2-selection--single .select2-selection__rendered,.wp-block-search .wp-block-search__input,.wp-block-search .wp-block-search__input:focus{color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"]{background-color:;}div.wpforms-container-full .wpforms-form input[type=date],div.wpforms-container-full .wpforms-form input[type=datetime],div.wpforms-container-full .wpforms-form input[type=datetime-local],div.wpforms-container-full .wpforms-form input[type=email],div.wpforms-container-full .wpforms-form input[type=month],div.wpforms-container-full .wpforms-form input[type=number],div.wpforms-container-full .wpforms-form input[type=password],div.wpforms-container-full .wpforms-form input[type=range],div.wpforms-container-full .wpforms-form input[type=search],div.wpforms-container-full .wpforms-form input[type=tel],div.wpforms-container-full .wpforms-form input[type=text],div.wpforms-container-full .wpforms-form input[type=time],div.wpforms-container-full .wpforms-form input[type=url],div.wpforms-container-full .wpforms-form input[type=week],div.wpforms-container-full .wpforms-form select,div.wpforms-container-full .wpforms-form textarea,input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea,select,.woocommerce .select2-container .select2-selection--single,.woocommerce-page .select2-container .select2-selection--single,.woocommerce-account fieldset,.woocommerce-account .woocommerce-form-login,.woocommerce-account .woocommerce-form-register,.woocommerce-cart .woocommerce-cart-form .actions .coupon input[type="text"],.wp-block-search .wp-block-search__input{border-color:;}input::placeholder{color:;opacity:1;}input:-ms-input-placeholder{color:;}input::-ms-input-placeholder{color:;}
+</style>
+<link rel="stylesheet" id="elementor-lazyload-css" href="../../wp-content/plugins/elementor/assets/css/modules/lazyload/frontend.min.css?ver=3.13.4" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_css-css" href="../../wp-content/plugins/jetpack/css/jetpack.css?ver=12.2.2" type="text/css" media="all">
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="../../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="wphb-2-js-extra">
+/* <![CDATA[ */
+var UrvanovSyntaxHighlighterSyntaxSettings = {"version":"2.8.28","is_admin":"0","ajaxurl":"","prefix":"urvanov-syntax-highlighter-","setting":"urvanov-syntax-highlighter-setting","selected":"urvanov-syntax-highlighter-setting-selected","changed":"urvanov-syntax-highlighter-setting-changed","special":"urvanov-syntax-highlighter-setting-special","orig_value":"data-orig-value","debug":""};
+var UrvanovSyntaxHighlighterSyntaxStrings = {"copy":"Copied to the clipboard","minimize":"\u9ede\u64ca\u5c55\u958b\u4ee3\u78bc"};
+/* ]]> */
+</script>
+
+
+
+
+
+
+
+<!-- HFCM by 99 Robots - Snippet # 2: 全站 CSS 調整 -->
+<style>
+#masthead > div.container > div > div > div:nth-child(1) > div > p.site-title > a,
+#menu-item-3117 > a,
+#nav_menu-16 > h3 {
+  color: #d65050 !important;
+}
+</style>
+<!-- /end HFCM by 99 Robots -->
+
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- GTM Container placement set to footer -->
+<script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+	var dataLayer_content = {"pageTitle":"【數據分析】蝦皮賣家競品分析 - Max行銷誌","pagePostType":"post","pagePostType2":"single-post","pageCategory":["%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0","analytics"],"pageAttributes":["%e5%95%86%e5%93%81%e8%a8%82%e5%83%b9%e7%ad%96%e7%95%a5","%e7%ab%b6%e5%93%81%e5%88%86%e6%9e%90","%e7%ab%b6%e5%93%81%e6%95%b8%e6%93%9a%e8%bf%bd%e8%b9%a4","%e8%9d%a6%e7%9a%ae%e7%88%ac%e8%9f%b2","%e8%9d%a6%e7%9a%ae%e8%b3%a3%e5%ae%b6%e5%88%86%e6%9e%90"],"pagePostAuthor":"Max","pagePostDate":"14 4 月, 2020","pagePostDateYear":"2020","pagePostDateMonth":"04","pagePostDateDay":"14","pagePostDateDayName":"星期二","pagePostDateHour":"03","pagePostDateMinute":"04","pagePostDateIso":"2020-04-14T03:04:21+00:00","pagePostDateUnix":1586833461,"pagePostTerms":{"category":["All posts","Python 數據分析"],"post_tag":["商品訂價策略","競品分析","競品數據追蹤","蝦皮爬蟲","蝦皮賣家分析"]},"postCountOnPage":1,"postCountTotal":1,"postFormat":"standard"};
+	dataLayer.push( dataLayer_content );
+</script>
+<script data-cfasync="false">
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WSG8N3Q');
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->		<script>
+			document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );
+		</script>
+				<style>
+			.no-js img.lazyload { display: none; }
+			figure.wp-block-image img.lazyloading { min-width: 150px; }
+							.lazyload { opacity: 0; }
+				.lazyloading {
+					border: 0 !important;
+					opacity: 1;
+					background: rgba(255, 255, 255, 0) url('/wp-content/plugins/wp-smush-pro/app/assets/images/smush-lazyloader-2.gif') no-repeat center !important;
+					background-size: 16px auto !important;
+				}
+					</style>
+			<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+
+<style class="wp-fonts-local" type="text/css">
+@font-face{font-family:Inter;font-style:normal;font-weight:300 900;font-display:fallback;src:url('/wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');font-stretch:normal;}
+@font-face{font-family:Cardo;font-style:normal;font-weight:400;font-display:fallback;src:url('/wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');}
+</style>
+<link rel="icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-150x150.png" sizes="32x32">
+<link rel="icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png" sizes="192x192">
+<link rel="apple-touch-icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
+<meta name="msapplication-TileImage" content="https://www.maxlist.xyz/image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C.png">
+<meta name="maxlist-static-snapshot" content="2026-08-01"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="description" content="NetSuite 自訂報表怎麼分享？用圖解與五個步驟，分清楚「對象」與「存取」的差別，學會依角色、部門、員工或群組設定報表權限。"><meta property="og:image:alt" content="NetSuite 教學 01：報表權限設定"><meta name="twitter:title" content="【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」"><meta name="twitter:description" content="NetSuite 自訂報表怎麼分享？用圖解與五個步驟，分清楚「對象」與「存取」的差別，學會依角色、部門、員工或群組設定報表權限。"><meta name="twitter:image" content="https://www.maxlist.xyz/image/netsuite-report-permissions/cover.jpg"><meta name="twitter:image:alt" content="NetSuite 教學 01：報表權限設定"><link rel="stylesheet" href="../../assets/css/posts/netsuite.css?v=20261015-4"><meta property="article:section" content="NetSuite 教學"></head>
+
+<body class="wp-singular post-template-default single single-post single-format-standard wp-theme-sydney theme-sydney woocommerce-no-js menu-inline e-lazyload elementor-default elementor-kit-5104 postid-11003 netsuite-post">
+
+<span id="toptarget"></span>
+
+
+
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
+
+	<script src="../../assets/js/components/header.js?v=20260803-1"></script>
+
+
+
+
+
+
+
+
+
+	<div class="sydney-hero-area">
+				<div class="header-image">
+								</div>
+
+			</div>
+
+
+	<div id="content" class="page-wrap">
+		<div class="content-wrapper container">
+			<div class="row">
+
+
+
+	<div id="primary" class="content-area sidebar-right col-md-9 container-normal">
+
+
+		<main id="main" class="post-wrap" role="main">
+
+
+
+
+<article id="post-11003" class="post-11003 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-netsuite">
+	<div class="content-inner">
+
+
+		<header class="entry-header">
+
+		<h1 class="title-post entry-title">【NetSuite 教學 01】報表權限設定：搞懂「對象」與「存取」</h1>
+					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/netsuite/" rel="category tag">NetSuite 教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/netsuite-report-permissions/" rel="bookmark"><time class="entry-date updated-time" datetime="2026-10-15T14:00:00+08:00">2026 年 10 月 15 日</time></a></span></div>			</header><div class="entry-thumb"><img src="../../image/netsuite-report-permissions/cover.jpg?v=20261015-5" width="1200" height="630" alt="NetSuite 教學 01：報表權限設定，分清楚對象與存取" decoding="async" fetchpriority="high"></div><!-- .entry-header -->
+
+
+
+
+	<div class="entry-content"><p class="netsuite-series"><a href="/category/netsuite/">Oracle NetSuite 教學</a> ／ 第 01 篇 · 報表與權限</p><p>分享 NetSuite 報表時，「對象」和「存取」看起來都有角色、部門與員工清單，卻是在處理不同的事。先分清楚「讓對方找到報表」與「讓對方有權限開啟」，就比較容易知道兩邊該怎麼選。</p>
+<p class="netsuite-scope">這套設定適用於一般報表產生器（Report Builder）及財務報表產生器（Financial Report Builder）的自訂報表，不限於財務報表。以下以管理員操作為例。</p><details class="netsuite-toc" open=""><summary>文章目錄</summary><ol><li><a href="#section-1">先用兩句話分清楚</a></li><li><a href="#section-2">用一個例子看懂兩邊怎麼選</a></li><li><a href="#section-3">實際設定的五個步驟</a><ol><li><a href="#section-4">步驟一：開啟更多選項</a></li><li><a href="#section-5">步驟二：在對象選擇分享給誰</a></li><li><a href="#section-6">步驟三：決定是否限制部門</a></li><li><a href="#section-7">步驟四：有需要再設定存取</a></li><li><a href="#section-8">步驟五：儲存後請接收者測試</a></li></ol></li><li><a href="#section-9">常見問題</a></li></ol></details>
+<h2 id="section-1">先用兩句話分清楚</h2>
+<p><strong>對象：這張報表，要放進誰的報表清單？</strong></p>
+<p>把某個角色或人員放進「對象」，是為了讓他在「所有已儲存報表」中找到這張表。至於點進去能不能使用，還要看他原本的權限。</p>
+<p><strong>存取：有人原本權限不夠，這一張要不要額外給他用？</strong></p>
+<p>如果某人原本不能執行這類報表，但你確定這張報表可以提供給他，管理員可在「存取」對這份自訂報表額外放行。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 分享報表說明</a>、<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取分頁說明</a></p>
+<figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/audience-vs-access.jpg?v=20261015-4" aria-label="放大圖解：對象負責報表清單中的分享 存取負責單份報表的額外放行"><img src="../../image/netsuite-report-permissions/audience-vs-access.jpg?v=20261015-4" width="1200" height="680" alt="對象負責報表清單中的分享 存取負責單份報表的額外放行" loading="lazy" decoding="async"></a><figcaption>圖一　「在清單找到」和「有權限開啟」，是兩個不同的問題。<span>點圖放大 ↗</span></figcaption></figure>
+
+<p class="netsuite-key-point">所以，<strong>兩邊不用選一樣的人；「存取」留白，也不代表沒有人能用。</strong> 原本權限已足夠的人，通常只需設定分享對象。</p>
+<h2 id="section-2">用一個例子看懂兩邊怎麼選</h2>
+<p>假設有一份自訂報表，要分享給使用者 A 和 B：</p>
+<ul>
+<li><strong>A 原本就有這類報表所需的權限</strong>：在「對象」加入 A，讓他從清單找到；不必再為 A 設定額外存取。</li>
+<li><strong>B 原本沒有這類報表所需的權限</strong>：只加到「對象」仍可能開不了。若確認內容可提供給 B，再在「存取」加入 B，並測試實際結果。</li>
+</ul>
+<figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/audience-access-example.jpg?v=20261015-4" aria-label="放大圖解：分享給 A 和 B 時 對象選 A 加 B 存取只為權限不足的 B 額外放行"><img src="../../image/netsuite-report-permissions/audience-access-example.jpg?v=20261015-4" width="1200" height="680" alt="分享給 A 和 B 時 對象選 A 加 B 存取只為權限不足的 B 額外放行" loading="lazy" decoding="async"></a><figcaption>圖二　這個例子是「對象放 A、B；存取只放 B」。A 仍可依原有權限使用，並非只有 B 能用。<span>點圖放大 ↗</span></figcaption></figure>
+
+<p>「存取」是需要額外放行的名單，不是整張報表的所有讀者名單。若希望對方也能從報表清單找到，仍應設定「對象」。</p>
+<p><strong>另外，沒放進「對象」，不等於一定被禁止開啟。</strong> Oracle 說明，原本有權查看相關資料的人，仍可能透過搜尋或已知連結開啟自訂報表。因此，不應只靠「對象」隱藏敏感報表，還要核對角色與資料權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 自訂報表分享規則</a></p>
+<h2 id="section-3">實際設定的五個步驟</h2>
+<h3 id="section-4">步驟一：開啟更多選項</h3>
+<p>從「報表 → 已儲存的報表 → 所有已儲存報表」找到目標報表，按「編輯」。若已在報表結果頁，也可按下方「自訂」，再進入「更多選項」。</p>
+<p>不同報表的產生器外觀可能略有差異；以下整理操作位置與設定欄位，實際畫面請以系統為準。</p>
+<figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/audience-settings.jpg?v=20261015-4" aria-label="放大圖解：報表產生器中的更多選項與對象分頁"><img src="../../image/netsuite-report-permissions/audience-settings.jpg?v=20261015-4" width="1200" height="795" alt="報表產生器中的更多選項與對象分頁" loading="lazy" decoding="async"></a><figcaption>圖三　先開啟「更多選項 → 對象」。（介面示意）<span>點圖放大 ↗</span></figcaption></figure>
+
+<h3 id="section-5">步驟二：在對象選擇分享給誰</h3>
+<p>依需求選取角色、指定員工或群組。這些是分享方式的選項，不需要每個欄位都填。</p>
+<p>若按角色分享，就在「內部角色」選取目標角色；只給特定人員使用時，可選擇「員工」；以團隊維護名單時，可使用「群組」。需要多選時，依 Oracle 文件按住 Ctrl 再點選，完成後確認先前的選取仍保留。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html">Oracle 對象設定說明</a></p>
+<h3 id="section-6">步驟三：決定是否限制部門</h3>
+<p>只依角色分享時，部門可以不選。若希望限定某部門中的特定角色，則同時選角色與部門；使用者須同時符合這兩項條件。</p>
+<p>若另外指定員工或群組，那些對象還可能透過另一條分享途徑符合。設定部門時，也要檢查其他已選名單。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html">Oracle 對象條件說明</a></p>
+<figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/roles-and-departments.jpg?v=20261015-4" aria-label="放大圖解：依角色分享 角色搭配部門 指定員工或群組的三種情境"><img src="../../image/netsuite-report-permissions/roles-and-departments.jpg?v=20261015-4" width="1200" height="630" alt="依角色分享 角色搭配部門 指定員工或群組的三種情境" loading="lazy" decoding="async"></a><figcaption>圖四　角色與部門一起判斷；指定員工或群組另有分享途徑。<span>點圖放大 ↗</span></figcaption></figure>
+
+<h3 id="section-7">步驟四：有需要再設定存取</h3>
+<p>先確認對方使用的角色，是否本來就能執行這類報表：</p>
+<ul>
+<li><strong>原本可以使用</strong>：通常不需要再加到「存取」。</li>
+<li><strong>原本權限不足，但確定這張可以給他用</strong>：在「存取」選取需要額外放行的角色或人員。</li>
+</ul>
+<p>這個分頁可能讓使用者看到原本受限制的報表資料，因此只加入確定需要放行的對象。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取注意事項</a></p>
+<figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/access-settings.jpg?v=20261015-4" aria-label="放大圖解：報表產生器中的存取分頁"><img src="../../image/netsuite-report-permissions/access-settings.jpg?v=20261015-4" width="1200" height="791" alt="報表產生器中的存取分頁" loading="lazy" decoding="async"></a><figcaption>圖五　「存取」依需要額外放行的人設定，不必照抄整份「對象」名單。（介面示意）<span>點圖放大 ↗</span></figcaption></figure>
+
+<h3 id="section-8">步驟五：儲存後請接收者測試</h3>
+<p>按「儲存」。如果出現覆寫提示，確認報表名稱後按「確定」；要另外保留一份時，才使用「另存新檔」。</p>
+<p>重新開啟設定，確認名單已保存，再請接收者用自己的帳號與實際角色，從報表清單開啟，測試期間切換及需要的匯出功能，並確認資料範圍正確。</p>
+<p>若仍出現錯誤，先看錯誤訊息，再檢查該類報表所需的角色權限。銷售、庫存、應收等報表可能對應不同權限，應依報表種類查核。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N699547.html">Oracle 報表權限說明</a></p>
+<h2 id="section-9">常見問題</h2><div class="netsuite-faq"><details><summary>已加入對象，為什麼還是開不了？</summary><div class="netsuite-faq__answer"><p>「對象」解決的是清單分享；如果原本權限不足，還要評估是否為這份報表設定「存取」，或由管理員調整對應的角色權限。其他執行錯誤也要按實際訊息處理。</p></div></details><details><summary>存取只選 B，是不是 A 就不能看？</summary><div class="netsuite-faq__answer"><p>不是。A 若本來就有足夠權限，不需要列在額外放行名單。上面的 A、B 範例就是這種情況。</p></div></details><details><summary>存取等於可以編輯報表嗎？</summary><div class="netsuite-faq__answer"><p>不是。這裡說的是報表存取與執行；編輯、另存或覆寫原報表，還有報表自訂權限、擁有者及管理員等規則。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 報表分享與編輯說明</a></p></div></details><details><summary>為什麼看不到存取分頁？</summary><div class="netsuite-faq__answer"><p>管理員可使用這個分頁；非管理員則需具備高於「檢視」層級的 Granting access to reports 權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取分頁權限說明</a></p></div></details><details><summary>已儲存搜尋、Workbook 或 Suitelet 也照這樣設定嗎？</summary><div class="netsuite-faq__answer"><p>這篇針對有「更多選項 → 對象／存取」的原生自訂報表。已儲存搜尋、Workbook 與 Suitelet 使用不同的分享或部署設定，需各自核對。</p></div></details></div>
+
+
+
+
+
+
+
+
+
+
+
+<p class="netsuite-series-end">這是 Oracle NetSuite 教學系列的第一篇。<br><a href="/category/netsuite/">瀏覽 NetSuite 教學系列 →</a></p></div><!-- .entry-content -->
+
+	<footer class="entry-footer"><span class="cat-links"><a href="/category/netsuite/" rel="category tag">NetSuite 教學</a></span></footer><!-- .entry-footer -->
+
+		</div>
+
+</article><!-- #post-## -->
+	<!-- .navigation -->
+
+
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+
+<script src="../../assets/js/components/sidebar.js?v=20260803-1"></script><!-- #secondary -->
+			</div>
+		</div>
+	</div><!-- #content -->
+
+
+
+<script src="../../assets/js/components/footer.js?v=20260803-1"></script>
+
+	<!-- #colophon -->
+
+
+</div><!-- #page -->
+
+<a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
+<!-- HFCM by 99 Robots - Snippet # 1: 文章尾部 作者版位 -->
+<script>
+const newHtml = `
+  <div class="elementor-widget-wrap" style="padding: 40px 0;">
+    <!-- Image Box -->
+    <div class="elementor-element elementor-element-7a328636 elementor-vertical-align-middle elementor-position-top elementor-widget elementor-widget-image-box">
+      <div class="elementor-widget-container">
+        <div class="elementor-image-box-wrapper" style="text-align: center;">
+          <figure class="elementor-image-box-img">
+            <img decoding="async"
+                 width="150"
+                 height="150"
+
+                 alt="Max Su"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="/image/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
+                 width="150"
+                 height="150"
+                 src="/image/Max-Su-400x400-1.png"
+                 alt="Max Su"
+                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></noscript>
+          </figure>
+          <div class="elementor-image-box-content">
+            <h3 class="elementor-image-box-title" style="color: #00102E; margin: 10px 0; font-size: 22px; font-weight: bold;">Max 行銷誌</h3>
+            <p class="elementor-image-box-description" style="color: #737C8C; letter-spacing: 2px; margin: 0 0 15px; font-size: 14px;">MARKETING, DATA AND PYTHON</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Text -->
+    <div class="elementor-element elementor-element-7f10b74 elementor-widget elementor-widget-text-editor">
+      <div class="elementor-widget-container">
+        <div class="elementor-text-editor elementor-clearfix" style="text-align: center;">
+          <p style="color: #7a7a7a; font-size: 16px; line-height: 1.6; margin: 0 0 15px; max-width: 400px; display: inline-block;">
+            我不常思考生命中的時間，做喜歡得事情，讓喜歡的事有價值。如果你還沒找到這件事，繼續找，別停頓。盡你全心全力，你知道你一定會找到。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Read More -->
+    <div class="elementor-element elementor-element-0316620 elementor-widget elementor-widget-text-editor">
+      <div class="elementor-widget-container">
+        <div class="elementor-text-editor elementor-clearfix" style="text-align: center; margin: 20px 0;">
+          <a href="/post/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+        </div>
+      </div>
+    </div>
+
+`;
+
+// 插入到 .entry-content 最後
+const entryContent = document.querySelector('.navigation');
+if (entryContent) {
+  entryContent.insertAdjacentHTML('beforeend', newHtml);
+}
+</script>
+<!-- /end HFCM by 99 Robots -->
+<!-- HFCM by 99 Robots - Snippet # 3: 快速總結版位 -->
+<script>
+(function() {
+    // 1. 取得當前網址並移除參數
+    const currentUrl = document.querySelector('link[rel="canonical"]')?.href || (window.location.origin + window.location.pathname);
+
+    // 2. AI 配置 (Claude 使用嵌入式 SVG，其他使用圖片)
+    const aiTools = [
+        { name: 'ChatGPT', color: '#000000', icon: '/image/Chatgpt-icon.jpg', prompt: 'https://chatgpt.com/?q=總結這篇文章: ' },
+        { name: 'Perplexity', color: '#14343B', icon: '/image/Perplexity-icon.jpg', prompt: 'https://www.perplexity.ai/?q=總結這篇文章: ' },
+        { name: 'Google AI', color: '#1A73E8', icon: '/image/Gemini-icon.png', prompt: 'https://www.google.com/search?udm=50&aep=11&q=總結這篇文章: ' },
+        { name: 'Grok', color: '#313131', icon: '/image/Grok-icon.png', prompt: 'https://x.com/i/grok?text=總結這篇文章: ' },
+        {
+            name: 'Claude',
+            color: '#DA714F',
+            svg: `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 128 128" fill="none"><g clip-path="url(#clip0_62_247)"><rect width="128" height="128" rx="64" fill="url(#paint0_linear_62_247)"/><rect opacity="0.35" width="128" height="128" fill="#D97757"/><path d="M35.0162 79.6935L53.4327 69.3665L53.7362 68.462L53.4327 67.9583H52.522L49.4357 67.7705L38.912 67.4889L29.805 67.1133L20.9509 66.6439L18.7248 66.1745L16.6504 63.405L16.8528 62.0437L18.7248 60.7763L21.4063 61.011L27.3258 61.4335L36.2305 62.0437L42.656 62.4193L52.2184 63.405H53.7362L53.9386 62.7948L53.4327 62.4193L53.0279 62.0437L43.8197 55.8006L33.8526 49.2289L28.6413 45.4267L25.8586 43.5021L24.442 41.7184L23.8348 37.7753L26.3646 34.9589L29.805 35.1936L30.6651 35.4283L34.1561 38.1039L41.5935 43.8776L51.3077 51.0126L52.7243 52.1862L53.2948 51.8012L53.3821 51.529L52.7243 50.4493L47.4625 40.9204L41.8465 31.2036L39.3168 27.1667L38.659 24.7727C38.4043 23.7681 38.2543 22.9369 38.2543 21.9093L41.1382 17.9663L42.7572 17.45L46.653 17.9663L48.272 19.3745L50.7006 24.9135L54.5963 33.5976L60.6677 45.4267L62.4385 48.9472L63.3998 52.1862L63.754 53.1719H64.3611V52.6086L64.867 45.943L65.7777 37.7753L66.6884 27.2606L66.992 24.3033L68.4593 20.7358L71.3937 18.8112L73.6705 19.8909L75.5425 22.5665L75.2895 24.3033L74.1764 31.5322L72.0009 42.8449L70.5842 50.4493H71.3937L72.355 49.4636L76.2002 44.394L82.6257 36.3202L85.459 33.1282L88.7983 29.6076L90.9233 27.9178H94.9708L97.9053 32.3302L96.5899 36.8835L92.4411 42.1408L89.0007 46.6002L84.0677 53.2093L81.0067 58.5232L81.2812 58.9616L82.0186 58.8987L93.1494 56.5047L99.1702 55.4251L106.355 54.2046L109.593 55.7067L109.947 57.2558L108.682 60.4008L100.992 62.2784L91.9857 64.1091L78.5749 67.2661L78.4264 67.3856L78.6017 67.6456L84.6495 68.193L87.2298 68.3338H93.5542L105.343 69.2257L108.429 71.2441L110.25 73.732L109.947 75.6566L105.191 78.0506L98.816 76.5484L83.8906 72.9809L78.7806 71.7135H78.0722V72.136L82.3222 76.3137L90.1643 83.3549L99.9291 92.4614L100.435 94.7145L99.1702 96.4983L97.8547 96.3105L89.2536 89.8327L85.9144 86.9224L78.4264 80.5854H77.9204V81.2425L79.6407 83.7773L88.7983 97.531L89.2536 101.756L88.5959 103.117L86.218 103.962L83.6376 103.492L78.224 95.935L72.7092 87.4857L68.2569 79.8812L67.7191 80.2207L65.0694 108.515L63.8551 109.97L61.0219 111.05L58.6439 109.266L57.379 106.356L58.6439 100.582L60.1617 93.0716L61.376 87.1101L62.4891 79.6935L63.1689 77.2158L63.1088 77.0501L62.5657 77.1413L56.9743 84.81L48.4744 96.3105L41.7453 103.492L40.1263 104.15L37.3436 102.694L37.5966 100.113L39.165 97.8126L48.4744 85.9836L54.0904 78.6138L57.7099 74.3834L57.6747 73.7716L57.4748 73.7545L32.7395 89.8796L28.3377 90.4429L26.4151 88.6592L26.6681 85.7488L27.5788 84.81L35.0162 79.6935Z" fill="#FAF9F5"/></g><defs><linearGradient id="paint0_linear_62_247" x1="52.5" y1="128" x2="52.5" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#DC6038"/><stop offset="1" stop-color="#D97757"/></linearGradient><clipPath id="clip0_62_247"><rect width="128" height="128" rx="64" fill="white"/></clipPath></defs></svg>`,
+            prompt: 'https://claude.ai/new?q=總結這篇文章: '
+        }
+    ];
+
+    const tocContainer = document.querySelector('#ez-toc-container');
+
+    if (tocContainer) {
+        tocContainer.style.cssText += `
+            border: 1px solid #d1d5db !important;
+            border-radius: 12px !important;
+            padding: 24px !important;
+            background-color: #f3f4f6 !important;
+            max-width: 100%;
+        `;
+
+        const tocTitle = tocContainer.querySelector('.ez-toc-title');
+        if (tocTitle) {
+            tocTitle.style.cssText = 'font-weight: 800; font-size: 1.25rem; color: #1f2937; margin-bottom: 10px;';
+        }
+
+        const aiWrapper = document.createElement('div');
+        aiWrapper.style.cssText = `
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #d1d5db;
+        `;
+
+        const aiHeader = document.createElement('h2');
+        aiHeader.innerText = '快速文章總結';
+        aiHeader.style.cssText = 'font-size: 1.1rem; font-weight: 700; color: #1f2937; margin-bottom: 15px; border: none; background: transparent; padding: 0;';
+        aiWrapper.appendChild(aiHeader);
+
+        const btnContainer = document.createElement('div');
+        btnContainer.style.cssText = 'display: flex; flex-wrap: wrap; gap: 10px;';
+
+        aiTools.forEach(tool => {
+            const btn = document.createElement('a');
+            btn.href = `${tool.prompt}${encodeURIComponent(currentUrl)}`;
+            btn.target = '_blank';
+            btn.rel = 'noopener noreferrer';
+            btn.style.cssText = `
+                padding: 10px 18px;
+                border-radius: 8px;
+                background: ${tool.color};
+                color: white;
+                font-size: 14px;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 600;
+                transition: transform 0.2s, opacity 0.2s;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                text-decoration: none;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            `;
+
+            if (tool.svg) {
+                const svgSpan = document.createElement('span');
+                svgSpan.style.display = 'flex';
+                svgSpan.innerHTML = tool.svg;
+                btn.appendChild(svgSpan);
+            } else {
+                const img = document.createElement('img');
+                img.src = tool.icon;
+                img.alt = '';
+                img.setAttribute('aria-hidden', 'true');
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.alt = '';
+                img.style.width = '18px';
+                img.style.height = '18px';
+                img.style.objectFit = 'contain';
+                img.style.borderRadius = '2px';
+                btn.appendChild(img);
+            }
+
+            btn.appendChild(document.createTextNode(tool.name));
+
+            btn.onmouseover = () => {
+                btn.style.opacity = '0.85';
+                btn.style.transform = 'translateY(-2px)';
+            };
+            btn.onmouseout = () => {
+                btn.style.opacity = '1';
+                btn.style.transform = 'translateY(0)';
+            };
+
+            // --- 核心修改：結合追蹤與開啟網址 ---
+            btn.onclick = () => {
+                // 1. 發送數據到 dataLayer
+								dataLayer.push({
+                        event: "cusevent",
+                        eventCategory: 'AIButton',
+                        eventAction: 'click', // 注意：需為字串
+                        eventLabel: tool.name // 動態帶入 AI 工具名稱
+                    });
+                console.log(tool.name)
+            };
+
+            btnContainer.appendChild(btn);
+        });
+
+        aiWrapper.appendChild(btnContainer);
+        tocContainer.appendChild(aiWrapper);
+    }
+})();
+</script>
+
+<!-- /end HFCM by 99 Robots -->
+
+<!-- GTM Container placement set to footer -->
+<!-- Google Tag Manager (noscript) -->
+				<noscript><iframe  height="0" width="0" style="display:none;visibility:hidden" aria-hidden="true" data-src="https://www.googletagmanager.com/ns.html?id=GTM-WSG8N3Q" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->			<script type="text/javascript">
+				const lazyloadRunObserver = () => {
+					const dataAttribute = 'data-e-bg-lazyload';
+					const lazyloadBackgrounds = document.querySelectorAll( `[${ dataAttribute }]:not(.lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+					entries.forEach( ( entry ) => {
+						if ( entry.isIntersecting ) {
+							let lazyloadBackground = entry.target;
+							const lazyloadSelector = lazyloadBackground.getAttribute( dataAttribute );
+							if ( lazyloadSelector ) {
+								lazyloadBackground = entry.target.querySelector( lazyloadSelector );
+							}
+							if( lazyloadBackground ) {
+								lazyloadBackground.classList.add( 'lazyloaded' );
+							}
+							lazyloadBackgroundObserver.unobserve( entry.target );
+						}
+					});
+					}, { rootMargin: '100px 0px 100px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/elementor.js?ver=20200504" id="sydney-elementor-editor-js"></script>
+<script type="text/javascript" src="../../wp-content/uploads/hummingbird-assets/acfab1b57e2f7878b4249d20f68b6646.js" id="wphb-3-js"></script>
+<script type="text/javascript" id="wphb-3-js-after">
+/* <![CDATA[ */
+lazySizes.cfg.nativeLoading={setLoadingAttribute:true,disableListeners:{scroll:true}};lazySizes.init();
+/* ]]> */
+</script>
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/functions.min.js?ver=20220628" id="sydney-functions-js"></script>
+<script type="text/javascript" src="../../wp-content/themes/sydney/js/scripts.js?ver=6.8.6" id="sydney-scripts-js"></script>
+
+
+
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+
+
+
+
+<script data-maxlist-offline="true" src="../../assets/js/offline.js?v=20260802-7"></script></body></html>

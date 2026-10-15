@@ -1,0 +1,32 @@
+{
+  "cover": {
+    "file": "cover.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "audience-vs-access": {
+    "file": "audience-vs-access.jpg",
+    "width": 1200,
+    "height": 680
+  },
+  "audience-access-example": {
+    "file": "audience-access-example.jpg",
+    "width": 1200,
+    "height": 680
+  },
+  "audience-settings": {
+    "file": "audience-settings.jpg",
+    "width": 1200,
+    "height": 795
+  },
+  "roles-and-departments": {
+    "file": "roles-and-departments.jpg",
+    "width": 1200,
+    "height": 630
+  },
+  "access-settings": {
+    "file": "access-settings.jpg",
+    "width": 1200,
+    "height": 791
+  }
+}
