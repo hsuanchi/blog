@@ -72,7 +72,7 @@ for (const cover of covers) {
       `$1<img src="cover.svg" width="1200" height="675" alt="${escape(cover.topic + ' ' + cover.title)}">$2`));
   }
   execFileSync(binary, [path.join(directory, 'cover.svg'), path.join(root, 'docs/image', cover.file)], { stdio: 'inherit' });
-  versions.set(cover.file, `brand-${createHash('sha256').update(await readFile(path.join(root, 'docs/image', cover.file))).digest('hex').slice(0, 12)}`);
+  versions.set(cover.file, `brand-v2-${createHash('sha256').update(await readFile(path.join(root, 'docs/image', cover.file))).digest('hex').slice(0, 12)}`);
   if (cover.slug.startsWith('netsuite-')) {
     const manifestFile = path.join(directory, 'exports.json');
     const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));
