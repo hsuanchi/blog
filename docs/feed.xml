@@ -5,14 +5,21 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 15 Oct 2026 09:14:23 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 06:51:57 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Thu, 15 Oct 2026 08:25:00 GMT</pubDate>
-      <description>Max行銷誌全部 182 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖與 NetSuite 教學。</description>
+      <pubDate>Mon, 02 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Max行銷誌全部 183 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
+    </item>
+    <item>
+      <title>Chrome 擴充套件匯入教學：ZIP 解壓縮、開發人員模式與手動安裝</title>
+      <link>https://www.maxlist.xyz/post/chrome-extension-import/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/chrome-extension-import/</guid>
+      <pubDate>Mon, 02 Nov 2026 16:00:00 GMT</pubDate>
+      <description>從 ZIP 解壓縮、確認 manifest.json，到開啟開發人員模式、載入未封裝項目與允許使用者指令碼，帶你完成 Chrome 擴充套件手動匯入，附操作介面示意與常見問題 QA。</description>
     </item>
     <item>
       <title>【NetSuite 教學 02】切換介面語言：繁體中文與英文設定</title>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/category/git-%E6%95%99%E5%AD%B8/</guid>
       <pubDate>Tue, 02 Jan 2024 15:26:55 GMT</pubDate>
       <description>分類: Git 教學 &lt;img width=&quot;1916&quot; height=&quot;1070&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2022/12/Git-入門指南.jpg&quot; class=&quot;attachment-large-thumb size-large-thumb…</description>
-    </item>
-    <item>
-      <title>Python 數據分析 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/analytics/page/2/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/analytics/page/2/</guid>
-      <pubDate>Tue, 02 Jan 2024 15:20:26 GMT</pubDate>
-      <description>分類: Python 數據分析 &lt;img width=&quot;1272&quot; height=&quot;706&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/數據分析-blog-dashboard-部落格儀表板.jpg&quot; class=&quot;attachment-large-…</description>
     </item>
   </channel>
 </rss>

@@ -4,6 +4,27 @@ import path from "node:path";
 export const ORIGIN = "https://www.maxlist.xyz";
 export const SITE_HOSTS = new Set(["maxlist.xyz", "www.maxlist.xyz"]);
 
+export function isExternalWebLink(href) {
+  if (!href) return false;
+  try {
+    const url = new URL(href, ORIGIN);
+    return new Set(["http:", "https:"]).has(url.protocol) && !SITE_HOSTS.has(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+export function normalizeExternalLinks($) {
+  $("a[href]").each((_index, element) => {
+    const link = $(element);
+    if (!isExternalWebLink(link.attr("href"))) return;
+    const rel = new Set((link.attr("rel") ?? "").split(/\s+/).filter(Boolean));
+    rel.add("noopener");
+    rel.add("noreferrer");
+    link.attr({ target: "_blank", rel: [...rel].join(" ") });
+  });
+}
+
 // NetSuite article images open the full asset while the reading tab stays in place.
 export function isNetsuiteImageZoomLink($, element, pagePath) {
   const link = $(element);

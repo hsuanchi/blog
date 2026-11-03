@@ -2,7 +2,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { load } from "cheerio";
-import { writeFileEnsured } from "./lib.mjs";
+import { writeFileEnsured, normalizeExternalLinks } from "./lib.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -159,6 +159,11 @@ if (!components.header || !components.sidebar || !components.footer) {
 const headerFragment = load(`<body>${components.header}</body>`, { decodeEntities: false });
 stripMenuState(headerFragment);
 components.header = headerFragment("body").html() ?? components.header;
+for (const name of Object.keys(components)) {
+  const fragment = load(`<body>${components[name]}</body>`, { decodeEntities: false });
+  normalizeExternalLinks(fragment);
+  components[name] = fragment("body").html() ?? components[name];
+}
 await Promise.all(
   Object.entries(components).map(([name, html]) =>
     writeFileEnsured(path.join(PARTIAL_ROOT, `${name}.html`), `${html.trim()}\n`)

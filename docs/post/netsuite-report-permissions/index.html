@@ -166,7 +166,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=20260803-1"></script>
+	<script src="../../assets/js/components/header.js?v=20261103-1"></script>
 
 
 
@@ -215,7 +215,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p><strong>對象：這張報表，要放進誰的報表清單？</strong></p>
 <p>把某個角色或人員放進「對象」，是為了讓他在「所有已儲存報表」中找到這張表。至於點進去能不能使用，還要看他原本的權限。</p>
 <p><strong>存取：有人原本權限不夠，這一張要不要額外給他用？</strong></p>
-<p>如果某人原本不能執行這類報表，但你確定這張報表可以提供給他，管理員可在「存取」對這份自訂報表額外放行。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 分享報表說明</a>、<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取分頁說明</a></p>
+<p>如果某人原本不能執行這類報表，但你確定這張報表可以提供給他，管理員可在「存取」對這份自訂報表額外放行。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html" target="_blank" rel="noopener noreferrer">Oracle 分享報表說明</a>、<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html" target="_blank" rel="noopener noreferrer">Oracle 存取分頁說明</a></p>
 <figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/audience-vs-access.jpg?v=20261015-4" aria-label="放大圖解：對象負責報表清單中的分享 存取負責單份報表的額外放行" target="_blank" rel="noopener noreferrer"><img src="../../image/netsuite-report-permissions/audience-vs-access.jpg?v=20261015-4" width="1200" height="680" alt="對象負責報表清單中的分享 存取負責單份報表的額外放行" loading="lazy" decoding="async"></a><figcaption>圖一　「在清單找到」和「有權限開啟」，是兩個不同的問題。<span>點圖放大 ↗</span></figcaption></figure>
 
 <p class="netsuite-key-point">所以，<strong>兩邊不用選一樣的人；「存取」留白，也不代表沒有人能用。</strong> 原本權限已足夠的人，通常只需設定分享對象。</p>
@@ -228,7 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/audience-access-example.jpg?v=20261015-4" aria-label="放大圖解：分享給 A 和 B 時 對象選 A 加 B 存取只為權限不足的 B 額外放行" target="_blank" rel="noopener noreferrer"><img src="../../image/netsuite-report-permissions/audience-access-example.jpg?v=20261015-4" width="1200" height="680" alt="分享給 A 和 B 時 對象選 A 加 B 存取只為權限不足的 B 額外放行" loading="lazy" decoding="async"></a><figcaption>圖二　這個例子是「對象放 A、B；存取只放 B」。A 仍可依原有權限使用，並非只有 B 能用。<span>點圖放大 ↗</span></figcaption></figure>
 
 <p>「存取」是需要額外放行的名單，不是整張報表的所有讀者名單。若希望對方也能從報表清單找到，仍應設定「對象」。</p>
-<p><strong>另外，沒放進「對象」，不等於一定被禁止開啟。</strong> Oracle 說明，原本有權查看相關資料的人，仍可能透過搜尋或已知連結開啟自訂報表。因此，不應只靠「對象」隱藏敏感報表，還要核對角色與資料權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 自訂報表分享規則</a></p>
+<p><strong>另外，沒放進「對象」，不等於一定被禁止開啟。</strong> Oracle 說明，原本有權查看相關資料的人，仍可能透過搜尋或已知連結開啟自訂報表。因此，不應只靠「對象」隱藏敏感報表，還要核對角色與資料權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html" target="_blank" rel="noopener noreferrer">Oracle 自訂報表分享規則</a></p>
 <h2 id="section-3">實際設定的五個步驟</h2>
 <h3 id="section-4">步驟一：開啟更多選項</h3>
 <p>從「報表 → 已儲存的報表 → 所有已儲存報表」找到目標報表，按「編輯」。若已在報表結果頁，也可按下方「自訂」，再進入「更多選項」。</p>
@@ -237,10 +237,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <h3 id="section-5">步驟二：在對象選擇分享給誰</h3>
 <p>依需求選取角色、指定員工或群組。這些是分享方式的選項，不需要每個欄位都填。</p>
-<p>若按角色分享，就在「內部角色」選取目標角色；只給特定人員使用時，可選擇「員工」；以團隊維護名單時，可使用「群組」。需要多選時，依 Oracle 文件按住 Ctrl 再點選，完成後確認先前的選取仍保留。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html">Oracle 對象設定說明</a></p>
+<p>若按角色分享，就在「內部角色」選取目標角色；只給特定人員使用時，可選擇「員工」；以團隊維護名單時，可使用「群組」。需要多選時，依 Oracle 文件按住 Ctrl 再點選，完成後確認先前的選取仍保留。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html" target="_blank" rel="noopener noreferrer">Oracle 對象設定說明</a></p>
 <h3 id="section-6">步驟三：決定是否限制部門</h3>
 <p>只依角色分享時，部門可以不選。若希望限定某部門中的特定角色，則同時選角色與部門；使用者須同時符合這兩項條件。</p>
-<p>若另外指定員工或群組，那些對象還可能透過另一條分享途徑符合。設定部門時，也要檢查其他已選名單。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html">Oracle 對象條件說明</a></p>
+<p>若另外指定員工或群組，那些對象還可能透過另一條分享途徑符合。設定部門時，也要檢查其他已選名單。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745036.html" target="_blank" rel="noopener noreferrer">Oracle 對象條件說明</a></p>
 <figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/roles-and-departments.jpg?v=20261015-4" aria-label="放大圖解：依角色分享 角色搭配部門 指定員工或群組的三種情境" target="_blank" rel="noopener noreferrer"><img src="../../image/netsuite-report-permissions/roles-and-departments.jpg?v=20261015-4" width="1200" height="630" alt="依角色分享 角色搭配部門 指定員工或群組的三種情境" loading="lazy" decoding="async"></a><figcaption>圖四　角色與部門一起判斷；指定員工或群組另有分享途徑。<span>點圖放大 ↗</span></figcaption></figure>
 
 <h3 id="section-7">步驟四：有需要再設定存取</h3>
@@ -249,14 +249,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><strong>原本可以使用</strong>：通常不需要再加到「存取」。</li>
 <li><strong>原本權限不足，但確定這張可以給他用</strong>：在「存取」選取需要額外放行的角色或人員。</li>
 </ul>
-<p>這個分頁可能讓使用者看到原本受限制的報表資料，因此只加入確定需要放行的對象。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取注意事項</a></p>
+<p>這個分頁可能讓使用者看到原本受限制的報表資料，因此只加入確定需要放行的對象。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html" target="_blank" rel="noopener noreferrer">Oracle 存取注意事項</a></p>
 <figure class="netsuite-figure"><a href="/image/netsuite-report-permissions/access-settings.jpg?v=20261015-4" aria-label="放大圖解：報表產生器中的存取分頁" target="_blank" rel="noopener noreferrer"><img src="../../image/netsuite-report-permissions/access-settings.jpg?v=20261015-4" width="1200" height="791" alt="報表產生器中的存取分頁" loading="lazy" decoding="async"></a><figcaption>圖五　「存取」依需要額外放行的人設定，不必照抄整份「對象」名單。（介面示意）<span>點圖放大 ↗</span></figcaption></figure>
 
 <h3 id="section-8">步驟五：儲存後請接收者測試</h3>
 <p>按「儲存」。如果出現覆寫提示，確認報表名稱後按「確定」；要另外保留一份時，才使用「另存新檔」。</p>
 <p>重新開啟設定，確認名單已保存，再請接收者用自己的帳號與實際角色，從報表清單開啟，測試期間切換及需要的匯出功能，並確認資料範圍正確。</p>
-<p>若仍出現錯誤，先看錯誤訊息，再檢查該類報表所需的角色權限。銷售、庫存、應收等報表可能對應不同權限，應依報表種類查核。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N699547.html">Oracle 報表權限說明</a></p>
-<h2 id="section-9">常見問題</h2><div class="netsuite-faq"><details><summary>已加入對象，為什麼還是開不了？</summary><div class="netsuite-faq__answer"><p>「對象」解決的是清單分享；如果原本權限不足，還要評估是否為這份報表設定「存取」，或由管理員調整對應的角色權限。其他執行錯誤也要按實際訊息處理。</p></div></details><details><summary>存取只選 B，是不是 A 就不能看？</summary><div class="netsuite-faq__answer"><p>不是。A 若本來就有足夠權限，不需要列在額外放行名單。上面的 A、B 範例就是這種情況。</p></div></details><details><summary>存取等於可以編輯報表嗎？</summary><div class="netsuite-faq__answer"><p>不是。這裡說的是報表存取與執行；編輯、另存或覆寫原報表，還有報表自訂權限、擁有者及管理員等規則。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html">Oracle 報表分享與編輯說明</a></p></div></details><details><summary>為什麼看不到存取分頁？</summary><div class="netsuite-faq__answer"><p>管理員可使用這個分頁；非管理員則需具備高於「檢視」層級的 Granting access to reports 權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html">Oracle 存取分頁權限說明</a></p></div></details><details><summary>已儲存搜尋、Workbook 或 Suitelet 也照這樣設定嗎？</summary><div class="netsuite-faq__answer"><p>這篇針對有「更多選項 → 對象／存取」的原生自訂報表。已儲存搜尋、Workbook 與 Suitelet 使用不同的分享或部署設定，需各自核對。</p></div></details></div>
+<p>若仍出現錯誤，先看錯誤訊息，再檢查該類報表所需的角色權限。銷售、庫存、應收等報表可能對應不同權限，應依報表種類查核。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N699547.html" target="_blank" rel="noopener noreferrer">Oracle 報表權限說明</a></p>
+<h2 id="section-9">常見問題</h2><div class="netsuite-faq"><details><summary>已加入對象，為什麼還是開不了？</summary><div class="netsuite-faq__answer"><p>「對象」解決的是清單分享；如果原本權限不足，還要評估是否為這份報表設定「存取」，或由管理員調整對應的角色權限。其他執行錯誤也要按實際訊息處理。</p></div></details><details><summary>存取只選 B，是不是 A 就不能看？</summary><div class="netsuite-faq__answer"><p>不是。A 若本來就有足夠權限，不需要列在額外放行名單。上面的 A、B 範例就是這種情況。</p></div></details><details><summary>存取等於可以編輯報表嗎？</summary><div class="netsuite-faq__answer"><p>不是。這裡說的是報表存取與執行；編輯、另存或覆寫原報表，還有報表自訂權限、擁有者及管理員等規則。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N745002.html" target="_blank" rel="noopener noreferrer">Oracle 報表分享與編輯說明</a></p></div></details><details><summary>為什麼看不到存取分頁？</summary><div class="netsuite-faq__answer"><p>管理員可使用這個分頁；非管理員則需具備高於「檢視」層級的 Granting access to reports 權限。<a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/bridgehead_N745205.html" target="_blank" rel="noopener noreferrer">Oracle 存取分頁權限說明</a></p></div></details><details><summary>已儲存搜尋、Workbook 或 Suitelet 也照這樣設定嗎？</summary><div class="netsuite-faq__answer"><p>這篇針對有「更多選項 → 對象／存取」的原生自訂報表。已儲存搜尋、Workbook 與 Suitelet 使用不同的分享或部署設定，需各自核對。</p></div></details></div>
 
 
 
@@ -279,19 +279,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-		</main><!-- #main -->
+		<section id="article-author" class="maxlist-article-author" data-maxlist-article-author="" aria-label="作者介紹" style="padding: 40px 20px; margin-top: 36px; border-top: 1px solid #e2e7ef; text-align: center; scroll-margin-top: 110px;">
+  <p style="color: #737c8c; font-size: 14px; letter-spacing: 2px; margin-bottom: 22px;">作者介紹</p>
+  <img src="../../image/Max-Su-400x400-1.png" width="150" height="150" alt="Max Su" loading="lazy" decoding="async" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.1); object-fit: cover;">
+  <h3 style="color: #00102e; margin: 18px 0 10px; font-size: 22px; font-weight: bold;">Max 行銷誌</h3>
+  <p style="color: #737c8c; letter-spacing: 2px; margin: 0 0 20px; font-size: 14px;">MARKETING, DATA AND PYTHON</p>
+  <p style="color: #7a7a7a; font-size: 16px; line-height: 1.8; max-width: 400px; margin: 0 auto 24px;">我不常思考生命中的時間，做喜歡的事情，讓喜歡的事有價值。如果你還沒找到這件事，繼續找，別停頓。盡你全心全力，你知道你一定會找到。</p>
+  <a href="/post/author/" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+</section>
+</main><!-- #main -->
 	</div><!-- #primary -->
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=c0d37aa89250"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=2ed3886b6cd3"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=20260803-1"></script>
+<script src="../../assets/js/components/footer.js?v=20261103-1"></script>
 
 	<!-- #colophon -->
 
@@ -300,62 +308,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <a on="tap:toptarget.scrollTo(duration=200)" class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
 <!-- HFCM by 99 Robots - Snippet # 1: 文章尾部 作者版位 -->
-<script>
-const newHtml = `
-  <div class="elementor-widget-wrap" style="padding: 40px 0;">
-    <!-- Image Box -->
-    <div class="elementor-element elementor-element-7a328636 elementor-vertical-align-middle elementor-position-top elementor-widget elementor-widget-image-box">
-      <div class="elementor-widget-container">
-        <div class="elementor-image-box-wrapper" style="text-align: center;">
-          <figure class="elementor-image-box-img">
-            <img decoding="async"
-                 width="150"
-                 height="150"
 
-                 alt="Max Su"
-                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" data-src="/image/Max-Su-400x400-1.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img decoding="async"
-                 width="150"
-                 height="150"
-                 src="/image/Max-Su-400x400-1.png"
-                 alt="Max Su"
-                 style="border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"></noscript>
-          </figure>
-          <div class="elementor-image-box-content">
-            <h3 class="elementor-image-box-title" style="color: #00102E; margin: 10px 0; font-size: 22px; font-weight: bold;">Max 行銷誌</h3>
-            <p class="elementor-image-box-description" style="color: #737C8C; letter-spacing: 2px; margin: 0 0 15px; font-size: 14px;">MARKETING, DATA AND PYTHON</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Text -->
-    <div class="elementor-element elementor-element-7f10b74 elementor-widget elementor-widget-text-editor">
-      <div class="elementor-widget-container">
-        <div class="elementor-text-editor elementor-clearfix" style="text-align: center;">
-          <p style="color: #7a7a7a; font-size: 16px; line-height: 1.6; margin: 0 0 15px; max-width: 400px; display: inline-block;">
-            我不常思考生命中的時間，做喜歡得事情，讓喜歡的事有價值。如果你還沒找到這件事，繼續找，別停頓。盡你全心全力，你知道你一定會找到。
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Read More -->
-    <div class="elementor-element elementor-element-0316620 elementor-widget elementor-widget-text-editor">
-      <div class="elementor-widget-container">
-        <div class="elementor-text-editor elementor-clearfix" style="text-align: center; margin: 20px 0;">
-          <a href="/post/author/" target="_blank" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
-        </div>
-      </div>
-    </div>
-
-`;
-
-// 插入到 .entry-content 最後
-const entryContent = document.querySelector('.navigation');
-if (entryContent) {
-  entryContent.insertAdjacentHTML('beforeend', newHtml);
-}
-</script>
 <!-- /end HFCM by 99 Robots -->
 <!-- HFCM by 99 Robots - Snippet # 3: 快速總結版位 -->
 <script>

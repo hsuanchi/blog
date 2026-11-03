@@ -1,0 +1,204 @@
+.chrome-import-guide {
+  --guide-ink: #00102e;
+  --guide-accent: #d65050;
+  color: #303744;
+  line-height: 1.9;
+}
+.chrome-import-guide h2 { margin-top: 2.4em; scroll-margin-top: 100px; }
+.chrome-import-guide h3 { margin-top: 1.7em; scroll-margin-top: 100px; }
+.chrome-import-guide .guide-scope { color: #666; font-size: .9em; }
+.chrome-import-guide .guide-note {
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: #f2f5fa;
+  border-left: 4px solid var(--guide-accent);
+  border-radius: 0 8px 8px 0;
+}
+.chrome-import-guide .guide-note p:last-child { margin-bottom: 0; }
+.chrome-import-guide .guide-related { margin-top: 44px; }
+.chrome-import-guide .guide-related-list { list-style: none; padding: 0; margin: 20px 0 0; }
+.chrome-import-guide .guide-related-list li { padding: 18px 0; border-bottom: 1px solid #e2e7ef; }
+.chrome-import-guide .guide-related-list a { font-weight: 600; }
+.chrome-import-guide .guide-related-list span { display: block; color: #637187; font-size: 14px; margin-top: 4px; }
+.chrome-import-guide details {
+  border: 1px solid #dce2eb;
+  border-radius: 8px;
+  margin: 14px 0;
+  padding: 16px 20px;
+}
+.chrome-import-guide summary { color: var(--guide-ink); font-weight: 600; cursor: pointer; }
+.chrome-import-guide details[open] > summary { margin-bottom: 14px; }
+.chrome-import-guide summary:focus-visible { outline: 2px solid var(--guide-accent); outline-offset: 5px; }
+.chrome-import-guide .guide-toc ol { margin: 8px 0 0; padding-left: 1.5em; }
+.chrome-import-guide pre {
+  background: #00102e;
+  color: #eef3ff;
+  border-radius: 10px;
+  padding: 22px;
+  overflow-x: auto;
+  line-height: 1.75;
+  font-size: .9em;
+}
+.chrome-import-guide pre code { color: inherit; background: transparent; padding: 0; }
+.chrome-import-guide :not(pre) > code { overflow-wrap: anywhere; }
+.chrome-import-guide figcaption { font-size: .85em; color: #666; margin-top: 10px; }
+.chrome-import-guide .guide-source { font-size: .88em; color: #666; }
+.chrome-import-guide .guide-faq p { margin: 0; }
+.chrome-import-guide .guide-faq p + p { margin-top: 14px; }
+.chrome-import-guide .guide-faq ol { margin: 14px 0; padding-left: 1.5em; }
+.chrome-import-guide .guide-faq li { margin-bottom: 8px; }
+.chrome-import-guide .chrome-preview {
+  margin: 30px 0 36px;
+  scroll-margin-top: 110px;
+  color: #253449;
+  line-height: 1.6;
+  font-size: 15px;
+}
+.chrome-import-guide .preview-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #637187;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.chrome-import-guide .preview-label::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  background: var(--guide-accent);
+  border-radius: 50%;
+}
+.chrome-import-guide .preview-window {
+  overflow: hidden;
+  border: 1px solid #dce2eb;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 28px #00102e0a;
+}
+.chrome-import-guide .preview-chrome-bar {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  background: #edf1f6;
+  border-bottom: 1px solid #dce2eb;
+  min-width: 0;
+}
+.chrome-import-guide .preview-dots { display: flex; gap: 5px; flex-shrink: 0; }
+.chrome-import-guide .preview-dots i { width: 8px; height: 8px; border-radius: 50%; background: #b3bece; }
+.chrome-import-guide .preview-address {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #dce2eb;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  overflow-wrap: anywhere;
+}
+.chrome-import-guide .preview-icon { width: 20px; height: 20px; vertical-align: middle; flex-shrink: 0; }
+.chrome-import-guide .preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: center;
+  padding: 22px;
+  flex-wrap: wrap;
+}
+.chrome-import-guide .preview-toolbar strong { font-size: 19px; color: #253449; }
+.chrome-import-guide .preview-mode { display: flex; gap: 9px; align-items: center; font-size: 13px; }
+.chrome-import-guide .preview-switch {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 34px;
+  height: 19px;
+  padding: 2px;
+  border-radius: 12px;
+  background: #2466d2;
+  flex-shrink: 0;
+}
+.chrome-import-guide .preview-switch::after { content: ""; width: 15px; height: 15px; background: #fff; border-radius: 50%; }
+.chrome-import-guide .preview-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--guide-accent);
+  color: #fff;
+  font: 600 13px/1 sans-serif;
+}
+.chrome-import-guide .preview-actions { display: flex; gap: 10px; flex-wrap: wrap; padding: 0 22px 22px; align-items: center; }
+.chrome-import-guide .preview-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #c4cfde;
+  padding: 7px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  color: #2466d2;
+}
+.chrome-import-guide .preview-highlight { border: 2px solid var(--guide-accent); }
+.chrome-import-guide .preview-muted { color: #8390a1; }
+.chrome-import-guide .preview-stage { background: #f6f8fb; border-top: 1px solid #e2e7ef; padding: 24px; }
+.chrome-import-guide .preview-placeholder { border: 1px dashed #c6d0df; border-radius: 8px; padding: 25px 16px; text-align: center; color: #77859a; font-size: 13px; }
+.chrome-import-guide .preview-callout { display: flex; align-items: flex-start; gap: 10px; margin-top: 16px; padding: 14px 18px; background: #fff1ee; color: #853b33; border-radius: 8px; font-size: 14px; }
+.chrome-import-guide .preview-file-layout { display: grid; grid-template-columns: minmax(140px, 28%) minmax(0, 1fr); }
+.chrome-import-guide .preview-folders { background: #f6f8fb; padding: 22px 14px; border-right: 1px solid #e2e7ef; }
+.chrome-import-guide .preview-folder { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 6px; font-size: 13px; }
+.chrome-import-guide .preview-folder--child { margin-left: 14px; }
+.chrome-import-guide .preview-selected { background: #e8f0ff; color: #174da5; font-weight: 600; }
+.chrome-import-guide .preview-files { padding: 20px; min-width: 0; }
+.chrome-import-guide .preview-path { color: #637187; font-size: 12px; margin-bottom: 18px; overflow-wrap: anywhere; }
+.chrome-import-guide .preview-file { display: flex; align-items: center; gap: 10px; padding: 12px 10px; border-bottom: 1px solid #edf1f6; font-size: 13px; }
+.chrome-import-guide .preview-file > span { min-width: 0; overflow-wrap: anywhere; }
+.chrome-import-guide .preview-file--manifest { border: 1px solid #efb1aa; background: #fff3f0; border-radius: 6px; margin-bottom: 4px; color: #853b33; font-weight: 600; }
+.chrome-import-guide .preview-chip { font-size: 11px; color: #853b33; background: #fff; padding: 2px 7px; border-radius: 4px; margin-left: auto; white-space: nowrap; }
+.chrome-import-guide .preview-picker-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid #e2e7ef; padding: 16px 20px; font-size: 13px; background: #f8faff; }
+.chrome-import-guide .preview-primary { color: #fff; background: #2466d2; border-color: #2466d2; }
+.chrome-import-guide .preview-success { display: flex; align-items: center; gap: 8px; color: #236c50; font-size: 13px; font-weight: 600; margin-bottom: 14px; }
+.chrome-import-guide .preview-extension-card { border: 1px solid #dce2eb; border-radius: 10px; background: #fff; padding: 20px; }
+.chrome-import-guide .preview-extension-heading { display: flex; align-items: center; gap: 12px; }
+.chrome-import-guide .preview-extension-logo { display: flex; justify-content: center; align-items: center; background: #e8f0ff; border-radius: 10px; width: 44px; height: 44px; color: #2466d2; flex-shrink: 0; }
+.chrome-import-guide .preview-extension-name { font-weight: 600; color: #253449; }
+.chrome-import-guide .preview-small { color: #637187; font-size: 12px; }
+.chrome-import-guide .preview-extension-controls { margin-top: 22px; padding-top: 16px; border-top: 1px solid #edf1f6; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.chrome-import-guide .preview-icon-button { display: inline-flex; align-items: center; justify-content: center; padding: 7px; border-radius: 6px; }
+.chrome-import-guide .preview-extension-controls .preview-mode { margin-left: auto; }
+.chrome-import-guide .preview-pin-menu { background: #fff; border: 1px solid #dce2eb; border-radius: 10px; padding: 18px; margin-top: 16px; }
+.chrome-import-guide .preview-pin-row { display: flex; align-items: center; gap: 10px; padding-top: 14px; margin-top: 12px; border-top: 1px solid #edf1f6; font-size: 13px; }
+.chrome-import-guide .preview-pin-row .preview-icon-button { margin-left: auto; color: #2466d2; }
+.chrome-import-guide .preview-details-card { margin-top: 16px; border: 1px solid #dce2eb; border-radius: 10px; background: #fff; overflow: hidden; }
+.chrome-import-guide .preview-details-title { padding: 16px 18px; font-weight: 600; border-bottom: 1px solid #edf1f6; }
+.chrome-import-guide .preview-settings-row { display: flex; align-items: flex-start; gap: 12px; padding: 20px 18px; }
+.chrome-import-guide .preview-settings-copy { flex: 1; min-width: 0; }
+.chrome-import-guide .preview-settings-copy strong { display: block; font-size: 15px; }
+.chrome-import-guide .preview-settings-copy .preview-small { display: block; margin-top: 5px; }
+.chrome-import-guide .preview-settings-toggle { display: flex; align-items: center; gap: 8px; padding-top: 3px; }
+@media (max-width: 540px) {
+  .chrome-import-guide .guide-note { padding: 18px; }
+  .chrome-import-guide pre { padding: 16px; font-size: .8em; }
+  .chrome-import-guide .preview-file-layout { grid-template-columns: minmax(0, 1fr); }
+  .chrome-import-guide .preview-folders { display: flex; flex-wrap: wrap; gap: 4px; padding: 12px; border-right: 0; border-bottom: 1px solid #e2e7ef; }
+  .chrome-import-guide .preview-folder--child { margin-left: 0; }
+  .chrome-import-guide .preview-chrome-bar { gap: 10px; padding: 12px; }
+  .chrome-import-guide .preview-toolbar { padding: 18px 14px; }
+  .chrome-import-guide .preview-actions { padding: 0 14px 18px; gap: 8px; }
+  .chrome-import-guide .preview-stage,
+  .chrome-import-guide .preview-files { padding: 16px 12px; }
+  .chrome-import-guide .preview-extension-card { padding: 16px 12px; }
+  .chrome-import-guide .preview-button { padding: 7px 9px; font-size: 12px; }
+  .chrome-import-guide .preview-chip { font-size: 10px; padding: 2px 4px; }
+  .chrome-import-guide .preview-callout { padding: 14px; }
+}

@@ -6,6 +6,7 @@
 
 - `docs/`：GitHub Pages 的完整網站根目錄
 - `components/`：Header、Sidebar、Footer 的可讀 HTML 原稿
+- `components/article-author.html`：文章缺少可用作者版位時，由建置直接嵌入的作者介紹
 - `docs/assets/js/components/`：所有頁面同步引入的共用元件
 - `docs/assets/js/offline.js`：直接雙擊 HTML 時修正站內連結與共用元件路徑
 - `docs/search/`：不依賴 WordPress 或伺服器的文章全文搜尋
@@ -36,6 +37,8 @@ npm run serve
 若要用與 GitHub Pages 相同的 HTTP 模式驗收，也可以執行 `npm run serve`，再開啟 `http://127.0.0.1:4173/`。這個服務只綁定本機，不會對外開放。
 
 ## 新增文章
+
+所有文章先遵循 [AGENTS.md 的文章通用規範](AGENTS.md)：外部網頁連結一律使用 `target="_blank" rel="noopener noreferrer"`，既有的其他 `rel` 值須保留。建置與驗證流程會同步處理文章及共用元件。
 
 NetSuite 教學系列先閱讀並遵循 [NetSuite 教學系列製作規範](NETSUITE_GUIDE_RULES.md)，沿用已確認的首圖、內文配色、FAQ 與預覽發布流程。
 

@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=20260803-1"></script>
+	<script src="../../assets/js/components/header.js?v=20261103-1"></script>
 
 
 
@@ -229,7 +229,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<ol class="wp-block-list"><li><a href="https://zh.wikipedia.org/wiki/Git">Git</a>：是一套免費、開源分散式的版本控制工具</li><li><a href="https://zh.wikipedia.org/wiki/GitHub">GitHub</a>：以 Git 為核心技術基礎的「雲端版本控制服務平台」，類似的服務還有&nbsp;GitLab、Bitbucket</li></ol>
+<ol class="wp-block-list"><li><a href="https://zh.wikipedia.org/wiki/Git" target="_blank" rel="noopener noreferrer">Git</a>：是一套免費、開源分散式的版本控制工具</li><li><a href="https://zh.wikipedia.org/wiki/GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>：以 Git 為核心技術基礎的「雲端版本控制服務平台」，類似的服務還有&nbsp;GitLab、Bitbucket</li></ol>
 
 
 
@@ -423,19 +423,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<h2 class="wp-block-heading"><span class="ez-toc-section" id="三_如何優雅的寫_Git_Commit"></span><a href="https://chris.beams.io/posts/git-commit/">三. 如何優雅的寫 Git Commit</a><span class="ez-toc-section-end"></span></h2>
+<h2 class="wp-block-heading"><span class="ez-toc-section" id="三_如何優雅的寫_Git_Commit"></span><a href="https://chris.beams.io/posts/git-commit/" target="_blank" rel="noopener noreferrer">三. 如何優雅的寫 Git Commit</a><span class="ez-toc-section-end"></span></h2>
 
 
 
-<p>如何寫好 Git Commit 首先我們先了解 2014 年 Chris Beams <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a> 文章中的 Git Commit 七大原則：</p>
+<p>如何寫好 Git Commit 首先我們先了解 2014 年 Chris Beams <a href="https://chris.beams.io/posts/git-commit/" target="_blank" rel="noopener noreferrer">How to Write a Git Commit Message</a> 文章中的 Git Commit 七大原則：</p>
 
 
 
-<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>1. 將訊息用空白行來區分標題與內容 <br>2. 標題限制在 50 字元以內 <br>3. 標題開頭使用大寫 <br>4. 標題不以句點結尾 <br>5. 使用祈使句設計標題 <br>6. 內容每行最多 72 字，過多文字則需要斷行 <br>7. 內容需解釋 what 以及 why vs. how </p><cite><a href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/</a></cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p>1. 將訊息用空白行來區分標題與內容 <br>2. 標題限制在 50 字元以內 <br>3. 標題開頭使用大寫 <br>4. 標題不以句點結尾 <br>5. 使用祈使句設計標題 <br>6. 內容每行最多 72 字，過多文字則需要斷行 <br>7. 內容需解釋 what 以及 why vs. how </p><cite><a href="https://chris.beams.io/posts/git-commit/" target="_blank" rel="noopener noreferrer">https://chris.beams.io/posts/git-commit/</a></cite></blockquote>
 
 
 
-<p>除了七大原則外，我覺得這篇 <a href="https://oberonlai.blog/git-essentials/">人生也有 Git 就好了</a> 讓我對 commit 有不同的看法。</p>
+<p>除了七大原則外，我覺得這篇 <a href="https://oberonlai.blog/git-essentials/" target="_blank" rel="noopener noreferrer">人生也有 Git 就好了</a> 讓我對 commit 有不同的看法。</p>
 
 
 
@@ -443,7 +443,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p> 1. 在紙上先將工作事項拆解成小任務：這跟看板方法提到的準備作業很像，先拆分準備要做的事，書中更具體的提到一個蕃茄鐘 25 分鐘可以完成的工作為一個小任務，有這個先決條件就很好拆分任務內容了。 <br><br>2. 先寫下小任務的提交訊息再開始寫程式碼：這點非常驚人，先寫下要提交的訊息除了可以確保訊息是有意義外，更重要的是他可以讓你專注在這個任務，只開啟跟這個任務相關的檔案，如果改了其他無關的檔案，立刻就會發現這不是我現在要做的事情，就會回頭乖乖做現在該做的事。 <br><br>3. 每完成一個小任務進行提交：小任務完成後就提交很有爽快感，每次小任務的提交都能離完成大任務更近一步。 <br><br>4. 別做出斷斷續續的提交：要保持開發的完整性，萬一真的寫到一半被抓去救火，先用 git stash 的功能把目前的進度封存起來。 <br><br>5. 說明功能變化而非實作細節修 bug 的話先描述問題或是原始需求：訊息以動詞開頭，像是新增、修改、除錯什麼什麼功能或介面，以非工程師也能看得懂的淺顯文字進行撰寫。 </p><cite> <br><a href="https://oberonlai.blog/git-essentials/">https://oberonlai.blog/git-essentials/</a></cite></blockquote>
+<blockquote class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"><p> 1. 在紙上先將工作事項拆解成小任務：這跟看板方法提到的準備作業很像，先拆分準備要做的事，書中更具體的提到一個蕃茄鐘 25 分鐘可以完成的工作為一個小任務，有這個先決條件就很好拆分任務內容了。 <br><br>2. 先寫下小任務的提交訊息再開始寫程式碼：這點非常驚人，先寫下要提交的訊息除了可以確保訊息是有意義外，更重要的是他可以讓你專注在這個任務，只開啟跟這個任務相關的檔案，如果改了其他無關的檔案，立刻就會發現這不是我現在要做的事情，就會回頭乖乖做現在該做的事。 <br><br>3. 每完成一個小任務進行提交：小任務完成後就提交很有爽快感，每次小任務的提交都能離完成大任務更近一步。 <br><br>4. 別做出斷斷續續的提交：要保持開發的完整性，萬一真的寫到一半被抓去救火，先用 git stash 的功能把目前的進度封存起來。 <br><br>5. 說明功能變化而非實作細節修 bug 的話先描述問題或是原始需求：訊息以動詞開頭，像是新增、修改、除錯什麼什麼功能或介面，以非工程師也能看得懂的淺顯文字進行撰寫。 </p><cite> <br><a href="https://oberonlai.blog/git-essentials/" target="_blank" rel="noopener noreferrer">https://oberonlai.blog/git-essentials/</a></cite></blockquote>
 
 
 
@@ -499,7 +499,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<ol class="wp-block-list"><li><a href="/post/git_tutorial/">Git 入門 4 步驟</a></li><li><a href="/post/git-reset-checkout/">進入 Git 平行時空(分支)</a><ul><li>Git 分支如何操作</li><li><a href="/post/git-merge-rebase/">Git 如何合併分支</a></li><li><a href="/post/git-reset-checkout/">Git 如何退回版本或切換分支</a></li></ul></li><li><a href="https://chris.beams.io/posts/git-commit/">如何優雅的寫 Git Commit</a></li><li><a href="/post/git-config/">如何使用 Git 快捷鍵</a></li></ol>
+<ol class="wp-block-list"><li><a href="/post/git_tutorial/">Git 入門 4 步驟</a></li><li><a href="/post/git-reset-checkout/">進入 Git 平行時空(分支)</a><ul><li>Git 分支如何操作</li><li><a href="/post/git-merge-rebase/">Git 如何合併分支</a></li><li><a href="/post/git-reset-checkout/">Git 如何退回版本或切換分支</a></li></ul></li><li><a href="https://chris.beams.io/posts/git-commit/" target="_blank" rel="noopener noreferrer">如何優雅的寫 Git Commit</a></li><li><a href="/post/git-config/">如何使用 Git 快捷鍵</a></li></ol>
 
 
 
@@ -533,14 +533,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=c0d37aa89250"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=2ed3886b6cd3"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=20260803-1"></script>
+<script src="../../assets/js/components/footer.js?v=20261103-1"></script>
 
 	<!-- #colophon -->
 

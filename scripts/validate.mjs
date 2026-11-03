@@ -1,7 +1,7 @@
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { load } from "cheerio";
-import { writeFileEnsured, isNetsuiteImageZoomLink } from "./lib.mjs";
+import { writeFileEnsured, isNetsuiteImageZoomLink, isExternalWebLink } from "./lib.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -10,10 +10,10 @@ const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
-// Two coffee guides and NetSuite tutorials 01–02, added after WordPress migration.
-const ADDED_STATIC_POSTS = 4;
-// Six coffee assets, six tutorial 01 assets, and three tutorial 02 assets.
-const ADDED_STATIC_IMAGES = 15;
+// Two coffee guides, NetSuite tutorials 01–02, and the Chrome extension import guide.
+const ADDED_STATIC_POSTS = 5;
+// Six coffee assets, nine NetSuite assets, and one Chrome extension guide cover.
+const ADDED_STATIC_IMAGES = 16;
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -86,6 +86,21 @@ const dynamicReferences = [];
 const componentCoverage = { header: 0, sidebar: 0, footer: 0 };
 const offlineCoverage = { runtime: 0, pagesWithoutPreloader: 0 };
 const internalLinksOpeningNewTabs = [];
+const missingArticleAuthorSections = [];
+const externalLinksMissingAttributes = [];
+let externalLinksChecked = 0;
+function checkExternalLinks($, file) {
+  $("a[href]").each((_index, element) => {
+    const link = $(element);
+    const reference = link.attr("href") ?? "";
+    if (!isExternalWebLink(reference)) return;
+    externalLinksChecked += 1;
+    const rel = new Set((link.attr("rel") ?? "").toLowerCase().split(/\s+/));
+    if (link.attr("target") !== "_blank" || !rel.has("noopener") || !rel.has("noreferrer")) {
+      externalLinksMissingAttributes.push({ file, reference, target: link.attr("target") ?? "", rel: link.attr("rel") ?? "" });
+    }
+  });
+}
 const netsuiteImagesWithoutNewTab = [];
 let netsuiteImagesOpeningNewTabs = 0;
 const offlineRootResourceReferences = [];
@@ -107,6 +122,14 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   const $ = load(html, { decodeEntities: false });
   const relativeFile = path.relative(REPO_ROOT, file);
+  checkExternalLinks($, relativeFile);
+  if ($("body.single-post").length && $("main article").length && !$("main [data-maxlist-article-author]").length) {
+    const legacyAuthorCanMount = $("main .navigation").length && $("script:not([src])").toArray().some((element) => {
+      const script = $(element).html() ?? "";
+      return script.includes("const newHtml =") && script.includes("關於作者") && script.includes(".navigation");
+    });
+    if (!legacyAuthorCanMount) missingArticleAuthorSections.push(relativeFile);
+  }
   for (const match of html.matchAll(legacyReferencePattern)) {
     let pathname;
     try {
@@ -388,6 +411,11 @@ const urlMigration = {
   malformedStructuredData
 };
 
+for (const name of ["header", "sidebar", "footer"]) {
+  const relativeFile = `components/${name}.html`;
+  checkExternalLinks(load(await readFile(path.join(REPO_ROOT, relativeFile), "utf8")), relativeFile);
+}
+
 const report = {
   generatedAt: new Date().toISOString(),
   files: { total: allFiles.length, html: htmlFiles.length, assets: allFiles.length - htmlFiles.length },
@@ -417,6 +445,8 @@ const report = {
     insecureSameSiteScriptReferences
   },
   internalLinksOpeningNewTabs,
+  articleEndMatter: { missingAuthorSections: missingArticleAuthorSections },
+  externalLinkNavigation: { linksChecked: externalLinksChecked, linksMissingAttributes: externalLinksMissingAttributes },
   netsuiteImageNavigation: { imagesOpeningNewTabs: netsuiteImagesOpeningNewTabs, imagesWithoutNewTab: netsuiteImagesWithoutNewTab },
   offlineRootResourceReferences,
   offlineRootCssReferences,
@@ -437,6 +467,8 @@ if (
   backendScriptReferences.length > 0 ||
   insecureSameSiteScriptReferences.length > 0 ||
   internalLinksOpeningNewTabs.length > 0 ||
+  missingArticleAuthorSections.length > 0 ||
+  externalLinksMissingAttributes.length > 0 ||
   netsuiteImagesWithoutNewTab.length > 0 ||
   offlineRootResourceReferences.length > 0 ||
   offlineRootCssReferences.length > 0 ||

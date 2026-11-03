@@ -2,7 +2,7 @@ import { readdir, readFile, rm } from "node:fs/promises";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { load } from "cheerio";
-import { writeFileEnsured, isNetsuiteImageZoomLink } from "./lib.mjs";
+import { writeFileEnsured, isNetsuiteImageZoomLink, normalizeExternalLinks } from "./lib.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -13,12 +13,13 @@ const SEARCH_INDEX_OUTPUT = path.join(DOCS_ROOT, "assets", "js", "search-index.j
 const SEARCH_PAGE_OUTPUT = path.join(DOCS_ROOT, "search", "index.html");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 const OFFLINE_RUNTIME_VERSION = "20260802-7";
-const COMPONENT_VERSION = "20260803-1";
+const COMPONENT_VERSION = "20261103-1";
 const SIDEBAR_COMPONENT_VERSION = createHash("sha256")
   .update(await readFile(path.join(DOCS_ROOT, "assets/js/components/sidebar.js")))
   .digest("hex").slice(0, 12);
 const CANONICAL_ALIASES = new Map([["首頁/index.html", `${SITE_ORIGIN}/`]]);
 const OBSOLETE_COMMERCE_PATHS = ["cart", "checkout", "my-account", "shop"];
+const ARTICLE_AUTHOR_HTML = await readFile(path.join(REPO_ROOT, "components/article-author.html"), "utf8");
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -541,6 +542,20 @@ for (const file of htmlFiles) {
     $(element).html(script);
   });
   $("#wp-emoji-styles-inline-css, style:contains('img#wpstats')").remove();
+  if ($("body.single-post").length && $("main article").length) {
+    const legacyAuthorScripts = $("script:not([src])").filter((_index, element) => {
+      const script = $(element).html() ?? "";
+      return script.includes("const newHtml =") && script.includes("關於作者") && script.includes(".navigation");
+    });
+    const legacyAuthorCanMount = legacyAuthorScripts.length && $("main .navigation").length;
+    if ($("[data-maxlist-article-author]").length) {
+      $("[data-maxlist-article-author]").replaceWith(ARTICLE_AUTHOR_HTML);
+      legacyAuthorScripts.remove();
+    } else if (!legacyAuthorCanMount) {
+      legacyAuthorScripts.remove();
+      $("main").first().append(ARTICLE_AUTHOR_HTML);
+    }
+  }
   $("noscript").each((_index, element) => {
     const fallback = $(element).html() ?? "";
     $(element).html(
@@ -700,6 +715,7 @@ for (const file of htmlFiles) {
     if (alt) $(element).attr("alt", alt);
   });
 
+  normalizeExternalLinks($);
   $('a[target="_blank"]').each((_index, element) => {
     const values = new Set(($(element).attr("rel") ?? "").split(/\s+/).filter(Boolean));
     values.add("noopener");
