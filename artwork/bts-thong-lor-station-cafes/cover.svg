@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">【 曼谷 Thong Lor 】 咖啡地圖</title>
+  <desc id="desc">沿用 Max行銷誌既有封面：主題背景、紅色遮罩、置中白字與右下角 M 品牌標記。</desc>
+  <image href="../../docs/image/bts-thong-lor-cafes-hero.jpg" x="0" y="0" width="1200" height="675" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1200" height="675" fill="#934f4c" opacity="0.86"/>
+  <text x="600" y="278" font-family="PingFang TC, sans-serif" font-size="88" font-weight="500" fill="#ffffff" text-anchor="middle">【 曼谷 Thong Lor 】</text>
+  <text x="600" y="391" font-family="PingFang TC, sans-serif" font-size="94" font-weight="500" fill="#ffffff" text-anchor="middle">咖啡地圖</text>
+  <text x="600" y="455" font-family="PingFang TC, sans-serif" font-size="32" fill="#ff8580" text-anchor="middle">Max行銷誌</text>
+  <rect x="1134" y="609" width="46" height="46" fill="#ff8580"/>
+  <text x="1157" y="645" font-family="PingFang TC, sans-serif" font-size="34" font-weight="600" fill="#934f4c" text-anchor="middle">M</text>
+</svg>

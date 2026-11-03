@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">【 NetSuite 教學 01 】 報表權限設定</title>
+  <desc id="desc">沿用 Max行銷誌既有封面：主題背景、紅色遮罩、置中白字與右下角 M 品牌標記。</desc>
+  <image href="../../docs/image/netsuite-report-permissions/audience-settings.jpg" x="0" y="-36" width="1200" height="795" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="1200" height="675" fill="#934f4c" opacity="0.86"/>
+  <text x="600" y="278" font-family="PingFang TC, sans-serif" font-size="84" font-weight="500" fill="#ffffff" text-anchor="middle">【 NetSuite 教學 01 】</text>
+  <text x="600" y="391" font-family="PingFang TC, sans-serif" font-size="94" font-weight="500" fill="#ffffff" text-anchor="middle">報表權限設定</text>
+  <text x="600" y="455" font-family="PingFang TC, sans-serif" font-size="32" fill="#ff8580" text-anchor="middle">Max行銷誌</text>
+  <rect x="1134" y="609" width="46" height="46" fill="#ff8580"/>
+  <text x="1157" y="645" font-family="PingFang TC, sans-serif" font-size="34" font-weight="600" fill="#934f4c" text-anchor="middle">M</text>
+</svg>
