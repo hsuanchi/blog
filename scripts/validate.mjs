@@ -3,6 +3,7 @@ import path from "node:path";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, isExternalWebLink } from "./lib.mjs";
 import { countArticleArchives, archiveCountLabel } from "./archive-counts.mjs";
+import { HOMEPAGE_TOPICS, collectHomepagePosts, homepageTopicCounts } from "./homepage.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -319,6 +320,17 @@ for (const component of ["sidebar", "footer"]) {
   }
 }
 
+const homepageCounts = homepageTopicCounts(await collectHomepagePosts(DOCS_ROOT));
+const $homepage = load(await readFile(path.join(DOCS_ROOT, "index.html"), "utf8"), { decodeEntities: false });
+const homepageSections = {
+  topicCountMismatches: []
+};
+for (const topic of HOMEPAGE_TOPICS) {
+  const actual = plainText($homepage(`h3 a[href="#${topic.anchor}"]`).text());
+  const expected = `${topic.label}(${homepageCounts[topic.anchor]} 篇)`;
+  if (actual !== expected) homepageSections.topicCountMismatches.push({ anchor: topic.anchor, actual, expected });
+}
+
 const idsByFile = new Map();
 async function idsFor(file) {
   if (idsByFile.has(file)) return idsByFile.get(file);
@@ -445,6 +457,7 @@ const report = {
   generatedFeatures,
   urlMigration,
   archiveNavigation,
+  homepageSections,
   security: {
     unexpectedForms,
     externalStatsScripts,
@@ -500,6 +513,7 @@ if (
   || archiveNavigation.yearMismatches.length > 0
   || archiveNavigation.missingArchives.length > 0
   || archiveNavigation.countMismatches.length > 0
+  || homepageSections.topicCountMismatches.length > 0
 ) {
   process.exitCode = 1;
 }

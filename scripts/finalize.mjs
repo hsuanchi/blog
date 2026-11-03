@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, normalizeExternalLinks } from "./lib.mjs";
 import { syncArchiveCounts } from "./archive-counts.mjs";
+import { collectHomepagePosts, enhanceHomepage, homepageTopicCounts } from "./homepage.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -15,6 +16,7 @@ const SEARCH_PAGE_OUTPUT = path.join(DOCS_ROOT, "search", "index.html");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 const OFFLINE_RUNTIME_VERSION = "20260802-7";
 await syncArchiveCounts(REPO_ROOT);
+const homepageData = { counts: homepageTopicCounts(await collectHomepagePosts(DOCS_ROOT)) };
 const COMPONENT_VERSIONS = Object.fromEntries(await Promise.all(
   ["header", "sidebar", "footer"].map(async (name) => [name, createHash("sha256")
     .update(await readFile(path.join(DOCS_ROOT, "assets/js/components", `${name}.js`)))
@@ -745,6 +747,7 @@ for (const file of htmlFiles) {
   if (relativeFile === "index.html") {
     $("#coffee-guides, #netsuite-guides, #maxlist-coffee-home-style").remove();
     $('link[href*="assets/css/posts/netsuite.css"]').remove();
+    enhanceHomepage($, homepageData);
     const homepageTitle = "Max行銷誌｜行銷、數據分析與 Python 教學";
     $("title").text(homepageTitle);
     ensureMeta($, 'meta[property="og:title"]', { property: "og:title", content: homepageTitle });
@@ -838,6 +841,7 @@ await writeFileEnsured(
 );
 
 const $search = load(homepage, { decodeEntities: false });
+$search('link[href*="assets/css/homepage.css"]').remove();
 $search("body").removeClass("home blog").addClass("search-results-page");
 $search("title").text("搜尋文章 — Max行銷誌");
 $search('link[rel="canonical"]').attr("href", `${SITE_ORIGIN}/search/`);
@@ -879,6 +883,7 @@ retargetPageResources($search, `${SITE_ORIGIN}/`, SEARCH_PAGE_OUTPUT);
 await writeFileEnsured(SEARCH_PAGE_OUTPUT, cleanGeneratedText($search.html()));
 
 const $404 = load(homepage, { decodeEntities: false });
+$404('link[href*="assets/css/homepage.css"]').remove();
 $404("body")
   .removeClass("home blog")
   .addClass("error404");

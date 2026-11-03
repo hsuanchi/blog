@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-03T08:42:21.225Z",
+  "generatedAt": "2026-11-03T16:08:10.670Z",
   "files": {
-    "total": 10411,
+    "total": 10412,
     "html": 852,
-    "assets": 9559
+    "assets": 9560
   },
   "componentCoverage": {
     "header": 852,
@@ -67,6 +67,9 @@
       }
     },
     "countMismatches": []
+  },
+  "homepageSections": {
+    "topicCountMismatches": []
   },
   "security": {
     "unexpectedForms": [],

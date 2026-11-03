@@ -1,0 +1,80 @@
+/* Homepage additions layered on the original Elementor layout. */
+@media (max-width: 767px) {
+  /* Topic entry cards: 2 × 2 instead of four full-width rows. */
+  body.home .elementor-element-fcec7f2 > .elementor-container > .elementor-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-inner-column {
+    width: 50%;
+    padding: 6px;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-inner-column > .elementor-column-wrap {
+    min-height: 0;
+    margin: 0;
+    padding: 16px 8px;
+  }
+
+  /* Elementor's per-element rules outrank these selectors, so the card overrides need !important. */
+  body.home .elementor-element-fcec7f2 .elementor-widget-wrap {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 !important;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-widget-image.elementor-hidden-mobile {
+    display: block;
+    width: 56px !important;
+    margin: 0 0 8px !important;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-widget-image > .elementor-widget-container {
+    padding: 0 !important;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-widget-image .elementor-image,
+  body.home .elementor-element-fcec7f2 .elementor-widget-image figure {
+    width: 100% !important;
+    margin: 0;
+    text-align: center !important;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-widget-image img {
+    width: 56px !important;
+    max-width: none;
+    height: auto;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-widget-heading {
+    width: 100%;
+  }
+
+  body.home .elementor-element-fcec7f2 .elementor-heading-title {
+    margin: 0 !important;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+
+  /* Article thumbnails: two per row. */
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) > .elementor-container > .elementor-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) .elementor-inner-column {
+    width: 50%;
+  }
+
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) .elementor-widget-image,
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) .elementor-image img {
+    width: 100%;
+  }
+
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) .elementor-text-editor,
+  body.home .elementor-top-section .elementor-inner-section:not(.elementor-element-fcec7f2) .elementor-text-editor a {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
