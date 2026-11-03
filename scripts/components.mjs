@@ -3,6 +3,7 @@ import path from "node:path";
 import process from "node:process";
 import { load } from "cheerio";
 import { writeFileEnsured, normalizeExternalLinks } from "./lib.mjs";
+import { syncArchiveCounts } from "./archive-counts.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -218,6 +219,7 @@ await Promise.all([
 const htmlFiles = (await filesBelow(DOCS_ROOT)).filter(
   (file) => file.endsWith(".html") && !file.startsWith(PARTIAL_ROOT)
 );
+await syncArchiveCounts(REPO_ROOT);
 let modified = 0;
 let alreadyUsingComponents = 0;
 for (const file of htmlFiles) {

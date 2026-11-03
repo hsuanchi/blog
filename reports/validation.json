@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T06:52:03.024Z",
+  "generatedAt": "2026-11-03T08:00:53.683Z",
   "files": {
     "total": 10411,
     "html": 852,
@@ -51,7 +51,22 @@
   "archiveNavigation": {
     "linksChecked": 18,
     "yearMismatches": [],
-    "missingArchives": []
+    "missingArchives": [],
+    "articleCounts": {
+      "total": 183,
+      "byYear": {
+        "2018": 31,
+        "2019": 35,
+        "2020": 48,
+        "2021": 17,
+        "2022": 20,
+        "2023": 14,
+        "2024": 4,
+        "2025": 8,
+        "2026": 6
+      }
+    },
+    "countMismatches": []
   },
   "security": {
     "unexpectedForms": [],

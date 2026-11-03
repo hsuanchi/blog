@@ -40,6 +40,8 @@ npm run serve
 
 所有文章先遵循 [AGENTS.md 的文章通用規範](AGENTS.md)：外部網頁連結一律使用 `target="_blank" rel="noopener noreferrer"`，既有的其他 `rel` 值須保留。建置與驗證流程會同步處理文章及共用元件。
 
+`finalize` 會依文章內容自動更新側邊欄與頁尾 Archives 的文章總數及新年度篇數，並更新共用元件版本；`validate` 會核對顯示的篇數。
+
 NetSuite 教學系列先閱讀並遵循 [NetSuite 教學系列製作規範](NETSUITE_GUIDE_RULES.md)，沿用已確認的首圖、內文配色、FAQ 與預覽發布流程。
 
 未來可直接複製既有文章目錄中的 `index.html`，保留共用元件的三個 `<script>`，再修改 `<head>` SEO 資訊與 `<article>` 內容。完成後執行 `npm run finalize && npm run validate`，更新搜尋索引、sitemap 與共用檢查；輸出仍是可直接部署的純靜態檔案，不需要框架或伺服器端建置。

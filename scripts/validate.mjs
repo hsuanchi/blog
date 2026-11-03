@@ -2,6 +2,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, isExternalWebLink } from "./lib.mjs";
+import { countArticleArchives, archiveCountLabel } from "./archive-counts.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -285,10 +286,16 @@ const duplicateIndexableTitles = [...indexableTitles]
   .filter(([, files]) => files.length > 1)
   .map(([title, files]) => ({ title, files }));
 
-const archiveNavigation = { linksChecked: 0, yearMismatches: [], missingArchives: [] };
+const articleCounts = await countArticleArchives(DOCS_ROOT);
+const archiveNavigation = { linksChecked: 0, yearMismatches: [], missingArchives: [], articleCounts, countMismatches: [] };
 for (const component of ["sidebar", "footer"]) {
   const componentFile = path.join(REPO_ROOT, "components", `${component}.html`);
   const $component = load(await readFile(componentFile, "utf8"), { decodeEntities: false });
+  $component("#menu-year-list a[href]").each((_index, element) => {
+    const anchor = $component(element);
+    const expected = archiveCountLabel(anchor.attr("href"), plainText(anchor.text()), articleCounts);
+    if (expected && plainText(anchor.text()) !== expected) archiveNavigation.countMismatches.push({ component, actual: plainText(anchor.text()), expected });
+  });
   for (const element of $component('a[href]').toArray()) {
     const anchor = $component(element);
     const year = plainText(anchor.text()).match(/^(\d{4})\b/)?.[1];
@@ -492,6 +499,7 @@ if (
   || urlMigration.malformedStructuredData.length > 0
   || archiveNavigation.yearMismatches.length > 0
   || archiveNavigation.missingArchives.length > 0
+  || archiveNavigation.countMismatches.length > 0
 ) {
   process.exitCode = 1;
 }
