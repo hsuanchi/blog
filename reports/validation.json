@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-03T08:27:40.890Z",
+  "generatedAt": "2026-11-03T08:36:15.977Z",
   "files": {
-    "total": 10411,
+    "total": 10412,
     "html": 852,
-    "assets": 9559
+    "assets": 9560
   },
   "componentCoverage": {
     "header": 852,
@@ -30,7 +30,7 @@
   },
   "generatedFeatures": {
     "staticFixesStylesheet": true,
-    "searchIndexDocuments": 232,
+    "searchIndexDocuments": 183,
     "cname": "www.maxlist.xyz",
     "obsoleteCommercePaths": []
   },
@@ -79,7 +79,7 @@
     "missingAuthorSections": []
   },
   "externalLinkNavigation": {
-    "linksChecked": 771,
+    "linksChecked": 767,
     "linksMissingAttributes": []
   },
   "netsuiteImageNavigation": {

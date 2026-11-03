@@ -293,7 +293,7 @@ for (const component of ["sidebar", "footer"]) {
   const $component = load(await readFile(componentFile, "utf8"), { decodeEntities: false });
   $component("#menu-year-list a[href]").each((_index, element) => {
     const anchor = $component(element);
-    const expected = archiveCountLabel(anchor.attr("href"), plainText(anchor.text()), articleCounts);
+    const expected = archiveCountLabel(anchor.attr("href"), articleCounts);
     if (expected && plainText(anchor.text()) !== expected) archiveNavigation.countMismatches.push({ component, actual: plainText(anchor.text()), expected });
   });
   for (const element of $component('a[href]').toArray()) {

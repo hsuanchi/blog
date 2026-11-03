@@ -173,7 +173,7 @@ await Promise.all(
 
 const activeMenuCode = `  const fixes = document.createElement("link");
   fixes.rel = "stylesheet";
-  fixes.href = new URL("../../css/static-fixes.css?v=20260802-3", script.src).href;
+  fixes.href = new URL("../../css/static-fixes.css?v=20261103-1", script.src).href;
   document.head.append(fixes);
   const current = location.pathname.replace(/\\/$/, "") || "/";
   document.querySelectorAll("#masthead a[href], #masthead-mobile a[href]").forEach((link) => {

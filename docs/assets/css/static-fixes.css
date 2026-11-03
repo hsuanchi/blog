@@ -27,6 +27,7 @@ object {
   border-bottom: 1px solid #e5e5e5;
   margin-bottom: 28px;
   padding-bottom: 24px;
+  overflow-wrap: anywhere;
 }
 
 .search-result h2 {
@@ -49,6 +50,7 @@ object {
 .search-status {
   color: #737c8c;
   margin-bottom: 28px;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 575px) {
@@ -75,6 +77,10 @@ object {
   .search-page-form {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .search-page-form input[type="search"] {
+    font-size: 16px;
   }
 
   .search-result h2 {

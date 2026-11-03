@@ -22,15 +22,13 @@ export async function countArticleArchives(docsRoot) {
   return counts;
 }
 
-export function archiveCountLabel(reference, currentLabel, counts) {
+export function archiveCountLabel(reference, counts) {
   let url;
   try { url = new URL(reference, ORIGIN); } catch { return null; }
   if (!SITE_HOSTS.has(url.hostname)) return null;
   if (decodeURIComponent(url.pathname) === "/category/所有文章/") return `All posts (${counts.total} 篇)`;
   const year = url.pathname.match(/^\/(\d{4})\/$/)?.[1];
-  // Existing historical labels already show their imported page totals.
-  // Bare/new year labels and article-count labels stay synchronized with posts.
-  if (year && !/\bpages?\b/i.test(currentLabel)) return `${year} (${counts.byYear[year] ?? 0} 篇)`;
+  if (year) return `${year} (${counts.byYear[year] ?? 0} 篇)`;
   return null;
 }
 
@@ -47,7 +45,7 @@ export async function syncArchiveCounts(repoRoot) {
     const $ = load(await readFile(file, "utf8"));
     $("#menu-year-list a[href]").each((_index, element) => {
       const anchor = $(element);
-      const label = archiveCountLabel(anchor.attr("href"), anchor.text(), counts);
+      const label = archiveCountLabel(anchor.attr("href"), counts);
       if (label) anchor.text(label);
     });
     const html = $("body").html().trim();

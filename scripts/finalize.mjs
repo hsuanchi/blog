@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, normalizeExternalLinks } from "./lib.mjs";
 import { syncArchiveCounts } from "./archive-counts.mjs";
+import { renderHomepage } from "./homepage.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -14,7 +15,8 @@ const SEARCH_INDEX_OUTPUT = path.join(DOCS_ROOT, "assets", "js", "search-index.j
 const SEARCH_PAGE_OUTPUT = path.join(DOCS_ROOT, "search", "index.html");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 const OFFLINE_RUNTIME_VERSION = "20260802-7";
-await syncArchiveCounts(REPO_ROOT);
+const articleArchiveCounts = await syncArchiveCounts(REPO_ROOT);
+await renderHomepage(REPO_ROOT, articleArchiveCounts);
 const COMPONENT_VERSIONS = Object.fromEntries(await Promise.all(
   ["header", "sidebar", "footer"].map(async (name) => [name, createHash("sha256")
     .update(await readFile(path.join(DOCS_ROOT, "assets/js/components", `${name}.js`)))
@@ -818,7 +820,8 @@ for (const file of htmlFiles) {
         $("time.entry-date").first().attr("datetime") ??
         modified
     });
-    searchDocuments.push({
+    // Legacy archives also declare og:type=article; search should return actual posts.
+    if ($("body").hasClass("single-post")) searchDocuments.push({
       title: plainText(title),
       description: plainText(articleDescription),
       url: new URL(canonical).pathname,
@@ -837,6 +840,7 @@ await writeFileEnsured(
 );
 
 const $search = load(homepage, { decodeEntities: false });
+$search('link[href*="assets/css/homepage.css"]').remove();
 $search("body").removeClass("home blog").addClass("search-results-page");
 $search("title").text("搜尋文章 — Max行銷誌");
 $search('link[rel="canonical"]').attr("href", `${SITE_ORIGIN}/search/`);
@@ -878,6 +882,7 @@ retargetPageResources($search, `${SITE_ORIGIN}/`, SEARCH_PAGE_OUTPUT);
 await writeFileEnsured(SEARCH_PAGE_OUTPUT, cleanGeneratedText($search.html()));
 
 const $404 = load(homepage, { decodeEntities: false });
+$404('link[href*="assets/css/homepage.css"], script.yoast-schema-graph[type="application/ld+json"]').remove();
 $404("body")
   .removeClass("home blog")
   .addClass("error404");
