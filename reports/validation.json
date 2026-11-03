@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-03T08:36:15.977Z",
+  "generatedAt": "2026-11-03T08:42:21.225Z",
   "files": {
-    "total": 10412,
+    "total": 10411,
     "html": 852,
-    "assets": 9560
+    "assets": 9559
   },
   "componentCoverage": {
     "header": 852,
@@ -79,7 +79,7 @@
     "missingAuthorSections": []
   },
   "externalLinkNavigation": {
-    "linksChecked": 767,
+    "linksChecked": 771,
     "linksMissingAttributes": []
   },
   "netsuiteImageNavigation": {

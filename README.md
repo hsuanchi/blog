@@ -42,8 +42,6 @@ npm run serve
 
 `finalize` 會依文章內容自動更新側邊欄與頁尾 Archives 的文章總數及所有年度篇數，統一使用「篇」，並更新共用元件版本；`validate` 會核對顯示的篇數。
 
-首頁內容原稿位於 `scripts/content/homepage.html`，樣式位於 `docs/assets/css/homepage.css`。`scripts/homepage.mjs` 會在建置時更新總篇數與近期實作筆記，維持六個主題入口、站內搜尋與作者介紹。
-
 NetSuite 教學系列先閱讀並遵循 [NetSuite 教學系列製作規範](NETSUITE_GUIDE_RULES.md)，沿用已確認的首圖、內文配色、FAQ 與預覽發布流程。
 
 未來可直接複製既有文章目錄中的 `index.html`，保留共用元件的三個 `<script>`，再修改 `<head>` SEO 資訊與 `<article>` 內容。完成後執行 `npm run finalize && npm run validate`，更新搜尋索引、sitemap 與共用檢查；輸出仍是可直接部署的純靜態檔案，不需要框架或伺服器端建置。
