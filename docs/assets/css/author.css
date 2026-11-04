@@ -1,0 +1,772 @@
+/* About-the-author page (/post/author/). Shares the homepage header (#maxlist-home-header,
+   styled in homepage.css) and keeps the shared footer, post navigation and comments. */
+body.postid-3987 {
+  --mh-ink: #14213d;
+  --mh-ink-2: #3d4a63;
+  --mh-muted: #5d6679;
+  --mh-line: #e4e1da;
+  --mh-paper: #faf8f4;
+  --mh-accent: #e8603c;
+  --mh-accent-text: #c4472a;
+  --mh-accent-soft: #fdeee8;
+  --mh-serif: "Noto Serif TC", "Songti TC", serif;
+  background: var(--mh-paper);
+}
+
+body.postid-3987 #masthead,
+body.postid-3987 #masthead-mobile,
+body.postid-3987 .header-clone,
+body.postid-3987 .sydney-hero-area,
+body.postid-3987 #secondary {
+  display: none !important;
+}
+
+body.postid-3987 .page-wrap {
+  padding: 0 !important;
+}
+
+body.postid-3987 .page-wrap > .content-wrapper.container,
+body.postid-3987 #content .row,
+body.postid-3987 #primary,
+body.postid-3987 #primary article,
+body.postid-3987 #primary .content-inner,
+body.postid-3987 #primary .entry-content {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* The page title stays in the markup for search engines; the hero carries the visible heading. */
+body.postid-3987 article .entry-header {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+#maxlist-author {
+  margin: 0 !important;
+  font-family: "Noto Sans TC", -apple-system, "PingFang TC", "Microsoft JhengHei", sans-serif;
+  color: var(--mh-ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+#maxlist-author a {
+  color: var(--mh-ink);
+  text-decoration: none;
+}
+
+#maxlist-author a:hover {
+  color: var(--mh-accent);
+}
+
+#maxlist-author h2,
+#maxlist-author h3,
+#maxlist-author h4,
+#maxlist-author p,
+#maxlist-author ul,
+#maxlist-author ol,
+#maxlist-author figure {
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+#maxlist-author ul,
+#maxlist-author ol {
+  list-style: none;
+}
+
+#maxlist-author img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hero */
+.ma-hero {
+  background: var(--mh-ink);
+  color: #e9e5dc;
+}
+
+.ma-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 820px;
+  padding: 80px 0 88px;
+  text-align: center;
+}
+
+.ma-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+#maxlist-author .ma-id img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid #f4f1ea;
+  box-shadow: 0 0 0 2px var(--mh-accent);
+  object-fit: cover;
+}
+
+.ma-hero .mh-kicker {
+  color: #f08a68;
+}
+
+#maxlist-author .ma-title {
+  margin: 10px 0 20px;
+  font-family: var(--mh-serif);
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+#maxlist-author .ma-lead {
+  max-width: 620px;
+  font-size: 19px;
+  line-height: 1.9;
+  color: #e9e5dc;
+}
+
+#maxlist-author .ma-quote {
+  margin: 28px 0 24px;
+  padding-top: 24px;
+  border-top: 2px solid var(--mh-accent);
+  font-family: var(--mh-serif);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+#maxlist-author .ma-coffee {
+  max-width: 620px;
+  font-size: 16px;
+  color: #b7bfd0;
+}
+
+.ma-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin-top: 32px;
+}
+
+#maxlist-author .ma-hero .mh-btn-accent:hover {
+  background: #ffffff;
+  color: var(--mh-ink) !important;
+}
+
+#maxlist-author .ma-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#maxlist-author .ma-social a {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+  color: #ffffff;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+#maxlist-author .ma-social a:hover {
+  border-color: var(--mh-accent);
+  background: var(--mh-accent);
+  color: #ffffff;
+}
+
+.ma-social svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Section frame */
+.ma-section {
+  padding: 96px 0;
+}
+
+.ma-section-white {
+  background: #ffffff;
+  border-top: 1px solid var(--mh-line);
+  border-bottom: 1px solid var(--mh-line);
+}
+
+.ma-head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+
+.ma-head-center {
+  align-items: center;
+  text-align: center;
+}
+
+#maxlist-author .ma-head h2 {
+  font-family: var(--mh-serif);
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 1.3;
+  color: var(--mh-ink);
+}
+
+#maxlist-author .ma-head p {
+  color: var(--mh-ink-2);
+}
+
+/* Skills */
+.ma-skills {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#maxlist-author .ma-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 24px;
+  border: 1px solid var(--mh-line);
+  border-radius: 16px;
+  background: var(--mh-paper);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+#maxlist-author .ma-skill:hover {
+  border-color: var(--mh-ink);
+  transform: translateY(-3px);
+  color: var(--mh-ink);
+}
+
+.ma-skill-icon {
+  margin-bottom: 6px;
+}
+
+.ma-skill-title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.ma-skill-desc {
+  font-size: 15px;
+  color: var(--mh-ink-2);
+}
+
+.ma-skill-more {
+  margin-top: auto;
+  padding-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mh-accent-text);
+}
+
+/* Experience */
+.ma-timeline {
+  position: relative;
+  max-width: 960px;
+}
+
+.ma-job {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 32px;
+  padding-bottom: 48px;
+}
+
+.ma-job:last-child {
+  padding-bottom: 0;
+}
+
+#maxlist-author .ma-when {
+  padding-top: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mh-muted);
+  text-align: right;
+}
+
+.ma-job-body {
+  position: relative;
+  padding-left: 32px;
+  border-left: 2px solid var(--mh-line);
+}
+
+.ma-job:last-child .ma-job-body {
+  border-left-color: transparent;
+}
+
+.ma-job-body::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: -8px;
+  width: 14px;
+  height: 14px;
+  border: 3px solid var(--mh-paper);
+  border-radius: 50%;
+  background: var(--mh-ink);
+  box-shadow: 0 0 0 2px var(--mh-ink);
+}
+
+.ma-job-now .ma-job-body::before {
+  background: var(--mh-accent);
+  box-shadow: 0 0 0 2px var(--mh-accent);
+}
+
+#maxlist-author .ma-job h3 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--mh-ink);
+}
+
+.ma-place {
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--mh-muted);
+}
+
+#maxlist-author .ma-role {
+  margin: 4px 0 14px;
+  font-weight: 700;
+  color: var(--mh-accent-text);
+}
+
+#maxlist-author .ma-job h4 {
+  margin: 18px 0 6px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mh-ink);
+}
+
+#maxlist-author .ma-job h4:first-of-type {
+  margin-top: 4px;
+}
+
+.ma-period {
+  margin-left: 6px;
+  font-weight: 500;
+  color: var(--mh-muted);
+}
+
+#maxlist-author .ma-points li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 15px;
+  color: var(--mh-ink-2);
+}
+
+#maxlist-author .ma-points li + li {
+  margin-top: 4px;
+}
+
+.ma-points li::before {
+  content: "";
+  position: absolute;
+  top: 0.75em;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--mh-accent);
+}
+
+/* Writing: a per-year chart and archive (filled in by scripts/author-page.mjs). */
+.ma-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  height: 196px;
+  border-bottom: 2px solid var(--mh-ink);
+}
+
+#maxlist-author .ma-bar {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  height: 100%;
+}
+
+.ma-bar-fill {
+  width: 100%;
+  max-width: 56px;
+  border-radius: 6px 6px 0 0;
+  background: #cdd3df;
+  transition: background 0.2s;
+}
+
+.ma-bar:hover .ma-bar-fill {
+  background: var(--mh-ink-2);
+}
+
+.ma-bar.is-peak .ma-bar-fill {
+  background: var(--mh-accent);
+}
+
+.ma-bar-value {
+  font-family: var(--mh-serif);
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--mh-ink-2);
+}
+
+.ma-bar.is-peak .ma-bar-value {
+  color: var(--mh-accent-text);
+}
+
+.ma-bar-year {
+  margin-bottom: -32px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--mh-muted);
+}
+
+#maxlist-author .ma-chart-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 44px;
+  font-size: 14px;
+  color: var(--mh-muted);
+}
+
+.ma-chart-note i {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--mh-accent);
+}
+
+.ma-years {
+  margin-top: 36px;
+  border-bottom: 1px solid var(--mh-line);
+}
+
+.ma-year {
+  scroll-margin-top: 90px;
+  border-top: 1px solid var(--mh-line);
+}
+
+.ma-year-head {
+  display: grid;
+  grid-template-columns: 110px 72px minmax(0, 1fr) 28px;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.ma-year-head::-webkit-details-marker {
+  display: none;
+}
+
+.ma-year-num {
+  font-family: var(--mh-serif);
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.ma-year-count {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mh-accent-text);
+}
+
+.ma-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ma-tag {
+  padding: 2px 12px;
+  border: 1px solid var(--mh-line);
+  border-radius: 999px;
+  background: var(--mh-paper);
+  font-size: 13px;
+  color: var(--mh-ink-2);
+}
+
+.ma-year-toggle::before {
+  content: "＋";
+  display: block;
+  font-size: 20px;
+  color: var(--mh-muted);
+  text-align: right;
+}
+
+.ma-year[open] .ma-year-toggle::before {
+  content: "－";
+  color: var(--mh-accent);
+}
+
+.ma-year-head:hover .ma-year-num {
+  color: var(--mh-accent);
+}
+
+#maxlist-author .ma-posts {
+  margin: 0 0 6px 126px;
+}
+
+#maxlist-author .ma-posts li {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px dashed var(--mh-line);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ma-post-date {
+  padding-top: 2px;
+  font-size: 14px;
+  color: var(--mh-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.ma-post-cat {
+  padding-top: 3px;
+  font-size: 13px;
+  color: var(--mh-muted);
+  white-space: nowrap;
+}
+
+#maxlist-author .ma-year-all {
+  display: inline-block;
+  margin: 6px 0 22px 126px;
+  border-bottom: 1px solid var(--mh-accent-text);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--mh-accent-text);
+}
+
+/* Finalize appends the shared author box to every post; on the author page it would only repeat the page. */
+body.postid-3987 [data-maxlist-article-author] {
+  display: none !important;
+}
+
+/* Closing */
+.ma-contact {
+  background: var(--mh-paper);
+  color: var(--mh-ink-2);
+}
+
+.ma-contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#maxlist-author .ma-contact h2 {
+  font-family: var(--mh-serif);
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--mh-ink);
+}
+
+#maxlist-author .ma-contact p {
+  color: var(--mh-ink-2);
+}
+
+#maxlist-author .ma-contact .mh-kicker {
+  color: var(--mh-accent-text);
+}
+
+#maxlist-author .ma-contact .mh-btn-accent:hover {
+  background: var(--mh-ink);
+  color: #ffffff !important;
+}
+
+#maxlist-author .ma-contact .ma-social a {
+  border-color: rgba(20, 33, 61, 0.22);
+  color: var(--mh-ink);
+}
+
+#maxlist-author .ma-contact .ma-social a:hover {
+  border-color: var(--mh-accent);
+  color: #ffffff;
+}
+
+.ma-contact .ma-actions {
+  justify-content: center;
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .ma-skills {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 767px) {
+  .ma-hero-inner {
+    padding: 52px 0 60px;
+  }
+
+  #maxlist-author .ma-id img {
+    width: 80px;
+    height: 80px;
+  }
+
+  #maxlist-author .ma-title {
+    margin-top: 6px;
+    font-size: 38px;
+  }
+
+  #maxlist-author .ma-lead {
+    font-size: 17px;
+  }
+
+  #maxlist-author .ma-quote {
+    font-size: 20px;
+  }
+
+  .ma-section {
+    padding: 64px 0;
+  }
+
+  .ma-head {
+    margin-bottom: 32px;
+  }
+
+  #maxlist-author .ma-head h2 {
+    font-size: 28px;
+  }
+
+  .ma-skills {
+    gap: 12px;
+  }
+
+  #maxlist-author .ma-skill {
+    padding: 20px 16px;
+  }
+
+  .ma-skill-title {
+    font-size: 18px;
+  }
+
+  .ma-skill-desc {
+    font-size: 14px;
+  }
+
+  .ma-job {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+    padding-bottom: 0;
+  }
+
+  #maxlist-author .ma-when {
+    padding: 0 0 0 26px;
+    text-align: left;
+    border-left: 2px solid var(--mh-line);
+  }
+
+  .ma-job-body {
+    padding: 0 0 40px 26px;
+    border-left-color: var(--mh-line) !important;
+  }
+
+  .ma-job:last-child .ma-job-body {
+    padding-bottom: 0;
+  }
+
+  .ma-job-body::before {
+    top: -22px;
+  }
+
+  #maxlist-author .ma-job h3 {
+    font-size: 21px;
+  }
+
+  .ma-contact-inner {
+    padding: 60px 0;
+  }
+
+  #maxlist-author .ma-contact h2 {
+    font-size: 26px;
+  }
+
+  .ma-chart {
+    gap: 6px;
+    height: 170px;
+  }
+
+  .ma-bar-value {
+    font-size: 13px;
+  }
+
+  .ma-bar-year {
+    font-size: 11px;
+  }
+
+  .ma-year-head {
+    grid-template-columns: 76px minmax(0, 1fr) 24px;
+    gap: 6px 12px;
+    padding: 16px 0;
+  }
+
+  .ma-year-num {
+    font-size: 26px;
+  }
+
+  .ma-tags {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  #maxlist-author .ma-posts {
+    margin-left: 0;
+  }
+
+  #maxlist-author .ma-posts li {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 10px;
+    font-size: 15px;
+  }
+
+  .ma-post-cat {
+    display: none;
+  }
+
+  #maxlist-author .ma-year-all {
+    margin-left: 0;
+  }
+}
+

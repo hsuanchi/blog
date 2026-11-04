@@ -27,7 +27,13 @@ export async function collectHomepagePosts(docsRoot) {
     const categories = ($("article").first().attr("class") ?? "").split(/\s+/)
       .filter((name) => name.startsWith("category-"))
       .map((name) => name.slice("category-".length));
-    posts.push({ slug: entry.name, categories });
+    // Same year rule as the yearly archives (scripts/archive-counts.mjs).
+    const published = $('meta[property="article:published_time"]').attr("content") || $("time.entry-date").first().attr("datetime") || "";
+    const title = ($("h1.entry-title").first().text() || $('meta[property="og:title"]').attr("content") || entry.name)
+      .replace(/\s*-\s*Max行銷誌\s*$/, "").trim();
+    const categoryNames = $(".entry-meta .cat-links a").toArray().map((element) => $(element).text().trim())
+      .filter((name) => name && !["All posts", "所有文章"].includes(name));
+    posts.push({ slug: entry.name, categories, published, title, categoryNames });
   }
   return posts;
 }

@@ -5,6 +5,7 @@ import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, normalizeExternalLinks } from "./lib.mjs";
 import { syncArchiveCounts } from "./archive-counts.mjs";
 import { collectHomepagePosts, enhanceHomepage, homepageTopicCounts } from "./homepage.mjs";
+import { enhanceAuthorPage } from "./author-page.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -16,7 +17,8 @@ const SEARCH_PAGE_OUTPUT = path.join(DOCS_ROOT, "search", "index.html");
 const SITE_ORIGIN = "https://www.maxlist.xyz";
 const OFFLINE_RUNTIME_VERSION = "20260802-7";
 await syncArchiveCounts(REPO_ROOT);
-const homepageData = { counts: homepageTopicCounts(await collectHomepagePosts(DOCS_ROOT)) };
+const homepagePosts = await collectHomepagePosts(DOCS_ROOT);
+const homepageData = { counts: homepageTopicCounts(homepagePosts) };
 const COMPONENT_VERSIONS = Object.fromEntries(await Promise.all(
   ["header", "sidebar", "footer"].map(async (name) => [name, createHash("sha256")
     .update(await readFile(path.join(DOCS_ROOT, "assets/js/components", `${name}.js`)))
@@ -743,6 +745,11 @@ for (const file of htmlFiles) {
       heading.tagName = "h1";
       heading.name = "h1";
     }
+  }
+  // The about-the-author page reuses the homepage learning-path steps, so its counts stay in sync too.
+  if (relativeFile === "post/author/index.html") {
+    enhanceHomepage($, homepageData);
+    enhanceAuthorPage($, { posts: homepagePosts });
   }
   if (relativeFile === "index.html") {
     $("#coffee-guides, #netsuite-guides, #maxlist-coffee-home-style").remove();
