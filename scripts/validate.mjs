@@ -3,7 +3,7 @@ import path from "node:path";
 import { load } from "cheerio";
 import { writeFileEnsured, isNetsuiteImageZoomLink, isExternalWebLink } from "./lib.mjs";
 import { countArticleArchives, archiveCountLabel } from "./archive-counts.mjs";
-import { HOMEPAGE_TOPICS, collectHomepagePosts, homepageTopicCounts } from "./homepage.mjs";
+import { HOMEPAGE_TOPICS, collectHomepagePosts, homepageCountText, homepageTopicCounts } from "./homepage.mjs";
 
 const REPO_ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS_ROOT = path.join(REPO_ROOT, "docs");
@@ -326,9 +326,11 @@ const homepageSections = {
   topicCountMismatches: []
 };
 for (const topic of HOMEPAGE_TOPICS) {
-  const actual = plainText($homepage(`h3 a[href="#${topic.anchor}"]`).text());
-  const expected = `${topic.label}(${homepageCounts[topic.anchor]} 篇)`;
-  if (actual !== expected) homepageSections.topicCountMismatches.push({ anchor: topic.anchor, actual, expected });
+  const expected = homepageCountText(homepageCounts[topic.anchor]);
+  const labels = $homepage(`[data-topic-count="${topic.anchor}"]`).toArray().map((element) => plainText($homepage(element).text()));
+  if (!$homepage(`#${topic.anchor}`).length || !labels.length || labels.some((actual) => actual !== expected)) {
+    homepageSections.topicCountMismatches.push({ anchor: topic.anchor, actual: labels, expected });
+  }
 }
 
 const idsByFile = new Map();

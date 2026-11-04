@@ -841,7 +841,7 @@ await writeFileEnsured(
 );
 
 const $search = load(homepage, { decodeEntities: false });
-$search('link[href*="assets/css/homepage.css"]').remove();
+$search('link[href*="assets/css/homepage.css"], #maxlist-home-fonts-css, #maxlist-home-header').remove();
 $search("body").removeClass("home blog").addClass("search-results-page");
 $search("title").text("搜尋文章 — Max行銷誌");
 $search('link[rel="canonical"]').attr("href", `${SITE_ORIGIN}/search/`);
@@ -883,7 +883,7 @@ retargetPageResources($search, `${SITE_ORIGIN}/`, SEARCH_PAGE_OUTPUT);
 await writeFileEnsured(SEARCH_PAGE_OUTPUT, cleanGeneratedText($search.html()));
 
 const $404 = load(homepage, { decodeEntities: false });
-$404('link[href*="assets/css/homepage.css"]').remove();
+$404('link[href*="assets/css/homepage.css"], #maxlist-home-fonts-css, #maxlist-home-header').remove();
 $404("body")
   .removeClass("home blog")
   .addClass("error404");

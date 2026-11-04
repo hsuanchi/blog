@@ -39,10 +39,13 @@ export function homepageTopicCounts(posts) {
   ]));
 }
 
+export function homepageCountText(count) {
+  return `${count} 篇`;
+}
+
+// Every element tagged data-topic-count (learning-path steps, "看全部" buttons) shows its topic's count.
 export function enhanceHomepage($, { counts }) {
   for (const topic of HOMEPAGE_TOPICS) {
-    $(`h3 a[href="#${topic.anchor}"]`).html(`${topic.label}<br>(${counts[topic.anchor]} 篇)`);
+    $(`[data-topic-count="${topic.anchor}"]`).text(homepageCountText(counts[topic.anchor]));
   }
-  // Drop the generated latest-posts row from earlier builds.
-  $("#maxlist-latest-posts").remove();
 }
