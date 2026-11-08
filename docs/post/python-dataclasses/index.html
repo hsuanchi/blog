@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=8db72127742f"></script>
+	<script src="../../assets/js/components/header.js?v=106f9c99f99f"></script>
 
 
 
@@ -199,14 +199,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<article id="post-7458" class="post-7458 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-base tag-__post_init__ tag-data-classes tag-dataframe-with-dataclass tag-immutable-dataclasses tag-python tag-python-data-classes">
+<article id="post-7458" class="post-7458 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-base tag-__post_init__ tag-data-classes tag-dataframe-with-dataclass tag-immutable-dataclasses tag-python tag-python-data-classes" data-category-names="[&quot;Python 基礎教學&quot;]">
 	<div class="content-inner">
 
 
-		<header class="entry-header">
+		<header class="entry-header maxlist-article-header">
 
 		<h1 class="title-post entry-title">[Python 教學] dataclass 是什麼? (python 3.7+)</h1>
-					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By  <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/" rel="category tag">All posts</a>、<a href="/category/python-base/" rel="category tag">Python 基礎教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/python-dataclasses/" rel="bookmark"><time class="entry-date updated-time" datetime="2022-12-19T07:15:04+00:00">19 12 月, 2022</time></a></span></div>			</header><!-- .entry-header -->
+					<div class="entry-meta entry-meta-below maxlist-article-meta"><span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="2022-04-30T06:15:00+00:00">2022 年 4 月 30 日</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="2022-12-19T07:15:04+00:00">2022 年 12 月 19 日</time></span>
+  </div></div>			</header><!-- .entry-header -->
 
 					<div class="entry-thumb ">
 			<img width="968" height="541" alt="什麼是 python data classes" decoding="async" fetchpriority="high" data-srcset="../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg 968w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-300x168.jpg 300w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-768x429.jpg 768w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-920x514.jpg 920w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-230x129.jpg 230w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-350x196.jpg 350w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-480x268.jpg 480w" data-src="../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg" data-sizes="(max-width: 968px) 100vw, 968px" class="attachment-large-thumb size-large-thumb wp-post-image lazyload" src="../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg" srcset="../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg 968w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-300x168.jpg 300w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-768x429.jpg 768w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-920x514.jpg 920w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-230x129.jpg 230w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-350x196.jpg 350w, ../../image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-480x268.jpg 480w"><noscript><img width="968" height="541" src="https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="什麼是 python data classes" decoding="async" fetchpriority="high" srcset="https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes.jpg 968w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-300x168.jpg 300w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-768x429.jpg 768w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-920x514.jpg 920w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-230x129.jpg 230w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-350x196.jpg 350w, https://www.maxlist.xyz/image/%E4%BB%80%E9%BA%BC%E6%98%AFpython-data-classes-480x268.jpg 480w" sizes="(max-width: 968px) 100vw, 968px" /></noscript>		</div>
@@ -471,14 +474,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=db13ef55df21"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=20734ded76b8"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=1750d4e63345"></script>
+<script src="../../assets/js/components/footer.js?v=282aa4436c59"></script>
 
 	<!-- #colophon -->
 

@@ -5,14 +5,28 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Tue, 03 Nov 2026 08:36:08 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 16:09:59 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Studio 教學 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</guid>
+      <pubDate>Sat, 07 Nov 2026 16:00:00 GMT</pubDate>
+      <description>分類: Data Studio 教學 &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-l…</description>
+    </item>
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Mon, 02 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Max行銷誌全部 183 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
+      <pubDate>Sat, 07 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Max行銷誌全部 184 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
+    </item>
+    <item>
+      <title>【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？</title>
+      <link>https://www.maxlist.xyz/post/data-studio-union/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/data-studio-union/</guid>
+      <pubDate>Fri, 06 Nov 2026 16:00:00 GMT</pubDate>
+      <description>用可點選的範例認識 Data Studio 的六種合併方式，搞懂 JOIN 和聯集（UNION）的差別，再跟著實際畫面完成一份報表。</description>
     </item>
     <item>
       <title>Chrome 擴充套件匯入教學：ZIP 解壓縮、開發人員模式與手動安裝</title>
@@ -57,18 +71,11 @@
       <description>分析 3,091 則 Google Maps 公開評論，從咖啡信號、星等、口碑與負評精選宮古島 15 間咖啡店，附完整評論、地圖與店家資訊。</description>
     </item>
     <item>
-      <title>Looker Studio 教學 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</guid>
-      <pubDate>Sun, 08 Mar 2026 05:15:06 GMT</pubDate>
-      <description>分類: Looker Studio 教學 &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-l…</description>
-    </item>
-    <item>
-      <title>[Looker Studio 教學] Search Console 網站曝光/網址曝光 如何選擇？ - Max行銷誌</title>
+      <title>[Data Studio 教學] Search Console 網站曝光/網址曝光 如何選擇？ - Max行銷誌</title>
       <link>https://www.maxlist.xyz/post/looker-studio-gsc-data-source/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/post/looker-studio-gsc-data-source/</guid>
       <pubDate>Sun, 08 Mar 2026 05:15:01 GMT</pubDate>
-      <description>當你在 Looker Studio 串接 Google Search Console 時，會發現系統提供兩種不同的資料來源： 1. 什麼是「網站曝光 (Site Impression)」 定義 網站曝光（Site Impression）是以 整個網站為單位統計搜尋結果中的曝光與點擊數據。當使用者在搜尋引擎輸入關鍵字時…</description>
+      <description>當你在 Data Studio 串接 Google Search Console 時，會發現系統提供兩種不同的資料來源： 1. 什麼是「網站曝光 (Site Impression)」 定義 網站曝光（Site Impression）是以 整個網站為單位統計搜尋結果中的曝光與點擊數據。當使用者在搜尋引擎輸入關鍵字時…</description>
     </item>
     <item>
       <title>Google Tag Manager 教學 彙整 - Max行銷誌</title>
@@ -85,18 +92,18 @@
       <description>AI 已經開始帶來網站流量，但在 GA4 裡往往無法直接看出來。若想知道 AI 帶來多少流量、進到哪些頁面，以及使用者是否真的閱讀內容，就必須把 AI 流量獨立分析。這篇文章會用 GA4 與 Looker，帶你建立一套可實際追蹤 AI 流量的分析儀表板。 這篇文章會帶你做到什麼？ 第一張 Dashboard 會幫助你…</description>
     </item>
     <item>
-      <title>[超完整表格] Looker Studio、Tableau 與 Power BI 比較：導入前的四個考慮要素 - Max行銷誌</title>
+      <title>[超完整表格] Data Studio、Tableau 與 Power BI 比較：導入前的四個考慮要素 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/post/lookerstudio-vs-tableau-vs-powerbi/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/post/lookerstudio-vs-tableau-vs-powerbi/</guid>
       <pubDate>Wed, 05 Nov 2025 03:11:40 GMT</pubDate>
-      <description>本篇整理了台灣最常被使用的三個 BI 工具：Looker Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Looker Studio vs Tableau vs Power BI 比較表格： 比較面向 Lo…</description>
+      <description>本篇整理了台灣最常被使用的三個 BI 工具：Data Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Data Studio vs Tableau vs Power BI 比較表格： 比較面向 Lo…</description>
     </item>
     <item>
-      <title>Looker Studio 教學 彙整 - 第 2 頁，總計 2 頁 - Max行銷誌</title>
+      <title>Data Studio 教學 彙整 - 第 2 頁，總計 2 頁 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</guid>
       <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description>分類: Looker Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
+      <description>分類: Data Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
     </item>
     <item>
       <title>一文搞懂 Kobo 電子書格式：EPUB、Kepub、版本差異與閱讀體驗 - Max行銷誌</title>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/post/uuid/</guid>
       <pubDate>Thu, 08 Feb 2024 05:23:11 GMT</pubDate>
       <description>UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…</description>
-    </item>
-    <item>
-      <title>Git 教學 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/git-%E6%95%99%E5%AD%B8/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/git-%E6%95%99%E5%AD%B8/</guid>
-      <pubDate>Tue, 02 Jan 2024 15:26:55 GMT</pubDate>
-      <description>分類: Git 教學 &lt;img width=&quot;1916&quot; height=&quot;1070&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2022/12/Git-入門指南.jpg&quot; class=&quot;attachment-large-thumb size-large-thumb…</description>
     </item>
   </channel>
 </rss>

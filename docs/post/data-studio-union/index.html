@@ -1,0 +1,380 @@
+<!DOCTYPE html><html lang="zh-TW"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？ - Max行銷誌</title>
+  <meta name="description" content="用可點選的範例認識 Data Studio 的六種合併方式，搞懂 JOIN 和聯集（UNION）的差別，再跟著實際畫面完成一份報表。">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Max">
+  <link rel="canonical" href="https://www.maxlist.xyz/post/data-studio-union/">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Max行銷誌">
+  <meta property="og:title" content="【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？">
+  <meta property="og:description" content="用可點選的範例認識 Data Studio 的六種合併方式，搞懂 JOIN 和聯集（UNION）的差別，再跟著實際畫面完成一份報表。">
+  <meta property="og:url" content="https://www.maxlist.xyz/post/data-studio-union/">
+  <meta property="og:image" content="https://www.maxlist.xyz/image/data-studio-union/cover.jpg?v=brand-v2-e2e570307a51">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Data Studio：UNION 資料混合">
+  <meta property="article:published_time" content="2026-11-07T00:00:00+08:00">
+  <meta property="article:modified_time" content="2026-11-08T00:00:00+08:00">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.maxlist.xyz/image/data-studio-union/cover.jpg?v=brand-v2-e2e570307a51">
+  <meta name="twitter:image:alt" content="Data Studio：UNION 資料混合">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.maxlist.xyz/post/data-studio-union/#article",
+    "mainEntityOfPage": "https://www.maxlist.xyz/post/data-studio-union/",
+    "headline": "【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？",
+    "description": "用可點選的範例認識 Data Studio 的六種合併方式，搞懂 JOIN 和聯集（UNION）的差別，再跟著實際畫面完成一份報表。",
+    "datePublished": "2026-11-07T00:00:00+08:00",
+    "dateModified": "2026-11-08T00:00:00+08:00",
+    "inLanguage": "zh-TW",
+    "image": "https://www.maxlist.xyz/image/data-studio-union/cover.jpg?v=brand-v2-e2e570307a51",
+    "author": {"@type": "Person", "name": "Max", "url": "https://www.maxlist.xyz/post/author/"},
+    "publisher": {"@type": "Organization", "name": "Max行銷誌", "url": "https://www.maxlist.xyz/"}
+  }
+  </script>
+  <link rel="alternate" type="application/rss+xml" title="訂閱《Max行銷誌》» 資訊提供" href="../../feed.xml">
+  <link rel="icon" href="../../image/Max%E8%A1%8C%E9%8A%B7%E8%AA%8C-150x150.png" sizes="32x32">
+  <link rel="stylesheet" href="../../wp-content/themes/sydney/css/bootstrap/bootstrap.min.css?ver=1">
+  <link rel="stylesheet" href="../../wp-content/themes/sydney/style.css?ver=20221019">
+  <link rel="stylesheet" href="../../wp-content/themes/sydney/css/styles.min.css?ver=20221019">
+  <link rel="stylesheet" href="../../assets/css/posts/data-studio-union.css?v=20261108-3">
+  <script src="../../wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({pageTitle: document.title, pagePostType: "post", pagePostType2: "single-post", pageCategory: ["所有文章", "Data Studio-教學"], pagePostAuthor: "Max", postCountOnPage: 1});
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WSG8N3Q');
+  </script>
+<meta name="maxlist-static-snapshot" content="2026-08-01"><meta name="referrer" content="strict-origin-when-cross-origin"></head>
+<body class="wp-singular post-template-default single single-post single-format-standard wp-theme-sydney theme-sydney menu-inline postid-11010">
+<span id="toptarget"></span>
+<div id="page" class="hfeed site">
+  <a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
+  <script src="../../assets/js/components/header.js?v=106f9c99f99f"></script>
+  <div class="sydney-hero-area"><div class="header-image"></div></div>
+  <div id="content" class="page-wrap">
+    <div class="content-wrapper container">
+      <div class="row">
+        <div id="primary" class="content-area sidebar-right col-md-9 container-normal">
+          <main id="main" class="post-wrap">
+<article id="post-11010" class="post-11010 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-looker-studio-" data-category-names="[&quot;Data Studio 教學&quot;]">
+  <div class="content-inner">
+    <header class="entry-header maxlist-article-header">
+      <h1 class="title-post entry-title">【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？</h1>
+      <div class="entry-meta entry-meta-below maxlist-article-meta"><span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span>
+
+      <div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="2026-11-07T00:00:00+08:00">2026 年 11 月 7 日</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="2026-11-08T00:00:00+08:00">2026 年 11 月 8 日</time></span>
+  </div></div>
+    </header>
+    <div class="entry-thumb"><img src="../../image/data-studio-union/cover.jpg?v=brand-v2-e2e570307a51" width="1200" height="675" alt="Data Studio：UNION 資料混合" decoding="async" fetchpriority="high"></div>
+    <div class="entry-content data-studio-union-guide">
+      <p>這篇文章會用簡單的商品與銷售案例，帶你認識 Data Studio的六種資料合併方式，搞懂<strong>什麼時候該用 JOIN、什麼時候該用聯集（UNION）</strong>。接著會說明新加入的聯集能解決什麼問題、合併時要注意哪些細節，最後搭配實際操作畫面，帶你完成資料合併與趨勢圖設定。</p>
+
+      <details class="guide-toc" open="">
+        <summary>文章目錄</summary>
+        <ol>
+          <li><a href="#join-vs-union">六種合併方式</a></li>
+          <li><a href="#what-is-union">聯集是什麼？為什麼需要它？</a></li>
+          <li><a href="#search-console">實作案例</a></li>
+          <li><a href="#faq">常見問題</a></li>
+          <li><a href="#related-reading">其他延伸閱讀</a></li>
+        </ol>
+      </details>
+
+      <h2 id="join-vs-union">1. Data Studio 的六種合併方式</h2>
+      <p>資料分散在不同表格，卻想放進同一張圖表分析時，可以使用 Data Studio 的「混合資料」。其中的「合併設定」，就是決定這些表要怎麼組合。</p>
+      <p>例如，商品名稱在一張表、銷量在另一張表，就要用商品代號找出對應資料，放在一起看；如果是每個月各有一份銷售月報，就要把各月的紀錄收進同一張表。<strong>前者適合用 JOIN，後者適合用聯集。</strong></p>
+      <p>六種選項中，前五種屬於 JOIN，最後一種是聯集。先看前四種 JOIN：它們都會找兩張表的共同資料，差別在於<strong>找不到對應資料時，要留下哪一邊</strong>。下面用同一組商品資料來比較：</p>
+      <ul>
+        <li><strong>左表「商品清單」：</strong>A 是馬克杯，B 是保溫瓶。</li>
+        <li><strong>右表「本月銷量」：</strong>B 賣了 7 件，C 賣了 2 件。</li>
+      </ul>
+      <p>用商品代號配對，只有 B 同時出現在兩張表。點選左側選單，看看 A、B、C 在不同選法下會不會留下；交叉與聯集則各用一個更適合的例子說明。</p>
+      <fieldset class="guide-operators">
+        <legend>點選一種合併方式，看會留下什麼</legend>
+        <div class="guide-operator-options">
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-left" name="merge-operator" aria-controls="result-left" checked="">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>左外部彙整</span>
+          </label>
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-right" name="merge-operator" aria-controls="result-right">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>右外部彙整</span>
+          </label>
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-inner" name="merge-operator" aria-controls="result-inner">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>內部</span>
+          </label>
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-full" name="merge-operator" aria-controls="result-full">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>完整外部彙整</span>
+          </label>
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-cross" name="merge-operator" aria-controls="result-cross">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>交叉</span>
+          </label>
+          <label class="guide-operator-choice">
+            <input type="radio" id="merge-union" name="merge-operator" aria-controls="result-union">
+            <span class="guide-operator-icon" aria-hidden="true"></span>
+            <span>聯集</span>
+          </label>
+        </div>
+        <div class="guide-operator-panels" aria-live="polite">
+          <div class="guide-operator-panel" id="result-left">
+            <h3>左外部彙整（Left join）</h3>
+            <p><strong>左表全部保留，再從右表補上對應資料。</strong>適合以商品清單為主，查看每個商品的銷量。</p>
+            <p>A 和 B 都在商品清單裡，所以都留下。A 在右表找不到紀錄，銷量留空；B 找到 7 件，就填入 7 件。C 不在左表，因此不會出現。</p>
+            <p>這裡的空白表示「沒有找到對應紀錄」，不一定代表賣了 0 件。</p>
+            <table class="guide-data-table">
+              <caption>左外部彙整結果</caption>
+              <thead><tr><th scope="col">代號</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+              <tbody><tr><td>A</td><td>馬克杯</td><td>空白</td></tr><tr><td>B</td><td>保溫瓶</td><td>7 件</td></tr></tbody>
+            </table>
+          </div>
+          <div class="guide-operator-panel" id="result-right">
+            <h3>右外部彙整（Right join）</h3>
+            <p><strong>右表全部保留，再從左表補上對應資料。</strong>適合以銷量表為主，查看賣出的商品名稱。</p>
+            <p>B 和 C 都有銷量，所以都留下。B 能找到「保溫瓶」；C 找不到商品名稱，就留空。這樣也能找出銷量表裡有哪些代號還缺商品資料。</p>
+            <table class="guide-data-table">
+              <caption>右外部彙整結果</caption>
+              <thead><tr><th scope="col">代號</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+              <tbody><tr><td>B</td><td>保溫瓶</td><td>7 件</td></tr><tr><td>C</td><td>空白</td><td>2 件</td></tr></tbody>
+            </table>
+          </div>
+          <div class="guide-operator-panel" id="result-inner">
+            <h3>內部（Inner join）</h3>
+            <p><strong>只保留兩張表都找得到的資料。</strong>適合只看商品清單與銷量表都有紀錄的商品。</p>
+            <p>這個例子只有 B 同時出現在兩張表，因此結果只留下保溫瓶與 7 件銷量。A 在右表找不到，C 在左表找不到，都不會出現。</p>
+            <table class="guide-data-table">
+              <caption>內部彙整結果</caption>
+              <thead><tr><th scope="col">代號</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+              <tbody><tr><td>B</td><td>保溫瓶</td><td>7 件</td></tr></tbody>
+            </table>
+          </div>
+          <div class="guide-operator-panel" id="result-full">
+            <h3>完整外部彙整（Full outer join）</h3>
+            <p><strong>兩張表的資料都保留。</strong>能配對的放在同一列，配不到的也留下，缺少的欄位留空。</p>
+            <p>A、B、C 都會出現。這很適合用來對帳：既能找到缺少銷量紀錄的 A，也能找到有銷量、卻缺少商品資料的 C。</p>
+            <table class="guide-data-table">
+              <caption>完整外部彙整結果</caption>
+              <thead><tr><th scope="col">代號</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+              <tbody><tr><td>A</td><td>馬克杯</td><td>空白</td></tr><tr><td>B</td><td>保溫瓶</td><td>7 件</td></tr><tr><td>C</td><td>空白</td><td>2 件</td></tr></tbody>
+            </table>
+          </div>
+          <div class="guide-operator-panel" id="result-cross">
+            <h3>交叉（Cross join）</h3>
+            <p><strong>列出兩張表所有可能的組合。</strong>左表每一筆都會搭配右表每一筆，不需要用代號配對。</p>
+            <p>例如要列出衣服的規格：左表有黑色、白色，右表有 S、M。每種顏色都配上兩種尺寸，2 × 2 就得到下面 4 種組合。</p>
+            <table class="guide-data-table">
+              <caption>交叉結果</caption>
+              <thead><tr><th scope="col">顏色</th><th scope="col">尺寸</th></tr></thead>
+              <tbody><tr><td>黑色</td><td>S</td></tr><tr><td>黑色</td><td>M</td></tr><tr><td>白色</td><td>S</td></tr><tr><td>白色</td><td>M</td></tr></tbody>
+            </table>
+          </div>
+          <div class="guide-operator-panel" id="result-union">
+            <h3>聯集（UNION）</h3>
+            <p><strong>把分散在不同表格的同類紀錄，收進同一張表。</strong>適合合併每個月、每間門市各自提供的銷售報表。</p>
+            <p>例如 1 月賣了 8 個馬克杯，2 月賣了 12 個，原本分別記在兩張月報。聯集後，兩筆紀錄排在同一張表裡，共用「月份、商品、銷量」這三個欄位，就能一起比較。</p>
+            <table class="guide-data-table">
+              <caption>聯集結果</caption>
+              <thead><tr><th scope="col">月份</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+              <tbody><tr><td>1 月</td><td>馬克杯</td><td>8 件</td></tr><tr><td>2 月</td><td>馬克杯</td><td>12 件</td></tr></tbody>
+            </table>
+          </div>
+        </div>
+      </fieldset>
+      <p class="guide-source"><a href="https://docs.cloud.google.com/data-studio/how-blends-work#merge_operators" target="_blank" rel="noopener noreferrer">Google 官方文件：六種合併運算子</a></p>
+
+      <h2 id="what-is-union">2. 聯集是什麼？為什麼需要它？</h2>
+      <p><strong>聯集（UNION）可以把分散在不同表格、欄位用途相同的資料合成一張表，例如把每個月的銷售月報合在一起，就能在同一張圖比較各月銷量。</strong></p>
+      <h3>用兩份銷售月報看聯集怎麼運作</h3>
+      <p>沿用剛才的例子：1 月賣了 8 個馬克杯，2 月賣了 12 個。不過，兩份月報的欄位名稱不太一樣：1 月叫「月份、商品、銷量」，2 月叫「月份、品項、售出件數」。</p>
+      <p>在 Data Studio 的「合併條件」裡，把<strong>月份對月份、商品對品項、銷量對售出件數</strong>，就是告訴系統哪些欄位放的是同一種資料。月份的值可以不同，1 月和 2 月仍會各自保留。</p>
+      <table class="guide-data-table">
+        <caption>合併後，兩個月共用一個「銷量」欄</caption>
+        <thead><tr><th scope="col">月份</th><th scope="col">商品</th><th scope="col">銷量</th></tr></thead>
+        <tbody><tr><td>1 月</td><td>馬克杯</td><td>8 件</td></tr><tr><td>2 月</td><td>馬克杯</td><td>12 件</td></tr></tbody>
+      </table>
+      <p>合併後，1 月的 8 件和 2 月的 12 件仍是兩筆紀錄。畫趨勢圖時，橫軸放月份、數值選銷量，就能比較這兩個月。要看總銷量，再讓圖表加總，才會得到 20 件。</p>
+      <h3>為什麼 Data Studio 要加入聯集？</h3>
+      <p>每月一份報表、每間門市一份報表，是很常見的資料整理方式。但要看整體成效，就得先把這些資料集合起來。過去常需要在試算表或資料庫先合表，再接進 Data Studio；現在可以直接在「混合資料」裡完成。這是 Data Studio 在 <strong>2026 年 11 月 5 日</strong>加入聯集後，能省下的一道處理步驟。 <a href="https://docs.cloud.google.com/data-studio/release-notes#November_05_2026" target="_blank" rel="noopener noreferrer">Google 更新公告</a></p>
+      <p>設定時，兩張表選入的維度數量、指標數量要分別一致。以上面的月報來說，兩邊都是「月份、商品」兩個維度，以及「銷量」一個指標。欄名可以不同，但每個欄位都要找到對應欄位，而且資料型態要一致，例如文字對文字、數字對數字。 <a href="https://docs.cloud.google.com/data-studio/create-edit-and-manage-blends#configure_a_union" target="_blank" rel="noopener noreferrer">Google：欄位配對說明</a></p>
+      <aside class="guide-note">
+        <p><strong>注意：整筆資料完全相同，聯集只會留一筆。</strong>例如兩間門市在同一月份、同一商品都賣了 8 件，如果表裡只有月份、商品、銷量，這兩筆就會被視為重複。把「門市」也放進去，才能分辨它們來自不同地方、保留兩筆紀錄。</p>
+      </aside>
+      <p class="guide-source">想看其他工具怎麼做同類操作，可以參考 <a href="https://help.tableau.com/current/pro/desktop/en-us/union.htm" target="_blank" rel="noopener noreferrer">Tableau 的按月合表範例</a>和 <a href="https://learn.microsoft.com/en-us/power-query/append-queries" target="_blank" rel="noopener noreferrer">Microsoft Power Query 的追加資料列範例</a>。實際配對和去重方式以各工具的規則為準。</p>
+
+      <h2 id="search-console">3. SEO 實作：把三種搜尋點擊畫在同一張圖</h2>
+      <p>了解聯集的用途後，接下來用 SEO 週報實作。假設我們想在同一張趨勢圖，比較 Search Console 的網頁、圖片和影片搜尋點擊，就可以先用聯集合併三份資料，再用「搜尋類型」分成三條線。</p>
+      <h3>步驟一：建立三份資料來源</h3>
+      <p>使用 Search Console 連接器，將同一個網站連接三次。三份都選「網站曝光」，搜尋類型則分別選 web（網頁）、image（圖片）、video（影片）。建議也用這三個名稱命名來源，後面比較不容易選錯。</p>
+      <figure class="guide-figure">
+        <a href="../../image/data-studio-union/search-console-live.jpg">
+          <img src="../../image/data-studio-union/search-console-live.jpg" width="592" height="158" alt="Data Studio 的 Search Console 連接器，左側選取網站曝光，右側列出 web、image、video、news。" loading="lazy" decoding="async">
+        </a>
+        <figcaption>圖 1｜Search Console 連接器實際畫面。 <a href="https://docs.cloud.google.com/data-studio/connect-to-search-console" target="_blank" rel="noopener noreferrer">Google：連接 Search Console</a></figcaption>
+      </figure>
+      <p>這個例子先看整個網站的點擊。如果還想分析讀者點進哪一頁，三份都改選「網址曝光」，並在後續各表加入「到達頁」維度。</p>
+
+      <h3>步驟二：加入三張表，標記各自的搜尋類型</h3>
+      <p>在報表編輯模式開啟<strong>資源 → 管理混合資料 → 新增混合</strong>，先選一份來源，再用「合併其他資料表」加入另外兩份。每張表都加入日期（Date）維度，以及點擊（Clicks）、曝光（Impressions）指標。</p>
+      <figure class="guide-figure">
+        <a href="../../image/data-studio-union/blend-tables-live.jpg">
+          <img src="../../image/data-studio-union/blend-tables-live.jpg" width="900" height="410" alt="Data Studio 混合編輯器中的兩張 Search Console 範例表，包含日期、裝置、點擊與曝光，中央顯示四個合併條件。" loading="lazy" decoding="async">
+        </a>
+        <figcaption>圖 2｜混合編輯器實際畫面。圖中的 Device Category 是裝置分類；本例會在這個維度位置加入自訂的「搜尋類型」。</figcaption>
+      </figure>
+      <p>接著替每張表加上來源標籤，讓合併後仍能分辨資料來自哪種搜尋。各表點<strong>新增維度 → 新增計算結果欄位</strong>，名稱都設為「搜尋類型」，公式分別填入：</p>
+      <ul>
+        <li>網頁搜尋的表：<code>"web"</code></li>
+        <li>圖片搜尋的表：<code>"image"</code></li>
+        <li>影片搜尋的表：<code>"video"</code></li>
+      </ul>
+      <p>公式中的雙引號要一起輸入，表示這是一段固定文字。</p>
+      <aside id="union-deduplication" class="guide-note">
+        <p><strong>這個標籤也能避免不同來源被當成重複資料。</strong>假設 11/1 網頁和圖片各有 8 次點擊、200 次曝光，只看日期與數字，兩筆完全一樣，聯集會只留一筆。加上搜尋類型後，一筆是 web、一筆是 image，就能各自保留；之後加總點擊，才會得到 16 次。</p>
+      </aside>
+
+      <h3>步驟三：選擇聯集，設定欄位對應</h3>
+      <p>點兩張表之間的鉛筆圖示，將合併方式設為「聯集」，再依序設定<strong>日期對日期、搜尋類型對搜尋類型、點擊對點擊、曝光對曝光</strong>。三張表之間有兩處合併設定，兩處都要完成。</p>
+      <figure class="guide-figure">
+        <a href="../../image/data-studio-union/union-settings-live.jpg">
+          <img src="../../image/data-studio-union/union-settings-live.jpg" width="805" height="580" alt="Data Studio 合併設定對話框，合併運算子選聯集，合併條件列出 Device Category、Date、Clicks、Impressions 的左右配對。" loading="lazy" decoding="async">
+        </a>
+        <figcaption>圖 3｜「聯集」與欄位對應的實際畫面。圖中使用 Device Category 示範，本例請改配對「搜尋類型」。 <a href="https://docs.cloud.google.com/data-studio/create-edit-and-manage-blends#configure_a_union" target="_blank" rel="noopener noreferrer">Google：設定 UNION</a></figcaption>
+      </figure>
+      <p>儲存後，三種搜尋資料就會共用日期、搜尋類型、點擊、曝光這四個欄位。接下來，圖表只要使用這份混合資料，就能同時取得三種搜尋的數字。</p>
+
+      <h3>步驟四：設定搜尋點擊趨勢圖</h3>
+      <p>新增一張時序圖，資料來源選剛才儲存的混合資料。<strong>X 軸選日期、Y 軸選點擊、細目維度選搜尋類型</strong>。「細目維度」就是用來分線的欄位，設好後，網頁、圖片、影片搜尋就會各自畫成一條線。</p>
+      <figure class="guide-figure">
+        <a href="../../image/data-studio-union/chart-settings-live.jpg">
+          <img src="../../image/data-studio-union/chart-settings-live.jpg" width="240" height="495" alt="Data Studio 時序圖的設定面板，資料來源選 UNION 範例，X 軸選 Date，細目維度選 Device Category，Y 軸選 Clicks。" loading="lazy" decoding="async">
+        </a>
+        <figcaption>圖 4｜時序圖的實際設定面板。圖中以裝置分類示範；本例將「細目維度」改選「搜尋類型」。</figcaption>
+      </figure>
+
+      <h3 id="verify">做完後，核對一次原始數字</h3>
+      <p>圖表設定完成後，先挑一小段日期核對，確認合併沒有漏掉資料，再用來製作正式週報。</p>
+      <ul>
+        <li><strong>點擊和曝光：</strong>使用相同的日期區間與篩選條件，分別核對 web、image、video，確認與各來源的原始數字一致。</li>
+        <li><strong>若要再算整體點閱率（CTR）：</strong>用總點擊除以總曝光。例如 16 次點擊、400 次曝光，CTR 就是 <strong>16 ÷ 400 = 4%</strong>。公式為 <code>SUM(點擊) / SUM(曝光)</code>，不要直接平均三種搜尋的 CTR。 <a href="https://docs.cloud.google.com/data-studio/use-blending-to-reaggregate-data" target="_blank" rel="noopener noreferrer">Google：重新彙總比率</a></li>
+      </ul>
+
+      <h2 id="faq">4. 常見問題</h2>
+      <details>
+        <summary>最多能加幾張表？能混用 JOIN 和 UNION 嗎？</summary>
+        <p>一份混合資料最多加入五張表，而且合併方式要全用 JOIN 或全用 UNION。例如三張表要做聯集，兩處合併設定都要選 UNION，不能一處選 JOIN、另一處選 UNION。</p>
+      </details>
+      <details>
+        <summary>聯集會自動把相同日期的數字相加嗎？</summary>
+        <p>聯集負責把紀錄集合起來；圖表怎麼加總，要看你放了哪些維度與指標。例如同一天的 web 有 8 次點擊、image 有 8 次點擊，聯集後是兩筆不同紀錄。圖表按搜尋類型區分時，會分別看到 8 和 8；只按日期顯示並加總點擊時，才會看到 16。</p>
+      </details>
+      <details>
+        <summary>要保留每一筆原始明細怎麼辦？</summary>
+        <p>如果來源有每筆紀錄的唯一編號，例如訂單明細 ID，將它加入維度，才能讓系統分辨每筆資料。因為 Data Studio 在合併前就會按維度整理、加總資料，只加上來源名稱，不一定能保留來源內的每一筆明細。</p>
+        <p>如果需要連完全相同的紀錄都保留，可先在 BigQuery 用 <a href="https://docs.cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#set_operators" target="_blank" rel="noopener noreferrer"><code>UNION ALL</code></a> 合併，再接進報表；圖表端仍要留意維度與加總設定。</p>
+      </details>
+      <details>
+        <summary>一次只看一種搜尋類型，也要用 UNION 嗎？</summary>
+        <p>如果只是讓讀者切換要看網頁、圖片或影片搜尋，一份資料來源就夠。新增下拉式清單控制項，將控制欄位設為 <strong>Search type</strong> 參數即可。本文用聯集，是為了讓三種搜尋同時出現在一張圖裡。</p>
+      </details>
+
+      <section aria-labelledby="related-reading">
+        <h2 id="related-reading">其他延伸閱讀</h2>
+        <h3>▍數據分析相關延伸閱讀</h3>
+        <ul class="guide-related">
+          <li><a href="/">走在數據分析師的路上</a></li>
+          <li><a href="/post/shopee-crawler/">蝦皮賣家競品分析</a></li>
+          <li><a href="/post/google_business/">如何預測商家銷售，降低顧客流失？</a></li>
+          <li><a href="/post/qsearch-trend/">雙 11 社群數據分析</a></li>
+          <li><a href="/post/cohort_analysis_part2/">電商數據分析</a></li>
+          <li><a href="/post/huli-mentor/">下班後的日常，如何準備作品集？</a></li>
+        </ul>
+        <h3>▍與 Data Studio 相關系列文章</h3>
+        <ul class="guide-related">
+          <li><a href="/post/quick-start-data-studio-category/">[Data Studio 教學] 入門學習指南</a></li>
+          <li><a href="/post/data-studio-class/">[Data Studio 教學] 進階入門的四個基礎概念</a></li>
+          <li><a href="/post/datastudio-regular-expression/">[Data Studio 教學] 正規表達式 Regular Expression 使用範例和情境</a></li>
+          <li><a href="/post/datastudio-case-statement/">[Data Studio 教學] 常用語法 CASE Statement 教學</a></li>
+          <li><a href="/post/datastudio-linkedin/">[Data Studio 教學] 實作 LinkedIn 好友儀表板</a></li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</article>
+<section id="article-author" class="maxlist-article-author" data-maxlist-article-author="" aria-label="作者介紹" style="padding: 40px 20px; margin-top: 36px; border-top: 1px solid #e2e7ef; text-align: center; scroll-margin-top: 110px;">
+  <p style="color: #737c8c; font-size: 14px; letter-spacing: 2px; margin-bottom: 22px;">作者介紹</p>
+  <img src="../../image/Max-Su-400x400-1.png" width="150" height="150" alt="Max Su" loading="lazy" decoding="async" style="width: 150px; height: 150px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.1); object-fit: cover;">
+  <h3 style="color: #00102e; margin: 18px 0 10px; font-size: 22px; font-weight: bold;">Max 行銷誌</h3>
+  <p style="color: #737c8c; letter-spacing: 2px; margin: 0 0 20px; font-size: 14px;">MARKETING, DATA AND PYTHON</p>
+  <p style="color: #7a7a7a; font-size: 16px; line-height: 1.8; max-width: 400px; margin: 0 auto 24px;">我不常思考生命中的時間，做喜歡的事情，讓喜歡的事有價值。如果你還沒找到這件事，繼續找，別停頓。盡你全心全力，你知道你一定會找到。</p>
+  <a href="/post/author/" style="color: #000; text-decoration: underline; font-weight: bold;">➤ 閱讀更多「關於作者」</a>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </main>
+        </div>
+        <script src="../../assets/js/components/sidebar.js?v=20734ded76b8"></script>
+      </div>
+    </div>
+  </div>
+  <script src="../../assets/js/components/footer.js?v=282aa4436c59"></script>
+</div>
+<a class="go-top visibility-all position-right" href="#toptarget" aria-label="返回頁首"><i class="sydney-svg-icon"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 15l7-7 7 7" stroke-width="3" stroke-linejoin="round"></path></svg></i></a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WSG8N3Q" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
+<script src="../../wp-content/themes/sydney/js/functions.min.js?ver=20220628"></script>
+<script src="../../wp-content/themes/sydney/js/scripts.js?ver=6.8.6"></script>
+<script data-maxlist-offline="true" src="../../assets/js/offline.js?v=20260802-7"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

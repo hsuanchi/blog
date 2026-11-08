@@ -1,0 +1,167 @@
+{
+  "tool": "imagegen (built-in)",
+  "edit": "Replace Looker Studio with Data Studio in the first title line; preserve each original subtitle, background, reddish overlay, centered typography, Max行銷誌 signature and M brand mark. Preserve the original brackets and uncropped landscape composition.",
+  "export": "Native sips JPEG exports at the existing full-size and responsive thumbnail dimensions; centered crop for the pre-existing square and portrait thumbnail variants.",
+  "assets": [
+    {
+      "image": "docs/image/LookerStudio.jpg",
+      "subtitle": "從入門到進階",
+      "version": "ds-banner-838c07103dc8",
+      "variants": [
+        "docs/image/LookerStudio-150x150.jpg",
+        "docs/image/LookerStudio-230x129.jpg",
+        "docs/image/LookerStudio-300x169.jpg",
+        "docs/image/LookerStudio-350x197.jpg",
+        "docs/image/LookerStudio-480x270.jpg",
+        "docs/image/LookerStudio-550x400.jpg",
+        "docs/image/LookerStudio-768x432.jpg",
+        "docs/image/LookerStudio.jpg"
+      ],
+      "prompt": "Use case: text-localization. Edit target: the attached existing 960 × 540 landscape blog banner. Make exactly one change: replace the first-line white text 【Looker Studio】 with 【Data Studio】. Keep the exact original background chart, muted red overlay, second line 從入門到進階, small coral Max行銷誌 text, bottom-right coral M square, all typography styles, positions and colors unchanged. Center the new first line in the same position and use the same font size and weight. This is a precise local lettering replacement, not a redesign. Preserve 16:9 aspect ratio and the complete uncropped original composition. Do not add borders, padding, new elements, or extra words."
+    },
+    {
+      "image": "docs/image/Looker-Studio-進階第一堂課.jpg",
+      "subtitle": "走出新手村，進階第一堂課",
+      "version": "ds-banner-12162cb6c9e8",
+      "variants": [
+        "docs/image/Looker-Studio-進階第一堂課-150x150.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-230x129.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-300x169.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-350x197.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-480x270.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-550x400.jpg",
+        "docs/image/Looker-Studio-進階第一堂課-768x432.jpg",
+        "docs/image/Looker-Studio-進階第一堂課.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"走出新手村，進階第一堂課\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/Looker-Studio-進階第二堂課.jpg",
+      "subtitle": "進階第二堂課，正規表達式",
+      "version": "ds-banner-63eeb0253c94",
+      "variants": [
+        "docs/image/Looker-Studio-進階第二堂課-150x150.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-230x129.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-300x169.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-350x197.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-480x270.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-550x400.jpg",
+        "docs/image/Looker-Studio-進階第二堂課-768x432.jpg",
+        "docs/image/Looker-Studio-進階第二堂課.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"進階第二堂課，正規表達式\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/Looker-Studio-進階第三堂課.jpg",
+      "subtitle": "進階第三堂課，CASE 教學",
+      "version": "ds-banner-9fd8f2526592",
+      "variants": [
+        "docs/image/Looker-Studio-進階第三堂課-150x150.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-230x129.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-300x169.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-350x197.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-480x270.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-550x400.jpg",
+        "docs/image/Looker-Studio-進階第三堂課-768x432.jpg",
+        "docs/image/Looker-Studio-進階第三堂課.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"進階第三堂課，CASE 教學\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/LinkedIn-Dashboard-Looker-Studio.jpg",
+      "subtitle": "製作 LinkedIn 儀表板",
+      "version": "ds-banner-f5008d1b041c",
+      "variants": [
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-150x150.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-230x129.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-300x169.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-350x197.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-480x270.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-550x400.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio-768x432.jpg",
+        "docs/image/LinkedIn-Dashboard-Looker-Studio.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"製作 LinkedIn 儀表板\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/LookerStudio工具比較.jpg",
+      "subtitle": "BI 工具比較",
+      "version": "ds-banner-660be142a43b",
+      "variants": [
+        "docs/image/LookerStudio工具比較-1000x559.jpg",
+        "docs/image/LookerStudio工具比較-1024x572.jpg",
+        "docs/image/LookerStudio工具比較-150x150.jpg",
+        "docs/image/LookerStudio工具比較-1536x859.jpg",
+        "docs/image/LookerStudio工具比較-230x129.jpg",
+        "docs/image/LookerStudio工具比較-300x168.jpg",
+        "docs/image/LookerStudio工具比較-350x196.jpg",
+        "docs/image/LookerStudio工具比較-480x268.jpg",
+        "docs/image/LookerStudio工具比較-550x400.jpg",
+        "docs/image/LookerStudio工具比較-768x429.jpg",
+        "docs/image/LookerStudio工具比較.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"BI 工具比較\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/AI流量追蹤.jpg",
+      "subtitle": "AI 流量追蹤",
+      "version": "ds-banner-c6a5be1e5bef",
+      "variants": [
+        "docs/image/AI流量追蹤-1000x561.jpg",
+        "docs/image/AI流量追蹤-100x100.jpg",
+        "docs/image/AI流量追蹤-1024x575.jpg",
+        "docs/image/AI流量追蹤-150x150.jpg",
+        "docs/image/AI流量追蹤-1536x862.jpg",
+        "docs/image/AI流量追蹤-230x129.jpg",
+        "docs/image/AI流量追蹤-300x168.jpg",
+        "docs/image/AI流量追蹤-350x196.jpg",
+        "docs/image/AI流量追蹤-420x420.jpg",
+        "docs/image/AI流量追蹤-480x269.jpg",
+        "docs/image/AI流量追蹤-550x400.jpg",
+        "docs/image/AI流量追蹤-768x431.jpg",
+        "docs/image/AI流量追蹤-800x449.jpg",
+        "docs/image/AI流量追蹤.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"AI 流量追蹤\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/GSC-資料匯入.jpg",
+      "subtitle": "GSC 資料匯入",
+      "version": "ds-banner-7a65fac47e3f",
+      "variants": [
+        "docs/image/GSC-資料匯入-1000x563.jpg",
+        "docs/image/GSC-資料匯入-100x100.jpg",
+        "docs/image/GSC-資料匯入-1024x577.jpg",
+        "docs/image/GSC-資料匯入-150x150.jpg",
+        "docs/image/GSC-資料匯入-1536x865.jpg",
+        "docs/image/GSC-資料匯入-230x130.jpg",
+        "docs/image/GSC-資料匯入-300x169.jpg",
+        "docs/image/GSC-資料匯入-350x197.jpg",
+        "docs/image/GSC-資料匯入-420x420.jpg",
+        "docs/image/GSC-資料匯入-480x270.jpg",
+        "docs/image/GSC-資料匯入-550x400.jpg",
+        "docs/image/GSC-資料匯入-768x432.jpg",
+        "docs/image/GSC-資料匯入-800x450.jpg",
+        "docs/image/GSC-資料匯入.jpg"
+      ],
+      "prompt": "Use case: text-localization. The attached image is the edit target, an existing landscape blog banner. Make exactly one local text change: replace the large white first-line title 【Looker Studio】 (or 【 Looker Studio 】) with 【Data Studio】. Preserve the subtitle exactly as shown: \"GSC 資料匯入\". Preserve the exact original background, reddish overlay, all Chinese characters, font size and weight, centered layout, small coral \"Max行銷誌\" signature, bottom-right coral square M brand mark, colors and full uncropped composition. Center the new shorter first line in its current position. Do not redesign, change the subtitle, repaint other elements, add margins, or crop. Maintain the original landscape approximately 16:9 aspect ratio."
+    },
+    {
+      "image": "docs/image/build-your-blog-monitor.jpg",
+      "subtitle": "Build your Blog Monitor",
+      "version": "ds-banner-62865a6d4c8d",
+      "variants": [
+        "docs/image/build-your-blog-monitor-150x150.jpg",
+        "docs/image/build-your-blog-monitor-230x129.jpg",
+        "docs/image/build-your-blog-monitor-300x169.jpg",
+        "docs/image/build-your-blog-monitor-350x197.jpg",
+        "docs/image/build-your-blog-monitor-480x270.jpg",
+        "docs/image/build-your-blog-monitor-550x400.jpg",
+        "docs/image/build-your-blog-monitor-768x432.jpg",
+        "docs/image/build-your-blog-monitor-920x518.jpg",
+        "docs/image/build-your-blog-monitor.jpg"
+      ],
+      "prompt": "Use case: text-localization. Edit target: the attached existing 960 × 540 landscape blog banner. Replace only the first-line white text [Looker Studio] with [Data Studio]. Keep square brackets as square brackets. Preserve the exact original tabletop equipment background, muted reddish overlay, second line 'Build your Blog Monitor', small coral 'Max行銷誌' signature, bottom-right coral M square, font styles, positions, sizes, colors and complete uncropped composition. Center the shorter first line in the same position. This is a local text edit, not a redesign. Preserve landscape 16:9 aspect ratio. No new words, elements, borders or margins."
+    }
+  ]
+}

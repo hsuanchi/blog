@@ -1,0 +1,189 @@
+.data-studio-union-guide {
+  --guide-ink: #00102e;
+  --guide-border: #dce2eb;
+  --guide-accent: #d65050;
+  color: #303744;
+  line-height: 1.9;
+}
+
+.data-studio-union-guide h2 { margin: 1.65em 0 .65em; scroll-margin-top: 100px; }
+.data-studio-union-guide h3 { margin: 1.4em 0 .45em; }
+.data-studio-union-guide li + li { margin-top: .45em; }
+.data-studio-union-guide code { overflow-wrap: anywhere; }
+
+.data-studio-union-guide .guide-note {
+  margin: 24px 0;
+  padding: 16px 20px;
+  background: #fff6f3;
+  border-left: 4px solid var(--guide-accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.data-studio-union-guide details {
+  margin: 14px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--guide-border);
+  border-radius: 8px;
+}
+
+.data-studio-union-guide summary { color: var(--guide-ink); font-weight: 600; cursor: pointer; }
+.data-studio-union-guide summary:focus-visible { outline: 2px solid var(--guide-accent); outline-offset: 4px; }
+.data-studio-union-guide details[open] > summary { margin-bottom: 12px; }
+.data-studio-union-guide details > :last-child,
+.data-studio-union-guide .guide-note p:last-child { margin-bottom: 0; }
+.data-studio-union-guide .guide-toc ol { padding-left: 1.5em; }
+
+.data-studio-union-guide .guide-figure { margin: 16px 0 24px; }
+.data-studio-union-guide .guide-figure > a { display: inline-block; max-width: 100%; vertical-align: top; }
+.data-studio-union-guide .guide-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+}
+.data-studio-union-guide .guide-figure figcaption {
+  margin-top: 8px;
+  color: #626b79;
+  font-size: .88em;
+  line-height: 1.6;
+}
+.data-studio-union-guide .guide-figure figcaption a { margin-inline-start: .45em; }
+
+.data-studio-union-guide .guide-operators {
+  min-inline-size: 0;
+  padding: 0;
+  margin: 18px 0 8px;
+  border: 0;
+}
+
+.data-studio-union-guide .guide-operators legend {
+  padding: 0;
+  margin: 0 0 10px;
+  border: 0;
+  color: var(--guide-ink);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.data-studio-union-guide .guide-operator-options {
+  display: grid;
+  gap: 6px;
+}
+
+.data-studio-union-guide .guide-operator-choice {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 52px;
+  padding: 4px 9px;
+  margin: 0;
+  border: 1px solid var(--guide-border);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--guide-ink);
+  cursor: pointer;
+  font-size: .9em;
+  line-height: 1.35;
+}
+
+.data-studio-union-guide .guide-operator-choice input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.data-studio-union-guide .guide-operator-choice:hover { border-color: #8b9ab2; }
+.data-studio-union-guide .guide-operator-choice:has(input:checked) {
+  border-color: #5277ac;
+  background: #eaf2fc;
+  box-shadow: inset 0 0 0 1px #5277ac;
+}
+.data-studio-union-guide .guide-operator-choice:has(input:focus-visible) {
+  outline: 2px solid #315e9b;
+  outline-offset: 3px;
+}
+
+/* Use the actual operator artwork from the 805 × 580 Data Studio screenshot, at 75% scale. */
+.data-studio-union-guide .guide-operator-icon {
+  width: 68px;
+  height: 41px;
+  background: url("../../../image/data-studio-union/union-settings-live.jpg") var(--guide-icon-x) -115.5px / 603.75px 435px no-repeat;
+  mix-blend-mode: multiply;
+}
+.data-studio-union-guide #merge-left + .guide-operator-icon { --guide-icon-x: -30px; }
+.data-studio-union-guide #merge-right + .guide-operator-icon { --guide-icon-x: -121.5px; }
+.data-studio-union-guide #merge-inner + .guide-operator-icon { --guide-icon-x: -211.5px; }
+.data-studio-union-guide #merge-full + .guide-operator-icon { --guide-icon-x: -302.25px; }
+.data-studio-union-guide #merge-cross + .guide-operator-icon { --guide-icon-x: -393px; }
+.data-studio-union-guide #merge-union + .guide-operator-icon {
+  --guide-icon-x: -506.25px;
+  clip-path: circle(19px at 34px 20.25px);
+}
+
+.data-studio-union-guide .guide-operator-panel {
+  padding: 14px 16px;
+  border: 1px solid var(--guide-border);
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+.data-studio-union-guide .guide-operator-panel h3 { margin: 0 0 4px; font-size: 1.1em; line-height: 1.45; }
+.data-studio-union-guide .guide-operator-panel p { margin: 8px 0; }
+.data-studio-union-guide .guide-source { font-size: .9em; }
+
+.data-studio-union-guide .guide-data-table {
+  width: 100%;
+  margin: 10px 0 16px;
+  border-collapse: collapse;
+  background: #fff;
+}
+.data-studio-union-guide .guide-data-table caption { padding: 0 0 5px; color: var(--guide-ink); font-weight: 600; }
+.data-studio-union-guide .guide-data-table th,
+.data-studio-union-guide .guide-data-table td { padding: 6px 8px; border: 1px solid var(--guide-border); text-align: left; }
+.data-studio-union-guide .guide-data-table th { background: #eaf0f8; }
+.data-studio-union-guide .guide-operator-panel .guide-data-table { margin-bottom: 0; }
+
+@supports selector(:has(*)) {
+  .data-studio-union-guide .guide-operators {
+    display: grid;
+    grid-template-columns: clamp(88px, 25%, 210px) minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+  }
+  .data-studio-union-guide .guide-operator-panels { min-width: 0; }
+  .data-studio-union-guide .guide-operator-panel { display: none; }
+  .data-studio-union-guide .guide-operators:has(#merge-left:checked) #result-left,
+  .data-studio-union-guide .guide-operators:has(#merge-right:checked) #result-right,
+  .data-studio-union-guide .guide-operators:has(#merge-inner:checked) #result-inner,
+  .data-studio-union-guide .guide-operators:has(#merge-full:checked) #result-full,
+  .data-studio-union-guide .guide-operators:has(#merge-cross:checked) #result-cross,
+  .data-studio-union-guide .guide-operators:has(#merge-union:checked) #result-union {
+    display: block;
+  }
+}
+
+.data-studio-union-guide .guide-related { list-style: none; margin: 0; padding: 0; }
+.data-studio-union-guide .guide-related li { margin: 0; padding: 13px 0; border-bottom: 1px solid var(--guide-border); }
+.data-studio-union-guide .guide-related a { font-weight: 600; }
+
+@media (max-width: 560px) {
+  .data-studio-union-guide h2 { font-size: 24px; }
+  .data-studio-union-guide .guide-note,
+  .data-studio-union-guide details { padding: 12px 14px; }
+  .data-studio-union-guide .guide-operator-choice {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 0;
+    min-height: 65px;
+    padding: 2px 4px 5px;
+    font-size: .76em;
+    text-align: center;
+  }
+  .data-studio-union-guide .guide-operator-panel { padding: 10px; font-size: .9em; }
+  .data-studio-union-guide .guide-data-table th,
+  .data-studio-union-guide .guide-data-table td { padding: 4px; }
+}

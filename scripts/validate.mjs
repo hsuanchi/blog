@@ -12,10 +12,10 @@ const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
-// Two coffee guides, NetSuite tutorials 01–02, and the Chrome extension import guide.
-const ADDED_STATIC_POSTS = 5;
-// Six coffee assets, nine NetSuite assets, and one Chrome extension guide cover.
-const ADDED_STATIC_IMAGES = 16;
+// Two coffee guides, NetSuite tutorials 01–02, the Chrome extension guide, and the Data Studio update.
+const ADDED_STATIC_POSTS = 6;
+// Six coffee assets, nine NetSuite assets, one Chrome cover, and five Data Studio assets.
+const ADDED_STATIC_IMAGES = 21;
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -89,6 +89,9 @@ const componentCoverage = { header: 0, sidebar: 0, footer: 0 };
 const offlineCoverage = { runtime: 0, pagesWithoutPreloader: 0 };
 const internalLinksOpeningNewTabs = [];
 const missingArticleAuthorSections = [];
+const articleDateErrors = [];
+const articleMetadataErrors = [];
+let articleDateHeadersChecked = 0;
 const externalLinksMissingAttributes = [];
 let externalLinksChecked = 0;
 function checkExternalLinks($, file) {
@@ -125,6 +128,27 @@ for (const file of htmlFiles) {
   const $ = load(html, { decodeEntities: false });
   const relativeFile = path.relative(REPO_ROOT, file);
   checkExternalLinks($, relativeFile);
+  if ($("body.single-post").length && $("main article").length) {
+    articleDateHeadersChecked += 1;
+    const meta = $("main article").first().find(".entry-header .entry-meta");
+    if (meta.find(".byline").length !== 1 ||
+        plainText(meta.find(".byline").text()) !== "Made with ☕ by Max" ||
+        meta.find(".cat-links").length) {
+      articleMetadataErrors.push(relativeFile);
+    }
+    const dates = $("main article").first().find(".entry-header .maxlist-article-dates");
+    const published = $('meta[property="article:published_time"]').attr("content");
+    const modified = $('meta[property="article:modified_time"]').attr("content");
+    if (dates.length !== 1 || !published || !modified ||
+        dates.find("time.published-time").length !== 1 ||
+        dates.find("time.updated-time").length !== 1 ||
+        dates.find("time.published-time").attr("datetime") !== published ||
+        dates.find("time.updated-time").attr("datetime") !== modified ||
+        !dates.find(".published-on").text().includes("建立時間") ||
+        !dates.find(".posted-on").text().includes("最後更新時間")) {
+      articleDateErrors.push(relativeFile);
+    }
+  }
   if ($("body.single-post").length && $("main article").length && !$("main [data-maxlist-article-author]").length) {
     const legacyAuthorCanMount = $("main .navigation").length && $("script:not([src])").toArray().some((element) => {
       const script = $(element).html() ?? "";
@@ -468,6 +492,8 @@ const report = {
   },
   internalLinksOpeningNewTabs,
   articleEndMatter: { missingAuthorSections: missingArticleAuthorSections },
+  articleDates: { headersChecked: articleDateHeadersChecked, errors: articleDateErrors },
+  articleMetadata: { headersChecked: articleDateHeadersChecked, errors: articleMetadataErrors },
   externalLinkNavigation: { linksChecked: externalLinksChecked, linksMissingAttributes: externalLinksMissingAttributes },
   netsuiteImageNavigation: { imagesOpeningNewTabs: netsuiteImagesOpeningNewTabs, imagesWithoutNewTab: netsuiteImagesWithoutNewTab },
   offlineRootResourceReferences,
@@ -490,6 +516,8 @@ if (
   insecureSameSiteScriptReferences.length > 0 ||
   internalLinksOpeningNewTabs.length > 0 ||
   missingArticleAuthorSections.length > 0 ||
+  articleDateErrors.length > 0 ||
+  articleMetadataErrors.length > 0 ||
   externalLinksMissingAttributes.length > 0 ||
   netsuiteImagesWithoutNewTab.length > 0 ||
   offlineRootResourceReferences.length > 0 ||

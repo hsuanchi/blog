@@ -321,6 +321,46 @@ function updateStructuredSearch($) {
   });
 }
 
+function syncArticleMetadata($) {
+  if (!$("body").hasClass("single-post")) return;
+  const article = $("main article").first();
+  const header = article.find(".entry-header").first();
+  const meta = header.find(".entry-meta").first();
+  if (!meta.length) return;
+  header.addClass("maxlist-article-header");
+
+  // Keep taxonomy available to the author archive after removing the visible header labels.
+  const categoryLinks = meta.find(".cat-links");
+  if (categoryLinks.length) {
+    const categoryNames = categoryLinks.find("a").toArray().map((element) => $(element).text().trim())
+      .filter((name) => name && !["All posts", "所有文章"].includes(name));
+    article.attr("data-category-names", JSON.stringify(categoryNames));
+  }
+  meta.find(".cat-links, .byline").remove();
+  meta.removeClass("delimiter-dot").addClass("maxlist-article-meta");
+  meta.prepend('<span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span>');
+
+  const published = $('meta[property="article:published_time"]').attr("content");
+  const modified = $('meta[property="article:modified_time"]').attr("content");
+  if (!published || !modified) return;
+
+  const formatter = new Intl.DateTimeFormat("zh-TW", {
+    timeZone: "Asia/Taipei", year: "numeric", month: "numeric", day: "numeric"
+  });
+  const dateText = (value) => {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) throw new Error(`Invalid article date: ${value}`);
+    const parts = Object.fromEntries(formatter.formatToParts(date).map(({ type, value }) => [type, value]));
+    return `${parts.year} 年 ${parts.month} 月 ${parts.day} 日`;
+  };
+
+  meta.find(".maxlist-article-dates, .published-on, .posted-on").remove();
+  meta.append(`<div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="${escapeXml(published)}">${dateText(published)}</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="${escapeXml(modified)}">${dateText(modified)}</time></span>
+  </div>`);
+}
+
 function decodeCloudflareEmail(hex) {
   if (!/^[0-9a-f]+$/i.test(hex) || hex.length < 4 || hex.length % 2 !== 0) return "";
   const key = Number.parseInt(hex.slice(0, 2), 16);
@@ -549,6 +589,7 @@ for (const file of htmlFiles) {
     $(element).html(script);
   });
   $("#wp-emoji-styles-inline-css, style:contains('img#wpstats')").remove();
+  syncArticleMetadata($);
   if ($("body.single-post").length && $("main article").length) {
     const legacyAuthorScripts = $("script:not([src])").filter((_index, element) => {
       const script = $(element).html() ?? "";

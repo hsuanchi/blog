@@ -169,7 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=8db72127742f"></script>
+	<script src="../../assets/js/components/header.js?v=106f9c99f99f"></script>
 
 
 
@@ -200,14 +200,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<article id="post-2039" class="post-2039 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-crawler tag-beautifulsoup tag-crontab tag-linux tag-python tag-selenium tag-smtplib tag-140">
+<article id="post-2039" class="post-2039 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-crawler tag-beautifulsoup tag-crontab tag-linux tag-python tag-selenium tag-smtplib tag-140" data-category-names="[&quot;Python 爬蟲教學&quot;]">
 	<div class="content-inner">
 
 
-		<header class="entry-header">
+		<header class="entry-header maxlist-article-header">
 
 		<h1 class="title-post entry-title">[爬蟲筆記] Python Selenium 爬蟲教學：實作商品庫存爬取</h1>
-					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By  <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/" rel="category tag">All posts</a>、<a href="/category/python-crawler/" rel="category tag">Python 爬蟲教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/python/" rel="bookmark"><time class="entry-date updated-time" datetime="2020-04-10T05:17:55+00:00">10 4 月, 2020</time></a></span></div>			</header><!-- .entry-header -->
+					<div class="entry-meta entry-meta-below maxlist-article-meta"><span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="2018-05-04T07:54:20+00:00">2018 年 5 月 4 日</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="2020-04-10T05:17:55+00:00">2020 年 4 月 10 日</time></span>
+  </div></div>			</header><!-- .entry-header -->
 
 					<div class="entry-thumb ">
 			<img width="1442" height="704" alt="螢幕快照 2018 05 01 下午1.22.01" decoding="async" fetchpriority="high" data-srcset="../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png 1442w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-300x146.png 300w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-768x375.png 768w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-1024x500.png 1024w" data-src="../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png" data-sizes="(max-width: 1442px) 100vw, 1442px" class="attachment-large-thumb size-large-thumb wp-post-image lazyload" src="../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png" srcset="../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png 1442w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-300x146.png 300w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-768x375.png 768w, ../../image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-1024x500.png 1024w"><noscript><img width="1442" height="704" src="https://www.maxlist.xyz/image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png" class="attachment-large-thumb size-large-thumb wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.maxlist.xyz/image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01.png 1442w, https://www.maxlist.xyz/image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-300x146.png 300w, https://www.maxlist.xyz/image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-768x375.png 768w, https://www.maxlist.xyz/image/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-05-01-%E4%B8%8B%E5%8D%881.22.01-1024x500.png 1024w" sizes="(max-width: 1442px) 100vw, 1442px" /></noscript>		</div>
@@ -312,14 +315,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=db13ef55df21"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=20734ded76b8"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=1750d4e63345"></script>
+<script src="../../assets/js/components/footer.js?v=282aa4436c59"></script>
 
 	<!-- #colophon -->
 

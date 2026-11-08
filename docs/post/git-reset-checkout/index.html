@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=8db72127742f"></script>
+	<script src="../../assets/js/components/header.js?v=106f9c99f99f"></script>
 
 
 
@@ -199,14 +199,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<article id="post-4585" class="post-4585 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-git- tag-git-branch tag-git-checkout tag-git-reset tag-git-reset-hard tag-git-reset-soft tag-git-">
+<article id="post-4585" class="post-4585 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-git- tag-git-branch tag-git-checkout tag-git-reset tag-git-reset-hard tag-git-reset-soft tag-git-" data-category-names="[&quot;Git 教學&quot;]">
 	<div class="content-inner">
 
 
-		<header class="entry-header">
+		<header class="entry-header maxlist-article-header">
 
 		<h1 class="title-post entry-title">【Git教學】Git 時光機回復版本的 2 種方法 reset &amp; checkout</h1>
-					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By  <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/" rel="category tag">All posts</a>、<a href="/category/git-%e6%95%99%e5%ad%b8/" rel="category tag">Git 教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/git-reset-checkout/" rel="bookmark"><time class="entry-date updated-time" datetime="2023-06-22T05:27:14+00:00">22 6 月, 2023</time></a></span></div>			</header><!-- .entry-header -->
+					<div class="entry-meta entry-meta-below maxlist-article-meta"><span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="2020-05-03T11:39:28+00:00">2020 年 5 月 3 日</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="2023-06-22T05:27:14+00:00">2023 年 6 月 22 日</time></span>
+  </div></div>			</header><!-- .entry-header -->
 
 					<div class="entry-thumb ">
 			<img width="1356" height="756" alt="Git 教學 git 退版 reset checkout" decoding="async" fetchpriority="high" data-srcset="../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg 1356w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-300x167.jpg 300w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1024x571.jpg 1024w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-768x428.jpg 768w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1000x558.jpg 1000w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-230x128.jpg 230w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-350x195.jpg 350w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-480x268.jpg 480w" data-src="../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg" data-sizes="(max-width: 1356px) 100vw, 1356px" class="attachment-large-thumb size-large-thumb wp-post-image lazyload" src="../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg" srcset="../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg 1356w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-300x167.jpg 300w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1024x571.jpg 1024w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-768x428.jpg 768w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1000x558.jpg 1000w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-230x128.jpg 230w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-350x195.jpg 350w, ../../image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-480x268.jpg 480w"><noscript><img width="1356" height="756" src="https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="Git 教學 git 退版 reset checkout" decoding="async" fetchpriority="high" srcset="https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout.jpg 1356w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-300x167.jpg 300w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1024x571.jpg 1024w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-768x428.jpg 768w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-1000x558.jpg 1000w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-230x128.jpg 230w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-350x195.jpg 350w, https://www.maxlist.xyz/image/Git-%E6%95%99%E5%AD%B8-git-%E9%80%80%E7%89%88-reset-checkout-480x268.jpg 480w" sizes="(max-width: 1356px) 100vw, 1356px" /></noscript>		</div>
@@ -491,14 +494,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=db13ef55df21"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=20734ded76b8"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=1750d4e63345"></script>
+<script src="../../assets/js/components/footer.js?v=282aa4436c59"></script>
 
 	<!-- #colophon -->
 

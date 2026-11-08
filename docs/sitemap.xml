@@ -10,7 +10,7 @@
   </url>
   <url>
     <loc>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2026-11-03T00:00:00+08:00</lastmod>
+    <lastmod>2026-11-08T00:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/10/</loc>
@@ -130,7 +130,7 @@
   </url>
   <url>
     <loc>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</loc>
-    <lastmod>2026-03-08T05:15:06+00:00</lastmod>
+    <lastmod>2026-11-08T00:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</loc>
@@ -287,6 +287,10 @@
   <url>
     <loc>https://www.maxlist.xyz/post/data-studio-class/</loc>
     <lastmod>2025-11-05T02:53:04+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://www.maxlist.xyz/post/data-studio-union/</loc>
+    <lastmod>2026-11-08T00:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>https://www.maxlist.xyz/post/datastudio-case-statement/</loc>

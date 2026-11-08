@@ -168,7 +168,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content">跳至主要內容</a>
 
-	<script src="../../assets/js/components/header.js?v=8db72127742f"></script>
+	<script src="../../assets/js/components/header.js?v=106f9c99f99f"></script>
 
 
 
@@ -199,14 +199,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<article id="post-4207" class="post-4207 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-base category-python-crawler tag-async-def tag-asyncio tag-asyncio-create_task tag-asyncio-gather tag-asyncio-get_event_loop tag-generator-based-coroutine tag-native-coroutine tag-python-coroutine tag-376 tag-377">
+<article id="post-4207" class="post-4207 post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-python-base category-python-crawler tag-async-def tag-asyncio tag-asyncio-create_task tag-asyncio-gather tag-asyncio-get_event_loop tag-generator-based-coroutine tag-native-coroutine tag-python-coroutine tag-376 tag-377" data-category-names="[&quot;Python 基礎教學&quot;,&quot;Python 爬蟲教學&quot;]">
 	<div class="content-inner">
 
 
-		<header class="entry-header">
+		<header class="entry-header maxlist-article-header">
 
 		<h1 class="title-post entry-title">【Python教學】淺談 Coroutine 協程使用方法</h1>
-					<div class="entry-meta entry-meta-below delimiter-dot"><span class="byline"><span class="author vcard">By  <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/%e6%89%80%e6%9c%89%e6%96%87%e7%ab%a0/" rel="category tag">All posts</a>、<a href="/category/python-base/" rel="category tag">Python 基礎教學</a>、<a href="/category/python-crawler/" rel="category tag">Python 爬蟲教學</a></span><span class="posted-on"> 最後更新時間 <a href="/post/python-coroutine/" rel="bookmark"><time class="entry-date updated-time" datetime="2023-06-22T05:10:49+00:00">22 6 月, 2023</time></a></span></div>			</header><!-- .entry-header -->
+					<div class="entry-meta entry-meta-below maxlist-article-meta"><span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><div class="maxlist-article-dates">
+    <span class="published-on"><span class="maxlist-date-label">建立時間</span> <time class="entry-date published-time" datetime="2020-03-29T10:12:52+00:00">2020 年 3 月 29 日</time></span>
+    <span class="posted-on"><span class="maxlist-date-label">最後更新時間</span> <time class="entry-date updated-time" datetime="2023-06-22T05:10:49+00:00">2023 年 6 月 22 日</time></span>
+  </div></div>			</header><!-- .entry-header -->
 
 					<div class="entry-thumb ">
 			<img width="1354" height="752" alt="python asyncio協程" decoding="async" fetchpriority="high" data-srcset="../../image/python-asyncio%E5%8D%94%E7%A8%8B.jpg 1354w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-300x167.jpg 300w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-1024x569.jpg 1024w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-768x427.jpg 768w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-1000x555.jpg 1000w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-230x128.jpg 230w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-350x194.jpg 350w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-480x267.jpg 480w" data-src="../../image/python-asyncio%E5%8D%94%E7%A8%8B.jpg" data-sizes="(max-width: 1354px) 100vw, 1354px" class="attachment-large-thumb size-large-thumb wp-post-image lazyload" src="../../image/python-asyncio%E5%8D%94%E7%A8%8B.jpg" srcset="../../image/python-asyncio%E5%8D%94%E7%A8%8B.jpg 1354w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-300x167.jpg 300w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-1024x569.jpg 1024w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-768x427.jpg 768w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-1000x555.jpg 1000w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-230x128.jpg 230w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-350x194.jpg 350w, ../../image/python-asyncio%E5%8D%94%E7%A8%8B-480x267.jpg 480w"><noscript><img width="1354" height="752" src="https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B.jpg" class="attachment-large-thumb size-large-thumb wp-post-image" alt="python asyncio協程" decoding="async" fetchpriority="high" srcset="https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B.jpg 1354w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-300x167.jpg 300w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-1024x569.jpg 1024w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-768x427.jpg 768w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-1000x555.jpg 1000w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-230x128.jpg 230w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-350x194.jpg 350w, https://www.maxlist.xyz/image/python-asyncio%E5%8D%94%E7%A8%8B-480x267.jpg 480w" sizes="(max-width: 1354px) 100vw, 1354px" /></noscript>		</div>
@@ -800,14 +803,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-<script src="../../assets/js/components/sidebar.js?v=db13ef55df21"></script><!-- #secondary -->
+<script src="../../assets/js/components/sidebar.js?v=20734ded76b8"></script><!-- #secondary -->
 			</div>
 		</div>
 	</div><!-- #content -->
 
 
 
-<script src="../../assets/js/components/footer.js?v=1750d4e63345"></script>
+<script src="../../assets/js/components/footer.js?v=282aa4436c59"></script>
 
 	<!-- #colophon -->
 

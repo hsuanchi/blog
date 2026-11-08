@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-11-04T05:48:05.866Z",
+  "generatedAt": "2026-11-08T16:10:06.374Z",
   "files": {
-    "total": 10413,
-    "html": 852,
-    "assets": 9561
+    "total": 10420,
+    "html": 853,
+    "assets": 9567
   },
   "componentCoverage": {
-    "header": 852,
-    "sidebar": 183,
-    "footer": 852
+    "header": 853,
+    "sidebar": 184,
+    "footer": 853
   },
   "offlineCoverage": {
-    "runtime": 852,
-    "pagesWithoutPreloader": 852
+    "runtime": 853,
+    "pagesWithoutPreloader": 853
   },
   "analytics": {
-    "pagesWithGtm": 852,
+    "pagesWithGtm": 853,
     "gtmContainer": "GTM-WSG8N3Q",
     "ga4Delivery": "via-gtm",
     "ga4MeasurementId": "G-YR986G8PX3"
   },
   "seo": {
-    "pagesWithCanonical": 851,
+    "pagesWithCanonical": 852,
     "missingDescriptions": [],
     "missingIndexableH1": [],
     "missingImageAlts": [],
@@ -30,19 +30,19 @@
   },
   "generatedFeatures": {
     "staticFixesStylesheet": true,
-    "searchIndexDocuments": 183,
+    "searchIndexDocuments": 184,
     "cname": "www.maxlist.xyz",
     "obsoleteCommercePaths": []
   },
   "urlMigration": {
     "migratedPosts": 178,
-    "addedStaticPosts": 5,
-    "expectedPosts": 183,
-    "actualPosts": 183,
+    "addedStaticPosts": 6,
+    "expectedPosts": 184,
+    "actualPosts": 184,
     "migratedImages": 9418,
-    "addedStaticImages": 16,
-    "expectedImages": 9434,
-    "actualImages": 9434,
+    "addedStaticImages": 21,
+    "expectedImages": 9439,
+    "actualImages": 9439,
     "legacyDatedPostFiles": [],
     "legacyUploadImages": [],
     "staleLegacyReferences": [],
@@ -53,7 +53,7 @@
     "yearMismatches": [],
     "missingArchives": [],
     "articleCounts": {
-      "total": 183,
+      "total": 184,
       "byYear": {
         "2018": 31,
         "2019": 35,
@@ -63,7 +63,7 @@
         "2023": 14,
         "2024": 4,
         "2025": 8,
-        "2026": 6
+        "2026": 7
       }
     },
     "countMismatches": []
@@ -81,8 +81,16 @@
   "articleEndMatter": {
     "missingAuthorSections": []
   },
+  "articleDates": {
+    "headersChecked": 184,
+    "errors": []
+  },
+  "articleMetadata": {
+    "headersChecked": 184,
+    "errors": []
+  },
   "externalLinkNavigation": {
-    "linksChecked": 769,
+    "linksChecked": 778,
     "linksMissingAttributes": []
   },
   "netsuiteImageNavigation": {
