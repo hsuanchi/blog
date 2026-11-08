@@ -5,21 +5,42 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 08 Nov 2026 16:09:59 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 16:18:56 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 數據分析 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/analytics/page/2/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/analytics/page/2/</guid>
+      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
+      <description>分類: Python 數據分析 &lt;img width=&quot;1272&quot; height=&quot;706&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/數據分析-blog-dashboard-部落格儀表板.jpg&quot; class=&quot;attachment-large-…</description>
+    </item>
     <item>
       <title>Data Studio 教學 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/</guid>
-      <pubDate>Sat, 07 Nov 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
       <description>分類: Data Studio 教學 &lt;img width=&quot;1886&quot; height=&quot;1062&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2026/03/GSC-資料匯入.jpg&quot; class=&quot;attachment-large-thumb size-l…</description>
+    </item>
+    <item>
+      <title>Data Studio 教學 彙整 - 第 2 頁，總計 2 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</guid>
+      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
+      <description>分類: Data Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
     </item>
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Sat, 07 Nov 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
       <description>Max行銷誌全部 184 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
+    </item>
+    <item>
+      <title>All posts 彙整 - 第 17 頁，總計 20 頁 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/17/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/page/17/</guid>
+      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
+      <description>分類: All posts &lt;img width=&quot;1812&quot; height=&quot;1008&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2023/06/數據分析-google-map-商家分析.jpg&quot; class=&quot;attachment-large-thumb s…</description>
     </item>
     <item>
       <title>【Data Studio 教學】JOIN 和聯集（UNION）怎麼選？</title>
@@ -97,13 +118,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/post/lookerstudio-vs-tableau-vs-powerbi/</guid>
       <pubDate>Wed, 05 Nov 2025 03:11:40 GMT</pubDate>
       <description>本篇整理了台灣最常被使用的三個 BI 工具：Data Studio、Tableau 與 Power BI，我們在導入視覺化工具前，需要考量的四大關鍵要素 (資料 / 費用 / 安全 /系統)： 以下表格是我整理的 Data Studio vs Tableau vs Power BI 比較表格： 比較面向 Lo…</description>
-    </item>
-    <item>
-      <title>Data Studio 教學 彙整 - 第 2 頁，總計 2 頁 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</guid>
-      <pubDate>Wed, 05 Nov 2025 02:53:04 GMT</pubDate>
-      <description>分類: Data Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
     </item>
     <item>
       <title>一文搞懂 Kobo 電子書格式：EPUB、Kepub、版本差異與閱讀體驗 - Max行銷誌</title>
@@ -202,20 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/category/python-sql/</guid>
       <pubDate>Mon, 01 Apr 2024 09:22:35 GMT</pubDate>
       <description>分類: Python 資料庫教學 &lt;img width=&quot;1888&quot; height=&quot;1060&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/04/關於-SQL-的一天.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
-    </item>
-    <item>
-      <title>SQL Query 的一天過得好嗎 (上)？ - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/post/a-day-of-sql/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/post/a-day-of-sql/</guid>
-      <pubDate>Mon, 01 Apr 2024 06:41:10 GMT</pubDate>
-      <description>這篇我們會從使用者下了 SQL 指令開始、路途中經過連線池 (connection pool)、解析器 (parser)、優化器 (optimizer)… 等的過程紀錄下，希望這篇文章有幫助到你 🙂 Phase 1 – Connection Pool (連線池) 1-1. 什麼是 Connection Pool？…</description>
-    </item>
-    <item>
-      <title>資料庫最常見的欄位：UUID - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/post/uuid/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/post/uuid/</guid>
-      <pubDate>Thu, 08 Feb 2024 05:23:11 GMT</pubDate>
-      <description>UUID 是什麼？ 舉個簡單現實中的例子你的電話號碼、員工編號、銀行帳號和身份證字號等，都和 UUID 的功用非常相似，是一組唯一識別的號碼或代號。 而在網路世界中通用的唯一識別碼，我們稱為 UUID (Universally Unique Identifie)，RFC 4122 中標準化了 UUID 的實作規範。…</description>
     </item>
   </channel>
 </rss>
