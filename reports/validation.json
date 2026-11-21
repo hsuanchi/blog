@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T05:38:42.012Z",
+  "generatedAt": "2026-11-21T17:17:12.335Z",
   "files": {
     "total": 10424,
     "html": 854,
@@ -90,7 +90,7 @@
     "errors": []
   },
   "externalLinkNavigation": {
-    "linksChecked": 791,
+    "linksChecked": 790,
     "linksMissingAttributes": []
   },
   "netsuiteImageNavigation": {

@@ -305,39 +305,37 @@ body.home #primary .entry-content {
 .mh-steps {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 32px 16px;
+  border: 1px solid var(--mh-line);
+  border-radius: 18px;
+  background: var(--mh-paper);
+  overflow: hidden;
 }
 
 .mh-step {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 6px;
-  padding: 0 16px;
-  text-align: center;
+  min-width: 0;
+  padding: 30px 28px;
+  transition: background-color 0.2s;
 }
 
-.mh-step-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
+.mh-step + .mh-step {
+  border-left: 1px solid var(--mh-line);
 }
 
-.mh-icon {
-  display: grid;
-  place-items: center;
-  width: 72px;
-  height: 72px;
-  margin-bottom: 10px;
-  border: 1px solid var(--mh-line);
-  border-radius: 20px;
-  background: var(--mh-paper);
-  transition: transform 0.2s;
+.mh-step:hover {
+  background: #ffffff;
 }
 
-.mh-step-main:hover .mh-icon {
-  transform: translateY(-3px);
+.mh-step-num {
+  margin-bottom: 8px;
+  font-family: var(--mh-serif);
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--mh-accent);
 }
 
 .mh-step-title {
@@ -347,22 +345,23 @@ body.home #primary .entry-content {
   line-height: 1.35;
 }
 
-.mh-step-count {
+#maxlist-home .mh-step:hover .mh-step-title {
+  color: var(--mh-accent-text);
+}
+
+.mh-step-meta {
   font-size: 13px;
   color: var(--mh-muted);
 }
 
-#maxlist-home .mh-step-start {
-  padding-bottom: 1px;
-  border-bottom: 1px solid #cfc9bd;
-  font-size: 14px;
-  color: var(--mh-ink-2);
+.mh-step-dot {
+  margin: 0 2px;
 }
 
-/* Stage sections */
+/* Stage sections: one lead article beside a list, STEP 4 in three series columns */
 .mh-stage {
   scroll-margin-top: 72px;
-  padding: 104px 0;
+  padding: 88px 0 96px;
   border-bottom: 1px solid var(--mh-line);
 }
 
@@ -373,19 +372,38 @@ body.home #primary .entry-content {
 .mh-stage > .mh-wrap {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 36px;
 }
 
 .mh-stage-head {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px 20px;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.mh-stage-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
 }
 
 .mh-stage-head .mh-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
+}
+
+.mh-stage-head .mh-kicker::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--mh-accent);
 }
 
 #maxlist-home .mh-stage-head h2 {
@@ -396,55 +414,211 @@ body.home #primary .entry-content {
   color: var(--mh-ink);
 }
 
-.mh-group {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#maxlist-home .mh-group h3 {
-  font-family: inherit;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--mh-ink);
-}
-
-.mh-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 40px 28px;
-}
-
-.mh-card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-#maxlist-home .mh-card img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 8px;
-  background: #ece8e0;
-  box-shadow: 0 1px 2px rgba(20, 33, 61, 0.08);
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-#maxlist-home .mh-card:hover img {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(20, 33, 61, 0.14);
-}
-
-.mh-card span {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.55;
+#maxlist-home .mh-stage-head p {
+  color: var(--mh-muted);
 }
 
 #maxlist-home .mh-more {
+  margin-top: 12px;
   text-align: center;
+}
+
+.mh-thumb {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  border-radius: 10px;
+  background: #ece8e0;
+  box-shadow: 0 1px 2px rgba(20, 33, 61, 0.08);
+}
+
+#maxlist-home .mh-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#maxlist-home a:hover .mh-thumb img {
+  transform: scale(1.04);
+}
+
+.mh-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.mh-lead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  min-width: 0;
+}
+
+.mh-split .mh-lead {
+  position: sticky;
+  top: 96px;
+}
+
+.mh-lead .mh-thumb {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.mh-badge {
+  padding: 3px 12px;
+  border-radius: 999px;
+  background: var(--mh-accent-soft);
+  color: var(--mh-accent-text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mh-lead-title {
+  font-family: var(--mh-serif);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.mh-lead-desc,
+.mh-item-desc {
+  color: var(--mh-muted);
+}
+
+.mh-lead-desc {
+  font-size: 16px;
+}
+
+#maxlist-home .mh-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#maxlist-home .mh-list li {
+  margin: 0;
+}
+
+#maxlist-home .mh-list li + li {
+  border-top: 1px solid var(--mh-line);
+}
+
+.mh-item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  padding-block: 14px;
+}
+
+.mh-list li:first-child .mh-item {
+  padding-top: 0;
+}
+
+.mh-item .mh-thumb {
+  border-radius: 8px;
+}
+
+.mh-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.mh-item-title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.mh-item-desc {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#maxlist-home .mh-lead:hover .mh-lead-title,
+#maxlist-home .mh-item:hover .mh-item-title {
+  color: var(--mh-accent-text);
+}
+
+#maxlist-home .mh-lead:hover .mh-lead-desc,
+#maxlist-home .mh-item:hover .mh-item-desc {
+  color: var(--mh-muted);
+}
+
+.mh-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.mh-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.mh-col-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--mh-ink);
+}
+
+#maxlist-home .mh-col-head h3 {
+  font-family: var(--mh-serif);
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.4;
+  color: var(--mh-ink);
+}
+
+.mh-col-head span {
+  font-size: 13px;
+  color: var(--mh-muted);
+}
+
+.mh-col .mh-lead {
+  gap: 10px;
+}
+
+.mh-col .mh-lead .mh-thumb {
+  border-radius: 12px;
+}
+
+.mh-col .mh-lead-title {
+  font-size: 21px;
+}
+
+.mh-col .mh-lead-desc {
+  font-size: 14.5px;
+}
+
+.mh-list-mini .mh-item {
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 14px;
+  padding-block: 11px;
+}
+
+.mh-list-mini li:first-child .mh-item {
+  padding-top: 11px;
+}
+
+.mh-list-mini .mh-item .mh-thumb {
+  border-radius: 6px;
+}
+
+.mh-list-mini .mh-item-title {
+  font-size: 15px;
 }
 
 /* Case studies */
@@ -545,46 +719,60 @@ body.home #primary .entry-content {
   font-size: 14px;
 }
 
-.mh-course {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px 24px;
-  margin-top: 64px;
-  padding: 24px 28px;
-  border-radius: 12px;
-  background: var(--mh-accent-soft);
-}
-
-.mh-course > div {
-  flex: 1 1 320px;
-}
-
-#maxlist-home .mh-course-title {
-  font-family: var(--mh-serif);
-  font-size: 20px;
-  font-weight: 900;
-}
-
-#maxlist-home .mh-course p {
-  color: var(--mh-ink-2);
-}
-
-#maxlist-home .mh-course .mh-btn {
-  min-height: 44px;
-  padding: 0 20px;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
 @media (max-width: 1024px) {
   .mh-search {
     flex-basis: 200px;
   }
 
-  .mh-steps,
-  .mh-grid {
+  .mh-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mh-step:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .mh-step:nth-child(n + 3) {
+    border-top: 1px solid var(--mh-line);
+  }
+
+  .mh-split {
+    gap: 32px;
+  }
+
+  /* The header wraps to two rows here, so a pinned lead would slide under it. */
+  .mh-split .mh-lead {
+    position: static;
+  }
+
+  .mh-lead-title {
+    font-size: 26px;
+  }
+
+  .mh-item {
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .mh-trio {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 56px;
+  }
+
+  /* One series per row: lead on the left, its list on the right. */
+  .mh-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 16px 32px;
+    align-items: start;
+  }
+
+  .mh-col-head {
+    grid-column: 1 / -1;
+  }
+
+  .mh-list-mini li:first-child .mh-item {
+    padding-top: 0;
   }
 }
 
@@ -654,11 +842,27 @@ body.home #primary .entry-content {
   }
 
   .mh-steps {
-    gap: 28px 8px;
+    grid-template-columns: minmax(0, 1fr);
+    border-radius: 14px;
   }
 
   .mh-step {
-    padding: 0;
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    align-items: center;
+    gap: 2px 14px;
+    padding: 18px;
+  }
+
+  .mh-step + .mh-step {
+    border-top: 1px solid var(--mh-line);
+    border-left: 0;
+  }
+
+  .mh-step-num {
+    grid-row: span 2;
+    margin: 0;
+    font-size: 34px;
   }
 
   .mh-step-title {
@@ -670,19 +874,48 @@ body.home #primary .entry-content {
   }
 
   .mh-stage > .mh-wrap {
-    gap: 28px;
+    gap: 24px;
   }
 
   #maxlist-home .mh-stage-head h2 {
     font-size: 30px;
   }
 
-  .mh-grid {
-    gap: 24px 14px;
+  .mh-split,
+  .mh-col {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
   }
 
-  .mh-card span {
-    font-size: 14px;
+  .mh-lead-title,
+  .mh-col .mh-lead-title {
+    font-size: 22px;
+  }
+
+  .mh-item,
+  .mh-list-mini .mh-item {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 14px;
+    padding-block: 12px;
+  }
+
+  .mh-list li:first-child .mh-item,
+  .mh-list-mini li:first-child .mh-item {
+    padding-top: 12px;
+  }
+
+  .mh-split .mh-list,
+  .mh-col .mh-list {
+    border-top: 1px solid var(--mh-line);
+  }
+
+  .mh-item-title,
+  .mh-list-mini .mh-item-title {
+    font-size: 15px;
+  }
+
+  .mh-item-desc {
+    display: none;
   }
 
   .mh-btn {
@@ -704,9 +937,5 @@ body.home #primary .entry-content {
 
   .mh-case .mh-case-desc {
     display: none;
-  }
-
-  .mh-course {
-    padding: 22px;
   }
 }
