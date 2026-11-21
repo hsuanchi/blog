@@ -2,6 +2,8 @@
 
 以下規則適用本專案所有新增、修改及建置的文章、HTML 預覽與共用元件。
 
+- 新增、改寫、移植或更新文章前，先閱讀並遵循 [文章守則](ARTICLE_RULES.md)。
+- **HTML 介面示意圖的視窗風格、配色與標示方式，遵循[文章守則的示意圖風格](ARTICLE_RULES.md#html-介面示意圖風格)。** 使用 HTML／CSS 重繪，沿用已確認的淺藍灰視窗、淡藍選取與珊瑚紅重點框。
 - **所有外部網頁連結一律另開新分頁，並加上 `rel="noopener noreferrer"`。** 不可省略 `noreferrer`；若原本已有 `nofollow`、`sponsored` 等值，須一併保留。
 - 範例：`<a href="https://example.com/guide" target="_blank" rel="noopener noreferrer">參考文件</a>`。
 - 外部網頁連結包含 `http:`、`https:` 及 `//` 開頭且指向站外的網址。站內文章連結、頁內錨點、`mailto:` 與 `tel:` 不套用此規則；NetSuite 圖片放大的另開分頁規則仍照系列規範執行。
