@@ -1,0 +1,63 @@
+.shopline-mcp-guide { color: #303744; line-height: 1.9; --sl-accent: #d65050; --sl-ink: #00102e; }
+.shopline-mcp-guide h2 { margin-top: 2.4em; scroll-margin-top: 110px; }
+.shopline-mcp-guide h3 { margin-top: 1.7em; scroll-margin-top: 110px; }
+.shopline-mcp-guide .sl-scope, .shopline-mcp-guide .sl-source { color: #637187; font-size: .88em; }
+.shopline-mcp-guide .sl-key { margin: 28px 0; padding: 22px 24px; background: #00102e; color: #fff; border-radius: 10px; }
+.shopline-mcp-guide .sl-key strong { display: block; font-size: 1em; color: #fff; }
+.shopline-mcp-guide .sl-key code { display: block; margin: 12px 0; color: #fff; background: transparent; padding: 0; font-size: .92em; overflow-wrap: anywhere; }
+.shopline-mcp-guide .sl-key span { font-size: .86em; color: #e1e7f1; }
+.shopline-mcp-guide details { border: 1px solid #dce2eb; border-radius: 8px; margin: 14px 0; padding: 16px 20px; }
+.shopline-mcp-guide summary { cursor: pointer; color: var(--sl-ink); font-weight: 600; }
+.shopline-mcp-guide summary:focus-visible, .shopline-mcp-guide a:focus-visible { outline: 2px solid var(--sl-accent); outline-offset: 4px; }
+.shopline-mcp-guide details[open] > summary { margin-bottom: 14px; }
+.shopline-mcp-guide .sl-toc ol { margin: 8px 0 0; padding-left: 1.5em; }
+.shopline-mcp-guide .sl-note { padding: 20px 24px; margin: 26px 0; background: #f2f5fa; border-left: 4px solid var(--sl-accent); border-radius: 0 8px 8px 0; }
+.shopline-mcp-guide .sl-note p:last-child, .shopline-mcp-guide .sl-faq p:last-child { margin-bottom: 0; }
+.shopline-mcp-guide pre { background: #f5f6f8; color: #253449; padding: 22px; border: 1px solid #dce2eb; border-radius: 8px; font-size: .9em; line-height: 1.85; white-space: pre-wrap; overflow-wrap: anywhere; }
+.shopline-mcp-guide pre code { background: transparent; color: inherit; padding: 0; font-size: inherit; }
+.shopline-mcp-guide :not(pre) > code { overflow-wrap: anywhere; }
+.shopline-mcp-guide .sl-figure { margin: 30px 0 36px; }
+.shopline-mcp-guide figcaption { margin-top: 12px; color: #637187; font-size: .85em; line-height: 1.7; }
+.shopline-mcp-guide .sl-ui { border: 1px solid #dce2eb; border-radius: 12px; overflow: hidden; background: #fff; color: #303744; font: 15px/1.6 -apple-system, BlinkMacSystemFont, "PingFang TC", sans-serif; box-shadow: 0 8px 24px #00102e08; }
+.shopline-mcp-guide .sl-ui-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; background: #f3f4f6; border-bottom: 1px solid #dce2eb; }
+.shopline-mcp-guide .sl-ui-admin .sl-ui-bar { color: #fff; background: #374151; }
+.shopline-mcp-guide .sl-ui-bar > span { font-size: 12px; white-space: nowrap; opacity: .85; }
+.shopline-mcp-guide .sl-ui-body { padding: 24px; }
+.shopline-mcp-guide .sl-breadcrumb { color: #637187; font-size: 13px; margin-bottom: 22px; }
+.shopline-mcp-guide .sl-tabs { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; border-bottom: 1px solid #dce2eb; }
+.shopline-mcp-guide .sl-tabs > span { color: #637187; }
+.shopline-mcp-guide .sl-tabs strong { padding: 10px 0; border-bottom: 3px solid #1689c2; }
+.shopline-mcp-guide .sl-number { display: inline-flex; align-items: center; justify-content: center; width: 23px; height: 23px; margin-right: 5px; border-radius: 50%; background: #d65050; color: #fff; font: normal 600 12px/1 sans-serif; flex-shrink: 0; }
+.shopline-mcp-guide .sl-permission { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 24px 0; border-bottom: 1px solid #e2e7ef; }
+.shopline-mcp-guide .sl-permission small { display: block; color: #637187; font-size: 13px; margin: 8px 0 0; }
+.shopline-mcp-guide .sl-toggle { display: flex; align-items: center; gap: 10px; padding: 4px 6px 4px 13px; background: #43843c; color: #fff; border-radius: 5px; flex-shrink: 0; }
+.shopline-mcp-guide .sl-toggle::after { content: ""; display: block; width: 19px; height: 21px; border-radius: 2px; background: #fff; }
+.shopline-mcp-guide .sl-permission-hint { display: flex; align-items: center; gap: 6px; padding: 20px 0; color: #637187; font-size: 14px; }
+.shopline-mcp-guide .sl-ui-actions { display: flex; justify-content: flex-end; margin-top: 18px; }
+.shopline-mcp-guide .sl-ui-button { display: inline-block; background: #252525; color: #fff; padding: 7px 18px; border-radius: 6px; font-size: 14px; }
+.shopline-mcp-guide .sl-ui-button-blue { background: #1689c2; }
+.shopline-mcp-guide .sl-ui-claude { background: #faf9f5; }
+.shopline-mcp-guide .sl-ui-claude .sl-ui-bar { background: #f1efe8; }
+.shopline-mcp-guide .sl-form-pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.shopline-mcp-guide .sl-form-page { min-width: 0; padding: 22px; }
+.shopline-mcp-guide .sl-form-page + .sl-form-page { border-left: 1px solid #dedcd4; }
+.shopline-mcp-guide .sl-form-step { font-weight: 600; margin-bottom: 20px; color: #6b5547; }
+.shopline-mcp-guide .sl-field-label { color: #59554d; font-size: 12px; margin: 14px 0 6px; }
+.shopline-mcp-guide .sl-field { padding: 10px 12px; border: 1px solid #d2cfc5; background: #fff; border-radius: 6px; font-size: 13px; overflow-wrap: anywhere; }
+.shopline-mcp-guide .sl-field-url { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; }
+.shopline-mcp-guide .sl-field-url b { color: #a43838; }
+.shopline-mcp-guide .sl-related { margin-top: 44px; }
+.shopline-mcp-guide .sl-related ul { list-style: none; padding: 0; margin: 20px 0 0; }
+.shopline-mcp-guide .sl-related li { padding: 18px 0; border-bottom: 1px solid #e2e7ef; }
+.shopline-mcp-guide .sl-related a { font-weight: 600; }
+.shopline-mcp-guide .sl-related span { display: block; color: #637187; font-size: 14px; margin-top: 4px; }
+@media (max-width: 620px) {
+  .shopline-mcp-guide .sl-form-pages { grid-template-columns: minmax(0, 1fr); }
+  .shopline-mcp-guide .sl-form-page + .sl-form-page { border-left: 0; border-top: 1px solid #dedcd4; }
+  .shopline-mcp-guide .sl-ui-bar { padding: 12px 14px; }
+  .shopline-mcp-guide .sl-ui-bar b { font-size: 13px; }
+  .shopline-mcp-guide .sl-ui-body, .shopline-mcp-guide .sl-form-page { padding: 18px 14px; }
+  .shopline-mcp-guide .sl-key, .shopline-mcp-guide .sl-note { padding: 18px; }
+  .shopline-mcp-guide pre { padding: 16px; font-size: .83em; }
+  .shopline-mcp-guide details { padding: 14px 16px; }
+}

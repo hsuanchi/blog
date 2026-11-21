@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">Claude 串接 SHOPLINE MCP 教學</title>
+<desc id="desc">Claude 與 SHOPLINE 連接器介面示意背景，搭配 Max行銷誌紅色遮罩、白色標題及右下角 M 標記。</desc>
+<rect width="1200" height="675" fill="#f5f3ee"/>
+<rect x="38" y="52" width="512" height="567" rx="18" fill="#fffdfa" stroke="#d6d2c7"/>
+<text x="78" y="108" font-size="32" font-weight="500" fill="#34332e">Claude</text>
+<text x="78" y="164" font-size="23" fill="#777267">Connectors</text>
+<rect x="76" y="193" width="432" height="268" rx="12" fill="#ffffff" stroke="#d6d2c7"/>
+<text x="104" y="239" font-size="24" font-weight="500" fill="#34332e">SHOPLINE</text>
+<text x="104" y="281" font-size="16" fill="#777267">Remote MCP server URL</text>
+<rect x="104" y="298" width="374" height="51" rx="7" fill="#f3f2ec"/>
+<text x="123" y="331" font-size="20" fill="#777267">/mcp/on-demand</text>
+<rect x="326" y="382" width="152" height="45" rx="7" fill="#34332e"/>
+<text x="402" y="413" font-size="21" fill="#ffffff" text-anchor="middle">Connect</text>
+<rect x="650" y="52" width="512" height="567" rx="18" fill="#ffffff" stroke="#d6dce3"/>
+<rect x="650" y="52" width="512" height="77" rx="18" fill="#374151"/>
+<text x="684" y="103" font-size="29" font-weight="500" fill="#ffffff">SHOPLINE ADMIN</text>
+<text x="686" y="176" font-size="24" fill="#374151">API Auth</text>
+<rect x="683" y="208" width="445" height="97" rx="10" fill="#eef3f6"/>
+<text x="706" y="265" font-size="25" fill="#374151">MCP 權限</text>
+<rect x="1026" y="237" width="69" height="34" rx="17" fill="#5a9464"/>
+<circle cx="1077" cy="254" r="13" fill="#ffffff"/>
+<rect x="687" y="340" width="435" height="12" rx="6" fill="#dce2e8"/>
+<rect x="687" y="383" width="338" height="12" rx="6" fill="#e4e8ec"/>
+<rect x="687" y="426" width="395" height="12" rx="6" fill="#e4e8ec"/>
+<rect width="1200" height="675" fill="#934f4c" opacity="0.86"/>
+<text x="600" y="278" font-family="PingFang TC, sans-serif" font-size="66" font-weight="500" fill="#ffffff" text-anchor="middle">【 Claude × SHOPLINE 】</text>
+<text x="600" y="391" font-family="PingFang TC, sans-serif" font-size="94" font-weight="500" fill="#ffffff" text-anchor="middle">MCP 串接教學</text>
+<text x="600" y="455" font-family="PingFang TC, sans-serif" font-size="32" fill="#ff8580" text-anchor="middle">Max行銷誌</text>
+<rect x="1134" y="609" width="46" height="46" fill="#ff8580"/>
+<text x="1157" y="645" font-family="PingFang TC, sans-serif" font-size="34" font-weight="600" fill="#934f4c" text-anchor="middle">M</text>
+</svg>

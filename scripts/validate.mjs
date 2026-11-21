@@ -12,10 +12,10 @@ const URL_MIGRATION_REPORT = path.join(REPO_ROOT, "reports", "url-migration.json
 const EXPECTED_GTM = "GTM-WSG8N3Q";
 const EXPECTED_GA4 = "G-YR986G8PX3";
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
-// Two coffee guides, NetSuite tutorials 01–02, the Chrome extension guide, and the Data Studio update.
-const ADDED_STATIC_POSTS = 6;
-// Six coffee assets, nine NetSuite assets, one Chrome cover, and five Data Studio assets.
-const ADDED_STATIC_IMAGES = 21;
+// Two coffee guides, NetSuite tutorials 01–02, the Chrome extension guide, Data Studio, and Claude × SHOPLINE MCP.
+const ADDED_STATIC_POSTS = 7;
+// Six coffee assets, nine NetSuite assets, one Chrome cover, five Data Studio assets, and one SHOPLINE cover.
+const ADDED_STATIC_IMAGES = 22;
 
 async function filesBelow(directory) {
   const entries = await readdir(directory, { withFileTypes: true });

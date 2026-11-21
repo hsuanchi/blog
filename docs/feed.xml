@@ -5,8 +5,29 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sun, 08 Nov 2026 16:18:56 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 01:54:00 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All posts 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
+      <pubDate>Fri, 20 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Max行銷誌全部 184 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
+    </item>
+    <item>
+      <title>數據自動化 彙整 - Max行銷誌</title>
+      <link>https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
+      <pubDate>Fri, 20 Nov 2026 16:00:00 GMT</pubDate>
+      <description>數據自動化教學，包含 Claude 串接 SHOPLINE MCP、查詢電商訂單與庫存，以及定時擷取行銷數據。</description>
+    </item>
+    <item>
+      <title>【Claude 教學】串接 SHOPLINE MCP：從權限設定到查詢訂單</title>
+      <link>https://www.maxlist.xyz/post/claude-shopline-mcp/</link>
+      <guid isPermaLink="true">https://www.maxlist.xyz/post/claude-shopline-mcp/</guid>
+      <pubDate>Fri, 20 Nov 2026 16:00:00 GMT</pubDate>
+      <description>用 Claude 串接 SHOPLINE MCP，從 OpenAPI 資格、管理員 MCP 權限、遠端連接器網址與 OAuth 設定，到商店授權、訂單及庫存查詢，附操作示意圖、指令範例與常見問題。</description>
+    </item>
     <item>
       <title>Python 數據分析 彙整 - 第 2 頁，總計 3 頁 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/analytics/page/2/</link>
@@ -27,13 +48,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/category/looker-studio-%E6%95%99%E5%AD%B8/page/2/</guid>
       <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
       <description>分類: Data Studio 教學 &lt;img width=&quot;960&quot; height=&quot;540&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2021/10/Looker-Studio-進階第一堂課.jpg&quot; class=&quot;attachment-large-th…</description>
-    </item>
-    <item>
-      <title>All posts 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Sun, 08 Nov 2026 16:10:50 GMT</pubDate>
-      <description>Max行銷誌全部 184 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
     </item>
     <item>
       <title>All posts 彙整 - 第 17 頁，總計 20 頁 - Max行銷誌</title>
@@ -148,13 +162,6 @@
       <description>最近遇到需要分享 Google Merchant Center 超級用戶權限的問題，花了很多時間研究，也和 GPT 聊很久，但 GMC 介面上把權限分享藏得很深，實在太難找了 🤣 所以寫了這篇，分享給目前也在卡關的你，希望有幫助！ Step 1 設定 &gt; 用戶訪問權限 首先，進入 Google Merchant C…</description>
     </item>
     <item>
-      <title>數據自動化 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
-      <pubDate>Thu, 03 Jul 2025 05:15:31 GMT</pubDate>
-      <description>分類: 數據自動化 &lt;img width=&quot;1910&quot; height=&quot;1076&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2025/07/數據自動化-Meta廣告.jpg&quot; class=&quot;attachment-large-thumb size-large-th…</description>
-    </item>
-    <item>
       <title>零成本，每天定時撈取 Meta 廣告數據 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/post/auto-fetch-meta-ads/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/post/auto-fetch-meta-ads/</guid>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">https://www.maxlist.xyz/post/fastapi-contributor/</guid>
       <pubDate>Sun, 14 Apr 2024 13:46:06 GMT</pubDate>
       <description>嗨你好，我是 Max，很歡迎你一起參與 FastAPI 繁體中文翻譯計畫，希望這份紀錄對你在開始第一篇翻譯時有幫助 🙂 ㄧ. 起手式 Fork FastAPI 首先到 FastAPI (https://github.com/tiangolo/fastapi)，點擊右上角的 Fork 專案 接下來到本地終端機 git…</description>
-    </item>
-    <item>
-      <title>Python 資料庫教學 彙整 - Max行銷誌</title>
-      <link>https://www.maxlist.xyz/category/python-sql/</link>
-      <guid isPermaLink="true">https://www.maxlist.xyz/category/python-sql/</guid>
-      <pubDate>Mon, 01 Apr 2024 09:22:35 GMT</pubDate>
-      <description>分類: Python 資料庫教學 &lt;img width=&quot;1888&quot; height=&quot;1060&quot; src=&quot;https://www.maxlist.xyz/wp-content/uploads/2024/04/關於-SQL-的一天.jpg&quot; class=&quot;attachment-large-thumb size-lar…</description>
     </item>
   </channel>
 </rss>
