@@ -46,6 +46,67 @@
 .shopline-mcp-guide .sl-field { padding: 10px 12px; border: 1px solid #d2cfc5; background: #fff; border-radius: 6px; font-size: 13px; overflow-wrap: anywhere; }
 .shopline-mcp-guide .sl-field-url { font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; }
 .shopline-mcp-guide .sl-field-url b { color: #a43838; }
+.shopline-mcp-guide .sl-small { display: block; color: #637187; font-size: 12px; line-height: 1.7; }
+.shopline-mcp-guide .sl-app-layout { display: grid; grid-template-columns: 160px minmax(0, 1fr); }
+.shopline-mcp-guide .sl-app-sidebar { display: flex; flex-direction: column; gap: 8px; padding: 22px 12px; background: #f1efe8; border-right: 1px solid #dedcd4; min-width: 0; }
+.shopline-mcp-guide .sl-app-brand { display: block; font: 600 22px/1.4 Georgia, serif; padding: 0 9px 18px; }
+.shopline-mcp-guide .sl-nav-item { display: flex; align-items: center; padding: 9px; border-radius: 6px; font-size: 13px; }
+.shopline-mcp-guide .sl-nav-active { background: #fff; box-shadow: 0 0 0 2px #d65050; }
+.shopline-mcp-guide .sl-app-main { min-width: 0; padding: 24px; }
+.shopline-mcp-guide .sl-screen-title { color: #302d28; font-size: 24px; font-weight: 600; }
+.shopline-mcp-guide .sl-screen-tabs { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin: 18px 0; border-bottom: 1px solid #dedcd4; color: #79746b; font-size: 13px; }
+.shopline-mcp-guide .sl-screen-tabs > * { padding: 8px 0; }
+.shopline-mcp-guide .sl-screen-tabs strong { border-bottom: 2px solid #302d28; color: #302d28; }
+.shopline-mcp-guide .sl-add-area { display: flex; flex-direction: column; align-items: flex-end; gap: 14px; padding: 8px 2px; }
+.shopline-mcp-guide .sl-outline-highlight { outline: 2px solid #d65050; outline-offset: 4px; }
+.shopline-mcp-guide .sl-menu-card { padding: 9px; background: #fff; border: 1px solid #dedcd4; border-radius: 9px; box-shadow: 0 5px 14px #302d280a; max-width: 100%; min-width: 0; }
+.shopline-mcp-guide .sl-menu-selected { display: flex; align-items: center; gap: 5px; padding: 9px; background: #fff3ef; border-radius: 5px; font-size: 13px; color: #7b3930; overflow-wrap: anywhere; }
+.shopline-mcp-guide .sl-empty-state { margin-top: 22px; padding: 25px 12px; border: 1px dashed #d2cfc5; border-radius: 7px; color: #79746b; text-align: center; font-size: 13px; }
+.shopline-mcp-guide .sl-account-menu { display: grid; grid-template-columns: 40px minmax(0, 1fr); align-items: center; gap: 10px; max-width: 410px; padding: 16px; border: 1px solid #dedcd4; border-radius: 9px; background: #fff; }
+.shopline-mcp-guide .sl-avatar-letter { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; background: #efede7; border-radius: 50%; }
+.shopline-mcp-guide .sl-account-menu > strong { grid-column: 1 / -1; }
+.shopline-mcp-guide .sl-organization-path { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 26px 0; font-size: 13px; }
+.shopline-mcp-guide .sl-organization-path > span:not([aria-hidden]), .shopline-mcp-guide .sl-organization-path > strong { display: inline-flex; align-items: center; padding: 7px 10px; background: #fff; border: 1px solid #dedcd4; border-radius: 6px; }
+.shopline-mcp-guide .sl-organization-path > strong { color: #7b3930; border-color: #d65050; }
+.shopline-mcp-guide .sl-screen-callout { padding: 14px 16px; border-radius: 7px; background: #f1efe8; color: #62594b; font-size: 13px; line-height: 1.8; }
+.shopline-mcp-guide .sl-connect-detail { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 32px 22px; text-align: center; }
+.shopline-mcp-guide .sl-service-icon { display: inline-flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 14px; background: #fff; border: 1px solid #dedcd4; box-shadow: 0 3px 8px #302d280a; color: #59554d; font: 600 29px/1 Georgia, serif; flex-shrink: 0; }
+.shopline-mcp-guide .sl-server-address { color: #79746b; font: 12px/1.8 ui-monospace, SFMono-Regular, monospace; overflow-wrap: anywhere; max-width: 100%; }
+.shopline-mcp-guide .sl-connection-label { color: #637187; font-size: 14px; }
+.shopline-mcp-guide .sl-connect-detail .sl-ui-button { margin: 4px 0; }
+.shopline-mcp-guide .sl-auth-connection { display: flex; align-items: flex-start; justify-content: center; gap: 24px; padding: 28px 0; }
+.shopline-mcp-guide .sl-auth-connection > div { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; min-width: 0; }
+.shopline-mcp-guide .sl-service-icon-claude { background: #fff4eb; color: #b66a47; }
+.shopline-mcp-guide .sl-service-icon-shop { background: #eef4fe; color: #4072bc; }
+.shopline-mcp-guide .sl-auth-arrow { color: #a9b4c5; font-size: 28px; padding-top: 5px; }
+.shopline-mcp-guide .sl-auth-heading { display: flex; align-items: center; gap: 5px; font-weight: 600; font-size: 14px; margin: 4px 0 14px; }
+.shopline-mcp-guide .sl-auth-scopes { border: 1px solid #dce2eb; border-radius: 7px; margin-bottom: 10px; background: #fff; }
+.shopline-mcp-guide .sl-auth-scopes > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; font-size: 14px; }
+.shopline-mcp-guide .sl-auth-scopes > div + div { border-top: 1px solid #e2e7ef; }
+.shopline-mcp-guide .sl-auth-actions { justify-content: center; gap: 20px; margin-top: 28px; }
+.shopline-mcp-guide .sl-ui-button-secondary { background: #f3f4f6; color: #374151; border: 1px solid #dce2eb; }
+.shopline-mcp-guide .sl-conversation-menu { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 14px; align-items: start; margin: 0 0 18px; }
+.shopline-mcp-guide .sl-conversation-menu .sl-menu-selected { justify-content: space-between; }
+.shopline-mcp-guide .sl-connector-toggle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 7px 4px; font-size: 13px; font-weight: 600; }
+.shopline-mcp-guide .sl-connector-toggle > span:first-child { display: flex; align-items: center; }
+.shopline-mcp-guide .sl-conversation-menu .sl-small { margin: 6px 5px; }
+.shopline-mcp-guide .sl-mini-toggle { display: flex; align-items: center; justify-content: flex-end; padding: 3px; width: 34px; height: 20px; border-radius: 12px; background: #252525; flex-shrink: 0; }
+.shopline-mcp-guide .sl-mini-toggle::after { content: ""; display: block; width: 14px; height: 14px; border-radius: 50%; background: #fff; }
+.shopline-mcp-guide .sl-composer { padding: 20px 18px 14px; border: 1px solid #d2cfc5; border-radius: 14px; background: #fff; }
+.shopline-mcp-guide .sl-composer-placeholder { color: #79746b; font-size: 14px; }
+.shopline-mcp-guide .sl-composer-toolbar { display: flex; align-items: center; justify-content: space-between; margin-top: 30px; }
+.shopline-mcp-guide .sl-plus-button { display: inline-flex; align-items: center; gap: 3px; font-size: 23px; }
+.shopline-mcp-guide .sl-chat-question { padding: 15px 18px; background: #efede7; border-radius: 12px; max-width: 88%; margin: 0 0 24px auto; font-size: 14px; line-height: 1.8; }
+.shopline-mcp-guide .sl-tool-trace { display: flex; align-items: center; gap: 10px; padding: 12px; border: 1px solid #dedcd4; border-radius: 8px; background: #fff; font-size: 13px; }
+.shopline-mcp-guide .sl-service-mark { display: flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 6px; background: #f1efe8; font-weight: 600; flex-shrink: 0; }
+.shopline-mcp-guide .sl-trace-status { margin-left: auto; color: #377052; font-size: 12px; white-space: nowrap; }
+.shopline-mcp-guide .sl-chat-answer { padding: 22px 0 18px; }
+.shopline-mcp-guide .sl-chat-answer > b { font-size: 14px; }
+.shopline-mcp-guide .sl-result-list { margin: 12px 0 0; border: 1px solid #dedcd4; background: #fff; border-radius: 8px; overflow: hidden; }
+.shopline-mcp-guide .sl-result-list > div { display: grid; grid-template-columns: 110px minmax(0, 1fr); font-size: 13px; }
+.shopline-mcp-guide .sl-result-list > div + div { border-top: 1px solid #dedcd4; }
+.shopline-mcp-guide .sl-result-list dt, .shopline-mcp-guide .sl-result-list dd { padding: 11px 14px; margin: 0; overflow-wrap: anywhere; }
+.shopline-mcp-guide .sl-result-list dt { background: #f5f4ef; color: #62594b; font-weight: 500; }
 .shopline-mcp-guide .sl-related { margin-top: 44px; }
 .shopline-mcp-guide .sl-related ul { list-style: none; padding: 0; margin: 20px 0 0; }
 .shopline-mcp-guide .sl-related li { padding: 18px 0; border-bottom: 1px solid #e2e7ef; }
@@ -60,4 +121,19 @@
   .shopline-mcp-guide .sl-key, .shopline-mcp-guide .sl-note { padding: 18px; }
   .shopline-mcp-guide pre { padding: 16px; font-size: .83em; }
   .shopline-mcp-guide details { padding: 14px 16px; }
+  .shopline-mcp-guide .sl-app-layout { grid-template-columns: minmax(0, 1fr); }
+  .shopline-mcp-guide .sl-app-sidebar { flex-direction: row; align-items: center; flex-wrap: wrap; gap: 7px; padding: 14px; border-right: 0; border-bottom: 1px solid #dedcd4; }
+  .shopline-mcp-guide .sl-app-brand { flex-basis: 100%; padding: 0 0 6px; }
+  .shopline-mcp-guide .sl-nav-item { padding: 7px; font-size: 12px; }
+  .shopline-mcp-guide .sl-app-main { padding: 18px 14px; }
+  .shopline-mcp-guide .sl-screen-tabs { gap: 14px; }
+  .shopline-mcp-guide .sl-connect-detail { padding: 28px 16px; }
+  .shopline-mcp-guide .sl-conversation-menu { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .shopline-mcp-guide .sl-conversation-menu .sl-menu-card:first-child { max-width: 220px; }
+  .shopline-mcp-guide .sl-composer { padding: 18px 14px 12px; }
+  .shopline-mcp-guide .sl-chat-question { max-width: 96%; padding: 13px; }
+  .shopline-mcp-guide .sl-tool-trace { gap: 8px; padding: 10px; }
+  .shopline-mcp-guide .sl-tool-trace .sl-small { font-size: 11px; }
+  .shopline-mcp-guide .sl-result-list > div { grid-template-columns: 88px minmax(0, 1fr); }
+  .shopline-mcp-guide .sl-result-list dt, .shopline-mcp-guide .sl-result-list dd { padding: 10px 12px; }
 }

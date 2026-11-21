@@ -11,6 +11,7 @@ const id = '11011';
 const title = '【Claude 教學】串接 SHOPLINE MCP：從權限設定到查詢訂單';
 const description = '用 Claude 串接 SHOPLINE MCP，從 OpenAPI 資格、管理員 MCP 權限、遠端連接器網址與 OAuth 設定，到商店授權、訂單及庫存查詢，附操作示意圖、指令範例與常見問題。';
 const date = '2026-11-21T00:00:00+08:00';
+const modified = '2026-11-21T13:07:10+08:00';
 const dateText = '2026 年 11 月 21 日';
 const permalink = `/post/${slug}/`;
 const canonical = `https://www.maxlist.xyz${permalink}`;
@@ -62,6 +63,7 @@ const imagePath = path.join(docs, 'image', slug, 'cover.jpg');
 execFileSync(renderer, [path.join(artwork, 'cover.svg'), imagePath], { stdio: 'inherit' });
 const version = createHash('sha256').update(await readFile(imagePath)).digest('hex').slice(0, 12);
 const cover = `/image/${slug}/cover.jpg?v=${version}`;
+const cssVersion = createHash('sha256').update(await readFile(path.join(docs, 'assets/css/posts', `${slug}.css`))).digest('hex').slice(0, 12);
 
 function meta($, selector, attributes) {
   const existing = $(selector).first();
@@ -87,15 +89,15 @@ for (const [name, value] of Object.entries({ title, description, url: canonical,
 for (const [name, value] of Object.entries({ title, description, image: `https://www.maxlist.xyz${cover}`, 'image:alt': 'Claude 串接 SHOPLINE MCP 教學' })) {
   meta($, `meta[name="twitter:${name}"]`, { name: `twitter:${name}`, content: value });
 }
-for (const name of ['published_time', 'modified_time']) meta($, `meta[property="article:${name}"]`, { property: `article:${name}`, content: date });
+for (const [name, value] of Object.entries({ published_time: date, modified_time: modified })) meta($, `meta[property="article:${name}"]`, { property: `article:${name}`, content: value });
 meta($, 'meta[property="article:section"]', { property: 'article:section', content: '數據自動化' });
 $('link[href*="posts/chrome-extension-import.css"]').remove();
-$('head').append('<link rel="stylesheet" href="../../assets/css/posts/claude-shopline-mcp.css?v=20261121-1">');
+$('head').append(`<link rel="stylesheet" href="../../assets/css/posts/claude-shopline-mcp.css?v=${cssVersion}">`);
 $('body').removeClass('postid-11006').addClass(`postid-${id}`);
 const article = $('main article').first();
 article.attr({ id: `post-${id}`, class: `post-${id} post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-708 tag-api`, 'data-category-names': JSON.stringify(['數據自動化']) });
 article.find('h1').text(title);
-article.find('.entry-meta').html(`<span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/數據自動化/" rel="category tag">數據自動化</a></span><span class="posted-on">最後更新時間 <time class="entry-date updated-time" datetime="${date}">${dateText}</time></span>`);
+article.find('.entry-meta').html(`<span class="byline"><span class="author vcard">Made with ☕ by <a class="url fn n" href="/post/author/">Max</a></span></span><span class="cat-links"><a href="/category/數據自動化/" rel="category tag">數據自動化</a></span><span class="posted-on">最後更新時間 <time class="entry-date updated-time" datetime="${modified}">${dateText}</time></span>`);
 article.find('.entry-thumb').html(`<img src="../..${cover}" width="1200" height="675" alt="Claude 串接 SHOPLINE MCP：從權限設定到查詢訂單" decoding="async" fetchpriority="high">`);
 const content = load(await readFile(path.join(root, 'scripts/content', `${slug}.html`), 'utf8'), null, false);
 // Keep related-reading labels aligned with the actual local article titles.
@@ -108,8 +110,8 @@ article.find('.entry-content').attr('class', 'entry-content shopline-mcp-guide')
 article.find('.entry-footer, .post-navigation').remove();
 const faq = content('.sl-faq details').toArray().map((element) => ({ '@type': 'Question', name: content(element).find('summary').text(), acceptedAnswer: { '@type': 'Answer', text: content(element).find('div').text() } }));
 const graph = [
-  { '@type': 'Article', '@id': `${canonical}#article`, headline: title, description, datePublished: date, dateModified: date, author: { '@id': authorId }, publisher: { '@id': authorId }, mainEntityOfPage: { '@id': canonical }, image: { '@type': 'ImageObject', url: `https://www.maxlist.xyz${cover}`, width: 1200, height: 675 }, articleSection: ['數據自動化'], inLanguage: 'zh-TW' },
-  { '@type': 'WebPage', '@id': canonical, url: canonical, name: `${title} - Max行銷誌`, description, datePublished: date, dateModified: date, breadcrumb: { '@id': `${canonical}#breadcrumb` }, inLanguage: 'zh-TW' },
+  { '@type': 'Article', '@id': `${canonical}#article`, headline: title, description, datePublished: date, dateModified: modified, author: { '@id': authorId }, publisher: { '@id': authorId }, mainEntityOfPage: { '@id': canonical }, image: { '@type': 'ImageObject', url: `https://www.maxlist.xyz${cover}`, width: 1200, height: 675 }, articleSection: ['數據自動化'], inLanguage: 'zh-TW' },
+  { '@type': 'WebPage', '@id': canonical, url: canonical, name: `${title} - Max行銷誌`, description, datePublished: date, dateModified: modified, breadcrumb: { '@id': `${canonical}#breadcrumb` }, inLanguage: 'zh-TW' },
   { '@type': 'BreadcrumbList', '@id': `${canonical}#breadcrumb`, itemListElement: [{ '@type': 'ListItem', position: 1, name: '首頁', item: 'https://www.maxlist.xyz/' }, { '@type': 'ListItem', position: 2, name: '數據自動化', item: 'https://www.maxlist.xyz/category/數據自動化/' }, { '@type': 'ListItem', position: 3, name: title }] },
   { '@type': 'Person', '@id': authorId, name: 'Max', url: 'https://www.maxlist.xyz/post/author/' },
   { '@type': 'FAQPage', '@id': `${canonical}#faq`, mainEntity: faq }
@@ -117,7 +119,7 @@ const graph = [
 $('script[type="application/ld+json"]').html(JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }));
 await save(`post/${slug}/index.html`, $);
 
-const card = `<article id="post-${id}" class="post-${id} post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-708 tag-api post-align-center post-vertical-align-middle col-lg-4 col-md-4"><div class="content-inner"><div class="entry-thumb"><a href="${permalink}" title="${title}"><img src="${cover}" width="1200" height="675" alt="Claude 串接 SHOPLINE MCP 教學" loading="lazy" decoding="async"></a></div><header class="entry-header"><h2 class="title-post entry-title"><a href="${permalink}" rel="bookmark">${title}</a></h2></header><div class="entry-meta below-excerpt delimiter-dot"><span class="posted-on">最後更新時間 <a href="${permalink}" rel="bookmark"><time class="entry-date updated-time" datetime="${date}">${dateText}</time></a></span></div></div></article>`;
+const card = `<article id="post-${id}" class="post-${id} post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-708 tag-api post-align-center post-vertical-align-middle col-lg-4 col-md-4"><div class="content-inner"><div class="entry-thumb"><a href="${permalink}" title="${title}"><img src="${cover}" width="1200" height="675" alt="Claude 串接 SHOPLINE MCP 教學" loading="lazy" decoding="async"></a></div><header class="entry-header"><h2 class="title-post entry-title"><a href="${permalink}" rel="bookmark">${title}</a></h2></header><div class="entry-meta below-excerpt delimiter-dot"><span class="posted-on">最後更新時間 <a href="${permalink}" rel="bookmark"><time class="entry-date updated-time" datetime="${modified}">${dateText}</time></a></span></div></div></article>`;
 for (const relative of ['2026/index.html', 'category/所有文章/index.html', 'category/數據自動化/index.html', 'tag/api/index.html']) {
   const archive = load(await readFile(path.join(docs, relative), 'utf8'));
   archive(`#post-${id}`).remove();
@@ -129,4 +131,4 @@ const home = load(await readFile(path.join(docs, 'index.html'), 'utf8'));
 home(`.mh-case-side a[href="${permalink}"]`).remove();
 home('.mh-case-side').prepend(`<a class="mh-case" href="${permalink}"><img src="${cover}" alt="Claude 串接 SHOPLINE MCP 教學" loading="lazy" width="1200" height="675"><span><span class="mh-kicker">AI 工具 → 電商營運</span><span class="mh-case-title">用 Claude 串接 SHOPLINE MCP</span><span class="mh-case-desc">設定權限、授權商店，再用對話查詢訂單與庫存。</span></span></a>`);
 await save('index.html', home);
-console.log(`Created ${permalink} with cover, two interface illustrations, five FAQs and four archive entries.`);
+console.log(`Built ${permalink} with cover, ${content('figure.sl-figure').length} HTML interface illustrations, five FAQs and four archive entries.`);

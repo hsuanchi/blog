@@ -5,20 +5,20 @@
     <link>https://www.maxlist.xyz/</link>
     <description>行銷、數據分析、與 Python</description>
     <language>zh-TW</language>
-    <lastBuildDate>Sat, 21 Nov 2026 01:54:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 05:09:26 GMT</lastBuildDate>
     <atom:link href="https://www.maxlist.xyz/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>All posts 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%89%80%E6%9C%89%E6%96%87%E7%AB%A0/</guid>
-      <pubDate>Fri, 20 Nov 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 21 Nov 2026 05:07:10 GMT</pubDate>
       <description>Max行銷誌全部 184 篇文章，涵蓋行銷、數據分析、Python、資料工程、咖啡地圖、NetSuite 與瀏覽器工具教學。</description>
     </item>
     <item>
       <title>數據自動化 彙整 - Max行銷誌</title>
       <link>https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</link>
       <guid isPermaLink="true">https://www.maxlist.xyz/category/%E6%95%B8%E6%93%9A%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
-      <pubDate>Fri, 20 Nov 2026 16:00:00 GMT</pubDate>
+      <pubDate>Sat, 21 Nov 2026 05:07:10 GMT</pubDate>
       <description>數據自動化教學，包含 Claude 串接 SHOPLINE MCP、查詢電商訂單與庫存，以及定時擷取行銷數據。</description>
     </item>
     <item>

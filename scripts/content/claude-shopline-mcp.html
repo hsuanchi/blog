@@ -1,6 +1,6 @@
 <p>想在 Claude 裡直接查詢 SHOPLINE 訂單、整理商品庫存，或請 AI 協助更新商品資料，可以透過 <strong>SHOPLINE MCP</strong> 連接商店。本篇從後台權限設定開始，帶你完成 Claude 授權，再用一筆訂單確認是否串接成功。</p>
 <p>MCP（Model Context Protocol）是讓 AI 使用外部工具與資料的連接協定。在這個情境裡，你用文字交代需求，Claude 透過 SHOPLINE 提供的工具取得資料，再整理成回答；能操作哪些項目，取決於商店授權及 MCP 已開放的功能。<a href="https://shopline-mcp.readme.io/docs/getting-started" target="_blank" rel="noopener noreferrer">SHOPLINE MCP 技術文件</a>。</p>
-<p class="sl-scope">適用：Claude 網頁版與 Claude Desktop 的遠端連接器。本文於 2026 年 11 月 21 日核對官方文件；操作圖為依文件重繪的介面示意，欄位與選單以實際畫面為準。</p>
+<p class="sl-scope">適用：Claude 網頁版與 Claude Desktop 的遠端連接器。本文於 2026 年 11 月 21 日核對官方文件；所有操作圖皆用 HTML／CSS 重繪，標示「介面示意」，商店與訂單資料均為虛構。圖解在手機上會調整排列，實際欄位與選單以產品畫面為準。</p>
 
 <div class="sl-key"><strong>Claude 的伺服器網址，請完整複製這一行</strong><code>https://shopline-open.shopline.io/mcp/on-demand</code><span>新增連接器時，保留結尾的 <b>/on-demand</b>。</span></div>
 
@@ -46,9 +46,25 @@
 <h2 id="claude-connector">步驟二：在 Claude 新增 SHOPLINE 連接器</h2>
 <h3>個人帳號：從 Customize 開始</h3>
 <p>開啟 Claude，依序進入 <strong>Customize → Connectors → Add → Add custom connector</strong>，新增自訂連接器。</p>
+<figure class="sl-figure" id="figure-personal-entry">
+<div class="sl-ui sl-ui-claude" role="img" aria-label="Claude 個人版新增連接器介面示意：左側選 Customize，右側選 Connectors，再按 Add，選 Add custom connector。">
+<div class="sl-ui-bar"><b>Claude · 個人帳號</b><span>介面示意</span></div>
+<div class="sl-app-layout">
+<div class="sl-app-sidebar"><span class="sl-app-brand">Claude</span><span class="sl-nav-item">＋ New</span><span class="sl-nav-item">Projects</span><strong class="sl-nav-item sl-nav-active"><i class="sl-number">1</i> Customize</strong></div>
+<div class="sl-app-main"><div class="sl-screen-title">Customize</div><div class="sl-screen-tabs"><span>Skills</span><strong><i class="sl-number">2</i> Connectors</strong><span>Plugins</span></div><div class="sl-add-area"><span class="sl-ui-button sl-outline-highlight"><i class="sl-number">3</i> ＋ Add ▾</span><div class="sl-menu-card"><strong class="sl-menu-selected"><i class="sl-number">4</i> Add custom connector</strong></div></div><div class="sl-empty-state">新增後，連接器會出現在這裡</div></div>
+</div></div>
+<figcaption>圖二　個人版入口示意。沿著 1 → 4 找到新增連接器的選項，再填入下一段的名稱與網址。</figcaption>
+</figure>
 <h3>Team／Enterprise：先由組織管理者加入</h3>
 <p>有新增權限的管理者從左下角帳號選單開啟 <strong>Organization settings → Connectors</strong>，按 Add 新增。依介面版本，入口可能顯示 <strong>Add custom connector</strong>，或是 <strong>Custom → Web</strong>。組織加入後，成員再回自己的 Customize → Connectors，找到 SHOPLINE 並連接。</p>
 <p class="sl-source">個人與組織的入口依 <a href="https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp" target="_blank" rel="noopener noreferrer">Claude 官方說明</a>整理。Team 通常由 Owner／Primary Owner 新增；Enterprise 另支援具備相關管理權限的自訂角色。</p>
+<figure class="sl-figure" id="figure-organization-entry">
+<div class="sl-ui sl-ui-claude" role="img" aria-label="Claude 組織版入口示意：從帳號選單開啟 Organization settings，在 Connectors 中按 Add，再選 Custom 和 Web。由有權限的組織管理者操作。">
+<div class="sl-ui-bar"><b>Claude · Team／Enterprise</b><span>介面示意</span></div>
+<div class="sl-ui-body"><div class="sl-account-menu"><span class="sl-avatar-letter">組</span><div><b>組織管理者（示意）</b><span class="sl-small">帳號選單</span></div><strong class="sl-menu-selected"><i class="sl-number">1</i> Organization settings</strong></div><div class="sl-organization-path"><span><i class="sl-number">2</i> Connectors</span><span aria-hidden="true">→</span><span><i class="sl-number">3</i> Add</span><span aria-hidden="true">→</span><span>Custom</span><span aria-hidden="true">→</span><strong>Web</strong></div><div class="sl-screen-callout">先加入組織，再由各成員登入自己的 SHOPLINE 管理員帳號完成連接。</div></div>
+</div>
+<figcaption>圖三　組織版入口示意。這裡畫出 Custom → Web 的選單版本；若畫面顯示 Add custom connector，選擇該項即可。</figcaption>
+</figure>
 
 <h3>填入名稱與遠端網址</h3>
 <p>在新增視窗中，名稱可填 <strong>SHOPLINE</strong>，Remote MCP server URL 填入下方網址，再按 <strong>Continue</strong>：</p>
@@ -62,22 +78,51 @@
 <div class="sl-form-page"><div class="sl-form-step">01　名稱與網址</div><div class="sl-field-label">Name</div><div class="sl-field">SHOPLINE</div><div class="sl-field-label">Remote MCP server URL</div><div class="sl-field sl-field-url">https://shopline-open.shopline.io/mcp/<b>on-demand</b></div><div class="sl-ui-actions"><span class="sl-ui-button">Continue →</span></div></div>
 <div class="sl-form-page"><div class="sl-form-step">02　驗證設定</div><div class="sl-field-label">Authentication</div><div class="sl-field">Sign in when needed</div><div class="sl-field-label">OAuth client</div><div class="sl-field">Register automatically (DCR)</div><div class="sl-ui-actions"><span class="sl-ui-button">Add</span></div></div>
 </div></div>
-<figcaption>圖二　Claude 設定介面示意。兩組欄位分階段填寫；驗證方式依 SHOPLINE 指定值設定。</figcaption>
+<figcaption>圖四　Claude 設定介面示意。兩組欄位分階段填寫；驗證方式依 SHOPLINE 指定值設定。</figcaption>
 </figure>
 
 <h2 id="authorize-shop">步驟三：登入 SHOPLINE 並授權商店</h2>
-<p>連接器新增後，找到 SHOPLINE，按 <strong>Connect</strong>。跳轉到 SHOPLINE 登入頁時，使用<strong>剛才已開啟 MCP 權限的管理員帳號</strong>登入，選擇要連接的商店，再按 <strong>Authorize</strong> 完成授權。</p>
+<p>連接器新增後，找到 SHOPLINE，按 <strong>Connect</strong>，開始商店登入與授權。</p>
+<figure class="sl-figure" id="figure-connect">
+<div class="sl-ui sl-ui-claude" role="img" aria-label="Claude SHOPLINE 連接器頁面示意：新增連接器後尚未連接，在 SHOPLINE 伺服器網址下方按 Connect，前往 SHOPLINE 登入授權。">
+<div class="sl-ui-bar"><b>Claude · Connectors</b><span>介面示意</span></div>
+<div class="sl-connect-detail"><span class="sl-service-icon">S</span><div class="sl-screen-title">SHOPLINE</div><span class="sl-server-address">https://shopline-open.shopline.io/mcp/on-demand</span><span class="sl-connection-label">尚未連接商店</span><span class="sl-ui-button sl-outline-highlight"><i class="sl-number">1</i> Connect</span><span class="sl-small">下一步：前往 SHOPLINE 登入與授權</span></div>
+</div>
+<figcaption>圖五　Connect 按鈕示意。連接器已新增時，還需要完成商店授權，才會取得可用資料。</figcaption>
+</figure>
+<p>跳轉到 SHOPLINE 登入頁時，使用<strong>剛才已開啟 MCP 權限的管理員帳號</strong>登入，選擇要連接的商店，再按 <strong>Authorize</strong> 完成授權。</p>
+<figure class="sl-figure" id="figure-shop-authorization">
+<div class="sl-ui sl-ui-admin" role="img" aria-label="SHOPLINE 授權介面示意：使用已開啟 MCP 的管理員登入後，確認選定的示範商店及權限範圍，再按 Authorize。示範商店名稱為虛構，權限清單僅作範例。">
+<div class="sl-ui-bar"><b>SHOPLINE · 授權 Claude</b><span>介面示意</span></div>
+<div class="sl-ui-body"><div class="sl-screen-callout">登入時，請使用已開啟 MCP 的管理員帳號。</div><div class="sl-auth-connection"><div><span class="sl-service-icon sl-service-icon-claude">C</span><b>Claude</b></div><span class="sl-auth-arrow" aria-hidden="true">←</span><div><span class="sl-service-icon sl-service-icon-shop">S</span><b>示範商店 A</b><span class="sl-small">虛構商店</span></div></div><div class="sl-auth-heading"><i class="sl-number">1</i> 確認選定的商店與權限</div><div class="sl-auth-scopes"><div><span>訂單</span><span aria-hidden="true">⌄</span></div><div><span>商品</span><span aria-hidden="true">⌄</span></div><div><span>顧客</span><span aria-hidden="true">⌄</span></div></div><span class="sl-small">權限項目為範例；請依授權頁實際內容核對。</span><div class="sl-ui-actions sl-auth-actions"><span class="sl-ui-button sl-ui-button-blue sl-outline-highlight"><i class="sl-number">2</i> Authorize</span><span class="sl-ui-button sl-ui-button-secondary">Deny</span></div></div>
+</div>
+<figcaption>圖六　選定商店後的授權畫面示意。示範商店與權限清單為虛構範例；確認目標商店正確後，再按 Authorize。</figcaption>
+</figure>
 <p>授權後回到 Claude 的 Connectors 頁面，確認 SHOPLINE 已連接。SHOPLINE 密碼只在官方登入頁輸入即可。</p>
 <div class="sl-note"><p><strong>新增連接器與商店授權是兩個步驟。</strong>只在列表看到 SHOPLINE 名稱時，還要確認已按 Connect 並完成授權。</p></div>
 
 <h2 id="first-query">步驟四：用一筆訂單確認連線</h2>
 <p>在 Claude 開啟新對話，從輸入框旁的 <strong>「＋」→ Connectors</strong> 確認本次對話已啟用 SHOPLINE。有工具執行確認視窗時，先檢查它準備執行的操作再允許。</p>
+<figure class="sl-figure" id="figure-enable-conversation">
+<div class="sl-ui sl-ui-claude" role="img" aria-label="Claude 對話介面示意：在新對話輸入框旁按加號，進入 Connectors，確認 SHOPLINE 開關為啟用。">
+<div class="sl-ui-bar"><b>Claude · 新對話</b><span>介面示意</span></div>
+<div class="sl-ui-body"><div class="sl-conversation-menu"><div class="sl-menu-card"><strong class="sl-menu-selected"><i class="sl-number">2</i> Connectors <span aria-hidden="true">›</span></strong></div><div class="sl-menu-card"><div class="sl-connector-toggle"><span><i class="sl-number">3</i> SHOPLINE</span><span class="sl-mini-toggle" aria-hidden="true"></span></div><span class="sl-small">已為這個對話啟用</span></div></div><div class="sl-composer"><span class="sl-composer-placeholder">輸入你想查詢的訂單或商品…</span><div class="sl-composer-toolbar"><span class="sl-plus-button"><i class="sl-number">1</i> ＋</span><span class="sl-small">新對話</span></div></div></div>
+</div>
+<figcaption>圖七　對話啟用位置示意。從輸入框旁的「＋」進入 Connectors，確認 SHOPLINE 已啟用，再送出查詢指令。</figcaption>
+</figure>
 <p>找一筆你能在後台核對的訂單，將訂單編號代入這段指令：</p>
 <pre class="sl-prompt"><code>請透過 SHOPLINE MCP 查詢訂單「填入你的訂單編號」。
 列出訂單編號、訂單狀態、付款狀態與出貨狀態，
 並註明目前查詢的商店名稱。
 這次只讀取資料，不修改任何內容；找不到時請直接說明。</code></pre>
 <p>檢查 Claude 是否有呼叫 SHOPLINE 工具，並把回傳的商店、訂單與後台資料逐一對照。只回答一般性的訂單處理建議，還不足以確認商店資料已連通。</p>
+<figure class="sl-figure" id="figure-query-result">
+<div class="sl-ui sl-ui-claude" role="img" aria-label="Claude 訂單查詢結果示意：虛構使用者查詢 DEMO-0001，Claude 顯示 SHOPLINE 工具呼叫，回傳示範商店 A、訂單號碼、已確認、已付款與未出貨等虛構資料。這不是實際測試結果。">
+<div class="sl-ui-bar"><b>Claude · 訂單查詢</b><span>介面示意 · 虛構資料</span></div>
+<div class="sl-ui-body"><div class="sl-chat-question">請透過 SHOPLINE MCP 查詢訂單 DEMO-0001，只讀取資料，不修改內容。</div><div class="sl-tool-trace"><span class="sl-service-mark">S</span><div><b>SHOPLINE 工具呼叫</b><span class="sl-small">訂單查詢 · 呼叫紀錄位置示意</span></div><span class="sl-trace-status">完成</span></div><div class="sl-chat-answer"><b>查詢結果（虛構範例）</b><dl class="sl-result-list"><div><dt>商店</dt><dd>示範商店 A</dd></div><div><dt>訂單編號</dt><dd>DEMO-0001</dd></div><div><dt>訂單狀態</dt><dd>已確認</dd></div><div><dt>付款狀態</dt><dd>已付款</dd></div><div><dt>出貨狀態</dt><dd>未出貨</dd></div></dl></div><div class="sl-screen-callout">核對重點：是否真的呼叫工具？商店與訂單是否和後台一致？</div></div>
+</div>
+<figcaption>圖八　查詢結果呈現示意，並非實際測試紀錄。商店、編號與狀態均為虛構；實際使用時請核對工具紀錄及 SHOPLINE 後台。</figcaption>
+</figure>
 <p>沒有合適的訂單，也可以改查一項已知商品的庫存。<a href="https://shopline-mcp.readme.io/docs/getting-started#testing-your-mcp-setup" target="_blank" rel="noopener noreferrer">SHOPLINE 技術文件</a>也以訂單與庫存查詢作為連線測試範例。</p>
 
 <h2 id="prompt-examples">串接後，可以怎麼使用？</h2>
