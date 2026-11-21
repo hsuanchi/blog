@@ -1,9 +1,5 @@
 <p>想在 Claude 裡直接查詢 SHOPLINE 訂單、整理商品庫存，或請 AI 協助更新商品資料，可以透過 <strong>SHOPLINE MCP</strong> 連接商店。本篇從後台權限設定開始，帶你完成 Claude 授權，再用一筆訂單確認是否串接成功。</p>
 <p>MCP（Model Context Protocol）是讓 AI 使用外部工具與資料的連接協定。在這個情境裡，你用文字交代需求，Claude 透過 SHOPLINE 提供的工具取得資料，再整理成回答；能操作哪些項目，取決於商店授權及 MCP 已開放的功能。<a href="https://shopline-mcp.readme.io/docs/getting-started" target="_blank" rel="noopener noreferrer">SHOPLINE MCP 技術文件</a>。</p>
-<p class="sl-scope">適用：Claude 網頁版與 Claude Desktop 的遠端連接器。本文於 2026 年 11 月 21 日核對官方文件；所有操作圖皆用 HTML／CSS 重繪，標示「介面示意」，商店與訂單資料均為虛構。圖解在手機上會調整排列，實際欄位與選單以產品畫面為準。</p>
-
-<div class="sl-key"><strong>Claude 的伺服器網址，請完整複製這一行</strong><code>https://shopline-open.shopline.io/mcp/on-demand</code><span>新增連接器時，保留結尾的 <b>/on-demand</b>。</span></div>
-
 <details class="sl-toc" open><summary>文章目錄</summary><ol>
 <li><a href="#before-start">開始前，先確認兩邊的使用條件</a></li>
 <li><a href="#shopline-permissions">步驟一：開啟 SHOPLINE 管理員的 MCP 權限</a></li>
@@ -68,7 +64,11 @@
 
 <h3>填入名稱與遠端網址</h3>
 <p>在新增視窗中，名稱可填 <strong>SHOPLINE</strong>，Remote MCP server URL 填入下方網址，再按 <strong>Continue</strong>：</p>
-<pre class="sl-url"><code>https://shopline-open.shopline.io/mcp/on-demand</code></pre>
+<div class="sl-server-card" data-copy-card>
+<div class="sl-server-card-heading"><span class="sl-server-badge">Claude 連接器</span><span id="shopline-mcp-url-label">Remote MCP server URL</span></div>
+<div class="sl-server-card-content"><code id="shopline-mcp-url" aria-labelledby="shopline-mcp-url-label" dir="ltr">https://shopline-open.shopline.io/mcp/on-demand</code><button class="sl-copy-button" type="button" data-copy-target="shopline-mcp-url" aria-label="複製 SHOPLINE MCP 伺服器網址" aria-describedby="shopline-mcp-copy-status"><svg class="sl-copy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M16 8V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4"></path></svg><svg class="sl-copy-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"></path></svg><span data-copy-label>複製網址</span></button></div>
+<p class="sl-copy-status" id="shopline-mcp-copy-status" role="status" aria-live="polite" aria-atomic="true">點一下即可複製，接著貼到 Claude 的網址欄位。</p>
+</div>
 <p>接著檢查驗證選項。<strong>依 SHOPLINE 對 Claude 的指定設定</strong>，Authentication 選 <strong>Sign in when needed</strong>；OAuth client 選 <strong>Register automatically（DCR）</strong>，最後按 <strong>Add</strong>。若中途還有一頁設定檢查，確認後再按 Continue 繼續。<a href="https://support.shoplineapp.com/hc/zh-tw/articles/60025657774105" target="_blank" rel="noopener noreferrer">SHOPLINE 官方 Claude 串接步驟</a>。</p>
 
 <figure class="sl-figure">

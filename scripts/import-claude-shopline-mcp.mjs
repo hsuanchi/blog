@@ -11,7 +11,7 @@ const id = '11011';
 const title = '【Claude 教學】串接 SHOPLINE MCP：從權限設定到查詢訂單';
 const description = '用 Claude 串接 SHOPLINE MCP，從 OpenAPI 資格、管理員 MCP 權限、遠端連接器網址與 OAuth 設定，到商店授權、訂單及庫存查詢，附操作示意圖、指令範例與常見問題。';
 const date = '2026-11-21T00:00:00+08:00';
-const modified = '2026-11-21T13:07:10+08:00';
+const modified = '2026-11-21T13:21:40+08:00';
 const dateText = '2026 年 11 月 21 日';
 const permalink = `/post/${slug}/`;
 const canonical = `https://www.maxlist.xyz${permalink}`;
@@ -64,6 +64,7 @@ execFileSync(renderer, [path.join(artwork, 'cover.svg'), imagePath], { stdio: 'i
 const version = createHash('sha256').update(await readFile(imagePath)).digest('hex').slice(0, 12);
 const cover = `/image/${slug}/cover.jpg?v=${version}`;
 const cssVersion = createHash('sha256').update(await readFile(path.join(docs, 'assets/css/posts', `${slug}.css`))).digest('hex').slice(0, 12);
+const scriptVersion = createHash('sha256').update(await readFile(path.join(docs, 'assets/js/posts', `${slug}.js`))).digest('hex').slice(0, 12);
 
 function meta($, selector, attributes) {
   const existing = $(selector).first();
@@ -93,6 +94,8 @@ for (const [name, value] of Object.entries({ published_time: date, modified_time
 meta($, 'meta[property="article:section"]', { property: 'article:section', content: '數據自動化' });
 $('link[href*="posts/chrome-extension-import.css"]').remove();
 $('head').append(`<link rel="stylesheet" href="../../assets/css/posts/claude-shopline-mcp.css?v=${cssVersion}">`);
+$('script[src*="posts/claude-shopline-mcp.js"]').remove();
+$('body').append(`<script src="../../assets/js/posts/claude-shopline-mcp.js?v=${scriptVersion}" defer></script>`);
 $('body').removeClass('postid-11006').addClass(`postid-${id}`);
 const article = $('main article').first();
 article.attr({ id: `post-${id}`, class: `post-${id} post type-post status-publish format-standard has-post-thumbnail hentry category-220 category-708 tag-api`, 'data-category-names': JSON.stringify(['數據自動化']) });
